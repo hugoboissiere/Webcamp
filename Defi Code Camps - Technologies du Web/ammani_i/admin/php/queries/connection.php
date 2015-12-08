@@ -1,6 +1,6 @@
 <?php    
 $dataBaseHost='localhost';
-$dataBaseName='cw;charset=utf8';
+$dataBaseName='cw';
 $dataBaseUser='root';
 $dataBasePassword='codecamp';
 try{
