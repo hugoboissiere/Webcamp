@@ -1,8 +1,8 @@
 <?php
-$dataBaseHost = 'cl1-sql7';
-$dataBaseName = 'trafalgar6';
-$dataBaseUser = 'trafalgar6';
-$dataBasePassword = 'etna';
+$dataBaseHost = 'localhost';
+$dataBaseName = 'cw';
+$dataBaseUser = 'root';
+$dataBasePassword = 'codecamp';
 
 
 $id = $_GET['id'];
