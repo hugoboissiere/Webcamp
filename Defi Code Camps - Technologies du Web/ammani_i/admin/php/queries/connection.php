@@ -14,6 +14,7 @@ try{
 catch(PDOException $e)
 {
     echo $e->getMessage();
+    echo "graphie";
 }
 session_start();
 /* 
