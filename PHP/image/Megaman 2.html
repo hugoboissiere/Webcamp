@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://192.168.124.7/articles/game.php?ID=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Megaman 2</title> 
+		<meta charset="utf8">
+        <link rel="stylesheet" href="http://192.168.124.7/articles/game.css">
+	</head>
+	<body>
+
+        		<div id="container">
+			<div id="button">
+				<div id="login">
+					<a href="http://192.168.124.7/register/register.php">Se connecter / Creer un compte</a>
+				</div>
+				<div id="panier">
+					<a href="http://192.168.124.7/commande/commande.php" class="panier">Panier: 0.00$</a>
+				</div>
+			</div>
+		</div>
+				<h1 class="titre"><a href="http://192.168.124.7/index.php"><img src="./Megaman 2_files/oldbutgoldlogo.png"></a></h1>
+
+			<form action="http://192.168.124.7/category/category.php" id="searchthis" method="post">
+				<select>
+					<option value="-1">Choisissez la plateforme</option>
+					<option value="NES">NES</option>
+					<option value="supernes">Super NES</option>
+					<option value="playsation1">Playstation 1</option>
+				</select>
+				<select>
+					<option value="-1">Choisissez le type de jeu</option>
+					<option value="actionaventure">Action-aventure</option>
+					<option value="RPG">Jeu de rôle</option>
+					<option value="plateforme">Plateforme</option>
+				</select>
+					<input id="search" name="q" type="text" placeholder="Rechercher">
+					<input type="submit" value="OK">
+				</form>        <h2>Megaman 2</h2>
+        <form class="buy" action"addpanier.php"="">
+    	   <button type="submit">Ajouter au panier</button>
+            <h4 class="prix">Prix : 0.75 $</h4>
+            <img src="./Megaman 2_files/yf75hnr.jpg" class="jaquette" alt="La jaquette européenne du jeu" title="La jaquette européenne du jeu">        </form>
+    
+    <div class="description">
+        <h3>Description du jeu :</h3>
+        Le jeu vidéo Megaman 2        <p class="categorie">Catégories : <a href="http://192.168.124.7/category/typeconsole.php?ID=1">NES</a>, <a href="http://192.168.124.7/category/typegame.php?ID=5">Plateforme</a></p> 
+    </div>
+		<div id="footer">
+        	<ul class="listfooter">
+        		<li><a href="http://192.168.124.7/aboutus/aboutus.php">About Us</a></li><a href="http://192.168.124.7/aboutus/aboutus.php">
+        		</a><li><a href="http://192.168.124.7/aboutus/aboutus.php"></a><a href="https://fr-fr.facebook.com/"><img src="./Megaman 2_files/facebook.png" width="15" height="15"></a></li><a href="https://fr-fr.facebook.com/">
+        		</a><li><a href="https://fr-fr.facebook.com/"></a><a href="http://192.168.124.7/index.php">oldbutgold.com</a></li><a href="http://192.168.124.7/index.php">
+        		</a><li><a href="http://192.168.124.7/index.php"></a><a href="https://twitter.com/?lang=fr"><img src="./Megaman 2_files/twitter.png" width="15" height="15"></a></li>
+        		<li>© 2015, oldbutgold</li>
+        	</ul>
+        </div>
+    <div id="itemTemplate" style="display:none;">
+        <div class="pseudo"></div>
+    	<div class="comantaire"></div>
+   	</div>		<form method="post" id="commentaire" action="http://192.168.124.7/articles/postcom.php">
+        <input type="text" name="nom" id="name" placeholder="Nom" required=""><br>
+        <input type="text" name="commentaire" id="com" placeholder="Votre commentaire" required=""><br>
+        <input type="submit" id="addcom" value="Ajouter un commentaire!">
+        <input type="text" name="idgame" value="1" style="display:none;">
+        <div id="comzone"></div>
+            </form><div class="pseudo">Le 2015-12-04 13:42:08, Test a dit :</div><br><br><div class="com">Commentaire de test</div>
+
+
+
+<!-- 
+    <div id="commentaire">
+		<input type="text" name="nom" id="name" placeholder="Nom" required/><br>
+    	<input type="text" name="commentaire" id="com" placeholder="Votre commentaire" required/><br>
+		<button type="button" id="addcom">Ajouter un commentaire!</button>
+    	<div id="comzone"></div>
+    </div>
+ -->    
+<!--     <div id="itemTemplate" style="display:none;">
+        <div class="pseudo"></div>
+    	<div class="comantaire"></div>
+   	</div>
+ -->   		<script src="./Megaman 2_files/jquery.min.js"></script></body></html>
