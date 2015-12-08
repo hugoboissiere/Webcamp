@@ -1,6 +1,6 @@
 <?php    
 $dataBaseHost='localhost';
-$dataBaseName='cw';
+$dataBaseName='cw;charset=utf8';
 $dataBaseUser='root';
 $dataBasePassword='codecamp';
 try{
@@ -14,7 +14,6 @@ try{
 catch(PDOException $e)
 {
     echo $e->getMessage();
-    echo "graphie";
 }
 session_start();
 /* 
