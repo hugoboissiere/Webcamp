@@ -8,7 +8,9 @@
 		<link rel="stylesheet" href="accueil.css">
 	</head>
 	<body>
-		<?php include("header.php"); ?>
+		<?php include("header.php"); 
+        echo $_SESSION['role'];
+        ?>
 		<h2>Articles au hasard</h2>
 <?php
         try
