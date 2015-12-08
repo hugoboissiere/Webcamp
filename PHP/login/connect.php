@@ -13,7 +13,7 @@ if(!empty($_SESSION['mail']) && !empty($_SESSION['password']))
 	{
 		$_SESSION['ID'] = $data[0];
 		$_SESSION['Nom'] = $data[2];
-		$_SESSION['role'] = $data[8];
+		$_SESSION['role'] = $data[9];
 		$_SESSION['Prenom'] = $data[1];		
 		header('Location: ../index.php');
 	}
