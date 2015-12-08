@@ -12,7 +12,7 @@ $().ready(function() {
             data: {id: $id},
             cache: false,
             error: function() {
-                alert("Erreur: veuillez contacter votre administrateur.");
+                alert("Erreur: MUDA MUDA MUDA");
             },
             success: function(data) {
                 $("#modify .id").val(data[0]["id"]);
