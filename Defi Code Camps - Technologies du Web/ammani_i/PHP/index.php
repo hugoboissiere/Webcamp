@@ -33,17 +33,17 @@
 
             if($_SESSION['role'] == 1)
             {
-                echo "<button type='button'>Admin</button><br>"
+                echo "<button type='button'>Admin</button><br>";
             }
 
             else if($_SESSION['role'] == 3)
             {
-                echo "<p>Pas de bouton pour toi, humain</p><br>"
+                echo "<p>Pas de bouton pour toi, humain</p><br>";
             }
 
             else if(!isset($_SESSION['role']))
             {
-                echo "<p>Connecte toi pour un autre message !</p>"
+                echo "<p>Connecte toi pour un autre message !</p>";
             }
 ?>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
