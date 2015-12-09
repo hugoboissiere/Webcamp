@@ -180,7 +180,7 @@ include("php/includes/navigator.php");
 
                         while ($idk2 = $categorie2->fetch())
                         {
-                            print_r($result);
+                            echo $result->id;
                             echo $idk2['description'];
                         }
             
