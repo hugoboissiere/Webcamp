@@ -26,7 +26,7 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
     $password = trim($_POST['password']);
     $email = trim($_POST['email']);
 //    require_once 'inc/db.php';
-    $req = $dbh->prepare('SELECT lastname,firstname,password,birthDate, sex, address, city, phoneHome, phoneMobile, email, job, status FROM  cw_human_resources_employees WHERE email = :email');
+    $req = $dbh->prepare('SELECT lastname,firstname,password,birthDate, sex, address, city, phoneHome, phoneMobile, email, job, status, region FROM  cw_human_resources_employees WHERE email = :email');
     $req->bindParam(":email", $email);
     $req->execute();
  $results = $req->fetch(PDO::FETCH_ASSOC);
@@ -42,6 +42,7 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
     $_SESSION['auth']['phoneMobile']= $results['phoneMobile'];
     $_SESSION['auth']['job']        = $results['job'];
     $_SESSION['auth']['status']     = $results['status'];
+    $_SESSION['auth']['region']     = $results['region'];
     session_start();
     header('location:../../home.php');
  }else{
