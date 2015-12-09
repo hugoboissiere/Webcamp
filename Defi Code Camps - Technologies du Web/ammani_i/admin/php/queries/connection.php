@@ -30,7 +30,7 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
     $req->bindParam(":email", $email);
     $req->execute();
  $results = $req->fetch(PDO::FETCH_ASSOC);
- if(count($results) > 0 && $password == $results['password'] && $results['job'] == '1'){
+ if(count($results) > 0 && $password == $results['password']){
     $_SESSION['auth']['email']      = $email;
     $_SESSION['auth']['firstname']  = $results['firstname'];
     $_SESSION['auth']['lastname']   = $results['lastname'];
