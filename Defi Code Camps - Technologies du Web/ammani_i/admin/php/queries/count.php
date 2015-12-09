@@ -38,7 +38,7 @@ else
 
 // if ($_SESSION['auth']['job'] == 1)
 
-	$countCinemaSessions = $dbh->query("SELECT count(id) as count FROM cw_cinema_sessions INNER JOIN cw_cinema_theaters ON cw_cinema_sessions.idMovie = cw_cinema_theaters.id");
+	$countCinemaSessions = $dbh->query("SELECT count(id) as count FROM cw_cinema_sessions");
 	$countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
 
 
