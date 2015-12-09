@@ -43,7 +43,8 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
     $_SESSION['auth']['job']        = $results['job'];
     $_SESSION['auth']['status']     = $results['status'];
     session_start();
-    header('location:../../home.php');
+    echo $results['job'];
+    // header('location:../../home.php');
  }else{
      header('location:../../index.php');
  }
