@@ -214,8 +214,6 @@ else
 }
 
 
-$theaterCompleteList =  $dbh->query("SELECT * FROM cw_cinema_theaters WHERE archive = 'false'");
-$theaterCompleteList -> setFetchMode(PDO::FETCH_OBJ);
 
 
 
