@@ -1,6 +1,7 @@
 <?php
 
-$uploaddir = '../../../preprod/resources/imgs/content/movies/'; 
+// $uploaddir = '../../../preprod/resources/imgs/content/movies/'; 
+$uploaddir = "./";
 $name = $_FILES['uploadfile']['name'];
 $ext = end((explode(".", $name))); # extra () to prevent notice
 //$fileName = "bim"."." . $ext;
