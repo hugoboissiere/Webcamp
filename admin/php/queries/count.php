@@ -14,9 +14,18 @@ $countMediasLanguages ->setFetchMode(PDO::FETCH_OBJ);
     
 $countHRMemberships = $dbh->query("SELECT count(id) as count FROM cw_human_resources_memberships");
 $countHRMemberships ->setFetchMode(PDO::FETCH_OBJ);
-    
-$countHREmployees = $dbh->query("SELECT count(id) as count FROM cw_human_resources_employees");
-$countHREmployees ->setFetchMode(PDO::FETCH_OBJ);
+
+if($_SESSION['auth']['job'] == 1)
+{
+	$countHREmployees = $dbh->query("SELECT count(id) as count FROM cw_human_resources_employees");
+	$countHREmployees ->setFetchMode(PDO::FETCH_OBJ);
+}
+
+else
+{
+	$countHREmployees = $dbh->query("SELECT count(id) as count FROM cw_human_resources_employees WHERE region= '" . $_SESSION['auth']['region'] . "'");
+	$countHREmployees ->setFetchMode(PDO::FETCH_OBJ);
+}
     
 $countCinemaTheaters = $dbh->query("SELECT count(id) as count FROM cw_cinema_theaters");
 $countCinemaTheaters ->setFetchMode(PDO::FETCH_OBJ);
