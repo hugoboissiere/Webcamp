@@ -1,6 +1,6 @@
 <?php
 $dataBaseHost = 'localhost';
-$dataBaseName = 'cw';
+$dataBaseName = 'cinewax; charset=utf8';
 $dataBaseUser = 'root';
 $dataBasePassword = 'codecamp';
 

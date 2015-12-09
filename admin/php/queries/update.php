@@ -1,10 +1,10 @@
 <?php
 
 /* connection */
-$dataBaseHost = 'cl1-sql7';
-$dataBaseName = 'trafalgar6';
-$dataBaseUser = 'trafalgar6';
-$dataBasePassword = 'etna';
+$dataBaseHost = 'localhost';
+$dataBaseName = 'cinewax; charset=utf8';
+$dataBaseUser = 'root';
+$dataBasePassword = 'codecamp';
 
 try {
     $dbh = new PDO('mysql:host=' . $dataBaseHost . ';dbname=' . $dataBaseName, $dataBaseUser, $dataBasePassword, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
