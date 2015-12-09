@@ -174,7 +174,18 @@ include("php/includes/navigator.php");
                     <tr data-id="<?php echo $result->id; ?>">
                         <td class="title"><?php echo $result->firstname; ?></td>
                         <td><?php echo $result->lastname; ?></td>
-                        <td><?php echo $result->job; ?></td>
+                        <td><?php 
+                        
+                        $categorie2 = $dbh->query('SELECT * FROM job WHERE id_job = "' . $_SESSION['auth']['job'] . '"');
+
+                        while ($idk2 = $categorie2->fetch())
+                        {
+                            echo $idk2['description'];
+                        }
+            
+                        $categorie2->closeCursor();
+
+                         ?></td>
                         <td><?php echo $result->status; ?></td>
                     </tr>
                     <?php
