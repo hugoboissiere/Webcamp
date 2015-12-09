@@ -44,7 +44,7 @@ if ($_SESSION['auth']['job'] == 1)
 
 else
 {
-	$countCinemaSessions = $dbh->query("SELECT count(id) as count FROM cw_cinema_sessions");
+	$countCinemaSessions = $dbh->query("SELECT count(id) as count FROM cw_cinema_sessions WHERE region= '" . $_SESSION['auth']['region'] . "'");
 	$countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
 }
 
