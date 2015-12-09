@@ -35,9 +35,7 @@ else
 	$countHREmployees = $dbh->query("SELECT count(id) as count FROM cw_human_resources_employees WHERE region= '" . $_SESSION['auth']['region'] . "'");
 	$countHREmployees ->setFetchMode(PDO::FETCH_OBJ);
 }
-    
-// $countCinemaTheaters = $dbh->query("SELECT count(id) as count FROM cw_cinema_theaters");
-// $countCinemaTheaters ->setFetchMode(PDO::FETCH_OBJ);
+
     
 $countCinemaSessions = $dbh->query("SELECT count(id) as count FROM cw_cinema_sessions");
 $countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
