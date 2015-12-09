@@ -36,17 +36,17 @@ else
 	$countHREmployees ->setFetchMode(PDO::FETCH_OBJ);
 }
 
-if ($_SESSION['auth']['job'] == 1)
-{
+// if ($_SESSION['auth']['job'] == 1)
+// {
 	$countCinemaSessions = $dbh->query("SELECT count(id) as count FROM cw_cinema_sessions");
 	$countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
-}
+// }
 
-else
-{
-	$countCinemaSessions = $dbh->query("SELECT count(id) as count FROM cw_cinema_sessions WHERE region= '" . $_SESSION['auth']['region'] . "'");
-	$countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
-}
+// else
+// {
+// 	$countCinemaSessions = $dbh->query("SELECT count(id) as count FROM cw_cinema_sessions WHERE region= '" . $_SESSION['auth']['region'] . "'");
+// 	$countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
+// }
 
 if($_SESSION['auth']['job'] == 1)
 {
