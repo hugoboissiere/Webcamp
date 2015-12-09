@@ -1,5 +1,6 @@
 $().ready(function() {
-    $("#table td").click(function() {
+        if ($('main').data('session') == 1) {
+        $("#table td").click(function() {
         $("#table tr").removeAttr('id', 'selected');
         $("#titleAndFilter ul li a").removeClass('inactiveLink');
         $row = $(this).parent("tr");
@@ -57,4 +58,5 @@ $().ready(function() {
             }
         });
     });
+}
 });

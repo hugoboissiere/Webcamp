@@ -18,7 +18,7 @@ $addPHP = array("queries/select");
 include("php/includes/head.php");
 include("php/includes/navigator.php");
 ?>
-<main>
+<?php echo "<main data-session =" . $_SESSION['auth']['job'] . ">" ?>
     <!--Titre-->
     <div id="titleAndFilter">
         <h2><?php echo $pageTitle; ?></h2>
