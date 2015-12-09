@@ -17,6 +17,7 @@ include("php/includes/navigator.php");
 ?>
 
         <!-- main content here -->
+        <p>Bienvenue</p>
     </main>
     <script src="js/layoutNavigator.js"></script> <!-- Resource jQuery -->
 </body>
