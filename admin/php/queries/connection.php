@@ -46,6 +46,7 @@ if(!empty($_POST) && !empty($_POST['email']) && !empty($_POST['password'])){
     header('location:../../home.php');
  }else{
      header('location:../../index.php');
+     echo 'You shall not pass!';
  }
 }
 ?>
