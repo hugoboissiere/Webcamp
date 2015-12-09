@@ -15,7 +15,7 @@ try {
     $statement = $dbh->prepare("SELECT * FROM cw_medias_genres WHERE id =".$id."");
     $statement->execute();
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-     echo json_encode($results);
+    echo json_encode($results);
 
 } catch (PDOException $e) {
     echo $e->getMessage();
