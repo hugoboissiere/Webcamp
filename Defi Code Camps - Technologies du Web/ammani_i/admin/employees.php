@@ -176,11 +176,10 @@ include("php/includes/navigator.php");
                         <td><?php echo $result->lastname; ?></td>
                         <td><?php 
                         
-                        $categorie2 = $dbh->query('SELECT * FROM job WHERE id_job = "' . $_SESSION['auth']['job'] . '"');
+                        $categorie2 = $dbh->query('SELECT * FROM job WHERE id_job = "' . $result->job . '"');
 
                         while ($idk2 = $categorie2->fetch())
                         {
-                            echo $result->job;
                             echo $idk2['description'];
                         }
             
