@@ -57,15 +57,11 @@ echo '<form method="post" action="" id="addForm" autocomplete="off" class="formO
                 <br/>
                 <label for="country">Pays : </label>
                 <select name="country" id="country">
-                    <?php
                     while ($result = $employeeRegionListAdd->fetch()) {
-                        ?>
-                    <option value="<?php echo $result->nom_region; ?>"><?php echo $result->nom_region; ?></option>
+                    <option value="' . $result->nom_region . '">' . $result->nom_region . '</option>
                         
-                        <?php
                     }
                     $employeeRegionListAdd->closeCursor();
-                    ?>
                 </select>
                 <br/>
                 <label for="mail">Email : </label>
@@ -73,28 +69,20 @@ echo '<form method="post" action="" id="addForm" autocomplete="off" class="formO
                 <br/>
                 <label for="status">Statut : </label>
                 <select name="status" id="status">
-                    <?php
                     while ($result = $statusListAdd->fetch()) {
-                        ?>
-                    <option value="<?php echo $result->name; ?>"><?php echo $result->name; ?></option>
-                        
-                        <?php
+                    <option value="' . $result->name . '">' . $result->name . '</option>
+                       
                     }
                     $statusListAdd->closeCursor();
-                    ?>
                 </select>
                 <br/>
                 <label for="activity">Activité : </label>
                 <select name="activity" id="activity">
-                    <?php
                     while ($result = $activityListAdd->fetch()) {
-                        ?>
-                    <option value="<?php echo $result->name; ?>"><?php echo $result->name; ?></option>
+                    <option value="' . $result->name . '">' . $result->name . '</option>
                         
-                        <?php
                     }
                     $activityListAdd->closeCursor();
-                    ?>
                 </select><br/>
                 <input type="submit" class="clearForm" name="InsertMembersOrSubscribers" value="Enregistrer">
             </form>
