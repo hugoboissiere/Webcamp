@@ -172,7 +172,7 @@ include("php/includes/navigator.php");
                 <label for="city">Ville : </label>
                 <input type="text" name="city" class="city" placeholder="Dakar">
                 <br/>
-                <label for="region">Pays : </label>
+                <label for="country">Pays : </label>
                 <select name="region" class="region">
                     <option value="" id="actualregion"></option>
                     <?php
@@ -184,7 +184,7 @@ include("php/includes/navigator.php");
                     }
                     $employeeRegionListModification->closeCursor();
                     ?>
-                </select>
+                </select> -->
                 <br/>
                 <label for="mail">Email : </label>
                 <input type="email" name="email" class="email" placeholder="Ex : laurent.dupont@gmail.com">
