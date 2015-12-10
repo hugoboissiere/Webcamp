@@ -8,10 +8,9 @@ while ($result = $moviesCompleteList->fetch())
 }
 $moviesCompleteList->closeCursor(); 
 
-$test = "SELECT `country` from cw_medias_movies WHERE (ID = 1)"; 
-$row=mysqli_fetch_assoc($test);
-$country = $row['country'];
-echo $country;
+$test = $dbh->query("SELECT * from cw_medias_movies"); 
+$test->setFetchMode(PDO::FETCH_OBJ);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,18 +31,19 @@ echo $country;
       <th>Duree (en min)</th>
       <th>Pays/Continent<th>
    </tr>
-   <tr>
-      <td>Test1</td>
-      <td>Fantastique</td>
-      <td>96</td>
-      <td></td>
-   </tr>
-   <tr>
-      <td>Test2</td>
-      <td>Drame</td>
-      <td>123</td>
-      <td>Afrique</td>
-   </tr>
-</table>
+   <?php  
+
+   while ($result = $test->fetch())
+   {
+      echo '<tr>
+               <td>' . $result->title . '</td>
+               <td>' . $result->genre . '</td>
+               <td>' . $result->runningTime . '</td>
+               <td>' . $result->country . '</td>
+            </tr>'
+   }
+   $employeeStatusListAdd->closeCursor();
+   ?>
+   </table>
 </body>
 </html>
