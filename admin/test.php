@@ -1,4 +1,7 @@
 <?php
+
+echo 'comment est votre blanquette ?';
+
 include("php/includes/database.php")
  $_POST["firstname"]='gre';
  $_POST["lastname"]='grd';
