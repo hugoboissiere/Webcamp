@@ -15,12 +15,12 @@ include("php/includes/head.php");
 
 $employeeRegionListAdd = $dbh->query("SELECT * FROM region");
 $employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
-while ($result = $employeeRegionListAdd->fetch()) 
-{
-	echo $result->nom_region;
-	echo "ffff";
-}
-$employeeRegionListAdd->closeCursor();
+// while ($result = $employeeRegionListAdd->fetch()) 
+// {
+// 	echo $result->nom_region;
+// 	echo "ffff";
+// }
+// $employeeRegionListAdd->closeCursor();
 
 
 $statusListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_status  WHERE archive = 'false'");
@@ -88,7 +88,7 @@ echo '<form method="post" action="" id="addForm" autocomplete="off" class="formO
                 <label for="status">Statut : </label>
                 <select name="status" id="status">
                     while ($result = $statusListAdd->fetch()) {
-                    <option value="' . $result->name . '">' . $result->name . '</option>
+                    	' . $result->nom_region . '
                        
                     }
                     $statusListAdd->closeCursor();
