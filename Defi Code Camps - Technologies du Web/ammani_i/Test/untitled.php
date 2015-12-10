@@ -20,7 +20,7 @@ $moviesCompleteList->closeCursor();
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="chartist.min.js"></script>
 	<script src="test.js"></script>
-	<table border="1" class="table table-striped">
+	<table border="1" bgcolor="#0D8900">
    <tr>
       <th>Film</th>
       <th>Genre</th>
