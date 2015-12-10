@@ -47,8 +47,8 @@ $moviesCompleteList->closeCursor();
          console.log(test2);
 
            new Chartist.Bar('.ct-chart', {
-             labels: ['Une legende indienne : 82','Aladdin : 90','Blanche-Neige et les sept nains : 83'],
-             series: [ 82, 90, 83],
+             labels: [ <?php echo $pouet ?>],
+             series: [ <?php echo $serie ?>],
            }, {
              distributeSeries: true,
              width: 1500,
