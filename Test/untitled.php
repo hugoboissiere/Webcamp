@@ -22,7 +22,6 @@ $test->setFetchMode(PDO::FETCH_OBJ);
 	<div class="ct-chart"></div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="chartist.min.js"></script>
-	<script src="test.js"></script>
 	<table border="1" bgcolor="#0D8900" align="center" style="border-color:#732C2C">
    <tr>
       <th>Film</th>
