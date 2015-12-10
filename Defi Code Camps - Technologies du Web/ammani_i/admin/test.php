@@ -18,6 +18,9 @@ $_POST["status"]='Invité';
 $_POST["newsletter"]='Yes';
 $_POST["region"]='1';
 
+
+try
+{ 
     $insert = $dbh->prepare("INSERT INTO cw_human_resources_memberships"
             . "(firstname,lastname,password,cardNumber,username,sex,phoneHome,phoneMobile,neighborhood,city,country,email,status,activity,membership,newsletter,region)"
             . " VALUES(:firstname,:lastname,:password,:cardNumber,:username,:sex,:phoneHome,:phoneMobile,:neighborhood,:city,:country,:email,:status,:activity,:membership,:newsletter,:region)");
@@ -39,5 +42,10 @@ $_POST["region"]='1';
     $insert->bindParam(":newsletter", $_POST["newsletter"]);
     $insert->bindParam(":region", $_POST["region"]);
     $insert->execute();
+}
+catch(PDOException $e)
+{
+    handle_sql_errors($selectQuery, $e->getMessage());
+}
 
     ?>
