@@ -71,17 +71,24 @@ include("php/includes/navigator.php");
                 <input type="email" name="email" id="mail" placeholder="Ex: laurent.dupont@gmail.com">
                 <br/>
                 Poste : 
-                <label for="adminregion">Administrateur régional</label>
-                <input type="radio" name="poste" value="Administrateur régional" id="region" class="radio">
-                
                 <?php
 
-                if ($_SESSION['auth']['job'] == 1)
+                if($_SESSION['auth']['job'] == 1)
                 {
-                    echo "graphie";
-                    echo '<label for="modo">Test</label>
-                    <input type="radio" name="sex" value="Female" id="woman" class="radio" checked>';
+                    echo '<label for="adminregion">Administrateur régional</label>
+                    <input type="radio" name="poste" value="2" id="region" class="radio">
+                    <label for="modoprog">Modérateur Programmation et salle</label>
+                    <input type="radio" name="modoprog" value="3" id="modoprog" class="radio">
+                    <label for="modomembres">Modérateur Membres</label>
+                    <input type="radio" name="modomembres" value="4" id="modomembre" class="radio">
+                    <label for="modoempl">Modérateur Employés</label>
+                    <input type="radio" name="modoempl" value="5" id="modoempl" class="radio">
+                    <label for="modocaisse">Modérateur Caisse</label>
+                    <input type="radio" name="modocaisse" value="6" id="modocaisse" class="radio">';                
                 }
+
+                echo '<label for="employe">Employé</label>
+                <input type="radio" name="employe" value="7" id="employe" class="radio" checked>';          
                 ?>
                 <br/>
                 <label for="status">Statut : </label>
