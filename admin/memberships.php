@@ -82,7 +82,17 @@ include("php/includes/navigator.php");
                 <input type="text" name="city" id="city" placeholder="Dakar">
                 <br/>
                 <label for="country">Pays : </label>
-                <input type="text" name="country" id="country" placeholder="Sénégal">
+                <select name="country" id="country">
+                    <?php
+                    while ($result = $employeeRegionListAdd->fetch()) {
+                        ?>
+                    <option value="<?php echo $result->nom_region; ?>"><?php echo $result->nom_region; ?></option>
+                        
+                        <?php
+                    }
+                    $employeeRegionListAdd->closeCursor();
+                    ?>
+                </select>
                 <br/>
                 <label for="mail">Email : </label>
                 <input type="email" name="email" id="mail" placeholder="Ex : laurent.dupont@gmail.com">
