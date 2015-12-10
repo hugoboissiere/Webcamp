@@ -13,6 +13,8 @@ $test->setFetchMode(PDO::FETCH_OBJ);
 
 $essai = $dbh->query("SELECT `runningTime` from cw_medias_movies WHERE (ID = 1)"); 
 $essai->setFetchMode(PDO::FETCH_OBJ);
+
+echo $result->runningTime;
 ?>
 
 
@@ -47,7 +49,7 @@ $essai->setFetchMode(PDO::FETCH_OBJ);
       }
       $employeeStatusListAdd->closeCursor();
 
-      echo $result->runningTime;
+
       ?>
       </table>
    </body>
