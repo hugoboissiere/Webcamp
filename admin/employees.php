@@ -108,7 +108,7 @@ include("php/includes/navigator.php");
                     <?php
                     while ($result = $employeeRegionListAdd->fetch()) {
                         ?>
-                        <option value="<?php echo $result->name; ?>"><?php echo $result->name; ?></option>
+                        <option value="<?php echo $result->nom_region; ?>"><?php echo $result->nom_region; ?></option>
 
                         <?php
                     }
