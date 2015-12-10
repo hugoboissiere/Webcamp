@@ -81,8 +81,8 @@ include("php/includes/navigator.php");
                 <label for="city">Ville : </label>
                 <input type="text" name="city" id="city" placeholder="Dakar">
                 <br/>
-                <label for="region">Pays : </label>
-                <select name="region" id="region">
+                <label for="country">Pays : </label>
+                <select name="country" id="country">
                     <?php
                     while ($result = $employeeRegionListAdd->fetch()) {
                         ?>
@@ -173,7 +173,7 @@ include("php/includes/navigator.php");
                 <input type="text" name="city" class="city" placeholder="Dakar">
                 <br/>
                 <label for="country">Pays : </label>
-                <select name="region" class="region">
+                <select name="country" class="region">
                     <option value="" id="actualregion"></option>
                     <?php
                     while ($result = $employeeRegionListModification->fetch()) {
