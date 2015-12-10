@@ -104,13 +104,16 @@ echo '                </select>
 echo '                </select>
                 <br/>
                 <label for="activity">Activité : </label>
-                <select name="activity" id="activity">
+                <select name="activity" id="activity">';
+                ?>
+                <?php
                     while ($result = $activityListAdd->fetch()) {
-                    <option value="' . $result->name . '">' . $result->name . '</option>
-                        
+                    echo '<option value="' . $result->name . '">' . $result->name . '</option>';                        
                     }
                     $activityListAdd->closeCursor();
-                </select><br/>
+                    ?>
+                    <?php
+echo '                </select><br/>
                 <input type="submit" class="clearForm" name="InsertMembersOrSubscribers" value="Enregistrer">
             </form>
         </div>';
