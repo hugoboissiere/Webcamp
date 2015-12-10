@@ -13,8 +13,8 @@ $addPHP = array("");
 include("php/includes/database.php");
 include("php/includes/head.php");
 
-$employeeRegionListAdd = $dbh->query("SELECT * FROM region");
-$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
+// $employeeRegionListAdd = $dbh->query("SELECT * FROM region");
+// $employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
 // while ($result = $employeeRegionListAdd->fetch()) 
 // {
 // 	echo $result->nom_region;
@@ -73,13 +73,16 @@ echo '<form method="post" action="" id="addForm" autocomplete="off" class="formO
                 <label for="city">Ville : </label>
                 <input type="text" name="city" id="city" placeholder="Dakar">
                 <br/>
-                <p>
+                <label for="country">Pays : </label>
+                <select name="country" id="country">
+                $employeeRegionListAdd = $dbh->query("SELECT * FROM region");
+$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
                     while ($result = $employeeRegionListAdd->fetch()) {
-                    ' . $result->nom_region . '
+                    <option value="' . $result->nom_region . '">' . $result->nom_region . '</option>
                         
                     }
                     $employeeRegionListAdd->closeCursor();
-                </p>
+                </select>
                 <br/>
                 <label for="mail">Email : </label>
                 <input type="email" name="email" id="mail" placeholder="Ex : laurent.dupont@gmail.com">
