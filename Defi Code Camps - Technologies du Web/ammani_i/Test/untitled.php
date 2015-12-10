@@ -8,8 +8,8 @@ while ($result = $moviesCompleteList->fetch())
 }
 $moviesCompleteList->closeCursor(); 
 
-$test = SELECT `country` from cw_medias_movies WHERE (ID = 1); 
-echo $test;            
+$test = "SELECT `country` from cw_medias_movies WHERE (ID = 1)"; 
+echo $test;
 ?>
 <!DOCTYPE html>
 <html>
