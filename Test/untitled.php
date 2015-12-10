@@ -17,16 +17,16 @@ $essai->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $essai->fetch())
 {  
    if ($pouet != "")
-      $pouet = $pouet.",'".$result->title." : ".$result->runningTime."'";
+      $pouet = $pouet.',"'.$result->title." : ".$result->runningTime.'"';
    else
-      $pouet = "'".$result->title." : ".$result->runningTime."'";
+      $pouet = '"'.$result->title." : ".$result->runningTime.'"';
    if ($serie != "")
       $serie = $serie.", ".$result->runningTime;
    else
       $serie = $result->runningTime;
+}
 echo $pouet."<br>";
 echo $serie."<br>";
-}
 $moviesCompleteList->closeCursor();
 ?>
 <!DOCTYPE html>
