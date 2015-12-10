@@ -86,7 +86,7 @@ and open the template in the editor.
                 <ul class="cd-main-nav">
                     <!--<li><a href="#0">About</a></li>-->
                     <li>
-                        <a href="espace_membre.php"><span>Espace Membre</span></a>
+                        <a href="espace_membre.php"><span>Espace Membre</span></a></li>
                         
                         <ul>
                             <li class="go-back"><a href="#0">Menu</a></li>
