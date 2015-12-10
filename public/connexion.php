@@ -123,8 +123,9 @@ echo '                </select><br/>
             </form>
         </div>';
 
-        echo '<p>SE CONNECTER<p/>
-        <br>';
+        echo '<p>SE CONNECTER<br/><p/>
+        <br>
+        <br/>';
 include("php/includes/scripts.php");
 ?>
 
