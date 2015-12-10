@@ -12,6 +12,8 @@ if (isset('coco'))
 	else
 		exit(0);
 
+	echo $_SESSION['username'];
+
 
 	header('Location:connexion.php');
 
