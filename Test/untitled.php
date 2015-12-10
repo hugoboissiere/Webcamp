@@ -40,7 +40,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
                <td>' . $result->genre . '</td>
                <td>' . $result->runningTime . '</td>
                <td>' . $result->country . '</td>
-            </tr>'
+            </tr>';
    }
    $employeeStatusListAdd->closeCursor();
    ?>
