@@ -75,7 +75,7 @@ include("php/includes/navigator.php");
 
                 if($_SESSION['auth']['job'] == 1)
                 {
-                    echo '<br><label for="adminregion">Administrateur régional</label>
+                    echo '<br><br><label for="adminregion">Administrateur régional</label>
                     <input type="radio" name="poste" value="2" id="region" class="radio"><br>
                     <label for="modoprog">Modérateur Programmation et salle</label>
                     <input type="radio" name="poste" value="3" id="modoprog" class="radio"><br>
