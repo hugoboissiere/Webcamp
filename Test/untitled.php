@@ -25,7 +25,7 @@ while ($result = $essai->fetch())
    else
       $serie = $result->runningTime;
 echo $pouet."<br>";
-echo $serie;
+echo $serie."<br>";
 }
 $moviesCompleteList->closeCursor();
 ?>
