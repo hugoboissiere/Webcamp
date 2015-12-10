@@ -14,5 +14,5 @@
     function onError(data, status)
     {   
         console.log("Failure.");
-        alert("Erreur, veuillez contacter l'administrateur.");
+        console.log("Erreur, veuillez contacter l'administrateur.");
     }

@@ -2,7 +2,7 @@ $().ready(function() {
     $("#addForm").validate({
         submitHandler: function() {
                 var formData = $("#addForm").serialize();
-                alert(formData);
+                console.log(formData);
                 $.ajax({
                     type: "POST",
                     url: "php/queries/insert.php",
