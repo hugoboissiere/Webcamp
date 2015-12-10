@@ -2,7 +2,12 @@
 include("../admin/php/includes/modules/database.php");
 $moviesCompleteList = $dbh->query("SELECT * FROM cw_medias_movies WHERE archive = 'false'");
 $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
-echo $moviesCompleteList->title;
+while ($result = $moviesCompleteList->fetch())
+{
+   echo $result->title;
+}
+$moviesCompleteList->closeCursor();
+                  
 ?>
 <!DOCTYPE html>
 <html>
