@@ -28,6 +28,8 @@ $statusListAdd->setFetchMode(PDO::FETCH_OBJ);
 $activityListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_activity  WHERE archive = 'false'");
 $activityListAdd->setFetchMode(PDO::FETCH_OBJ);
 
+echo "INSCRIPTION";
+
 
 echo '<form method="post" action="connect.php" id="addForm" autocomplete="off" class="formOverflow"> 
                 <label for="member">Adhérent</label>
@@ -123,6 +125,6 @@ include("php/includes/scripts.php");
 ?>
 
 <!--scripts Js-->
-
+<script type="text/javascript" src></script>
 </body>
 </html>
