@@ -10,6 +10,9 @@ $moviesCompleteList->closeCursor();
 
 $test = $dbh->query("SELECT * from cw_medias_movies"); 
 $test->setFetchMode(PDO::FETCH_OBJ);
+
+$essai = $dbh->query("SELECT `runningTime` from cw_medias_movies WHERE (ID = 1)"); 
+$essai->setFetchMode(PDO::FETCH_OBJ);
 ?>
 
 
@@ -36,13 +39,15 @@ $test->setFetchMode(PDO::FETCH_OBJ);
       while ($result = $test->fetch())
       {
          echo '<tr>
-                  <td>' . $result->title[1] . '</td>
+                  <td>' . $result->title . '</td>
                   <td>' . $result->genre . '</td>
                   <td>' . $result->runningTime . '</td>
                   <td>' . $result->country . '</td>
                </tr>';
       }
       $employeeStatusListAdd->closeCursor();
+
+      echo $essai;
       ?>
       </table>
    </body>
