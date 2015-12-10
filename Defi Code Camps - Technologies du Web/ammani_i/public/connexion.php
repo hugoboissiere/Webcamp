@@ -29,6 +29,7 @@ $activityListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_a
 $activityListAdd->setFetchMode(PDO::FETCH_OBJ);
 
 echo "INSCRIPTION";
+echo '<br>';
 
 
 echo '<form method="post" action="connect.php" id="addForm" autocomplete="off" class="formOverflow"> 
