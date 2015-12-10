@@ -132,7 +132,8 @@ echo '                </select><br/>
                 <br/>
                 <label for="password">Mot de passe : </label>
                 <input type="password" type="password" name="password" id="password" placeholder="Au moins 5 caractères">
-                <br/>';
+                <br/>
+                <input type="submit" class="clearForm" name="coco" value="Se connecter">';
 
 include("php/includes/scripts.php");
 ?>
