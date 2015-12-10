@@ -10,7 +10,17 @@ $addJS =  array("");
 
 // Queries de cette page
 $addPHP = array("");
+include("php/includes/database.php");
 include("php/includes/head.php");
+	$employeeRegionListAdd = $dbh->query("SELECT * FROM region");
+	$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
+
+$statusListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_status  WHERE archive = 'false'");
+$statusListAdd->setFetchMode(PDO::FETCH_OBJ);
+$activityListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_activity  WHERE archive = 'false'");
+$activityListAdd->setFetchMode(PDO::FETCH_OBJ);
+
+
 echo '<form method="post" action="" id="addForm" autocomplete="off" class="formOverflow"> 
                 <label for="member">Adhérent</label>
                 <input type="radio" name="membership" value="Member" id="member" class="radio">
