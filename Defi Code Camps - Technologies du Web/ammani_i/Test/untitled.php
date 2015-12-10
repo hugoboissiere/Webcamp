@@ -6,8 +6,7 @@ while ($result = $moviesCompleteList->fetch())
 {
    echo $result->country;
 }
-$moviesCompleteList->closeCursor();
-                  
+$moviesCompleteList->closeCursor();             
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,19 +24,20 @@ $moviesCompleteList->closeCursor();
    <tr>
       <th>Film</th>
       <th>Genre</th>
-      <th>Duree</th>
-      <th>Pays<th>
+      <th>Duree (en min)</th>
+      <th>Pays/Continent<th>
    </tr>
    <tr>
-      <td>Mike</td>
-      <td>Stuntman</td>
-      <td>Cascadeur</td>
-      <td><?php echo $result ?><td>
+      <td>Test1</td>
+      <td>Fantastique</td>
+      <td>96</td>
+      <td>France</td>
    </tr>
    <tr>
-      <td>Mister</td>
-      <td>Pink</td>
-      <td>Gangster</td>
+      <td>Test2</td>
+      <td>Drame</td>
+      <td>123</td>
+      <td>Afrique</td>
    </tr>
 </table>
 </body>
