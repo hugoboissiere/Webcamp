@@ -173,7 +173,7 @@ include("php/includes/navigator.php");
                 <input type="text" name="city" class="city" placeholder="Dakar">
                 <br/>
                 <label for="country">Pays : </label>
-                <select name="country" id="country">
+                <select name="country" id="actualCountry">
                     <?php
                     while ($result = $employeeRegionListAdd->fetch()) {
                         ?>
