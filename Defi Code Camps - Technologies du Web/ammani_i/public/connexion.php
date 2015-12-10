@@ -76,7 +76,7 @@ echo '<form method="post" action="" id="addForm" autocomplete="off" class="formO
                 <label for="country">Pays : </label>
                 <select name="country" id="country">
                     while ($result = $employeeRegionListAdd->fetch()) {
-                    <option value="' . $result->nom_region . '">' . $result->nom_region . '</option>
+                    ' . $result->nom_region . '
                         
                     }
                     $employeeRegionListAdd->closeCursor();
@@ -88,7 +88,7 @@ echo '<form method="post" action="" id="addForm" autocomplete="off" class="formO
                 <label for="status">Statut : </label>
                 <select name="status" id="status">
                     while ($result = $statusListAdd->fetch()) {
-                    	' . $result->nom_region . '
+                    <option value="' . $result->name . '">' . $result->name . '</option>
                        
                     }
                     $statusListAdd->closeCursor();
