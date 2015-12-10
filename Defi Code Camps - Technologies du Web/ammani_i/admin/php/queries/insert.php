@@ -129,8 +129,8 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
     $_POST["cardNumber"] = "0"; // Pas de numero de compte pour l'instant
 
     $insert = $dbh->prepare("INSERT INTO cw_human_resources_memberships"
-            . "(firstname,lastname,password,cardNumber,username,sex,phoneHome,phoneMobile,neighborhood,city,country,email,status,activity,membership,newsletter)"
-            . " VALUES(:firstname,:lastname,:password,:cardNumber,:username,:sex,:phoneHome,:phoneMobile,:neighborhood,:city,:country,:email,:status,:activity,:membership,:newsletter)");
+            . "(firstname,lastname,password,cardNumber,username,sex,phoneHome,phoneMobile,neighborhood,city,country,email,status,activity,membership,newsletter, region)"
+            . " VALUES(:firstname,:lastname,:password,:cardNumber,:username,:sex,:phoneHome,:phoneMobile,:neighborhood,:city,:country,:email,:status,:activity,:membership,:newsletter,:region)");
     $insert->bindParam(":firstname", $_POST["firstname"]);
     $insert->bindParam(":lastname", $_POST["lastname"]);
     $insert->bindParam(":password", $_POST["password"]);
@@ -147,6 +147,7 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
     $insert->bindParam(":activity", $_POST["activity"]);
     $insert->bindParam(":membership", $_POST["membership"]);
     $insert->bindParam(":newsletter", $_POST["newsletter"]);
+    $insert->bindParam(":region", $_POST["region"]);
     $insert->execute();
 }
 
