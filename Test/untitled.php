@@ -32,7 +32,21 @@ $moviesCompleteList->closeCursor();
 	  <div class="ct-chart"></div>
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	  <script src="chartist.min.js"></script>
-	  <script src="test.js"></script>
+	  <script>
+         var test = $("#test1").data("numberone");
+         console.log(test);
+         var test2 = $("#test1").data("numbertwo");
+         console.log(test2);
+
+           new Chartist.Bar('.ct-chart', {
+             labels: ['Test : <br> 20 entrees', 'Test1 : <br> 60 entrees', 'Test2 : <br> 120 entrees', 'Test3 : <br> 200 entrees', 'Test4 : <br> 180 entrees', 'Test5 : <br> 20 entrees', 'Test6 : <br> 10 entrees'],
+             series: [ 20, 60, 120, 200, 180, 20, 10],
+           }, {
+             distributeSeries: true,
+             width: 1500,
+             height: 600,
+           });
+     </script>
 	  <table border="1" bgcolor="#0D8900" align="center" style="border-color:#732C2C">
       <tr>
          <th>Film</th>
