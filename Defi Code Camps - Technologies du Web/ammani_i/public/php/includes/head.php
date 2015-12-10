@@ -86,8 +86,14 @@ and open the template in the editor.
                 <ul class="cd-main-nav">
                     <!--<li><a href="#0">About</a></li>-->
                     <li>
-                        <a href="#0" class="cd-subnav-trigger"><span>SHEMA DE TRAVERSE</span></a>
-                        
+                        <?php
+
+                        if(!isset($_SESSION['id']))
+                            echo '<a href="#0" class="cd-subnav-trigger"><span>Reseaux sociaux</span></a>';
+                        else
+                            echo '<a href="espace_membre.php"><span>Espace Membre</span></a>';
+
+                        ?>
                         <ul>
                             <li class="go-back"><a href="#0">Menu</a></li>
                             <li><a href="https://www.facebook.com/Cinecinewax" target="_blank"><img src="resources/imgs/layout/iconFacebook.png"/></a></li>
@@ -196,6 +202,7 @@ and open the template in the editor.
                         </ul>
                     </li>
                 </ul>
+                <a href="../../connexion.php">Se connecter</a>
             </nav>
         </aside>
         
