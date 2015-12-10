@@ -14,7 +14,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
 <!DOCTYPE html>
 <html>
    <head>
-	title>Test</title>
+	<title>Test</title>
 	<link rel="stylesheet" href="chartist.min.css">
 </head>
 <body>
