@@ -103,6 +103,18 @@ include("php/includes/navigator.php");
                     $employeeStatusListAdd->closeCursor();
                     ?>
                 </select><br/>
+                <label for="region">Région : </label>
+                <select name="region" id="region">
+                    <?php
+                    while ($result = $employeeRegionListAdd->fetch()) {
+                        ?>
+                        <option value="<?php echo $result->name; ?>"><?php echo $result->name; ?></option>
+
+                        <?php
+                    }
+                    $employeeRegionListAdd->closeCursor();
+                    ?>
+                </select><br/>
                 <input type="submit" name="insertEmployee" value="Enregistrer">
 
             </form>
