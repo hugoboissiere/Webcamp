@@ -24,7 +24,7 @@ $().ready(function() {
             password2: {
                 required: true,
                 minlength: 5,
-                equalTo: "#add .password"
+                equalTo: "#add #password"
             },
             username: {
                 required: true,
