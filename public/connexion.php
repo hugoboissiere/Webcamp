@@ -13,14 +13,14 @@ $addPHP = array("");
 include("php/includes/database.php");
 include("php/includes/head.php");
 
-// $employeeRegionListAdd = $dbh->query("SELECT * FROM region");
-// $employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
-// while ($result = $employeeRegionListAdd->fetch()) 
-// {
-// 	echo $result->nom_region;
-// 	echo "ffff";
-// }
-// $employeeRegionListAdd->closeCursor();
+$employeeRegionListAdd = $dbh->query("SELECT * FROM region");
+$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
+while ($result = $employeeRegionListAdd->fetch()) 
+{
+	echo $result->nom_region;
+	echo "ffff";
+}
+$employeeRegionListAdd->closeCursor();
 
 
 $statusListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_status  WHERE archive = 'false'");
@@ -76,7 +76,7 @@ echo '<form method="post" action="" id="addForm" autocomplete="off" class="formO
                 <label for="country">Pays : </label>
                 <select name="country" id="country">
                 $employeeRegionListAdd = $dbh->query("SELECT * FROM region");
-$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
+				$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
                     while ($result = $employeeRegionListAdd->fetch()) {
                     <option value="' . $result->nom_region . '">' . $result->nom_region . '</option>
                         
