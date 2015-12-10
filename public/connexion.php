@@ -73,14 +73,13 @@ echo '<form method="post" action="" id="addForm" autocomplete="off" class="formO
                 <label for="city">Ville : </label>
                 <input type="text" name="city" id="city" placeholder="Dakar">
                 <br/>
-                <label for="country">Pays : </label>
-                <select name="country" id="country">
+                <p>
                     while ($result = $employeeRegionListAdd->fetch()) {
                     ' . $result->nom_region . '
                         
                     }
                     $employeeRegionListAdd->closeCursor();
-                </select>
+                </p>
                 <br/>
                 <label for="mail">Email : </label>
                 <input type="email" name="email" id="mail" placeholder="Ex : laurent.dupont@gmail.com">
