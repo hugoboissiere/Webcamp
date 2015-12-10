@@ -173,18 +173,17 @@ include("php/includes/navigator.php");
                 <input type="text" name="city" class="city" placeholder="Dakar">
                 <br/>
                 <label for="country">Pays : </label>
-                <select name="country" class="region">
-                    <option value="" id="actualregion"></option>
+                <select name="country" class="country">
                     <?php
                     while ($result = $employeeRegionListModification->fetch()) {
                         ?>
-                    <option value="<?php echo $result->nom_region; ?>"><?php echo $result->nom_region; ?></option>
+                    <option value="<?php echo $result->id_region; ?>"><?php echo $result->nom_region; ?></option>
                         
                         <?php
                     }
                     $employeeRegionListModification->closeCursor();
                     ?>
-                </select> -->
+                </select>
                 <br/>
                 <label for="mail">Email : </label>
                 <input type="email" name="email" class="email" placeholder="Ex : laurent.dupont@gmail.com">
