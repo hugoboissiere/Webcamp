@@ -186,7 +186,21 @@ include("php/includes/navigator.php");
                     }
                     $employeeStatusListModification->closeCursor();
                     ?>
-                </select><br/>
+                </select>
+                <br/>
+               <label for="country">Pays : </label>
+                <select name="country" class="country">
+                    <option value="" id="actualCountry"></option>
+                    <?php
+                    while ($result = $employeeRegionListModification->fetch()) {
+                        ?>
+                    <option value="<?php echo $result->nom_region; ?>"><?php echo $result->nom_region; ?></option>
+                        
+                        <?php
+                    }
+                    $employeeRegionListModification->closeCursor();
+                    ?>
+                </select>
                 <input type="submit" name="updateEmployee" value="Enregistrer">
 
             </form>
