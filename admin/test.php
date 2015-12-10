@@ -42,9 +42,11 @@ try
     $insert->bindParam(":newsletter", $_POST["newsletter"]);
     $insert->bindParam(":region", $_POST["region"]);
     $insert->execute();
+    echo 'comment est votre blanquette ?';
 }
 catch(PDOException $e)
 {
+        echo 'comment est votre blanquette ?1';
     handle_sql_errors($selectQuery, $e->getMessage());
 }
 
