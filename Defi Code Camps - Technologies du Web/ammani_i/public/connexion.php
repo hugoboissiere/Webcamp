@@ -11,10 +11,10 @@ $addJS =  array("");
 // Queries de cette page
 $addPHP = array("");
 include("php/includes/head.php");
-
+echo "<p>ewergrthytht</p>";
 include("php/includes/scripts.php");
 ?>
-<p>ewergrthytht</p>
+
 <!--scripts Js-->
 
 </body>
