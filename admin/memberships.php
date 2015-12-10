@@ -90,7 +90,7 @@ include("php/includes/navigator.php");
                         
                         <?php
                     }
-                    // $employeeRegionListAdd->closeCursor();
+                    $employeeRegionListAdd->closeCursor();
                     ?>
                 </select>
                 <br/>
@@ -173,15 +173,16 @@ include("php/includes/navigator.php");
                 <input type="text" name="city" class="city" placeholder="Dakar">
                 <br/>
                 <label for="country">Pays : </label>
-                <select name="country" id="actualCountry">
+                <select name="country" class="country">
+                    <option value="" id="actualCountry"></option>
                     <?php
-                    while ($result = $employeeRegionListAdd->fetch()) {
+                    while ($result = $employeeRegionListModification->fetch()) {
                         ?>
                     <option value="<?php echo $result->nom_region; ?>"><?php echo $result->nom_region; ?></option>
                         
                         <?php
                     }
-                    $employeeRegionListAdd->closeCursor();
+                    $employeeRegionListModification->closeCursor();
                     ?>
                 </select>
                 <br/>
