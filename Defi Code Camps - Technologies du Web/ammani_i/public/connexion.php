@@ -11,12 +11,9 @@ $addJS =  array("");
 // Queries de cette page
 $addPHP = array("");
 include("php/includes/head.php");
-?>
 
-
-
-<?php
 include("php/includes/scripts.php");
+echo "ça me gonfle";
 ?>
 
 <!--scripts Js-->
