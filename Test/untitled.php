@@ -15,11 +15,11 @@ $essai = $dbh->query("SELECT * from cw_medias_movies");
 $essai->setFetchMode(PDO::FETCH_OBJ);
 
 while ($result = $essai->fetch())
-{
+{  
    if ($pouet != "")
-      $pouet = $pouet.",'".$result->title." : <br> ".$result->runningTime."'";
+      $pouet = $pouet.",'".$result->title." : ".$result->runningTime."'";
    else
-      $pouet = $result->title." : <br> ".$result->runningTime."'";
+      $pouet = "'".$result->title." : ".$result->runningTime."'";
    if ($serie != "")
       $serie = $serie.", ".$result->runningTime;
    else
@@ -45,8 +45,8 @@ $moviesCompleteList->closeCursor();
          console.log(test2);
 
            new Chartist.Bar('.ct-chart', {
-             labels: ['Test : 20 entrees', 'Test1 : 60 entrees', 'Test2 : 120 entrees', 'Test3 : 200 entrees', 'Test4 : 180 entrees', 'Test5 : 20 entrees', 'Test6 : 10 entrees'],
-             series: [ 20, 60, 120, 200, 180, 20, 10],
+             labels: [<?php echo $pouet ?>],
+             series: [ <?php echo $serie ?> ],
            }, {
              distributeSeries: true,
              width: 1500,
