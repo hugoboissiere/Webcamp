@@ -12,8 +12,9 @@ $addJS =  array("");
 $addPHP = array("");
 include("php/includes/database.php");
 include("php/includes/head.php");
-// $employeeRegionListAdd = $dbh->query("SELECT * FROM region");
-// $employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
+
+$employeeRegionListAdd = $dbh->query("SELECT * FROM region");
+$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
 
 // $statusListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_status  WHERE archive = 'false'");
 // $statusListAdd->setFetchMode(PDO::FETCH_OBJ);
