@@ -4,7 +4,7 @@ $moviesCompleteList = $dbh->query("SELECT * FROM cw_medias_movies WHERE archive 
 $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $moviesCompleteList->fetch())
 {
-   echo $result->country\n;
+   echo $result->country . "\n";
 }
 $moviesCompleteList->closeCursor();             
 ?>
