@@ -17,7 +17,7 @@ $essai->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $essai->fetch())
 {
    if ($pouet != "")
-      $pouet = ",'".$result->title." : <br> ".$result->runningTime."'";
+      $pouet = $pouet.",'".$result->title." : <br> ".$result->runningTime."'";
    else
       $pouet = $result->title." : <br> ".$result->runningTime."'";
    if ($serie != "")
