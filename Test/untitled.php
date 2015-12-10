@@ -24,6 +24,8 @@ while ($result = $essai->fetch())
       $serie = $serie.", ".$result->runningTime;
    else
       $serie = $result->runningTime;
+echo $pouet."<br>";
+echo $serie;
 }
 $moviesCompleteList->closeCursor();
 ?>
@@ -45,8 +47,8 @@ $moviesCompleteList->closeCursor();
          console.log(test2);
 
            new Chartist.Bar('.ct-chart', {
-             labels: [<?php echo $pouet ?>],
-             series: [ <?php echo $serie ?> ],
+             labels: ['Test : 20 entrees', 'Test1 : 60 entrees', 'Test2 : 120 entrees', 'Test3 : 200 entrees', 'Test4 : 180 entrees', 'Test5 : 20 entrees', 'Test6 : 10 entrees'],
+             series: [ 20, 60, 120, 200, 180, 20, 10],
            }, {
              distributeSeries: true,
              width: 1500,
