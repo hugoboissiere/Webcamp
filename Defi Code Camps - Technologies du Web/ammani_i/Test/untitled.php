@@ -16,7 +16,7 @@ $essai->setFetchMode(PDO::FETCH_OBJ);
 
 while ($result = $essai->fetch())
 {
-   echo $essai->runningTime . "\n";
+   echo $result->runningTime . "\n";
 }
 $moviesCompleteList->closeCursor();
 ?>
