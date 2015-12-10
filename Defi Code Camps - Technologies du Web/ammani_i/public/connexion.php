@@ -92,13 +92,16 @@ echo '                </select>
                 <input type="email" name="email" id="mail" placeholder="Ex : laurent.dupont@gmail.com">
                 <br/>
                 <label for="status">Statut : </label>
-                <select name="status" id="status">
+                <select name="status" id="status">';
+                ?>
+                <?php
                     while ($result = $statusListAdd->fetch()) {
-                    <option value="' . $result->name . '">' . $result->name . '</option>
-                       
+                    echo '<option value="' . $result->status . '">' . $result->status . '</option>';      
                     }
                     $statusListAdd->closeCursor();
-                </select>
+                    ?>
+                    <?php
+echo '                </select>
                 <br/>
                 <label for="activity">Activité : </label>
                 <select name="activity" id="activity">
