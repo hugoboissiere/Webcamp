@@ -174,10 +174,17 @@ $employeeStatusListModification = $dbh->query("SELECT * FROM cw_human_resources_
 $employeeStatusListModification->setFetchMode(PDO::FETCH_OBJ);
 
 
+if($_SESSION['auth']['job'] == 1)
+{
+	$employeeRegionListAdd = $dbh->query("SELECT * FROM region");
+	$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
+}
 
-$employeeRegionListAdd = $dbh->query("SELECT * FROM region");
-$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
-
+else
+{
+	$employeeRegionListAdd = $dbh->query("SELECT * FROM region WHERE id_region = '" . $_SESSION['auth']['job'] . "'");
+	$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
+}
 /*
  *          a.  Status
  */
