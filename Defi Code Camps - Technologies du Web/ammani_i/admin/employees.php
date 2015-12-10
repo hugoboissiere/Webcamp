@@ -79,6 +79,7 @@ include("php/includes/navigator.php");
                     <label for="modo">Femme</label>
                     <input type="radio" name="sex" value="Female" id="woman" class="radio" checked>';
                 }
+                ?>
                 <br/>
                 <label for="status">Statut : </label>
                 <select name="status" id="status">
