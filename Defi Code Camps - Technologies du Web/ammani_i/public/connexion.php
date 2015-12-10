@@ -13,10 +13,8 @@ $addPHP = array("");
 include("php/includes/head.php");
 
 include("php/includes/scripts.php");
-echo "ça me gonfle";
-echo "ça me gonfle";
-echo "ça me gonfle";
 ?>
+<p>ewergrthytht</p>
 <!--scripts Js-->
 
 </body>
