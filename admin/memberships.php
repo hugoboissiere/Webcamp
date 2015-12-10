@@ -90,7 +90,7 @@ include("php/includes/navigator.php");
                         
                         <?php
                     }
-                    $employeeRegionListAdd->closeCursor();
+                    // $employeeRegionListAdd->closeCursor();
                     ?>
                 </select>
                 <br/>
