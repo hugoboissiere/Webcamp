@@ -32,7 +32,7 @@ $moviesCompleteList->closeCursor();
       <td>Mike</td>
       <td>Stuntman</td>
       <td>Cascadeur</td>
-      <td><?php echo $result ?>
+      <td><?php echo $result ?><td>
    </tr>
    <tr>
       <td>Mister</td>
