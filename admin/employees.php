@@ -72,11 +72,14 @@ include("php/includes/navigator.php");
                 <br/>
                 Poste : 
                 <label for="adminregion">Administrateur régional</label>
-                <? php
+                <input type="radio" name="poste" value="Administrateur régional" id="region" class="radio">
+                
+                <?php
+
                 if ($_SESSION['auth']['job'] == 1)
                 {
-                    echo '<input type="radio" name="poste" value="Administrateur régional" id="region" class="radio">
-                    <label for="modo">Femme</label>
+                    echo "graphie";
+                    echo '<label for="modo">Test</label>
                     <input type="radio" name="sex" value="Female" id="woman" class="radio" checked>';
                 }
                 ?>
