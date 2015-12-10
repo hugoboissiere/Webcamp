@@ -16,7 +16,7 @@ $essai->setFetchMode(PDO::FETCH_OBJ);
 
 while ($result = $essai->fetch())
 {
-   $pouet = $result->runningTime;
+   $pouet = $pouet." ".$result->runningTime;
 
    echo $pouet . "<br>";
 }
