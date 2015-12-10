@@ -117,7 +117,7 @@ echo '                </select><br/>
                 <input type="submit" class="clearForm" name="InsertMembersOrSubscribers" value="Enregistrer">
                 if (isset($_POST['InsertMembersOrSubscribers']))
                 {
-                	$req = $dbh->p('INSERT INTO cw_human_resources_memberships (" ", membership, newsletter, lastname, firstname, password, username, sex, phoneHome, phoneMobile, neighborhood, city, country) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+                	$req = $dbh->query('INSERT INTO cw_human_resources_memberships (" ", membership, newsletter, lastname, firstname, password, username, sex, phoneHome, phoneMobile, neighborhood, city, country) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
                 }
             </form>
         </div>';
