@@ -46,9 +46,6 @@ $().ready(function() {
             city: {
                 minlength: 2
             },
-            country: {
-                minlength: 2
-            },
             email: {
                 required: true,
                 email: true
