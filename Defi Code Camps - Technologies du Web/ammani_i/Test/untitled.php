@@ -47,7 +47,7 @@ $essai->setFetchMode(PDO::FETCH_OBJ);
       }
       $employeeStatusListAdd->closeCursor();
 
-      echo $essai;
+      echo $result->runningTime;
       ?>
       </table>
    </body>
