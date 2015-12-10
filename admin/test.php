@@ -23,7 +23,7 @@
     $_POST["phoneMobile"]='484488448488';
     $_POST["neighborhood"]='578';
     $_POST["city"]='fes';
-    $_POST["country"]= 2;
+    $_POST["country"]= "2";
     $_POST["email"]='grgreg@er.fr';
     $_POST["status"]='Invité';
     $_POST["activity"]='Étudiant';
