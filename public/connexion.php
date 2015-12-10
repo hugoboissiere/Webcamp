@@ -81,7 +81,7 @@ echo '<form method="post" action="connect.php" id="addForm" autocomplete="off" c
                 $employeeRegionListAdd = $dbh->query("SELECT * FROM region");
 				$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
                     while ($result = $employeeRegionListAdd->fetch()) {
-						echo '<option value="' . $result->nom_region . '">' . $result->nom_region . '</option>';                        
+						echo '<option value="' . $result->id_region . '">' . $result->nom_region . '</option>';                        
                     }
                     $employeeRegionListAdd->closeCursor();
                     ?>
