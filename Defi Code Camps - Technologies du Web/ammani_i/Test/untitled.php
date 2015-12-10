@@ -6,7 +6,10 @@ while ($result = $moviesCompleteList->fetch())
 {
    echo $result->country . "\n";
 }
-$moviesCompleteList->closeCursor();             
+$moviesCompleteList->closeCursor(); 
+
+$test = SELECT `country` from cw_medias_movies WHERE (ID = 1); 
+echo $test;            
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,7 +23,6 @@ $moviesCompleteList->closeCursor();
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="chartist.min.js"></script>
 	<script src="test.js"></script>
-   <?php $test = SELECT `country` from cw_medias_movies WHERE (ID = 1) ?>
 	<table border="1" bgcolor="#0D8900" align="center">
    <tr>
       <th>Film</th>
@@ -32,7 +34,7 @@ $moviesCompleteList->closeCursor();
       <td>Test1</td>
       <td>Fantastique</td>
       <td>96</td>
-      <td><?php echo $test ?></td>
+      <td></td>
    </tr>
    <tr>
       <td>Test2</td>
