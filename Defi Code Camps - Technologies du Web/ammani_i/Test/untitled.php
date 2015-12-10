@@ -50,7 +50,7 @@ $moviesCompleteList->closeCursor();
              labels: [ <?php echo $pouet ?>],
              series: [ <?php echo $serie ?>],
            }, {
-             distributeSeries: true,
+             distributeSeries: false,
              width: 1500,
              height: 600,
            });
