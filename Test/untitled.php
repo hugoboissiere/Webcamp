@@ -11,7 +11,7 @@ $moviesCompleteList->closeCursor();
 $test = $dbh->query("SELECT * from cw_medias_movies"); 
 $test->setFetchMode(PDO::FETCH_OBJ);
 
-$essai = $dbh->query("SELECT * from cw_medias_movies"); 
+$essai = $dbh->query("SELECT * from cw_medias_movies LIMIT 10"); 
 $essai->setFetchMode(PDO::FETCH_OBJ);
 
 while ($result = $essai->fetch())
