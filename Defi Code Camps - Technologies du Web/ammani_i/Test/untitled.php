@@ -21,8 +21,6 @@ while ($result = $essai->fetch())
 }
 $moviesCompleteList->closeCursor();
 ?>
-
-
 <!DOCTYPE html>
 <html>
    <head>
@@ -53,8 +51,6 @@ $moviesCompleteList->closeCursor();
                </tr>';
       }
       $employeeStatusListAdd->closeCursor();
-
-
       ?>
       </table>
    </body>
