@@ -81,8 +81,8 @@ include("php/includes/navigator.php");
                 <label for="city">Ville : </label>
                 <input type="text" name="city" id="city" placeholder="Dakar">
                 <br/>
-                <label for="country">Pays : </label>
-                <select name="country" id="country">
+                <label for="region">Pays : </label>
+                <select name="region" id="region">
                     <?php
                     while ($result = $employeeRegionListAdd->fetch()) {
                         ?>
@@ -172,9 +172,9 @@ include("php/includes/navigator.php");
                 <label for="city">Ville : </label>
                 <input type="text" name="city" class="city" placeholder="Dakar">
                 <br/>
-                <label for="country">Pays : </label>
-                <select name="country" class="country">
-                    <option value="" id="actualCountry"></option>
+                <label for="region">Pays : </label>
+                <select name="region" class="region">
+                    <option value="" id="actualregion"></option>
                     <?php
                     while ($result = $employeeRegionListModification->fetch()) {
                         ?>
@@ -249,7 +249,7 @@ include("php/includes/navigator.php");
                 <tr data-id="<?php echo $result->id; ?>">
                     <td class="title"><?php echo $result->username; ?></td>
                     <td><?php echo $result->email; ?></td>
-                    <td><?php echo $result->country; ?></td>
+                    <td><?php echo $result->region; ?></td>
                     <td><?php  if($result->newsletter === "Yes"){echo "Inscrit";}else{echo "Non";}; ?></td>
                 </tr>
                     <?php
