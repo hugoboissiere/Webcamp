@@ -26,4 +26,6 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
 }
 
 header('Location: connexion.php');
+
 ?>
+
