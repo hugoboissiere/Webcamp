@@ -51,7 +51,7 @@ $moviesCompleteList->closeCursor();
              series: [ <?php echo $serie ?>],
            }, {
              distributeSeries: true,
-             width: 1500,
+             width: 2000,
              height: 600,
            });
      </script>
