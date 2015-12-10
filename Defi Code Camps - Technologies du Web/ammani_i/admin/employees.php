@@ -119,7 +119,10 @@ include("php/includes/navigator.php");
 
             </form>
         </div>
-        <div class="form-style-8" id="modify">
+<?php
+if($_SESSION['auth']['job'] != 1)
+{
+ echo '       <div class="form-style-8" id="modify">
             <h2>Modifier</h2>
             <form method="post" action="" id="modificationForm" class="formOverflow">
                 <input type="hidden" class="id" name="id">
@@ -153,9 +156,7 @@ include("php/includes/navigator.php");
                 <label for="email">Email : </label>
                 <input type="email" name="email" class="email" placeholder="Ex: laurent.dupont@gmail.com">
                 <br/>
-                Poste : 
-                <?php
-
+                Poste : ';
                 if($_SESSION['auth']['job'] == 1)
                 {
                     echo '<br><br><label for="adminregion">Administrateur régional</label>
@@ -172,8 +173,8 @@ include("php/includes/navigator.php");
 
                 echo '<label for="employe">Employé</label>
                 <input type="radio" name="poste" value="7" id="employe" class="radio" checked><br>';          
-                ?>
-                <br/>
+        
+echo '                <br/>
                 <label for="status">Statut : </label>
                 <select name="status" class="status">
                     <option value="" id="actualStatus"></option>
@@ -204,7 +205,9 @@ include("php/includes/navigator.php");
                 <input type="submit" name="updateEmployee" value="Enregistrer">
 
             </form>
-        </div>
+        </div>';
+
+?>
         <div class="form-style-8" id="archive">
             <h2>Archiver</h2>
             <form method="post" action="" id="archiveForm" class="formOverflow">
