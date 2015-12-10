@@ -129,7 +129,7 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
     $_POST["cardNumber"] = "0"; // Pas de numero de compte pour l'instant
 
     $insert = $dbh->prepare("INSERT INTO cw_human_resources_memberships"
-            . "(firstname,lastname,password,cardNumber,username,sex,phoneHome,phoneMobile,neighborhood,city,country,email,status,activity,membership,newsletter, region)"
+            . "(firstname,lastname,password,cardNumber,username,sex,phoneHome,phoneMobile,neighborhood,city,country,email,status,activity,membership,newsletter,region)"
             . " VALUES(:firstname,:lastname,:password,:cardNumber,:username,:sex,:phoneHome,:phoneMobile,:neighborhood,:city,:country,:email,:status,:activity,:membership,:newsletter,:region)");
     $insert->bindParam(":firstname", $_POST["firstname"]);
     $insert->bindParam(":lastname", $_POST["lastname"]);
