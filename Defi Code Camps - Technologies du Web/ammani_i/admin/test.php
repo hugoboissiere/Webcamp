@@ -11,7 +11,8 @@
 
     echo 'comment est votre blanquette ?';
 
-    include("php/includes/database.php")
+    include("php/includes/database.php");
+
     $_POST["firstname"]='gre';
     $_POST["lastname"]='grd';
     $_POST["password"]='eeeee';
@@ -32,7 +33,7 @@
 
 
     try
-    { 
+    {
         $insert = $dbh->prepare("INSERT INTO cw_human_resources_memberships"
             . "(firstname,lastname,password,cardNumber,username,sex,phoneHome,phoneMobile,neighborhood,city,country,email,status,activity,membership,newsletter,region)"
             . " VALUES(:firstname,:lastname,:password,:cardNumber,:username,:sex,:phoneHome,:phoneMobile,:neighborhood,:city,:country,:email,:status,:activity,:membership,:newsletter,:region)");
