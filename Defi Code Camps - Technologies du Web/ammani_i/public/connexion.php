@@ -76,53 +76,53 @@ echo '<form method="post" action="" id="addForm" autocomplete="off" class="formO
                 <label for="country">Pays : </label>
                 <select name="country" id="country">';
                 ?>
-//                 <?php
+                <?php
 
-//                 $employeeRegionListAdd = $dbh->query("SELECT * FROM region");
-// 				$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
-//                     while ($result = $employeeRegionListAdd->fetch()) {
-// 						echo '<option value="' . $result->nom_region . '">' . $result->nom_region . '</option>';                        
-//                     }
-//                     $employeeRegionListAdd->closeCursor();
-//                     ?>
-//                     <?php
-// echo '                </select>
-//                 <br/>
-//                 <label for="mail">Email : </label>
-//                 <input type="email" name="email" id="mail" placeholder="Ex : laurent.dupont@gmail.com">
-//                 <br/>
-//                 <label for="status">Statut : </label>
-//                 <select name="status" id="status">';
-//                 ?>
-//                 <?php
-//                     while ($result = $statusListAdd->fetch()) {
-//                     echo '<option value="' . $result->name . '">' . $result->name . '</option>';      
-//                     }
-//                     $statusListAdd->closeCursor();
-//                     ?>
-//                     <?php
-// echo '                </select>
-//                 <br/>
-//                 <label for="activity">Activité : </label>
-//                 <select name="activity" id="activity">';
-//                 ?>
-//                 <?php
-//                     while ($result = $activityListAdd->fetch()) {
-//                     echo '<option value="' . $result->name . '">' . $result->name . '</option>';                        
-//                     }
-//                     $activityListAdd->closeCursor();
-//                     ?>
-//                     <?php
-// echo '                </select><br/>
-//                 <input type="submit" class="clearForm" name="InsertMembersOrSubscribers" value="Enregistrer">';
-//                  if (isset($_POST['InsertMembersOrSubscribers']))
-//                 {
-//                 	$req = $dbh->exec('INSERT INTO cw_human_resources_memberships (" ", membership, newsletter, lastname, firstname, password, username, sex, phoneHome, phoneMobile, neighborhood, city, country) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
-//                 }
-//                  echo '
+                $employeeRegionListAdd = $dbh->query("SELECT * FROM region");
+				$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
+                    while ($result = $employeeRegionListAdd->fetch()) {
+						echo '<option value="' . $result->nom_region . '">' . $result->nom_region . '</option>';                        
+                    }
+                    $employeeRegionListAdd->closeCursor();
+                    ?>
+                    <?php
+echo '                </select>
+                <br/>
+                <label for="mail">Email : </label>
+                <input type="email" name="email" id="mail" placeholder="Ex : laurent.dupont@gmail.com">
+                <br/>
+                <label for="status">Statut : </label>
+                <select name="status" id="status">';
+                ?>
+                <?php
+                    while ($result = $statusListAdd->fetch()) {
+                    echo '<option value="' . $result->name . '">' . $result->name . '</option>';      
+                    }
+                    $statusListAdd->closeCursor();
+                    ?>
+                    <?php
+echo '                </select>
+                <br/>
+                <label for="activity">Activité : </label>
+                <select name="activity" id="activity">';
+                ?>
+                <?php
+                    while ($result = $activityListAdd->fetch()) {
+                    echo '<option value="' . $result->name . '">' . $result->name . '</option>';                        
+                    }
+                    $activityListAdd->closeCursor();
+                    ?>
+                    <?php
+echo '                </select><br/>
+                <input type="submit" class="clearForm" name="InsertMembersOrSubscribers" value="Enregistrer">';
+                //  if (isset($_POST['InsertMembersOrSubscribers']))
+                // {
+                // 	$req = $dbh->exec('INSERT INTO cw_human_resources_memberships (" ", membership, newsletter, lastname, firstname, password, username, sex, phoneHome, phoneMobile, neighborhood, city, country) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+                // }
+                 echo '
 
-//             </form>
-//         </div>';
+            </form>
+        </div>';
 include("php/includes/scripts.php");
 ?>
 
