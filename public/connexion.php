@@ -74,15 +74,19 @@ echo '<form method="post" action="" id="addForm" autocomplete="off" class="formO
                 <input type="text" name="city" id="city" placeholder="Dakar">
                 <br/>
                 <label for="country">Pays : </label>
-                <p>
+                <p>' ?>
+                	<?php
+
                 $employeeRegionListAdd = $dbh->query("SELECT * FROM region");
 				$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
                     while ($result = $employeeRegionListAdd->fetch()) {
-                    '. $result->nom_region . '
+                    echo  $result->nom_region;
                         
                     }
                     $employeeRegionListAdd->closeCursor();
-                </p>
+                ?>
+                <?php
+echo '                </p>
                 <br/>
                 <label for="mail">Email : </label>
                 <input type="email" name="email" id="mail" placeholder="Ex : laurent.dupont@gmail.com">
