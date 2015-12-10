@@ -85,9 +85,6 @@ $().ready(function() {
             city: {
                 minlength: "It must be at least 2 characters long"
             },
-            country: {
-                minlength: "It must be at least 2 characters long"
-            },
             email: "Please enter a valid email address"
         }
     });
