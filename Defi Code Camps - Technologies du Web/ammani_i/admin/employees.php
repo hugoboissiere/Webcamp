@@ -76,19 +76,19 @@ include("php/includes/navigator.php");
                 if($_SESSION['auth']['job'] == 1)
                 {
                     echo '<label for="adminregion">Administrateur régional</label>
-                    <input type="radio" name="poste" value="2" id="region" class="radio">
+                    <input type="radio" name="poste" value="2" id="region" class="radio"><br>
                     <label for="modoprog">Modérateur Programmation et salle</label>
-                    <input type="radio" name="poste" value="3" id="modoprog" class="radio">
+                    <input type="radio" name="poste" value="3" id="modoprog" class="radio"><br>
                     <label for="modomembres">Modérateur Membres</label>
-                    <input type="radio" name="poste" value="4" id="modomembre" class="radio">
+                    <input type="radio" name="poste" value="4" id="modomembre" class="radio"><br>
                     <label for="modoempl">Modérateur Employés</label>
-                    <input type="radio" name="poste" value="5" id="modoempl" class="radio">
+                    <input type="radio" name="poste" value="5" id="modoempl" class="radio"><br>
                     <label for="modocaisse">Modérateur Caisse</label>
-                    <input type="radio" name="poste" value="6" id="modocaisse" class="radio">';                
+                    <input type="radio" name="poste" value="6" id="modocaisse" class="radio"><br>';                
                 }
 
                 echo '<label for="employe">Employé</label>
-                <input type="radio" name="poste" value="7" id="employe" class="radio" checked>';          
+                <input type="radio" name="poste" value="7" id="employe" class="radio" checked><br>';          
                 ?>
                 <br/>
                 <label for="status">Statut : </label>
