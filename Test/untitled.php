@@ -14,7 +14,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
 $essai = $dbh->query("SELECT * from cw_medias_movies WHERE (ID = 1)"); 
 $essai->setFetchMode(PDO::FETCH_OBJ);
 
-echo $result->runningTime;
+echo $essai->runningTime;
 ?>
 
 
