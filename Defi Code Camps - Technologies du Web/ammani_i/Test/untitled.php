@@ -31,7 +31,7 @@ $moviesCompleteList->closeCursor();
       <td>Test1</td>
       <td>Fantastique</td>
       <td>96</td>
-      <td><?php $test = SELECT `country` from cw_medias_movies WHERE (ID = 1); echo $test; ?></td>
+      <td><?php $test = SELECT `country` from cw_medias_movies WHERE (ID = 1); echo $test ?></td>
    </tr>
    <tr>
       <td>Test2</td>
