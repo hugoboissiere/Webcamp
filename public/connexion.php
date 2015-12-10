@@ -96,7 +96,7 @@ echo '                </select>
                 ?>
                 <?php
                     while ($result = $statusListAdd->fetch()) {
-                    echo '<option value="' . $result->status . '">' . $result->status . '</option>';      
+                    echo '<option value="' . $result->name . '">' . $result->name . '</option>';      
                     }
                     $statusListAdd->closeCursor();
                     ?>
