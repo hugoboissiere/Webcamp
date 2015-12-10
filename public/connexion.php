@@ -119,9 +119,12 @@ echo '                </select>
 echo '                </select><br/>
                 <input type="submit" class="clearForm" name="InsertMembersOrSubscribers" value="Enregistrer">';
                  echo '
-
+                 <br/>
             </form>
         </div>';
+
+        echo '<p>SE CONNECTER<p/>
+        <br>';
 include("php/includes/scripts.php");
 ?>
 
