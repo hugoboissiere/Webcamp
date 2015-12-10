@@ -1,5 +1,5 @@
 <?php session_start();
-include("../admin/php/includes/modules/database.php");
+include("../admin/php/includes/database.php");
 $moviesCompleteList = $dbh->query("SELECT * FROM cw_medias_movies WHERE archive = 'false'");
 $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $moviesCompleteList->fetch())
