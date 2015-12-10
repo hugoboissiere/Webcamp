@@ -14,10 +14,10 @@ include("php/includes/head.php");
 
 include("php/includes/scripts.php");
 echo "ça me gonfle";
+echo "ça me gonfle";
+echo "ça me gonfle";
 ?>
-<p>ça me gonfle</p>
 <!--scripts Js-->
-
 
 </body>
 </html>
