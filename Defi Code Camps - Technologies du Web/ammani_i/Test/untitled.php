@@ -9,8 +9,9 @@ while ($result = $moviesCompleteList->fetch())
 $moviesCompleteList->closeCursor(); 
 
 $test = "SELECT `country` from cw_medias_movies WHERE (ID = 1)"; 
-$row=mysql_fetch_assoc($test);
-echo $row;
+$row=mysqli_fetch_assoc($test);
+$country = $row['country'];
+echo $country;
 ?>
 <!DOCTYPE html>
 <html>
