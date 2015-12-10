@@ -173,6 +173,11 @@ $employeeStatusListAdd->setFetchMode(PDO::FETCH_OBJ);
 $employeeStatusListModification = $dbh->query("SELECT * FROM cw_human_resources_employees_status  WHERE archive = 'false'");
 $employeeStatusListModification->setFetchMode(PDO::FETCH_OBJ);
 
+
+
+$employeeRegionListAdd = $dbh->query("SELECT * FROM region");
+$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
+
 /*
  *          a.  Status
  */
