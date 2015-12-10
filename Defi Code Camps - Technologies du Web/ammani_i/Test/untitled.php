@@ -15,7 +15,7 @@ $essai = $dbh->query("SELECT * from cw_medias_movies WHERE (ID = 1)");
 $essai->setFetchMode(PDO::FETCH_OBJ);
 
 while ($result = $essai->fetch()){
-   echo $essai->runningTime;
+   echo $essai->runningTime ;
 }
 $moviesCompleteList->closeCursor();
 ?>
