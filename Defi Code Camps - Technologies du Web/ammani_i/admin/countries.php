@@ -13,12 +13,10 @@ $addJS = array("js/form/countries.js","js/rowSelection/countries.js");
     
     
 // PHP (queries) de cette page
-$addPHP = array("");
+$addPHP = array("queries/select");
     
 include("php/includes/head.php");
 include("php/includes/navigator.php");
-
-include("php/includes/select.php");
 ?>
 
 
@@ -84,18 +82,13 @@ include("php/includes/select.php");
                 </tr>
             </thead>
             <tbody>
-<?php
-                $countriesCompleteList = $dbh->query("SELECT * FROM cw_medias_countries  WHERE archive = 'false'");
-$countriesCompleteList->setFetchMode(PDO::FETCH_OBJ);
-?>
                 <?php
                 while ($result = $countriesCompleteList->fetch()) {
-                    ?>
-                    <tr data-id="<?php echo $result->id; ?>">
-                    <td class="title"><?php echo $result->name; ?></td>
-                    <td><?php echo $result->abbreviation; ?></td>
-                </tr>
-                    <?php
+                    
+                   echo "<tr data-id='" . $result->id . "'>
+                    <td class='title'>" . $result->name . "</td>
+                    <td>" . $result->abbreviation . "</td>
+                </tr>";
                 }
                 $countriesCompleteList->closeCursor();
                 ?>
