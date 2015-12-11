@@ -13,8 +13,8 @@ $addJS = array("js/form/countries.js","js/rowSelection/countries.js");
     
     
 // PHP (queries) de cette page
-//$addPHP = array();
-include("php/queries/select.php");
+$addPHP = array("queries/select");
+    
 include("php/includes/head.php");
 include("php/includes/navigator.php");
 ?>
@@ -82,11 +82,8 @@ include("php/includes/navigator.php");
                 </tr>
             </thead>
             <tbody>
-                <tr><td>test</td><td>tr</td></tr>
                 <?php
-                echo "tttt";
                 while ($result = $countriesCompleteList->fetch()) {
-                    echo "tet";
                     ?>
                     <tr data-id="<?php echo $result->id; ?>">
                     <td class="title"><?php echo $result->name; ?></td>
@@ -100,14 +97,6 @@ include("php/includes/navigator.php");
             </tbody>
         </table>
     </div>
-
-
-    <p>
-                        <?php while ($result = $countMediasMovies->fetch()) {
-                    echo $result->count;
-                } $countMediasMovies->closeCursor(); ?>
-            </p>
-            <p>test</p>
 </main>
 
 
