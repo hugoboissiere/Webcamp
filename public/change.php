@@ -52,16 +52,16 @@ $archive = $_POST['archive'];
 // echo $_SESSION['username'];
 // $sele->closeCursor(); 
 // echo PDO::errorCode();
-try {
+// try {
 $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET username = 'qwerty' WHERE id = 9 ");
-$dbh->aff
-    }
-catch(PDOException $e)
-{
-    echo $e->getMessage();
-}//$rep = $bdh->exec("UPDATE cw_human_resources_memberships SET firstname = " . $firstname . " , password = ". $password .", archive = ". $archive . ", lastname = " . $lastname ." , username = " . $username . " , sex = " . $sex . " , phoneHome = " . $phoneHome ." , phoneMobile = " . $phoneMobile ." , neighborhood = " . $neighborhood ." , city = " . $city . " , country = " . $country . " , email = " . $email . " , membership = " . $membership . " , newsletter = " . $newsletter . ", status = ". $status . " , activity = " . $activity ." WHERE id =  ".$_SESSION['id']." ");
+// $dbh->aff
+//     }
+// catch(PDOException $e)
+// {
+//     echo $e->getMessage();
+//$rep = $bdh->exec("UPDATE cw_human_resources_memberships SET firstname = " . $firstname . " , password = ". $password .", archive = ". $archive . ", lastname = " . $lastname ." , username = " . $username . " , sex = " . $sex . " , phoneHome = " . $phoneHome ." , phoneMobile = " . $phoneMobile ." , neighborhood = " . $neighborhood ." , city = " . $city . " , country = " . $country . " , email = " . $email . " , membership = " . $membership . " , newsletter = " . $newsletter . ", status = ". $status . " , activity = " . $activity ." WHERE id =  ".$_SESSION['id']." ");
 
-echo $rep . "TEST";
+// echo $rep . "TEST";
 // echo PDO::errorCode();
 // echo $firstname . $_SESSION['username'] ;
 // if ($rep == NULL)
