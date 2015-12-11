@@ -11,7 +11,7 @@ while ($result = $moviesTitleList->fetch()) {
 }
 $moviesTitleList->closeCursor();
 
-echo $nb;
+// echo $nb;
 $update = $dbh->prepare("UPDATE cw_medias_movies "
 	. "SET nb_entrees = :nb "
 	. "WHERE id = 1");
