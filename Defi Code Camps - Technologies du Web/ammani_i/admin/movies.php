@@ -103,7 +103,7 @@ include("php/includes/navigator.php");
     </div>
         
     <!--Popin-->
-   <div style='display:none'>
+   <div >
     saltu
         <!-- <div class="form-style-8" id="add">
             <h2>Ajouter</h2>
