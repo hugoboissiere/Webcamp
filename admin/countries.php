@@ -82,17 +82,7 @@ include("php/includes/navigator.php");
                 </tr>
             </thead>
             <tbody>
-                <?php
-                while ($result = $countriesCompleteList->fetch()) {
-                    ?>
-                    <tr data-id="<?php echo $result->id; ?>">
-                    <td class="title"><?php echo $result->name; ?></td>
-                    <td><?php echo $result->abbreviation; ?></td>
-                </tr>
-                    <?php
-                }
-                $countriesCompleteList->closeCursor();
-                ?>
+                <tr><td>test</td><td>tr</td></tr>
                 
             </tbody>
         </table>
