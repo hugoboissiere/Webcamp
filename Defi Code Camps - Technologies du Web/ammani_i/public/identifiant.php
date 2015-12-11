@@ -1,7 +1,7 @@
 <?php
 include("php/includes/database.php");
 
-if (isset('coco'))
+if (isset($_POST["coco"]))
 {
 
 	$select = $bdh->query('SELECT username, password FROM cw_human_resources_memberships WHERE username = $_POST['username']');
