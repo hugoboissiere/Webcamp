@@ -3,16 +3,16 @@ include("php/includes/database.php");
 include("php/includes/head.php");
 
 echo 	'Login : ' . $_SESSION['username'] . '<br /> 
-   		Prenom : ' . $_SESSION['firstname'] . ' 
-   		Nom : ' . $_SESSION['lastname'] . ' 
-   		Sexe : ' . $_SESSION['sex'] . ' 
-   		Numéro de domicile : ' .$_SESSION['phoneHome'] . '
-   		Numéro de portable : ' .$_SESSION['phoneMobile'] . '
-   		Quartier : ' . $_SESSION['neighborhood'] .' 
-   		Ville : ' . $_SESSION['city'] . ' 
-   		Pays : ' . $_SESSION['country'] . ' 
-   		Email : ' . $_SESSION['email'] . '
-   		Statut : ' . $_SESSION['status'] . '
+   		Prenom : ' . $_SESSION['firstname'] . '<br /> 
+   		Nom : ' . $_SESSION['lastname'] . '<br /> 
+   		Sexe : ' . $_SESSION['sex'] . '<br /> 
+   		Numéro de domicile : ' .$_SESSION['phoneHome'] . '<br />
+   		Numéro de portable : ' .$_SESSION['phoneMobile'] . '<br />
+   		Quartier : ' . $_SESSION['neighborhood'] .'<br /> 
+   		Ville : ' . $_SESSION['city'] . '<br /> 
+   		Pays : ' . $_SESSION['country'] . '<br /> 
+   		Email : ' . $_SESSION['email'] . '<br />
+   		Statut : ' . $_SESSION['status'] . '<br />
    		Activité : ' . $_SESSION['activity'] . ' ';
 
 ?>   		
