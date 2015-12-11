@@ -9,7 +9,6 @@ $rep->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $rep->fetch())
 {
    $_SESSION['username'] = $result->username;
-   $_SESSION['id'] = $result->id;
    $_SESSION['firstname'] = $result->firstname;
    $_SESSION['lastname'] = $result->lastname;
    $_SESSION['password'] = $result->password;
