@@ -114,7 +114,7 @@ $("#modificationForm").validate({
         password2: {
             required: true,
             minlength: 5,
-            equalTo: "#modify #password"
+            equalTo: "#modify .password"
         },
         username: {
             required: true,
