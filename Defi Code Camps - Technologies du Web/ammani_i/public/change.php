@@ -1,6 +1,6 @@
 <?php
 echo "tototototot";
-// print_r($_POST);
+print_r($_POST);
 // session_start();
 
 // include("php/includes/database.php");
