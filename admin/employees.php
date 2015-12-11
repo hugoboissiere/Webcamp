@@ -103,12 +103,12 @@ include("php/includes/navigator.php");
                     $employeeStatusListAdd->closeCursor();
                     ?>
                 </select><br/>
-                <label for="region">Région : </label>
-                <select name="region" id="region">
+                <label for="country">Région : </label>
+                <select name="country" id="country">
                     <?php
                     while ($result = $employeeRegionListAdd->fetch()) {
                         ?>
-                        <option value="<?php echo $result->nom_region; ?>"><?php echo $result->nom_region; ?></option>
+                        <option value="<?php echo $result->id_region; ?>"><?php echo $result->nom_region; ?></option>
 
                         <?php
                     }
@@ -181,7 +181,7 @@ include("php/includes/navigator.php");
                     <?php
                     while ($result = $employeeStatusListModification->fetch()) {
                         ?>
-                    <option value="<?php echo $result->name; ?>"><?php echo $result->name; ?></option>
+                        <option value="<?php echo $result->name; ?>"><?php echo $result->name; ?></option>
 
                         <?php
                     }
@@ -189,13 +189,13 @@ include("php/includes/navigator.php");
                     ?>
                 </select>
                 <br/>
-               <label for="country">Pays : </label>
+                <label for="country">Pays : </label>
                 <select name="country" class="country">
                     <option value="" id="actualCountry"></option>
                     <?php
                     while ($result = $employeeRegionListModification->fetch()) {
                         ?>
-                    <option value="<?php echo $result->nom_region; ?>"><?php echo $result->nom_region; ?></option>
+                        <option value="<?php echo $result->nom_region; ?>"><?php echo $result->nom_region; ?></option>
                         
                         <?php
                     }
@@ -227,7 +227,7 @@ include("php/includes/navigator.php");
                     <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col style="background-color:#232b2d" data-tablesaw-priority="1">Prénom</th>
                     <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" style="background-color:#232b2d">Poste</th>
                     <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3" style="background-color:#232b2d">Statut</th>   
-                        
+
                 </tr>
             </thead>
             <tbody>
@@ -245,10 +245,10 @@ include("php/includes/navigator.php");
                         {
                             echo $idk2['description'];
                         }
-            
+
                         $categorie2->closeCursor();
 
-                         ?></td>
+                        ?></td>
                         <td><?php echo $result->status; ?></td>
                     </tr>
                     <?php
