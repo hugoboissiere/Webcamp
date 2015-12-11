@@ -30,6 +30,7 @@ $sele->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $sele->fetch())
 {
 	//var_dump($result);
+	echo $result->username;
    $_SESSION['username'] = $result->username;
    $_SESSION['firstname'] = $result->firstname;
    $_SESSION['lastname'] = $result->lastname;
