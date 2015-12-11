@@ -64,7 +64,7 @@
         
     $update = $dbh->prepare("UPDATE cw_human_resources_memberships "
         . "SET firstname = :firstname, lastname = :lastname, password = :password, cardNumber = :cardNumber, username = :username, sex = :sex, phoneHome = :phoneHome, phoneMobile = :phoneMobile, neighborhood = :neighborhood, city = :city, country = :country, email = :email, status = :status, activity = :activity, membership = :membership, newsletter = :newsletter "
-        . "WHERE id = :id");
+        . "WHERE id = :1");
     $update->bindParam(":firstname", $_POST["firstname"]);
     $update->bindParam(":lastname", $_POST["lastname"]);
     $update->bindParam(":password", $_POST["password"]);
