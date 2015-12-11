@@ -1,3 +1,7 @@
+table { 
+	margin : 10px auto auto auto; 
+}
+
 table.tableau {
 	border-collapse: collapse;
     border: 1px solid black;
