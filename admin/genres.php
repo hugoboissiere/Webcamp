@@ -24,6 +24,7 @@ include("php/includes/navigator.php");
 <main>
     
     <!--Titre-->
+    <?php var_dump($_SESSION); ?>
     <div id="titleAndFilter">
         <h2><?php echo $pageTitle;?></h2>
         <ul>
