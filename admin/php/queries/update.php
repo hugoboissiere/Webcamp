@@ -64,18 +64,11 @@ if (isset($_POST["updateLanguage"])) {
     $update->execute();
 }
 
-$employeesCompleteList = $dbh->query("SELECT * FROM cw_human_resources_memberships WHERE firstname = '" . $_POST["firstname"] . "'");
-$employeesCompleteList->setFetchMode(PDO::FETCH_OBJ);
-while ($result = $moviesCompleteList->fetch())
-{
- $id = $result->id;
-}
-$employeesCompleteList->closeCursor();
-
 if (isset($_POST["updateEmployee"])) {
     $update = $dbh->prepare("UPDATE cw_human_resources_employees "
         . "SET firstname = :firstname, lastname = :lastname, birthDate = :birthDate, sex = :sex, address = :address, city = :city, phoneHome = :phoneHome, phoneMobile = :phoneMobile, email = :email, job = :job, status = :status, password = :password, country = :country "
         . "WHERE id = :id");
+    $update->bindParam(":id", $_POST["id"]);
     $update->bindParam(":lastname", $_POST["lastname"]);
     $update->bindParam(":firstname", $_POST["firstname"]);
     $update->bindParam(":birthDate", $_POST["birthDate"]);
