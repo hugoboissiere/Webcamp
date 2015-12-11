@@ -31,12 +31,12 @@
     $_POST["newsletter"]='Yes';
 
 
-    $test = $dbh->query("SELECT * from cw_human_resources_memberships WHERE username = '" . $_POST['username'] . "'"); 
-    $test->setFetchMode(PDO::FETCH_OBJ);
-    while ($result = $test->fetch())
-    {
-        $id = $result['id'];
-    }
+    // $test = $dbh->query("SELECT * from cw_human_resources_memberships WHERE username = '" . $_POST['username'] . "'"); 
+    // $test->setFetchMode(PDO::FETCH_OBJ);
+    // while ($result = $test->fetch())
+    // {
+    //     $id = $result['id'];
+    // }
 
 
 
