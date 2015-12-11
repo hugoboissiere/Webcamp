@@ -52,7 +52,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
       $employeeStatusListAdd->closeCursor();
       ?>
       </table>
-      <p id="test1" data-numberone="20, 60, 120" data-numbertwo="200, 180, 20" class="titre">Par genre</p>
+      <p>Par genre</p>
       <table class="tableau">
       <tr>
          <th>Genre</th>
