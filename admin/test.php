@@ -35,7 +35,7 @@ $moviesCompleteList = $dbh->query("SELECT * FROM cw_human_resources_memberships 
 $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $moviesCompleteList->fetch())
 {
-   echo $result->username;
+   echo $result->id;
 }
 $moviesCompleteList->closeCursor();
 
