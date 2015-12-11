@@ -92,7 +92,7 @@ $().ready(function() {
 $("#modificationForm").validate({
     submitHandler: function() {
         var formData = $("#modificationForm").serialize();
-        alert(formData);
+        console.log(formData);
         $.ajax({
             type: "POST",
             url: "php/queries/update.php",
