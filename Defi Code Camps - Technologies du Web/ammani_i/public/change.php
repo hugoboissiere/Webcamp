@@ -23,6 +23,8 @@ $membership = $_POST['membership'];
 $newsletter = $_POST['newsletter'];
 $archive = $_POST['archive'];
 
+echo $firstname;
+
 
 
 $rep = $bdh->exec('UPDATE cw_human_resources_memberships SET firstname = "' . $firstname . '" , password = "'. $password .'", archive = "'. $archive . '", lastname = "' . $lastname .'" , username = "' . $username . '" , sex = "' . $sex . '" , phoneHome = "' . $phoneHome .'" , phoneMobile = "' . $phoneMobile .'" , neighborhood = "' . $neighborhood .'" , city = "' . $city . '" , country = "' . $country . '" , email = "' . $email . '" , membership = "' . $membership . '" , newsletter = "' . $newsletter . '", status = "'. $status . '" , activity = "' . $activity . '"  WHERE id = ' . $_SESSION['id'] . ' ');
