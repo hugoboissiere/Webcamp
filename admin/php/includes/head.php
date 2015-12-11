@@ -6,7 +6,7 @@ if (!isset($_SESSION['auth']) && count($_SESSION['auth']) != 12) {
 }
 
 include("php/queries/count.php");
-
+include("php/queries/select.php");
 // Fichiers CSS/JS/PHP ajoutés
 $css = $addCSS;
 $js = $addJS;
