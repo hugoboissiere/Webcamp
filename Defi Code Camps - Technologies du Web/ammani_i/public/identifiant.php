@@ -11,8 +11,9 @@ include("php/includes/database.php");
 	// {
 	// 	$_SESSION['username'] = $_POST['username'];
 	// } 
+$_POST['username'] = "testdimanche";
 
-	$moviesCompleteList = $dbh->query('SELECT * FROM cw_human_resources_memberships');
+	$moviesCompleteList = $dbh->query('SELECT * FROM cw_human_resources_memberships WHERE username = "' . $_POST['username'] . '" ');
 $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $moviesCompleteList->fetch())
 {
