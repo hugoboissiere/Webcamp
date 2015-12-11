@@ -82,9 +82,6 @@ include("php/includes/navigator.php");
                 </tr>
             </thead>
             <tbody>
-                <?php while ($result = $countMediasMovies->fetch()) {
-                    echo $result->count;
-                } $countMediasMovies->closeCursor(); ?>
                 <?php
                 while ($result = $countriesCompleteList->fetch()) {
                     ?>
@@ -100,6 +97,13 @@ include("php/includes/navigator.php");
             </tbody>
         </table>
     </div>
+
+
+    <p>
+                        <?php while ($result = $countMediasMovies->fetch()) {
+                    echo $result->count;
+                } $countMediasMovies->closeCursor(); ?>
+            </p>
 </main>
 
 
