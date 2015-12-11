@@ -1,25 +1,17 @@
 <?php
 include("php/includes/database.php");
 
-// if (isset($_POST["username"]) AND isset($_POST["password"]))
+if (isset($_POST["email"]) AND isset($_POST["password"]))
 
-// {
-	// $username = $_POST['username'];
+{
 
-	// $select = $bdh->query('SELECT username, password FROM cw_human_resources_memberships WHERE username = "' . $username . '" ');
- // 	if ($select['password'] == $_POST['password'])
-	// {
-	// 	$_SESSION['username'] = $_POST['username'];
-	// } 
-$_POST['username'] = "testdimanche";
-
-	$moviesCompleteList = $dbh->query('SELECT * FROM cw_human_resources_memberships WHERE username = "' . $_POST['username'] . '" ');
+	$moviesCompleteList = $dbh->query('SELECT * FROM cw_human_resources_memberships WHERE email = "' . $_POST['email'] . '"  AND password = "' . $_POST["password"] .'"  ');
 $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $moviesCompleteList->fetch())
 {
-   $username = $result->username;
-   echo $username;
+   $_SESSION['username'] = $result->username;
 }
+echo $_SESSION['username'];
 $moviesCompleteList->closeCursor(); 
 
  // WHERE username = "' . $username . '" '
