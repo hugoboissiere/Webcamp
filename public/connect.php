@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 include("php/includes/database.php");
 if (isset($_POST["InsertMembersOrSubscribers"])) {
     $_POST["cardNumber"] = "0"; // Pas de numero de compte pour l'instant
