@@ -24,7 +24,7 @@ include("php/includes/select.php");
 
 
 <main>
-  <!--   <div id="titleAndFilter">
+    <div id="titleAndFilter">
         <h2><?php echo $pageTitle;?></h2>
         <ul>
             <li>
@@ -74,7 +74,7 @@ include("php/includes/select.php");
                 <br/>
             </form>
         </div>
-    </div> -->
+    </div>
     <div id="table">
         <table class="tablesaw" data-tablesaw-sortable data-tablesaw-mode="stack">
             <thead>
@@ -84,11 +84,6 @@ include("php/includes/select.php");
                 </tr>
             </thead>
             <tbody>
-                 <?php
-                $countriesCompleteList = $dbh->query("SELECT * FROM cw_medias_countries  WHERE archive = 'false'");
-$countriesCompleteList->setFetchMode(PDO::FETCH_OBJ);
-
-?>
                 <?php
                 while ($result = $countriesCompleteList->fetch()) {
                     ?>
