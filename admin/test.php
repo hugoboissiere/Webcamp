@@ -9,7 +9,7 @@
 <body>
     <?php
 
-    echo 'comment est votre blanquette ?';
+    echo 'comment est votre blanquette ?fwe';
 
     include("php/includes/database.php");
 
