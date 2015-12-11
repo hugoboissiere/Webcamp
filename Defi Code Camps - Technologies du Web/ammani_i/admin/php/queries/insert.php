@@ -163,8 +163,8 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
 if (isset($_POST["insertEmployee"])) {
     
     $insert = $dbh->prepare("INSERT INTO cw_human_resources_employees"
-            . "(lastname,firstname,birthDate,sex,address,city,phoneHome,phoneMobile,email,job,status)"
-            . " VALUES(:lastname,:firstname,:birthDate,:sex,:address,:city,:phoneHome,:phoneMobile,:email,:job,:status)");
+            . "(lastname,firstname,birthDate,sex,address,city,phoneHome,phoneMobile,email,job,status,password,country)"
+            . " VALUES(:lastname,:firstname,:birthDate,:sex,:address,:city,:phoneHome,:phoneMobile,:email,:job,:status,:password,:country)");
     $insert->bindParam(":lastname", $_POST["lastname"]);
     $insert->bindParam(":firstname", $_POST["firstname"]);
     $insert->bindParam(":birthDate", $_POST["birthDate"]);
@@ -176,6 +176,8 @@ if (isset($_POST["insertEmployee"])) {
     $insert->bindParam(":email", $_POST["email"]);
     $insert->bindParam(":job", $_POST["job"]);
     $insert->bindParam(":status", $_POST["status"]);
+    $insert->bindParam(":password", $_POST["job"]);
+    $insert->bindParam(":country", $_POST["status"]);
     $insert->execute();
 }
     
