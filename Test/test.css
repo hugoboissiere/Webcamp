@@ -11,5 +11,6 @@ table.tableau td, th {
 
 .titre {
 	text-align: center;
-	font: 20px Verdana, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-family: Arial, sans-serif;
 }
