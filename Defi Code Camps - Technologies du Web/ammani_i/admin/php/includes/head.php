@@ -12,7 +12,7 @@ $css = $addCSS;
 $js = $addJS;
 $php = $addPHP;
 
-
+echo "fwe";
 if (count($php) > 0 && $php[0] != "") {
     for ($i = 0; $i < count($php); $i++) {
         include("php/" . $php[$i] . ".php");
