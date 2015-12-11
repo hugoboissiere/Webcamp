@@ -22,10 +22,10 @@ echo '<form method="post" action="change.php" id="addForm" autocomplete="off" cl
                 <input type="text" name="firstname" id="firstname" value="' . $_SESSION['firstname'] . '">
                 <br/>
                 <label for="password">Mot de passe : </label>
-                <input type="password" type="password" name="password" id="password" value="Au moins 5 caractères" pattern=".{5,}">
+                <input type="password" type="password" name="password" id="password" value="' . $_SESSION['password'] . '" pattern=".{5,}">
                 <br/>
                 <label for="password2">Retaper le mdp : </label>
-                <input type="password" name="password2" id="password2" value="Au moins 5 caractères" pattern=".{5,}">
+                <input type="password" name="password2" id="password2" value="' . $_SESSION['password2'] . '" pattern=".{5,}">
                 <br/>
                 <label for="username">Pseudo : </label>
                 <input type="text" name="username" id="username" value="' . $_SESSION['username'] . '">
