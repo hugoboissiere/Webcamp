@@ -16,7 +16,7 @@
     $_POST["firstname"]='gre';
     $_POST["lastname"]='grd';
     $_POST["password"]='eeeee';
-    $_POST["username"]='greree';
+    $_POST["username"]='testdimanche';
     $_POST["sex"]='Female';
     $_POST["cardNumber"]='0';
     $_POST["phoneHome"]='546467984649';
@@ -31,11 +31,11 @@
     $_POST["newsletter"]='Yes';
 
 
-$moviesCompleteList = $dbh->query("SELECT * FROM cw_medias_movies WHERE archive = 'false'");
+$moviesCompleteList = $dbh->query("SELECT * FROM cw_human_resources_memberships WHERE username = '" . $_POST["username"] "'");
 $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $moviesCompleteList->fetch())
 {
-   echo $result->country . "\n";
+   echo $result->id . "\n";
 }
 $moviesCompleteList->closeCursor();
 
