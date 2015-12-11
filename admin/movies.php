@@ -101,10 +101,26 @@ include("php/includes/navigator.php");
             </li>
         </ul>
     </div>
+
+        
+    <!--Tableau-->
+    <div id="table">
+        <table class="tablesaw" data-tablesaw-sortable data-tablesaw-mode="stack">
+            <thead>
+                <tr>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" style="background-color:#232b2d">Titre</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col style="background-color:#232b2d" data-tablesaw-priority="1">Genre</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" style="background-color:#232b2d">Année de sortie</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3" style="background-color:#232b2d"><abbr title="Rotten Tomato Rating">Durée</abbr></th>   
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3" style="background-color:#232b2d">Images</th>   
+                </tr>
+            </thead>
+
+        </table>
+    </div>
         
     <!--Popin-->
-   <div >
-    saltu
+   <div style='display:none'>
         <!-- <div class="form-style-8" id="add">
             <h2>Ajouter</h2>
             <form method="post" action="" id="addForm" class="formOverflow">
@@ -270,22 +286,7 @@ include("php/includes/navigator.php");
             <span id="status" ></span>
         </div> -->
     </div> 
-        
-    <!--Tableau-->
-    <div id="table">
-        <table class="tablesaw" data-tablesaw-sortable data-tablesaw-mode="stack">
-            <thead>
-                <tr>
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" style="background-color:#232b2d">Titre</th>
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col style="background-color:#232b2d" data-tablesaw-priority="1">Genre</th>
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" style="background-color:#232b2d">Année de sortie</th>
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3" style="background-color:#232b2d"><abbr title="Rotten Tomato Rating">Durée</abbr></th>   
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3" style="background-color:#232b2d">Images</th>   
-                </tr>
-            </thead>
 
-        </table>
-    </div>
 </main>
 <script src="js/layoutNavigator.js"></script> <!-- Resource jQuery -->
 </body>
