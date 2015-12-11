@@ -18,7 +18,6 @@ $test->setFetchMode(PDO::FETCH_OBJ);
 	<title>Test</title>
 	<link rel="stylesheet" href="chartist.min.css">
    <link rel="stylesheet" type="text/css" href="test.css"></link>
-   </head>
    <body>
 	   <p id="test1" data-numberone="20, 60, 120" data-numbertwo="200, 180, 20" class="titre">Nombre d'entrees</p>
 	   <div class="ct-chart"></div>
@@ -51,16 +50,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
       }
       $employeeStatusListAdd->closeCursor();
       ?>
-      <table>
-      <p>Par genre</p>
-      <tr>
-         <th>Film</th>
-         <th>Genre</th>
-         <th>Duree (en min)</th>
-         <th>Pays/Continent</th>
-         <th>Nombre d'entrees total</th>
-      </tr>
       </table>
-      </table>
+   </head>
    </body>
 </html>
