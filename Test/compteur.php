@@ -3,7 +3,7 @@
 	// $compteur->setFetchMode(PDO::FETCH_OBJ);
 	//header("Location: untitled.php");//
 echo "test";
-
+echo "cfeededbh hjb";
 $moviesTitleList = $dbh->query("SELECT nb_entrees FROM cw_medias_movies WHERE id = 1");
 $moviesTitleList->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $moviesTitleList->fetch()) {
