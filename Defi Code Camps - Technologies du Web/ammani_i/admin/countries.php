@@ -22,7 +22,7 @@ include("php/includes/navigator.php");
 
 
 <main>
-    <div id="titleAndFilter">
+<!--     <div id="titleAndFilter">
         <h2><?php echo $pageTitle;?></h2>
         <ul>
             <li>
@@ -72,7 +72,7 @@ include("php/includes/navigator.php");
                 <br/>
             </form>
         </div>
-    </div>
+    </div> -->
     <div id="table">
         <table class="tablesaw" data-tablesaw-sortable data-tablesaw-mode="stack">
             <thead>
