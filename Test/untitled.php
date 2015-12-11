@@ -25,7 +25,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
    <link rel="stylesheet" type="text/css" href="test.css"></link>
 	<table class="tableau" align="center">
    <tr>
-      <th class="tableau">Film</th>
+      <th>Film</th>
       <th>Genre</th>
       <th>Duree (en min)</th>
       <th>Pays/Continent<th>
