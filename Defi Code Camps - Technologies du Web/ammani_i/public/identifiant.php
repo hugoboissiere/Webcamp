@@ -14,6 +14,6 @@ if (isset('coco'))
 // 	echo $_SESSION['username'];
 
 
-// 	header('Location:connexion.php');
+	header('Location:connexion.php');
 
 // }
