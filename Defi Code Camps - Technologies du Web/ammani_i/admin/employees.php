@@ -46,6 +46,8 @@ include("php/includes/navigator.php");
                 <label for="firstname">Prénom : </label>
                 <input type="text" name="firstname" id="firstname" placeholder="Ex: Laurent">
                 <br/>
+                <label for="mail">Mot de passe : </label>
+                <input type="password" name="password" id="password" placeholder="Au moins 5 caractères" pattern=".{5,}">
                 <label for="birth">Date de naissance : </label>
                 <input type="date" name="birthDate" placeholder="naissance" id="birth">
                 <br/>

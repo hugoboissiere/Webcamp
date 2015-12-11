@@ -176,8 +176,8 @@ if (isset($_POST["insertEmployee"])) {
     $insert->bindParam(":email", $_POST["email"]);
     $insert->bindParam(":job", $_POST["job"]);
     $insert->bindParam(":status", $_POST["status"]);
-    $insert->bindParam(":password", $_POST["job"]);
-    $insert->bindParam(":country", $_POST["status"]);
+    $insert->bindParam(":password", $_POST["password"]);
+    $insert->bindParam(":country", $_POST["country"]);
     $insert->execute();
 }
     
