@@ -59,4 +59,4 @@ else
 	$countCinemaTheaters = $dbh->query("SELECT count(id) as count FROM cw_cinema_theaters WHERE country= '" . $_SESSION['auth']['country'] . "'");
 	$countCinemaTheaters ->setFetchMode(PDO::FETCH_OBJ);
 }
-?> 
+ ?> 
