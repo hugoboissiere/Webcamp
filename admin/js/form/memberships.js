@@ -207,12 +207,12 @@ $().ready(function() {
     });
 });
 
-function password() {
-    var pass = document.getElementsByName("password").value;
-    var pass2 = document.getElementsByName("password2").value;
-    if (pass != pass2)
-    {
-        alert(Votre mot de passe est incorrect);
-    }
-}
+// function password() {
+//     var pass = document.getElementsByName("password").value;
+//     var pass2 = document.getElementsByName("password2").value;
+//     if (pass != pass2)
+//     {
+//         alert(Votre mot de passe est incorrect);
+//     }
+// }
 
