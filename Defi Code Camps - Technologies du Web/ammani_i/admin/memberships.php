@@ -151,8 +151,8 @@ include("php/includes/navigator.php");
                 <label for="password2">Retaper le mdp : </label>
                 <input type="password" name="password2" class="password2" placeholder="Au moins 5 caractères">
                 <br/>
-                <label for="username">Pseudo : </label>
-                <input type="text" name="username" class="username" placeholder="Ex : laurent_dupont">
+                <!-- <label for="username">Pseudo : </label> -->
+                <input type="hidden" name="username" class="username" placeholder="Ex : laurent_dupont">
                 <br/>
                 Sexe : 
                 <label for="man">Homme</label>
