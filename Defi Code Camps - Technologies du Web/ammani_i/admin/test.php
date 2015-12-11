@@ -9,7 +9,7 @@
 <body>
     <?php
 
-    echo 'comment est votre blanquette ?fwe';
+    echo 'comment est votre blanquette ?';
 
     include("php/includes/database.php");
 
@@ -27,7 +27,7 @@
     $_POST["status"]='CDI';
     $_POST["job"]='3';
 
-
+    echo "ddd";
     try
     {
 
