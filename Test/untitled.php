@@ -25,7 +25,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
 	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	   <script src="chartist.min.js"></script>
       <script src="compteur.php"></script>
-      <input href="compteur.php" type="button" value="entree" class="button" onclick="compteur()"></input>
+      <input type="button" value="entree" class="button" onclick="document.location.href = 'compteur.php'"></input>
 	   <table class="tableau">
       <tr>
          <th>Film</th>
