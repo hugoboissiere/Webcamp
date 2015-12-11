@@ -51,10 +51,13 @@ $test->setFetchMode(PDO::FETCH_OBJ);
       }
       $employeeStatusListAdd->closeCursor();
       ?>
-      <script type="text/javascript">
-         var test = $('tr:eq(1)').find('td:eq(4)').text();
-         console.log(test);
-      </script>
+      </table>
+      <p id="test1" data-numberone="20, 60, 120" data-numbertwo="200, 180, 20" class="titre">Par genre</p>
+      <table class="tableau">
+      <tr>
+         <th>Genre</th>
+         <th>Nombre d'entrees total</th>
+      </tr>
       </table>
    </body>
 </html>
