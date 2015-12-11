@@ -12,7 +12,7 @@ while ($result = $moviesTitleList->fetch()) {
 	$nb++;
 	echo $nb;
 }
-
+echo "ddd";
 $moviesTitleList->closeCursor();
 // $update = $dbh->prepare("UPDATE cw_medias_movies "
 // 	. "SET nb_entrees = :nb "
