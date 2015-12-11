@@ -22,6 +22,7 @@ if (count($php) > 0 && $php[0] != "") {
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <?php echo "few"; ?>
         <title><?php echo $headTitle; ?></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">  
