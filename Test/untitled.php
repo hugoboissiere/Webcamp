@@ -44,6 +44,9 @@ $test->setFetchMode(PDO::FETCH_OBJ);
                   <td>' . $result->runningTime . '</td>
                   <td>' . $result->country . '</td>
                   <td>' . $result->nb_entrees . '</td>
+                  <td><form action="compteur.php'.$result->ID.'">
+                        <button type="submit">Entree</button>
+                  </form></td>
                </tr>';
       }
       $employeeStatusListAdd->closeCursor();
