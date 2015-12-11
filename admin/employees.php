@@ -197,11 +197,10 @@ include("php/includes/navigator.php");
                 <br/>
                 <label for="country">Pays : </label>
                 <select name="country" class="country">
-                    <option value="" id="actualCountry"></option>
                     <?php
                     while ($result = $employeeRegionListModification->fetch()) {
                         ?>
-                        <option value="<?php echo $result->nom_region; ?>"><?php echo $result->nom_region; ?></option>
+                        <option value="<?php echo $result->id_region; ?>"><?php echo $result->nom_region; ?></option>
                         
                         <?php
                     }
