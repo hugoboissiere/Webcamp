@@ -33,6 +33,7 @@ if ($rep == NULL)
 $rep->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $rep->fetch())
 {
+	var_dump($result);
    $_SESSION['username'] = $result->username;
    $_SESSION['firstname'] = $result->firstname;
    $_SESSION['lastname'] = $result->lastname;
