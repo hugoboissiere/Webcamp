@@ -25,39 +25,39 @@ $archive = $_POST['archive'];
 
 //echo $firstname . $_SESSION['username'] ;
 
-$sele = $bdh->query('SELECT * FROM cw_human_resources_memberships');
-$sele->setFetchMode(PDO::FETCH_OBJ);
-while ($result = $sele->fetch())
-{
-	//var_dump($result);
-	echo $result->username;
-   $_SESSION['username'] = $result->username;
-   $_SESSION['firstname'] = $result->firstname;
-   $_SESSION['lastname'] = $result->lastname;
-   $_SESSION['password'] = $result->password;
-   $_SESSION['sex'] = $result->sex;
-   $_SESSION['phoneHome'] = $result->phoneHome;
-   $_SESSION['phoneMobile'] = $result->phoneMobile;
-   $_SESSION['neighborhood'] = $result->neighborhood;
-   $_SESSION['city'] = $result->city;
-   $_SESSION['country'] = $result->country;
-   $_SESSION['email'] = $result->email;
-   $_SESSION['status'] = $result->status;
-   $_SESSION['activity'] = $result->activity;
-   $_SESSION['membership'] = $result->membership;
-   $_SESSION['newsletter'] = $result->newsletter;
-   $_SESSION['archive'] = $result->archive;
-   $sele->execute();
-}
-echo $_SESSION['username'];
-$sele->closeCursor(); 
-echo PDO::errorCode();
+// $sele = $bdh->query('SELECT * FROM cw_human_resources_memberships');
+// $sele->setFetchMode(PDO::FETCH_OBJ);
+// while ($result = $sele->fetch())
+// {
+// 	//var_dump($result);
+// 	echo $result->username;
+//    $_SESSION['username'] = $result->username;
+//    $_SESSION['firstname'] = $result->firstname;
+//    $_SESSION['lastname'] = $result->lastname;
+//    $_SESSION['password'] = $result->password;
+//    $_SESSION['sex'] = $result->sex;
+//    $_SESSION['phoneHome'] = $result->phoneHome;
+//    $_SESSION['phoneMobile'] = $result->phoneMobile;
+//    $_SESSION['neighborhood'] = $result->neighborhood;
+//    $_SESSION['city'] = $result->city;
+//    $_SESSION['country'] = $result->country;
+//    $_SESSION['email'] = $result->email;
+//    $_SESSION['status'] = $result->status;
+//    $_SESSION['activity'] = $result->activity;
+//    $_SESSION['membership'] = $result->membership;
+//    $_SESSION['newsletter'] = $result->newsletter;
+//    $_SESSION['archive'] = $result->archive;
+//    $sele->execute();
+// }
+// echo $_SESSION['username'];
+// $sele->closeCursor(); 
+// echo PDO::errorCode();
 
 $rep = $bdh->prepare('UPDATE cw_human_resources_memberships SET firstname = "' . $firstname . '" , password = "'. $password .'", archive = "'. $archive . '", lastname = "' . $lastname .'" , username = "' . $username . '" , sex = "' . $sex . '" , phoneHome = "' . $phoneHome .'" , phoneMobile = "' . $phoneMobile .'" , neighborhood = "' . $neighborhood .'" , city = "' . $city . '" , country = "' . $country . '" , email = "' . $email . '" , membership = "' . $membership . '" , newsletter = "' . $newsletter . '", status = "'. $status . '" , activity = "' . $activity . '" WHERE id = ' . $_SESSION['id'] . ' ');
-echo PDO::errorCode();
-echo $firstname . $_SESSION['username'] ;
-if ($rep == NULL)
-	echo "NULL";
+// echo PDO::errorCode();
+// echo $firstname . $_SESSION['username'] ;
+// if ($rep == NULL)
+// 	echo "NULL";
 $sele = $bdh->query('SELECT * FROM cw_human_resources_memberships');
 $sele->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $sele->fetch())
