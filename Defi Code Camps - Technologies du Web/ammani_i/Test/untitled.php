@@ -10,6 +10,8 @@ $moviesCompleteList->closeCursor();
 
 $test = $dbh->query("SELECT * from cw_medias_movies"); 
 $test->setFetchMode(PDO::FETCH_OBJ);
+
+UPDATE  SET expiration = expiration+40
 ?>
 <!DOCTYPE html>
 <html>
@@ -45,5 +47,6 @@ $test->setFetchMode(PDO::FETCH_OBJ);
       $employeeStatusListAdd->closeCursor();
       ?>
       </table>
+      <input type="button" name="+1 entree"></input>
    </body>
 </html>
