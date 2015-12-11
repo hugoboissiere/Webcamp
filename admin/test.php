@@ -27,13 +27,12 @@
     $_POST["status"]='CDI';
     $_POST["job"]='3';
 
-    echo "ddd";
     try
     {
 
     $update = $dbh->prepare("UPDATE cw_human_resources_employees "
         . "SET firstname = :firstname, lastname = :lastname, birthDate = :birthDate, sex = :sex, address = :address, city = :city, phoneHome = :phoneHome, phoneMobile = :phoneMobile, email = :email, job = :job, status = :status, password = :password, country = :country "
-        . "WHERE id = :id");
+        . "WHERE id = 1");
     $insert->bindParam(":lastname", $_POST["lastname"]);
     $insert->bindParam(":firstname", $_POST["firstname"]);
     $insert->bindParam(":birthDate", $_POST["birthDate"]);
