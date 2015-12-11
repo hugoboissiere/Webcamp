@@ -92,7 +92,7 @@ include("php/includes/navigator.php");
                     <td>" . $result->abbreviation . "</td>
                 </tr>";
                 }
-                $countriesCompleteList->closeCursor();
+                // $countriesCompleteList->closeCursor();
                 ?>
                 
             </tbody>
