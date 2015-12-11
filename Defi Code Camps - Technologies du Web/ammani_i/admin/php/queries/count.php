@@ -20,7 +20,7 @@ if($_SESSION['auth']['job'] == 1)
 
 else
 {
-	$countHRMemberships = $dbh->query("SELECT count(id) as count FROM cw_human_resources_memberships WHERE region = '" . $_SESSION['auth']['region'] . "'");
+	$countHRMemberships = $dbh->query("SELECT count(id) as count FROM cw_human_resources_memberships WHERE country = '" . $_SESSION['auth']['country'] . "'");
 	$countHRMemberships ->setFetchMode(PDO::FETCH_OBJ);
 }
 
@@ -32,21 +32,21 @@ if($_SESSION['auth']['job'] == 1)
 
 else
 {
-	$countHREmployees = $dbh->query("SELECT count(id) as count FROM cw_human_resources_employees WHERE region= '" . $_SESSION['auth']['region'] . "'");
+	$countHREmployees = $dbh->query("SELECT count(id) as count FROM cw_human_resources_employees WHERE country= '" . $_SESSION['auth']['country'] . "'");
 	$countHREmployees ->setFetchMode(PDO::FETCH_OBJ);
 }
 
 // if ($_SESSION['auth']['job'] == 1)
 	print_r($_SESSION);
 	$countCinemaSessions = $dbh->query("SELECT count(CCS.id) as count FROM cw_cinema_sessions CCS
-										INNER JOIN cw_cinema_theaters CCT ON CCT.region='".$_SESSION['auth']['region']."'
+										INNER JOIN cw_cinema_theaters CCT ON CCT.country='".$_SESSION['auth']['country']."'
 										WHERE CCS.idTheater=CCT.id");
 	$countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
 
 
 // else
 
-	// $countCinemaSessions = $dbh->query("SELECT count(id) as count FROM cw_cinema_sessions IN (SELECT region= '" . $_SESSION['auth']['region'] . "'");
+	// $countCinemaSessions = $dbh->query("SELECT count(id) as count FROM cw_cinema_sessions IN (SELECT country= '" . $_SESSION['auth']['country'] . "'");
 	// $countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
 
 
@@ -58,7 +58,7 @@ if($_SESSION['auth']['job'] == 1)
 
 else
 {
-	$countCinemaTheaters = $dbh->query("SELECT count(id) as count FROM cw_cinema_theaters WHERE region= '" . $_SESSION['auth']['region'] . "'");
+	$countCinemaTheaters = $dbh->query("SELECT count(id) as count FROM cw_cinema_theaters WHERE country= '" . $_SESSION['auth']['country'] . "'");
 	$countCinemaTheaters ->setFetchMode(PDO::FETCH_OBJ);
 }
         
