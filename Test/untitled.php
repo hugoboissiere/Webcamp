@@ -29,6 +29,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
          <th>Genre</th>
          <th>Duree (en min)</th>
          <th>Pays/Continent</th>
+         <th>Nombre d'entrees total</th>
       </tr>
       <?php
       while ($result = $test->fetch())
@@ -38,6 +39,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
                   <td>' . $result->genre . '</td>
                   <td>' . $result->runningTime . '</td>
                   <td>' . $result->country . '</td>
+                  <td>' . $result->nb_entrees . '</td>
                </tr>';
       }
       $employeeStatusListAdd->closeCursor();
