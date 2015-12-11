@@ -26,7 +26,7 @@ $archive = $_POST['archive'];
 echo $firstname;
 
 
-$sele = $bdh->('SELECT * FROM cw_human_resources_memberships');
+$sele = $bdh->query('SELECT * FROM cw_human_resources_memberships');
 $rep = $bdh->query('UPDATE cw_human_resources_memberships SET firstname = "' . $firstname . '" , password = "'. $password .'", archive = "'. $archive . '", lastname = "' . $lastname .'" , username = "' . $username . '" , sex = "' . $sex . '" , phoneHome = "' . $phoneHome .'" , phoneMobile = "' . $phoneMobile .'" , neighborhood = "' . $neighborhood .'" , city = "' . $city . '" , country = "' . $country . '" , email = "' . $email . '" , membership = "' . $membership . '" , newsletter = "' . $newsletter . '", status = "'. $status . '" , activity = "' . $activity . '" WHERE id = ' . $_SESSION['id'] . ' ');
 if ($rep == NULL)
 	echo "NULL";
