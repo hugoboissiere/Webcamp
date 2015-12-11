@@ -2,15 +2,16 @@
 include("../admin/php/includes/database.php");
 $moviesCompleteList = $dbh->query("SELECT * FROM cw_medias_movies WHERE archive = 'false'");
 $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
-while ($result = $moviesCompleteList->fetch())
+/*while ($result = $moviesCompleteList->fetch())
 {
    echo $result->country . "\n";
 }
-$moviesCompleteList->closeCursor(); 
+$moviesCompleteList->closeCursor(); */
 
 $test = $dbh->query("SELECT * from cw_medias_movies"); 
 $test->setFetchMode(PDO::FETCH_OBJ);
 ?>
+
 <!DOCTYPE html>
 <html>
    <head>
@@ -23,6 +24,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
 	   <div class="ct-chart"></div>
 	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	   <script src="chartist.min.js"></script>
+      <input type="button" value="entree"></input>
 	   <table class="tableau">
       <tr>
          <th>Film</th>
@@ -44,7 +46,6 @@ $test->setFetchMode(PDO::FETCH_OBJ);
       }
       $employeeStatusListAdd->closeCursor();
       ?>
-      <input type="button" value="entree"></input>
       </table>
    </body>
 </html>
