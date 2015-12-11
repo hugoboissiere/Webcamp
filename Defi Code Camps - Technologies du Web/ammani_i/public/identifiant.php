@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 include("php/includes/database.php");
 
 if (isset($_POST["email"]) AND isset($_POST["password"]))
