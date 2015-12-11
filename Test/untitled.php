@@ -51,7 +51,6 @@ $test->setFetchMode(PDO::FETCH_OBJ);
       }
       $employeeStatusListAdd->closeCursor();
       ?>
-      </table>
       <table>
       <p>Par genre</p>
       <tr>
@@ -61,6 +60,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
          <th>Pays/Continent</th>
          <th>Nombre d'entrees total</th>
       </tr>
-   </table>
+      </table>
+      </table>
    </body>
 </html>
