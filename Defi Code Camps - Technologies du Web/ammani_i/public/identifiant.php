@@ -10,15 +10,32 @@ $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $moviesCompleteList->fetch())
 {
    $_SESSION['username'] = $result->username;
+   $_SESSION['id'] = $result->id;
+   $_SESSION['firstname'] = $result->firstname;
+   $_SESSION['lastname'] = $result->lastname;
+   $_SESSION['password'] = $result->password;
+   $_SESSION['caddNumber'] = $result->cardNumber;
+   $_SESSION['sex'] = $result->sex;
+   $_SESSION['phoneHome'] = $result->phoneHome;
+   $_SESSION['phoneMobile'] = $result->phoneMobile;
+   $_SESSION['neighborhood'] = $result->neighborhood;
+   $_SESSION['city'] = $result->city;
+   $_SESSION['country'] = $result->country;
+   $_SESSION['email'] = $result->email;
+   $_SESSION['status'] = $result->status;
+   $_SESSION['activity'] = $result->activity;
+   $_SESSION['membership'] = $result->membership;
+   $_SESSION['newsletter'] = $result->newsletter;
+   $_SESSION['archive'] = $result->archive;
+
+
 }
-echo $_SESSION['username'];
+
 $moviesCompleteList->closeCursor(); 
 
- // WHERE username = "' . $username . '" '
 	
+header('Location:index.php');
 
-
-	// header('Location:identification.php');
 }
 
 ?>
