@@ -43,7 +43,11 @@ $test->setFetchMode(PDO::FETCH_OBJ);
                   <td>' . $result->country . '</td>
                   <td>' . $result->nb_entrees . '</td>
                   <td><form method="get" action="compteur.php">
-                        <input type="hidden" name="ID" value="'.$result->id.'">
+                        <select type="hidden" name="ID" value="'.$result->id.'">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        </select>
                         <button type="submit">Entree</button>
                   </form></td>
                   <td><form method="get" action="compteur2.php">
