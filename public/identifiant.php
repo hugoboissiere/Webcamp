@@ -3,7 +3,6 @@ include("php/includes/database.php");
 
 if (isset('coco'))
 {
-	$_POST['cardNumber'] = "0";
 
 	$select = $bdh->query('SELECT username, password FROM cw_human_resources_memberships WHERE username = $_POST['username']');
 	if ($select->password == $_POST['password'])

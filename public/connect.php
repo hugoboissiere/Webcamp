@@ -3,6 +3,9 @@ include("php/includes/database.php");
 if (isset($_POST["InsertMembersOrSubscribers"])) {
     $_POST["cardNumber"] = "0"; // Pas de numero de compte pour l'instant
 
+
+    $_POST["password"] = sha1($_POST["password"]);
+
     $insert = $dbh->prepare("INSERT INTO cw_human_resources_memberships"
             . "(firstname,lastname,password,cardNumber,username,sex,phoneHome,phoneMobile,neighborhood,city,country,email,status,activity,membership,newsletter)"
             . " VALUES(:firstname,:lastname,:password,:cardNumber,:username,:sex,:phoneHome,:phoneMobile,:neighborhood,:city,:country,:email,:status,:activity,:membership,:newsletter)");
