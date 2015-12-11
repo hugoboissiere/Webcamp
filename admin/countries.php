@@ -104,6 +104,7 @@ include("php/includes/navigator.php");
                     echo $result->count;
                 } $countMediasMovies->closeCursor(); ?>
             </p>
+            <p>test</p>
 </main>
 
 
