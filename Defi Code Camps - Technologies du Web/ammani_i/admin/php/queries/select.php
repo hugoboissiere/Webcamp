@@ -39,47 +39,47 @@
 
 //  All movies and their infos  
 
-$moviesCompleteList = $dbh->query("SELECT * FROM cw_medias_movies WHERE archive = 'false'");
-$moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
+// $moviesCompleteList = $dbh->query("SELECT * FROM cw_medias_movies WHERE archive = 'false'");
+// $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 
-/*
- *  All movies' title
- */
+// /*
+//  *  All movies' title
+//  */
 
-$moviesTitleList = $dbh->query("SELECT title FROM cw_medias_movies WHERE archive = 'false'");
-$moviesTitleList->setFetchMode(PDO::FETCH_OBJ);
+// $moviesTitleList = $dbh->query("SELECT title FROM cw_medias_movies WHERE archive = 'false'");
+// $moviesTitleList->setFetchMode(PDO::FETCH_OBJ);
 
-/*
- *  Affiche film precis
- */
+// /*
+//  *  Affiche film precis
+//  */
 
-$movieInformations = $dbh->query("SELECT * FROM cw_medias_movies");
-$movieInformations->setFetchMode(PDO::FETCH_OBJ);
+// $movieInformations = $dbh->query("SELECT * FROM cw_medias_movies");
+// $movieInformations->setFetchMode(PDO::FETCH_OBJ);
 
-/*
- *      2.  TV Shows
- */
+// /*
+//  *      2.  TV Shows
+//  */
 
-// NEED TO BE DONE
+// // NEED TO BE DONE
 
-/*
- *      3.  Genres
- */
+// /*
+//  *      3.  Genres
+//  */
 
-$genresList = $dbh->query("SELECT name, id FROM cw_medias_genres WHERE archive = 'false'");
-$genresList->setFetchMode(PDO::FETCH_OBJ);
+// $genresList = $dbh->query("SELECT name, id FROM cw_medias_genres WHERE archive = 'false'");
+// $genresList->setFetchMode(PDO::FETCH_OBJ);
 
-$genresListAdd = $dbh->query("SELECT name, id FROM cw_medias_genres WHERE archive = 'false'");
-$genresListAdd->setFetchMode(PDO::FETCH_OBJ);
+// $genresListAdd = $dbh->query("SELECT name, id FROM cw_medias_genres WHERE archive = 'false'");
+// $genresListAdd->setFetchMode(PDO::FETCH_OBJ);
 
-$genresListModification = $dbh->query("SELECT name, id FROM cw_medias_genres WHERE archive = 'false'");
-$genresListModification->setFetchMode(PDO::FETCH_OBJ);
+// $genresListModification = $dbh->query("SELECT name, id FROM cw_medias_genres WHERE archive = 'false'");
+// $genresListModification->setFetchMode(PDO::FETCH_OBJ);
 
-$genresCompleteLists = $dbh->query("SELECT count(m.title) as moviesCount, g.name as genre
-FROM cw_medias_movies m, cw_medias_genres g
-WHERE m.genre = g.name
-GROUP BY g.name");
-$genresCompleteLists->setFetchMode(PDO::FETCH_OBJ);
+// $genresCompleteLists = $dbh->query("SELECT count(m.title) as moviesCount, g.name as genre
+// FROM cw_medias_movies m, cw_medias_genres g
+// WHERE m.genre = g.name
+// GROUP BY g.name");
+// $genresCompleteLists->setFetchMode(PDO::FETCH_OBJ);
 
 
 /*
