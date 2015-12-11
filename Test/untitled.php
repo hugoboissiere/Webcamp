@@ -53,6 +53,14 @@ $test->setFetchMode(PDO::FETCH_OBJ);
       ?>
       </table>
       <p>Par genre</p>
-
+      <table>
+      <tr>
+         <th>Film</th>
+         <th>Genre</th>
+         <th>Duree (en min)</th>
+         <th>Pays/Continent</th>
+         <th>Nombre d'entrees total</th>
+      </tr>
+      </table>
    </body>
 </html>
