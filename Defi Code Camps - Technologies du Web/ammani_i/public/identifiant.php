@@ -19,6 +19,6 @@ $moviesCompleteList->closeCursor();
 
 
 	// header('Location:identification.php');
-// }
+}
 
 ?>
