@@ -1,7 +1,11 @@
 <?php
+
+session_start();
+
 include("php/includes/database.php");
 include("php/queries/select.php");
 include("php/queries/count.php");
+
 // Fichiers CSS/JS/PHP ajoutés
 $css = $addCSS;
 $js = $addJS;
