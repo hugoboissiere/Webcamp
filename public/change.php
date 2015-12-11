@@ -1,5 +1,7 @@
 <?php
 
+print_r($_POST);
+
 session_start();
 
 include("php/includes/database.php");
