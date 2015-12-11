@@ -12,7 +12,7 @@ include("php/includes/head.php");
 
 // Queries de cette page
 $addPHP = array("");
-//include("php/includes/queries/count.php");
+include("php/includes/queries/count.php");
 include("php/includes/navigator.php");
 ?>
 
