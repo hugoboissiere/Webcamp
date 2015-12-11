@@ -51,13 +51,5 @@ $test->setFetchMode(PDO::FETCH_OBJ);
       }
       $employeeStatusListAdd->closeCursor();
       ?>
-      </table>
-      <p>Par genre</p>
-      <table class="tableau">
-      <tr>
-         <th>Genre</th>
-         <th>Nombre d'entrees total</th>
-      </tr>
-      </table>
    </body>
 </html>
