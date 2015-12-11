@@ -8,4 +8,5 @@ div
 {
 	display: inline-block;
 	vertical-align: top;
+	border: black 1px solid;
 }
