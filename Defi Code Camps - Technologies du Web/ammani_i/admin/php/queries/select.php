@@ -39,8 +39,8 @@
 
 //  All movies and their infos  
 
-// $moviesCompleteList = $dbh->query("SELECT * FROM cw_medias_movies WHERE archive = 'false'");
-// $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
+$moviesCompleteList = $dbh->query("SELECT * FROM cw_medias_movies WHERE archive = 'false'");
+$moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 
 // /*
 //  *  All movies' title
