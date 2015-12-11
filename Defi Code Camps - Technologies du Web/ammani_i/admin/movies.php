@@ -283,9 +283,9 @@ include("php/includes/navigator.php");
                 </tr>
             </thead>
             <tbody>
-            <?php
+<!--      <!--        <?php
             while ($result = $moviesCompleteList->fetch()) {
-                ?>
+                ?> -->
                 <tr data-id="<?php echo $result->id; ?>">
                     <td class="title"><?php echo $result->title; ?></td>
                     <td><?php echo $result->genre; ?></td>
@@ -299,7 +299,7 @@ include("php/includes/navigator.php");
                 <?php
             }
             $moviesCompleteList->closeCursor();
-            ?>    
+            ?>    --> 
             </tbody>
         </table>
     </div>
