@@ -64,34 +64,42 @@ if (isset($_POST["updateLanguage"])) {
     $update->execute();
 }
 
-if (isset($_POST["updateEmployee"])) {
-    $update = $dbh->prepare("UPDATE cw_human_resources_employees "
-        . "SET firstname = :firstname, lastname = :lastname, birthDate = :birthDate, sex = :sex, address = :address, city = :city, phoneHome = :phoneHome, phoneMobile = :phoneMobile, email = :email, job = :job, status = :status, password = :password "
-        . "WHERE id = :id");
-    $update->bindParam(":id", $_POST["id"]);
-    $update->bindParam(":firstname", $_POST["firstname"]);
-    $update->bindParam(":lastname", $_POST["lastname"]);
-    $update->bindParam(":birthDate", $_POST["birthDate"]);
-    $update->bindParam(":sex", $_POST["sex"]);
-    $update->bindParam(":address", $_POST["address"]);
-    $update->bindParam(":city", $_POST["city"]);
-    $update->bindParam(":phoneHome", $_POST["phoneHome"]);
-    $update->bindParam(":phoneMobile", $_POST["phoneMobile"]);
-    $update->bindParam(":email", $_POST["email"]);
-    $update->bindParam(":job", $_POST["job"]);
-    $update->bindParam(":status", $_POST["status"]);
-    $update->bindParam(":password", $_POST["password"]);
-    $update->execute();
-}
-
-
-$moviesCompleteList = $dbh->query("SELECT * FROM cw_human_resources_memberships WHERE username = '" . $_POST["username"] . "'");
-$moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
+$employeesCompleteList = $dbh->query("SELECT * FROM cw_human_resources_memberships WHERE firstname = '" . $_POST["firstname"] . "'");
+$employeesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $moviesCompleteList->fetch())
 {
  $id = $result->id;
 }
-$moviesCompleteList->closeCursor();
+$employeesCompleteList->closeCursor();
+
+if (isset($_POST["updateEmployee"])) {
+    $update = $dbh->prepare("UPDATE cw_human_resources_employees "
+        . "SET firstname = :firstname, lastname = :lastname, birthDate = :birthDate, sex = :sex, address = :address, city = :city, phoneHome = :phoneHome, phoneMobile = :phoneMobile, email = :email, job = :job, status = :status, password = :password, country = :country "
+        . "WHERE id = :id");
+    $insert->bindParam(":lastname", $_POST["lastname"]);
+    $insert->bindParam(":firstname", $_POST["firstname"]);
+    $insert->bindParam(":birthDate", $_POST["birthDate"]);
+    $insert->bindParam(":sex", $_POST["sex"]);
+    $insert->bindParam(":address", $_POST["address"]);
+    $insert->bindParam(":city", $_POST["city"]);
+    $insert->bindParam(":phoneHome", $_POST["phoneHome"]);
+    $insert->bindParam(":phoneMobile", $_POST["phoneMobile"]);
+    $insert->bindParam(":email", $_POST["email"]);
+    $insert->bindParam(":job", $_POST["job"]);
+    $insert->bindParam(":status", $_POST["status"]);
+    $insert->bindParam(":password", $_POST["password"]);
+    $insert->bindParam(":country", $_POST["country"]);
+    $insert->execute();
+}
+
+
+$memberCompleteList = $dbh->query("SELECT * FROM cw_human_resources_memberships WHERE username = '" . $_POST["username"] . "'");
+$memberCompleteList->setFetchMode(PDO::FETCH_OBJ);
+while ($result = $moviesCompleteList->fetch())
+{
+ $id = $result->id;
+}
+$memberCompleteList->closeCursor();
 
 if (isset($_POST["updateMembership"]))
 {
