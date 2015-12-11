@@ -84,7 +84,11 @@ include("php/includes/select.php");
                 </tr>
             </thead>
             <tbody>
-                sxsdsdﬂﬂﬂ
+                 <?php
+                $countriesCompleteList = $dbh->query("SELECT * FROM cw_medias_countries  WHERE archive = 'false'");
+$countriesCompleteList->setFetchMode(PDO::FETCH_OBJ);
+
+?>
                 <?php
                 while ($result = $countriesCompleteList->fetch()) {
                     ?>
