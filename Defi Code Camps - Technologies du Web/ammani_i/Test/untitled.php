@@ -24,7 +24,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
 	   <div class="ct-chart"></div>
 	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	   <script src="chartist.min.js"></script>
-      <input type="submit" value="entree" class="button" action="compteur.php"></input>
+      <button type="button" value="entree" class="button" action="compteur.php"></button>
 	   <table class="tableau">
       <tr>
          <th>Film</th>
