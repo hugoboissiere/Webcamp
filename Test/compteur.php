@@ -17,6 +17,5 @@ $update = $dbh->prepare("UPDATE cw_medias_movies "
 	. "WHERE id = 1");
 $update->bindParam(":nb", $nb);
 $update->execute();
-echo "graphie";
-// header("Location: untitled.php");
+header("Location: untitled.php");
 ?>
