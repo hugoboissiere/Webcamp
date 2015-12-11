@@ -27,6 +27,7 @@
     $_POST["status"]='CDI';
     $_POST["job"]='3';
 
+    echo "oui";
     try
     {
 
