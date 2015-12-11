@@ -4,20 +4,22 @@ if (!isset($_SESSION['auth']) && count($_SESSION['auth']) != 12) {
     header("location:index.php");
     exit;
 }
-// var_dump($_SESSION);
+
 include("php/queries/count.php");
-// echo "JOHN CENA";
+
 // Fichiers CSS/JS/PHP ajoutés
 $css = $addCSS;
 $js = $addJS;
 $php = $addPHP;
 
+
 if (count($php) > 0 && $php[0] != "") {
     for ($i = 0; $i < count($php); $i++) {
-        include("../php/" . $php[$i] . ".php");
+        include("php/" . $php[$i] . ".php");
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
