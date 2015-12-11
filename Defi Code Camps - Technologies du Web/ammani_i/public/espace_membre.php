@@ -10,6 +10,7 @@ include("php/includes/head.php");
 <?php
 
 echo 	'Login : ' . $_SESSION['username'] . '<br /> 
+         <br />
    		Prenom : ' . $_SESSION['firstname'] . '<br /> 
    		Nom : ' . $_SESSION['lastname'] . '<br /> 
    		Sexe : ' . $_SESSION['sex'] . '<br /> 
