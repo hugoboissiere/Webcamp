@@ -31,13 +31,13 @@
     $_POST["newsletter"]='Yes';
 
 
-    // $test = $dbh->query("SELECT * from cw_human_resources_memberships WHERE username = '" . $_POST['username'] . "'"); 
-    // $test->setFetchMode(PDO::FETCH_OBJ);
-    // while ($result = $test->fetch())
-    // {
-    //     $id = $result['id'];
-    // }
-
+$moviesCompleteList = $dbh->query("SELECT * FROM cw_medias_movies WHERE archive = 'false'");
+$moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
+while ($result = $moviesCompleteList->fetch())
+{
+   echo $result->country . "\n";
+}
+$moviesCompleteList->closeCursor();
 
 
 
