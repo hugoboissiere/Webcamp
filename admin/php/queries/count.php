@@ -44,7 +44,6 @@ if ($_SESSION['auth']['job'] == 1)
 	$countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
 }
 
-echo "feuwifew";
 else
 {
 	$countCinemaSessions = $dbh->query("SELECT count(id) as count FROM cw_cinema_sessions IN (SELECT country= '" . $_SESSION['auth']['country'] . "'");
