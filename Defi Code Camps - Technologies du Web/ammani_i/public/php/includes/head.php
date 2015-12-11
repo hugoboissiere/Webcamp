@@ -161,7 +161,7 @@ and open the template in the editor.
 
             <?php 
             if ($_SESSION['id'])
-                echo 'Bonjour, ' . $_SESSION['firstname'] . ' '; ?>
+                echo 'Bonjour, "' . $_SESSION['firstname'] . '" '; ?>
             <nav id="staffPanel">
                 <ul>
                     <li>LE CINÉMA
