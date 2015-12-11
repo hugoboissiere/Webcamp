@@ -17,5 +17,6 @@ $update = $dbh->prepare("UPDATE cw_medias_movies "
 $update->bindParam(":id", $_POST["id"]);
 $update->bindParam(":nb", $nb);
 $update->execute();
-header("Location: untitled.php");
+echo "d";
+// header("Location: untitled.php");
 ?>
