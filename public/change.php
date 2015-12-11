@@ -23,7 +23,7 @@ $membership = $_POST['membership'];
 $newsletter = $_POST['newsletter'];
 $archive = $_POST['archive'];
 
-echo $firstname;
+echo $firstname . $_SESSION['username'] ;
 
 
 $sele = $bdh->query('SELECT * FROM cw_human_resources_memberships');
