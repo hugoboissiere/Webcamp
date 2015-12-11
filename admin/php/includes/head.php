@@ -4,9 +4,9 @@ if (!isset($_SESSION['auth']) && count($_SESSION['auth']) != 11) {
     header("location:index.php");
     exit;
 }
-var_dump($_SESSION);
+// var_dump($_SESSION);
 include("php/queries/count.php");
-echo "JOHN CENA";
+// echo "JOHN CENA";
 // Fichiers CSS/JS/PHP ajoutés
 $css = $addCSS;
 $js = $addJS;
