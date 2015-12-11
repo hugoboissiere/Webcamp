@@ -1,6 +1,7 @@
 table.tableau {
 	border-collapse: collapse;
     border: 1px solid black;
+    align: center;
 }
 
 table.tableau td, th {
