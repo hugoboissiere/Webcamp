@@ -19,6 +19,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
    <link rel="stylesheet" type="text/css" href="test.css"></link>
    </head>
    <body>
+      <input type="button" name="entree"></input>
 	   <p id="test1" data-numberone="20, 60, 120" data-numbertwo="200, 180, 20" class="titre">Nombre d'entrees</p>
 	   <div class="ct-chart"></div>
 	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -45,6 +46,5 @@ $test->setFetchMode(PDO::FETCH_OBJ);
       $employeeStatusListAdd->closeCursor();
       ?>
       </table>
-      <input type="button" name="+1 entree"></input>
    </body>
 </html>
