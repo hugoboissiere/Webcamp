@@ -9,17 +9,28 @@ include("php/includes/head.php");
 <div class="infos">
 <?php
 
-echo 	'Login : ' . $_SESSION['username'] . '<br /> 
-   		Prenom : ' . $_SESSION['firstname'] . '<br /> 
+echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br /> 
+         <br />
    		Nom : ' . $_SESSION['lastname'] . '<br /> 
+         <br />
+         Login : ' . $_SESSION['username'] . '<br /> 
+         <br />
    		Sexe : ' . $_SESSION['sex'] . '<br /> 
+         <br />
    		Numéro de domicile : ' .$_SESSION['phoneHome'] . '<br />
+         <br />
    		Numéro de portable : ' .$_SESSION['phoneMobile'] . '<br />
+         <br />
    		Quartier : ' . $_SESSION['neighborhood'] .'<br /> 
+         <br />
    		Ville : ' . $_SESSION['city'] . '<br /> 
+         <br />
    		Pays : ' . $_SESSION['country'] . '<br /> 
+         <br />
    		Email : ' . $_SESSION['email'] . '<br />
+         <br />
    		Statut : ' . $_SESSION['status'] . '<br />
+         <br />
    		Activité : ' . $_SESSION['activity'] . ' ';
 
 ?>
