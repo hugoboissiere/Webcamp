@@ -18,6 +18,7 @@ if (count($php) > 0 && $php[0] != "") {
         include("php/" . $php[$i] . ".php");
     }
 }
+echo "test";
 ?>
 <!DOCTYPE html>
 <html lang="fr">
