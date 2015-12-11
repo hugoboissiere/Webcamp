@@ -61,7 +61,7 @@
 </html>
 
 
-
+<!-- 
 $moviesCompleteList = $dbh->query("SELECT * FROM cw_human_resources_memberships WHERE username = '" . $_POST["username"] . "'");
 // $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 // while ($result = $moviesCompleteList->fetch())
@@ -92,4 +92,4 @@ $moviesCompleteList = $dbh->query("SELECT * FROM cw_human_resources_memberships 
 //     // $insert->bindParam(":activity", $_POST["activity"]);
 //     // $insert->bindParam(":membership", $_POST["membership"]);
 //     // $insert->bindParam(":newsletter", $_POST["newsletter"]);
-//     // $insert->execute();
+//     // $insert->execute(); -->
