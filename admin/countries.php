@@ -82,10 +82,13 @@ include("php/includes/navigator.php");
                 </tr>
             </thead>
             <tbody>
+                <?php while ($result = $countMediasMovies->fetch()) {
+                    echo $result->count;
+                } $countMediasMovies->closeCursor(); ?>
                 <?php
                 while ($result = $countriesCompleteList->fetch()) {
                     ?>
-                <tr data-id="<?php echo $result->id; ?>">
+                    <tr data-id="<?php echo $result->id; ?>">
                     <td class="title"><?php echo $result->name; ?></td>
                     <td><?php echo $result->abbreviation; ?></td>
                 </tr>
