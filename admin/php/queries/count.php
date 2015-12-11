@@ -36,11 +36,11 @@ else
 	$countHREmployees ->setFetchMode(PDO::FETCH_OBJ);
 }
 echo "fuewGFUERH";
-// if ($_SESSION['auth']['job'] == 1)
-	// $countCinemaSessions = $dbh->query("SELECT count(CCS.id) as count FROM cw_cinema_sessions CCS
-	// 									INNER JOIN cw_cinema_theaters CCT ON CCT.country='".$_SESSION['auth']['country']."'
-	// 									WHERE CCS.idTheater=CCT.id");
-	// $countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
+if ($_SESSION['auth']['job'] == 1)
+	$countCinemaSessions = $dbh->query("SELECT count(CCS.id) as count FROM cw_cinema_sessions CCS
+										INNER JOIN cw_cinema_theaters CCT ON CCT.country='".$_SESSION['auth']['country']."'
+										WHERE CCS.idTheater=CCT.id");
+	$countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
 
 echo "feuwifew";
 // else
