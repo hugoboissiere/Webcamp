@@ -1,6 +1,4 @@
 .tableau {
-	border-width: 1px ;
+	border: 1px solid black;
 	background-color: #0D8900;
-	text-align: center;
-	border-color: #732C2C;
 }
