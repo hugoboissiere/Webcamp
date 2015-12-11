@@ -47,6 +47,6 @@ UPDATE  SET expiration = expiration+40
       $employeeStatusListAdd->closeCursor();
       ?>
       </table>
-      <input type="button" name="+1 entree"></input>
+      <input type="button" name="entree"></input>
    </body>
 </html>
