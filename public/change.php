@@ -3,7 +3,7 @@
 session_start();
 
 include("php/includes/database.php");
-
+print_r($_POST);
 $rep = $bdh->prepare('UPDATE cw_human_resources_memberships SET firstname = "' . $_POST['firstname'] . '", lastname = "' . $_POST['lastname'] . '", username = "' . $_POST['username'] . '", sex = "' . $_POST['sex'] . '", phoneHome = ' . $_POST['phoneHome'] . ', phoneMobile = ' . $_POST['phoneMobile'] . ', neighborhood = "' . $_POST['neighborhood'] . '", city = "' . $_POST['city'] . '", country = "' . $_POST['country'] . '", email = "' . $_POST['email'] . '", status = "' . $_POST['status'] . '", activity = "' . $_POST['activity'] . '"  WHERE id = ' . $_SESSION['id'] . ' ');
 $rep->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $rep->fetch())
