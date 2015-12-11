@@ -45,6 +45,7 @@
         $insert->bindParam(":email", $_POST["email"]);
         $insert->bindParam(":job", $_POST["job"]);
         $insert->bindParam(":status", $_POST["status"]);
+        echo "rale";
         $insert->bindParam(":password", $_POST["password"]);
         $insert->bindParam(":country", $_POST["country"]);
         $insert->execute();
