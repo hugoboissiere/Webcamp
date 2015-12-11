@@ -115,7 +115,21 @@ include("php/includes/navigator.php");
                     <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3" style="background-color:#232b2d">Images</th>   
                 </tr>
             </thead>
-
+            <tbody>
+                <?php
+                // $countriesCompleteList = $dbh->query("SELECT * FROM cw_medias_countries  WHERE archive = 'false'");
+                // $countriesCompleteList->setFetchMode(PDO::FETCH_OBJ);
+                while ($result = $moviesCompleteList->fetch()) {
+                    
+                   echo "<tr data-id='" . $result->title . "'>
+                    <td class='title'>" . $result->genre . "</td>
+                    <td>" . $result->abbreviation . "</td>
+                </tr>";
+                }
+                // $countriesCompleteList->closeCursor();
+                ?>
+                
+            </tbody>
         </table>
     </div>
         
