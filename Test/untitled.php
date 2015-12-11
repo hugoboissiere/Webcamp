@@ -25,7 +25,6 @@ $test->setFetchMode(PDO::FETCH_OBJ);
 	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	   <script src="chartist.min.js"></script>
       <form action="compteur.php">
-      <button type="submit">Entree</button>
       </form>
 	   <table class="tableau">
       <tr>
