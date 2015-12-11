@@ -72,25 +72,25 @@ include("php/includes/navigator.php");
                 <label for="mail">Email : </label>
                 <input type="email" name="email" id="mail" placeholder="Ex: laurent.dupont@gmail.com">
                 <br/>
-                Poste : 
+                job : 
                 <?php
 
                 if($_SESSION['auth']['job'] == 1)
                 {
                     echo '<br><br><label for="adminregion">Administrateur régional</label>
-                    <input type="radio" name="poste" value="2" id="region" class="radio"><br>
+                    <input type="radio" name="job" value="2" id="region" class="radio"><br>
                     <label for="modoprog">Modérateur Programmation et salle</label>
-                    <input type="radio" name="poste" value="3" id="modoprog" class="radio"><br>
+                    <input type="radio" name="job" value="3" id="modoprog" class="radio"><br>
                     <label for="modomembres">Modérateur Membres</label>
-                    <input type="radio" name="poste" value="4" id="modomembre" class="radio"><br>
+                    <input type="radio" name="job" value="4" id="modomembre" class="radio"><br>
                     <label for="modoempl">Modérateur Employés</label>
-                    <input type="radio" name="poste" value="5" id="modoempl" class="radio"><br>
+                    <input type="radio" name="job" value="5" id="modoempl" class="radio"><br>
                     <label for="modocaisse">Modérateur Caisse</label>
-                    <input type="radio" name="poste" value="6" id="modocaisse" class="radio"><br>';                
+                    <input type="radio" name="job" value="6" id="modocaisse" class="radio"><br>';                
                 }
 
                 echo '<label for="employe">Employé</label>
-                <input type="radio" name="poste" value="7" id="employe" class="radio" checked><br>';          
+                <input type="radio" name="job" value="7" id="employe" class="radio" checked><br>';          
                 ?>
                 <br/>
                 <label for="status">Statut : </label>
@@ -156,25 +156,25 @@ include("php/includes/navigator.php");
                 <label for="email">Email : </label>
                 <input type="email" name="email" class="email" placeholder="Ex: laurent.dupont@gmail.com">
                 <br/>
-                Poste : 
+                job : 
                 <?php
 
                 if($_SESSION['auth']['job'] == 1)
                 {
                     echo '<br><br><label for="adminregion">Administrateur régional</label>
-                    <input type="radio" name="poste" value="2" id="region" class="radio"><br>
+                    <input type="radio" name="job" value="2" id="region" class="radio"><br>
                     <label for="modoprog">Modérateur Programmation et salle</label>
-                    <input type="radio" name="poste" value="3" id="modoprog" class="radio"><br>
+                    <input type="radio" name="job" value="3" id="modoprog" class="radio"><br>
                     <label for="modomembres">Modérateur Membres</label>
-                    <input type="radio" name="poste" value="4" id="modomembre" class="radio"><br>
+                    <input type="radio" name="job" value="4" id="modomembre" class="radio"><br>
                     <label for="modoempl">Modérateur Employés</label>
-                    <input type="radio" name="poste" value="5" id="modoempl" class="radio"><br>
+                    <input type="radio" name="job" value="5" id="modoempl" class="radio"><br>
                     <label for="modocaisse">Modérateur Caisse</label>
-                    <input type="radio" name="poste" value="6" id="modocaisse" class="radio"><br>';                
+                    <input type="radio" name="job" value="6" id="modocaisse" class="radio"><br>';                
                 }
 
                 echo '<label for="employe">Employé</label>
-                <input type="radio" name="poste" value="7" id="employe" class="radio" checked><br>';          
+                <input type="radio" name="job" value="7" id="employe" class="radio" checked><br>';          
                 ?>
                 <br/>
                 <label for="status">Statut : </label>
@@ -227,7 +227,7 @@ include("php/includes/navigator.php");
                 <tr>
                     <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" style="background-color:#232b2d">Nom</th>
                     <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col style="background-color:#232b2d" data-tablesaw-priority="1">Prénom</th>
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" style="background-color:#232b2d">Poste</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" style="background-color:#232b2d">job</th>
                     <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3" style="background-color:#232b2d">Statut</th>   
 
                 </tr>
