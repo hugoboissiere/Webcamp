@@ -130,8 +130,8 @@ include("php/includes/navigator.php");
                 <label for="lastname">Nom : </label>   
                 <input type="text" name="lastname" class="lastname" placeholder="Ex: Dupont">
                 <br/>
-                <!-- <label for="firstname">Prénom : </label> -->
-                <input type="hidden" name="firstname" class="firstname" placeholder="Ex: Laurent">
+                <label for="firstname">Prénom : </label>
+                <input type="text" name="firstname" class="firstname" placeholder="Ex: Laurent">
                 <br/>
                 <label for="password">Mot de passe : </label>
                 <input type="password" name="password" id="password" placeholder="Au moins 5 caractères" pattern=".{5,}">
