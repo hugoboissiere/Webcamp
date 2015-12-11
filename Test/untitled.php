@@ -24,7 +24,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
 	   <div class="ct-chart"></div>
 	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	   <script src="chartist.min.js"></script>
-      <input type="button" value="entree" align="center"></input>
+      <input type="button" value="entree" style="text-align: center;"></input>
 	   <table class="tableau">
       <tr>
          <th>Film</th>
