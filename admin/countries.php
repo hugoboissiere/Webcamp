@@ -13,8 +13,8 @@ $addJS = array("js/form/countries.js","js/rowSelection/countries.js");
     
     
 // PHP (queries) de cette page
-$addPHP = array("php/queries/select.php");
-    
+$addPHP = array();
+    include("php/queries/select.php");
 include("php/includes/head.php");
 include("php/includes/navigator.php");
 ?>

@@ -14,7 +14,7 @@ $php = $addPHP;
 
 if (count($php) > 0 && $php[0] != "") {
     for ($i = 0; $i < count($php); $i++) {
-        include("./php/" . $php[$i] . ".php");
+        include("../php/" . $php[$i] . ".php");
     }
 }
 ?>
