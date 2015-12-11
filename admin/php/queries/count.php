@@ -43,23 +43,23 @@ if ($_SESSION['auth']['job'] == 1)
 	$countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
 
 echo "feuwifew";
-// else
+else
 
-	// $countCinemaSessions = $dbh->query("SELECT count(id) as count FROM cw_cinema_sessions IN (SELECT country= '" . $_SESSION['auth']['country'] . "'");
-	// $countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
+	$countCinemaSessions = $dbh->query("SELECT count(id) as count FROM cw_cinema_sessions IN (SELECT country= '" . $_SESSION['auth']['country'] . "'");
+	$countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
 
 echo "kekekekeke";
-// if($_SESSION['auth']['job'] == 1)
-// {
-// 	$countCinemaTheaters = $dbh->query("SELECT count(id) as count FROM cw_cinema_theaters");
-// 	$countCinemaTheaters ->setFetchMode(PDO::FETCH_OBJ);
-// }
+if($_SESSION['auth']['job'] == 1)
+{
+	$countCinemaTheaters = $dbh->query("SELECT count(id) as count FROM cw_cinema_theaters");
+	$countCinemaTheaters ->setFetchMode(PDO::FETCH_OBJ);
+}
 
-// else
-// {
-// 	$countCinemaTheaters = $dbh->query("SELECT count(id) as count FROM cw_cinema_theaters WHERE country= '" . $_SESSION['auth']['country'] . "'");
-// 	$countCinemaTheaters ->setFetchMode(PDO::FETCH_OBJ);
-// }
+else
+{
+	$countCinemaTheaters = $dbh->query("SELECT count(id) as count FROM cw_cinema_theaters WHERE country= '" . $_SESSION['auth']['country'] . "'");
+	$countCinemaTheaters ->setFetchMode(PDO::FETCH_OBJ);
+}
 
 echo "jej";
 ?> 
