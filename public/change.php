@@ -25,7 +25,7 @@ $archive = $_POST['archive'];
 
 
 
-$rep = $bdh->prepare('UPDATE cw_human_resources_memberships SET firstname = "' . $firstname . '" , password = "'. $password .'", archive = "'. $archive . '", lastname = "' . $lastname .'" , username = "' . $username . '" , sex = "' . $sex . '" , phoneHome = "' . $phoneHome .'" , phoneMobile = "' . $phoneMobile .'" , neighborhood = "' . $neighborhood .'" , city = "' . $city . '" , country = "' . $country . '" , email = "' . $email . '" , membership = "' . $membership . '" , newsletter = "' . $newsletter . '", status = "'. $status . '" , activity = "' . $activity . '"  WHERE id = ' . $_SESSION['id'] . ' ');
+$rep = $bdh->exec('UPDATE cw_human_resources_memberships SET firstname = "' . $firstname . '" , password = "'. $password .'", archive = "'. $archive . '", lastname = "' . $lastname .'" , username = "' . $username . '" , sex = "' . $sex . '" , phoneHome = "' . $phoneHome .'" , phoneMobile = "' . $phoneMobile .'" , neighborhood = "' . $neighborhood .'" , city = "' . $city . '" , country = "' . $country . '" , email = "' . $email . '" , membership = "' . $membership . '" , newsletter = "' . $newsletter . '", status = "'. $status . '" , activity = "' . $activity . '"  WHERE id = ' . $_SESSION['id'] . ' ');
 $rep->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $rep->fetch())
 {
@@ -45,7 +45,7 @@ while ($result = $rep->fetch())
    $_SESSION['membership'] = $result->membership;
    $_SESSION['newsletter'] = $result->newsletter;
    $_SESSION['archive'] = $result->archive;
-   $rep->execute();
+   //$rep->execute();
 }
 
 $rep->closeCursor(); 
