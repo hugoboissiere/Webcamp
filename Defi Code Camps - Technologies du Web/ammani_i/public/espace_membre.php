@@ -23,8 +23,9 @@ echo 	'Login : ' . $_SESSION['username'] . '<br />
    		Activité : ' . $_SESSION['activity'] . ' ';
 
 ?>
-<br />   		
+<br /> 
+<br />  		
 <form method="post" action="modification.php">
-<input type="input" value="Modifier"/>
+<input type="submit" value="Modifier"/>
 </div>   		
 
