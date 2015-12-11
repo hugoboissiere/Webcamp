@@ -1,9 +1,9 @@
 <?php
-// session_start();
-// if (!isset($_SESSION['auth']) && count($_SESSION['auth']) != 11) {
-//     header("location:index.php");
-//     exit;
-// }
+session_start();
+if (!isset($_SESSION['auth']) && count($_SESSION['auth']) != 11) {
+    header("location:index.php");
+    exit;
+}
 
 include("php/queries/count.php");
 

@@ -9,10 +9,9 @@ include("php/includes/head.php");
 <div class="infos">
 <?php
 
-echo 	'
+echo 	'Login : ' . $_SESSION['username'] . '<br /> 
    		Prenom : ' . $_SESSION['firstname'] . '<br /> 
    		Nom : ' . $_SESSION['lastname'] . '<br /> 
-   		Login : ' . $_SESSION['username'] . '<br /> 
    		Sexe : ' . $_SESSION['sex'] . '<br /> 
    		Numéro de domicile : ' .$_SESSION['phoneHome'] . '<br />
    		Numéro de portable : ' .$_SESSION['phoneMobile'] . '<br />
