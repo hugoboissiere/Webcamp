@@ -25,7 +25,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
    <link rel="stylesheet" type="text/css" href="test.css"></link>
 	<table class="tableau" align="center">
    <tr>
-      <th>Film</th>
+      <th class="tableau">Film</th>
       <th>Genre</th>
       <th>Duree (en min)</th>
       <th>Pays/Continent<th>
@@ -33,7 +33,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
    <?php
    while ($result = $test->fetch())
    {
-      echo '<tr class="tableau">
+      echo '<tr>
                <td>' . $result->title . '</td>
                <td>' . $result->genre . '</td>
                <td>' . $result->runningTime . '</td>
