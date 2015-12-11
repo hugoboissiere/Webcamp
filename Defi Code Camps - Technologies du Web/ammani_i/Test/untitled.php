@@ -44,7 +44,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
                   <td>' . $result->runningTime . '</td>
                   <td>' . $result->country . '</td>
                   <td>' . $result->nb_entrees . '</td>
-                  <td><form method="GET" action="compteur.php">
+                  <td><form method="get" action="compteur.php">
                         <input type="hidden" value="'.$result->id.'">
                         <button type="submit">Entree</button>
                   </form></td>
