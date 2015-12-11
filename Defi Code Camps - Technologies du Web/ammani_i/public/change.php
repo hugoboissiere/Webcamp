@@ -1,11 +1,11 @@
 <?php
 
-//print_r($_POST);
-echo "1";
+print_r($_POST);
+
 session_start();
-echo "2";
+
 include("php/includes/database.php");
-echo "3";
+
 
 
 
@@ -32,7 +32,7 @@ while ($result = $rep->fetch())
    $_SESSION['archive'] = $result->archive;
    $rep->execute();
 }
-echo "4";
+
 $rep->closeCursor(); 
 
 	
