@@ -1,25 +1,24 @@
 <?php
 session_start();
-if (!isset($_SESSION['auth']) && count($_SESSION['auth']) != 12) {
+if (!isset($_SESSION['auth']) && count($_SESSION['auth']) != 11) {
     header("location:index.php");
     exit;
 }
 
 include("php/queries/count.php");
-include("php/queries/select.php");
+
 // Fichiers CSS/JS/PHP ajoutés
-// $css = $addCSS;
+$css = $addCSS;
 $js = $addJS;
-// $php = $addPHP;
+$php = $addPHP;
 
 
-// if (count($php) > 0 && $php[0] != "") {
-//     for ($i = 0; $i < count($php); $i++) {
-//         include("../php/" . $php[$i] . ".php");
-//     }
-// }
+if (count($php) > 0 && $php[0] != "") {
+    for ($i = 0; $i < count($php); $i++) {
+        include("php/" . $php[$i] . ".php");
+    }
+}
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
     <head>
