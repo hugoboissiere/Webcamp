@@ -89,7 +89,7 @@ echo '                </select>
                     ?>
                     <?php
 echo '                </select><br/>
-                <input type="submit" class="clearForm" name="InsertMembersOrSubscribers" value="Enregistrer">';
+                <input type="submit" class="clearForm" value="Modification">';
                  echo '
                  <br/>
             </form>
@@ -97,7 +97,3 @@ echo '                </select><br/>
 
 
 ?>
-
-
-
-//$rep = $bdh->prepare('UPDATE cw_human_resources_memberships SET firstname = "' . $_POST['firstname'] . '", lastname = "' . $_POST['lastname'] . '", username = "' . $_POST['email'] . '" ')
