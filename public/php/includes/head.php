@@ -44,6 +44,7 @@ and open the template in the editor.
         <link rel="icon" type="image/png" href="resources/imgs/layout/favicon.png" />
         <!--CSS-->
         <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/membre.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" type="text/css" href="css/default.css" />
