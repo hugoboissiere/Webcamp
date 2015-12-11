@@ -49,17 +49,17 @@ echo "feuwifew";
 	// $countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
 
 echo "kekekekeke";
-if($_SESSION['auth']['job'] == 1)
-{
-	$countCinemaTheaters = $dbh->query("SELECT count(id) as count FROM cw_cinema_theaters");
-	$countCinemaTheaters ->setFetchMode(PDO::FETCH_OBJ);
-}
+// if($_SESSION['auth']['job'] == 1)
+// {
+// 	$countCinemaTheaters = $dbh->query("SELECT count(id) as count FROM cw_cinema_theaters");
+// 	$countCinemaTheaters ->setFetchMode(PDO::FETCH_OBJ);
+// }
 
-else
-{
-	$countCinemaTheaters = $dbh->query("SELECT count(id) as count FROM cw_cinema_theaters WHERE country= '" . $_SESSION['auth']['country'] . "'");
-	$countCinemaTheaters ->setFetchMode(PDO::FETCH_OBJ);
-}
+// else
+// {
+// 	$countCinemaTheaters = $dbh->query("SELECT count(id) as count FROM cw_cinema_theaters WHERE country= '" . $_SESSION['auth']['country'] . "'");
+// 	$countCinemaTheaters ->setFetchMode(PDO::FETCH_OBJ);
+// }
 
 echo "jej";
 ?> 
