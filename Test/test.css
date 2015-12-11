@@ -1,5 +1,4 @@
-.tableau {
+.tableau table{
 	border: 3px solid black;
 	background-color: #0D8900;
-	border-collapse: collapse;
 }
