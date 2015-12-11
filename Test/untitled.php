@@ -23,7 +23,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="chartist.min.js"></script>
    <link rel="stylesheet" type="text/css" href="test.css"></link>
-	<table class="tableau">
+	<table class="tableau" align="center">
    <tr>
       <th>Film</th>
       <th>Genre</th>
