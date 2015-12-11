@@ -51,6 +51,16 @@ $test->setFetchMode(PDO::FETCH_OBJ);
       $employeeStatusListAdd->closeCursor();
       ?>
       </table>
+      <table>
+      <p>Par genre</p>
+      <tr>
+         <th>Film</th>
+         <th>Genre</th>
+         <th>Duree (en min)</th>
+         <th>Pays/Continent</th>
+         <th>Nombre d'entrees total</th>
+      </tr>
+      </table>
    </head>
    </body>
 </html>
