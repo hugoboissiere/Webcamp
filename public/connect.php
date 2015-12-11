@@ -28,7 +28,7 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
     $insert->execute();
 }
 
-header('Location: connexion.php');
+header('Location: inscription.php');
 
 ?>
 
