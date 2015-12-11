@@ -13,10 +13,12 @@ $addJS = array("js/form/countries.js","js/rowSelection/countries.js");
     
     
 // PHP (queries) de cette page
-$addPHP = array("queries/select");
+$addPHP = array();
     
 include("php/includes/head.php");
 include("php/includes/navigator.php");
+
+include("php/includes/select.php");
 ?>
 
 
