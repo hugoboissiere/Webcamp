@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
- <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
- <link rel="shortcut icon" type="image/ico" href="img/favicon.gif" />
- <link rel="stylesheet" type="text/css" href="style.css" />
- <title> titre </title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <link rel="shortcut icon" type="image/ico" href="img/favicon.gif" />
+   <link rel="stylesheet" type="text/css" href="style.css" />
+   <title> titre </title>
 </head>
 <body>
     <?php
@@ -30,24 +30,24 @@
     echo "oui";
     try
     {
-
-    $update = $dbh->prepare("UPDATE cw_human_resources_employees "
-        . "SET firstname = :firstname, lastname = :lastname, birthDate = :birthDate, sex = :sex, address = :address, city = :city, phoneHome = :phoneHome, phoneMobile = :phoneMobile, email = :email, job = :job, status = :status, password = :password, country = :country "
-        . "WHERE id = 1");
-    $insert->bindParam(":lastname", $_POST["lastname"]);
-    $insert->bindParam(":firstname", $_POST["firstname"]);
-    $insert->bindParam(":birthDate", $_POST["birthDate"]);
-    $insert->bindParam(":sex", $_POST["sex"]);
-    $insert->bindParam(":address", $_POST["address"]);
-    $insert->bindParam(":city", $_POST["city"]);
-    $insert->bindParam(":phoneHome", $_POST["phoneHome"]);
-    $insert->bindParam(":phoneMobile", $_POST["phoneMobile"]);
-    $insert->bindParam(":email", $_POST["email"]);
-    $insert->bindParam(":job", $_POST["job"]);
-    $insert->bindParam(":status", $_POST["status"]);
-    $insert->bindParam(":password", $_POST["password"]);
-    $insert->bindParam(":country", $_POST["country"]);
-    $insert->execute();
+        
+        $update = $dbh->prepare("UPDATE cw_human_resources_employees "
+            . "SET firstname = :firstname, lastname = :lastname, birthDate = :birthDate, sex = :sex, address = :address, city = :city, phoneHome = :phoneHome, phoneMobile = :phoneMobile, email = :email, job = :job, status = :status, password = :password, country = :country "
+            . "WHERE id = 1");
+        $insert->bindParam(":lastname", $_POST["lastname"]);
+        $insert->bindParam(":firstname", $_POST["firstname"]);
+        $insert->bindParam(":birthDate", $_POST["birthDate"]);
+        $insert->bindParam(":sex", $_POST["sex"]);
+        $insert->bindParam(":address", $_POST["address"]);
+        $insert->bindParam(":city", $_POST["city"]);
+        $insert->bindParam(":phoneHome", $_POST["phoneHome"]);
+        $insert->bindParam(":phoneMobile", $_POST["phoneMobile"]);
+        $insert->bindParam(":email", $_POST["email"]);
+        $insert->bindParam(":job", $_POST["job"]);
+        $insert->bindParam(":status", $_POST["status"]);
+        $insert->bindParam(":password", $_POST["password"]);
+        $insert->bindParam(":country", $_POST["country"]);
+        $insert->execute();
         echo 'logie';
     }
     catch(PDOException $e)
