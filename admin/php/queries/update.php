@@ -15,8 +15,8 @@ try {
 
 if (isset($_POST["updateMovie"])) {
     $update = $dbh->prepare("UPDATE cw_medias_movies "
-            . "SET title = :title, titleOriginal = :titleOriginal, realisator = :realisator, plot = :plot, actors = :actors, country = :country, type = :type, genre = :genre, releaseDate = :releaseDate, runningTime = :runningTime, production = :production, distribution = :distribution, language = :language, warning = :warning "
-            . "WHERE id = :id");
+        . "SET title = :title, titleOriginal = :titleOriginal, realisator = :realisator, plot = :plot, actors = :actors, country = :country, type = :type, genre = :genre, releaseDate = :releaseDate, runningTime = :runningTime, production = :production, distribution = :distribution, language = :language, warning = :warning "
+        . "WHERE id = :id");
     $update->bindParam(":id", $_POST["id"]);
     $update->bindParam(":title", $_POST["title"]);
     $update->bindParam(":titleOriginal", $_POST["titleOriginal"]);
@@ -37,8 +37,8 @@ if (isset($_POST["updateMovie"])) {
 
 if (isset($_POST["updateGenre"])) {
     $update = $dbh->prepare("UPDATE cw_medias_genres "
-            . "SET name = :name "
-            . "WHERE id = :id");
+        . "SET name = :name "
+        . "WHERE id = :id");
     $update->bindParam(":id", $_POST["id"]);
     $update->bindParam(":name", $_POST["name"]);
     $update->execute();
@@ -46,28 +46,28 @@ if (isset($_POST["updateGenre"])) {
 
 if (isset($_POST["updateCountry"])) {
     $update = $dbh->prepare("UPDATE cw_medias_countries "
-            . "SET name = :name, abbreviation = :abbreviation "
-            . "WHERE id = :id");
+        . "SET name = :name, abbreviation = :abbreviation "
+        . "WHERE id = :id");
     $update->bindParam(":id", $_POST["id"]);
     $update->bindParam(":name", $_POST["name"]);
     $update->bindParam(":abbreviation", $_POST["abbreviation"]);
-     $update->execute();
+    $update->execute();
 }
 
 if (isset($_POST["updateLanguage"])) {
     $update = $dbh->prepare("UPDATE cw_medias_languages "
-            . "SET name = :name, abbreviation = :abbreviation "
-            . "WHERE id = :id");
+        . "SET name = :name, abbreviation = :abbreviation "
+        . "WHERE id = :id");
     $update->bindParam(":id", $_POST["id"]);
     $update->bindParam(":name", $_POST["name"]);
     $update->bindParam(":abbreviation", $_POST["abbreviation"]);
-     $update->execute();
+    $update->execute();
 }
 
 if (isset($_POST["updateEmployee"])) {
     $update = $dbh->prepare("UPDATE cw_human_resources_employees "
-            . "SET firstname = :firstname, lastname = :lastname, birthDate = :birthDate, sex = :sex, address = :address, city = :city, phoneHome = :phoneHome, phoneMobile = :phoneMobile, email = :email, job = :job, status = :status, password = :password "
-            . "WHERE id = :id");
+        . "SET firstname = :firstname, lastname = :lastname, birthDate = :birthDate, sex = :sex, address = :address, city = :city, phoneHome = :phoneHome, phoneMobile = :phoneMobile, email = :email, job = :job, status = :status, password = :password "
+        . "WHERE id = :id");
     $update->bindParam(":id", $_POST["id"]);
     $update->bindParam(":firstname", $_POST["firstname"]);
     $update->bindParam(":lastname", $_POST["lastname"]);
@@ -86,9 +86,8 @@ if (isset($_POST["updateEmployee"])) {
 
 if (isset($_POST["updateMembership"])) {
     $update = $dbh->prepare("UPDATE cw_human_resources_memberships "
-            . "SET firstname = :firstname, lastname = :lastname, password = :password, cardNumber = :cardNumber, username = :username, sex = :sex, phoneHome = :phoneHome, phoneMobile = :phoneMobile, neighborhood = :neighborhood, city = :city, country = :country, email = :email, status = :status, activity = :activity, membership = :membership, newsletter = :newsletter "
-            . "WHERE id = :id");
-    $update->bindParam(":id", $_POST["id"]);
+        . "SET firstname = :firstname, lastname = :lastname, password = :password, cardNumber = :cardNumber, username = :username, sex = :sex, phoneHome = :phoneHome, phoneMobile = :phoneMobile, neighborhood = :neighborhood, city = :city, country = :country, email = :email, status = :status, activity = :activity, membership = :membership, newsletter = :newsletter "
+        . "WHERE id = :id");
     $update->bindParam(":firstname", $_POST["firstname"]);
     $update->bindParam(":lastname", $_POST["lastname"]);
     $update->bindParam(":password", $_POST["password"]);
@@ -110,12 +109,12 @@ if (isset($_POST["updateMembership"])) {
 
 if (isset($_POST["updateTheater"])) {
     $update = $dbh->prepare("UPDATE cw_cinema_theaters "
-            . "SET name = :name, numberOfPlace = :numberOfPlace, address = :address, phone = :phone "
-            . "WHERE id = :id");
+        . "SET name = :name, numberOfPlace = :numberOfPlace, address = :address, phone = :phone "
+        . "WHERE id = :id");
     $update->bindParam(":id", $_POST["id"]);
     $update->bindParam(":name", $_POST["name"]);
     $update->bindParam(":address", $_POST["address"]);
     $update->bindParam(":phone", $_POST["phone"]);
     $update->bindParam(":numberOfPlace", $_POST["numberOfPlace"]);
-     $update->execute();
+    $update->execute();
 }
