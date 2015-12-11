@@ -53,7 +53,8 @@ $archive = $_POST['archive'];
 // $sele->closeCursor(); 
 // echo PDO::errorCode();
 try {
-$rep = $bdh->exec("UPDATE cw_human_resources_memberships SET username = 'qwerty' WHERE id = 9 ");
+$rep = $dbh->exec("UPDATE cw_human_resources_memberships SET username = 'qwerty' WHERE id = 9 ");
+$dbh->aff
     }
 catch(PDOException $e)
 {
