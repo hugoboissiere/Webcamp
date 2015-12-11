@@ -25,7 +25,7 @@ UPDATE  SET expiration = expiration+40
 	   <div class="ct-chart"></div>
 	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	   <script src="chartist.min.js"></script>
-      <input type="button" name="entree"></input>
+      
 	   <table class="tableau">
       <tr>
          <th>Film</th>
