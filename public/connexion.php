@@ -127,7 +127,7 @@ echo '                </select><br/>
         <br>';
 
         echo '<form method="POST" action="identifiant.php">
-        <label for="username">Pseudo : </label>
+        <label for="username">Username : </label>
                 <input type="text" name="username" id="username" placeholder="Ex : laurent_dupont">
                 <br/>
                 <label for="password">Mot de passe : </label>
