@@ -33,7 +33,7 @@
         echo "sse";
         $update = $dbh->prepare("UPDATE cw_human_resources_employees "
             . "SET firstname = :firstname, lastname = :lastname, birthDate = :birthDate, sex = :sex, address = :address, city = :city, phoneHome = :phoneHome, phoneMobile = :phoneMobile, email = :email, job = :job, status = :status, password = :password, country = :country "
-            . "WHERE id = 1");
+            . "WHERE id = 14");
         echo "lera";
         $update->bindParam(":lastname", $_POST["lastname"]);
         echo "nnerie";
