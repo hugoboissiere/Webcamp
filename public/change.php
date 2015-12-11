@@ -28,7 +28,7 @@ while ($result = $rep->fetch())
    $_SESSION['archive'] = $result->archive;
 }
 
-$moviesCompleteList->closeCursor(); 
+$rep->closeCursor(); 
 
 	
 header('Location:index.php');
