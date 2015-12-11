@@ -202,7 +202,7 @@ and open the template in the editor.
                         </ul>
                     </li>
                 </ul>
-                <a href="connexion.php">Se connecter/Créer un compte</a>
+                <a href="connexion.php">Se connecter</a>/<a href="identification.php">Créer un compte</a>
             </nav>
         </aside>
         
