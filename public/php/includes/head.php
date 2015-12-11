@@ -154,7 +154,10 @@ and open the template in the editor.
         </header>
         
         <aside>
-            <?php echo 'Bonjour, ' . $_SESSION['firstname'] . ' '; ?>
+
+            <?php 
+            if ($_SESSION['id'])
+                echo 'Bonjour, ' . $_SESSION['firstname'] . ' '; ?>
             <nav id="staffPanel">
                 <ul>
                     <li>LE CINÉMA
