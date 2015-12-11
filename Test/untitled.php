@@ -28,7 +28,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
          <th>Film</th>
          <th>Genre</th>
          <th>Duree (en min)</th>
-         <th>Pays/Continent<th>
+         <th>Pays/Continent</th>
       </tr>
       <?php
       while ($result = $test->fetch())
