@@ -2,6 +2,13 @@
 include("php/includes/database.php");
 include("php/includes/head.php");
 
+?>
+
+<img src="http://img.tvmag.lefigaro.fr/ImCon/Arti/72959/Motus-350.jpg" alt="titi" />
+
+<div class="infos">
+<?php
+
 echo 	'Login : ' . $_SESSION['username'] . '<br /> 
    		Prenom : ' . $_SESSION['firstname'] . '<br /> 
    		Nom : ' . $_SESSION['lastname'] . '<br /> 
@@ -16,5 +23,5 @@ echo 	'Login : ' . $_SESSION['username'] . '<br />
    		Activité : ' . $_SESSION['activity'] . ' ';
 
 ?>   		
-   		
+</div>   		
 
