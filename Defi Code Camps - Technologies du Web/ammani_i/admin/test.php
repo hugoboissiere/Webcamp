@@ -31,9 +31,9 @@
     try
     {
 
-    $insert = $dbh->prepare("INSERT INTO cw_human_resources_employees"
-            . "(lastname,firstname,birthDate,sex,address,city,phoneHome,phoneMobile,email,job,status,password,country)"
-            . " VALUES(:lastname,:firstname,:birthDate,:sex,:address,:city,:phoneHome,:phoneMobile,:email,:job,:status,:password,:country)");
+    $update = $dbh->prepare("UPDATE cw_human_resources_employees "
+        . "SET firstname = :firstname, lastname = :lastname, birthDate = :birthDate, sex = :sex, address = :address, city = :city, phoneHome = :phoneHome, phoneMobile = :phoneMobile, email = :email, job = :job, status = :status, password = :password, country = :country "
+        . "WHERE id = :id");
     $insert->bindParam(":lastname", $_POST["lastname"]);
     $insert->bindParam(":firstname", $_POST["firstname"]);
     $insert->bindParam(":birthDate", $_POST["birthDate"]);
@@ -48,11 +48,11 @@
     $insert->bindParam(":password", $_POST["password"]);
     $insert->bindParam(":country", $_POST["country"]);
     $insert->execute();
-        echo 'comment est votre blanquette ?';
+        echo 'logie';
     }
     catch(PDOException $e)
     {
-        echo 'comment est votre blanquette ?1';
+        echo 'graphie';
         handle_sql_errors($selectQuery, $e->getMessage());
     }
 
