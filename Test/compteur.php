@@ -15,9 +15,8 @@ echo $nb;
 $update = $dbh->prepare("UPDATE cw_medias_movies "
 	. "SET nb_entrees = :nb "
 	. "WHERE id = 1");
-$update->bindParam(":id", $_POST["id"]);
 $update->bindParam(":nb", $nb);
 $update->execute();
-
+echo "graphie";
 // header("Location: untitled.php");
 ?>
