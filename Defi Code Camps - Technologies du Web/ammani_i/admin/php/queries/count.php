@@ -37,7 +37,7 @@ else
 }
 
 // if ($_SESSION['auth']['job'] == 1)
-	print_r($_SESSION);
+	echo "fffff";
 	$countCinemaSessions = $dbh->query("SELECT count(CCS.id) as count FROM cw_cinema_sessions CCS
 										INNER JOIN cw_cinema_theaters CCT ON CCT.country='".$_SESSION['auth']['country']."'
 										WHERE CCS.idTheater=CCT.id");
