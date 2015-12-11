@@ -48,7 +48,7 @@ while ($result = $sele->fetch())
    $_SESSION['archive'] = $result->archive;
    //$rep->execute();
 }
-
+echo $_SESSION['username'];
 $sele->closeCursor(); 
 echo PDO::errorCode();
 
