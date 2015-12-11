@@ -16,7 +16,7 @@ include("php/includes/database.php");
 $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $moviesCompleteList->fetch())
 {
-   $username = $moviesCompleteList->username;
+   $username = $result->username;
    echo $username;
 }
 $moviesCompleteList->closeCursor(); 
