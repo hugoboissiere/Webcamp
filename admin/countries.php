@@ -83,8 +83,8 @@ include("php/includes/navigator.php");
             </thead>
             <tbody>
                 <?php
-                $countriesCompleteList = $dbh->query("SELECT * FROM cw_medias_countries  WHERE archive = 'false'");
-                $countriesCompleteList->setFetchMode(PDO::FETCH_OBJ);
+                // $countriesCompleteList = $dbh->query("SELECT * FROM cw_medias_countries  WHERE archive = 'false'");
+                // $countriesCompleteList->setFetchMode(PDO::FETCH_OBJ);
                 while ($result = $countriesCompleteList->fetch()) {
                     
                    echo "<tr data-id='" . $result->id . "'>
