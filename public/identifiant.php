@@ -1,4 +1,5 @@
 <?php
+include("php/includes/database.php");
 
 if (isset('coco'))
 {
@@ -9,9 +10,7 @@ if (isset('coco'))
 	{
 		$_SESSION['username'] = $_POST['username'];
 	} 
-	else
-		exit(0);
-
+	
 	echo $_SESSION['username'];
 
 
