@@ -6,9 +6,26 @@ session_start();
 
 include("php/includes/database.php");
 
+$firstname = $_POST['firstname'];
+$password = $_POST['password'];
+$lastname = $_POST['lastname'];
+$username = $_POST['username'];
+$sex = $_POST['sex'];
+$phoneHome = $_POST['phoneHome'];
+$phoneMobile = $_POST['phoneMobile'];
+$neighborhood = $_POST['neighborhood'];
+$city = $_POST['city'];
+$country = $_POST['country'];
+$email = $_POST['email'];
+$sex = $_POST['status'];
+$activity = $_POST['activity'];
+$membership = $_POST['membership'];
+$newsletter = $_POST['newsletter'];
+$archive = $_POST['archive'];
 
 
-$rep = $bdh->prepare('UPDATE cw_human_resources_memberships SET firstname = "' . $_POST['firstname'] . '", password = "' . $_POST['password'] . '", archive = "' . $_POST['archive'] . '", lastname = "' . $_POST['lastname'] . '", username = "' . $_POST['username'] . '", sex = "' . $_POST['sex'] . '", phoneHome = ' . $_POST['phoneHome'] . ', phoneMobile = ' . $_POST['phoneMobile'] . ', neighborhood = "' . $_POST['neighborhood'] . '", city = "' . $_POST['city'] . '", country = "' . $_POST['country'] . '", email = "' . $_POST['email'] . '", membership = "' . $_POST['membership'] . '", newsletter = "' . $_POST['newsletter'] . '", status = "' . $_POST['status'] . '", activity = "' . $_POST['activity'] . '"  WHERE id = ' . $_SESSION['id'] . ' ');
+
+$rep = $bdh->prepare('UPDATE cw_human_resources_memberships SET firstname = "' . $firstname . '" , password = "'. $password .'", archive = "'. $archive . '", lastname = "' . $lastname .'" , username = "' . $username . '" , sex = "' . $sex . '" , phoneHome = "' . $phoneHome .'" , phoneMobile = "' . $phoneMobile .'" , neighborhood = "' . $neighborhood .'" , city = "' . $city . '" , country = "' . $country . '" , email = "' . $email . '" , membership = "' . $membership . '" , newsletter = "' . $newsletter . '", status = "'. $status . '" , activity = "' . $activity . '"  WHERE id = ' . $_SESSION['id'] . ' ');
 $rep->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $rep->fetch())
 {
@@ -16,7 +33,6 @@ while ($result = $rep->fetch())
    $_SESSION['firstname'] = $result->firstname;
    $_SESSION['lastname'] = $result->lastname;
    $_SESSION['password'] = $result->password;
-   $_SESSION['caddNumber'] = $result->cardNumber;
    $_SESSION['sex'] = $result->sex;
    $_SESSION['phoneHome'] = $result->phoneHome;
    $_SESSION['phoneMobile'] = $result->phoneMobile;
