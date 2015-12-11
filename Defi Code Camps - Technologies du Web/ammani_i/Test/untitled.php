@@ -44,7 +44,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
       }
       $employeeStatusListAdd->closeCursor();
       ?>
-      </table>
       <input type="button" value="entree"></input>
+      </table>
    </body>
 </html>
