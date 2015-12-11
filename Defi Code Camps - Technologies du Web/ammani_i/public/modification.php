@@ -16,19 +16,19 @@ echo '<form method="post" action="change.php" id="addForm" autocomplete="off" cl
                 <input type="radio" name="newsletter" value="No" id="newsletterOff"class="radio" checked>
                 <br/>
                 <label for="name">Nom : </label>
-                <input type="text" name="lastname" id="name" placeholder="' . $_SESSION['lastname'] . '">
+                <input type="text" name="lastname" id="name" value="' . $_SESSION['lastname'] . '">
                 <br/>
                 <label for="firstname">Prénom : </label>
-                <input type="text" name="firstname" id="firstname" placeholder="' . $_SESSION['firstname'] . '">
+                <input type="text" name="firstname" id="firstname" value="' . $_SESSION['firstname'] . '">
                 <br/>
                 <label for="password">Mot de passe : </label>
-                <input type="password" type="password" name="password" id="password" placeholder="Au moins 5 caractères" pattern=".{5,}">
+                <input type="password" type="password" name="password" id="password" value="Au moins 5 caractères" pattern=".{5,}">
                 <br/>
                 <label for="password2">Retaper le mdp : </label>
-                <input type="password" name="password2" id="password2" placeholder="Au moins 5 caractères" pattern=".{5,}">
+                <input type="password" name="password2" id="password2" value="Au moins 5 caractères" pattern=".{5,}">
                 <br/>
                 <label for="username">Pseudo : </label>
-                <input type="text" name="username" id="username" placeholder="' . $_SESSION['username'] . '">
+                <input type="text" name="username" id="username" value="' . $_SESSION['username'] . '">
                 <br/>
                 Sexe : 
                 <label for="man">Homme</label>
@@ -37,16 +37,16 @@ echo '<form method="post" action="change.php" id="addForm" autocomplete="off" cl
                 <input type="radio" name="sex" value="Female" id="woman"  class="radio" checked>
                 <br/>
                 <label for="phoneHome">Téléphone Fixe : </label>
-                <input type="tel" name="phoneHome" id="phoneHome" placeholder="' . $_SESSION['phoneHome'] . '">
+                <input type="tel" name="phoneHome" id="phoneHome" value="' . $_SESSION['phoneHome'] . '">
                 <br/>
                 <label for="phoneMobile">Téléphone Mobile : </label>
-                <input type="tel" name="phoneMobile" id="phoneMobile" placeholder="' . $_SESSION['phoneMobile'] . '">
+                <input type="tel" name="phoneMobile" id="phoneMobile" value="' . $_SESSION['phoneMobile'] . '">
                 <br/>
                 <label for="neighborhood">Quartier : </label>
-                <input type="text" id="neighborhood" name="neighborhood" placeholder="' . $_SESSION['neighborhood'] . '">
+                <input type="text" id="neighborhood" name="neighborhood" value="' . $_SESSION['neighborhood'] . '">
                 <br/>
                 <label for="city">Ville : </label>
-                <input type="text" name="city" id="city" placeholder="' . $_SESSION['city'] . '">
+                <input type="text" name="city" id="city" value="' . $_SESSION['city'] . '">
                 <br/>
                 <label for="country">Pays : </label>
                 <select name="country" id="country">';
@@ -64,7 +64,7 @@ echo '<form method="post" action="change.php" id="addForm" autocomplete="off" cl
 echo '                </select>
                 <br/>
                 <label for="mail">Email : </label>
-                <input type="email" name="email" id="mail" placeholder="' . $_SESSION['email'] . '">
+                <input type="email" name="email" id="mail" value="' . $_SESSION['email'] . '">
                 <br/>
                 <label for="status">Statut : </label>
                 <select name="status" id="status">';
