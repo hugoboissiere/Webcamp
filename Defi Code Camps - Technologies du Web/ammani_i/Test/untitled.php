@@ -24,7 +24,10 @@ $test->setFetchMode(PDO::FETCH_OBJ);
 	   <div class="ct-chart"></div>
 	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	   <script src="chartist.min.js"></script>
-      <script src="recuperation.js"></script>
+      <script type="text/javascript">
+         var test = $('tr:eq(1)').find('td:eq(4)').text();
+         console.log(test);
+      </script>
       <form action="compteur.php">
       </form>
 	   <table class="tableau">
