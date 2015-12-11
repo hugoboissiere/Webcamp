@@ -154,6 +154,7 @@ and open the template in the editor.
         </header>
         
         <aside>
+            <?php echo 'Bonjour, ' . $_SESSION['firstname'] . ' '; ?>
             <nav id="staffPanel">
                 <ul>
                     <li>LE CINÉMA
@@ -202,7 +203,12 @@ and open the template in the editor.
                         </ul>
                     </li>
                 </ul>
-                <a href="connexion.php">Créer un compte</a>/<a href="identification.php">Se connecter</a>
+                <?php
+                if(!isset($_SESSION['id']))
+                    echo '<a href="connexion.php">Créer un compte</a>/<a href="identification.php">Se connecter</a>';
+                else
+                    echo '<a href="deconnexion.php">Deconnexion</a>';
+                ?>
             </nav>
         </aside>
         
