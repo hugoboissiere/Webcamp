@@ -33,7 +33,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
    <?php
    while ($result = $test->fetch())
    {
-      echo '<tr>
+      echo '<tr class="tableau">
                <td>' . $result->title . '</td>
                <td>' . $result->genre . '</td>
                <td>' . $result->runningTime . '</td>
