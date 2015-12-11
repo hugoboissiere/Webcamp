@@ -10,7 +10,6 @@ include("php/includes/head.php");
 <?php
 
 echo 	'Login : ' . $_SESSION['username'] . '<br /> 
-         <br />
    		Prenom : ' . $_SESSION['firstname'] . '<br /> 
    		Nom : ' . $_SESSION['lastname'] . '<br /> 
    		Sexe : ' . $_SESSION['sex'] . '<br /> 
@@ -23,6 +22,9 @@ echo 	'Login : ' . $_SESSION['username'] . '<br />
    		Statut : ' . $_SESSION['status'] . '<br />
    		Activité : ' . $_SESSION['activity'] . ' ';
 
-?>   		
+?>
+<br />   		
+<form method="post" action="modification.php">
+<input type="input" value="Modifier"/>
 </div>   		
 
