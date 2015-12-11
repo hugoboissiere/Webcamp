@@ -15,5 +15,4 @@ if (isset('coco'))
 
 
 	header('Location:connexion.php');
-
-// }
+}
