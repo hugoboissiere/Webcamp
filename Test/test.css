@@ -1,8 +1,8 @@
 .tableau {
-	border: 3px solid black;
+	border: 1px;
 	background-color: #0D8900;
 }
 
 table.tableau td, th {
-    border: 3px solid black;
+    border: 1px;
 }
