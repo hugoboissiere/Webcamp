@@ -103,8 +103,9 @@ include("php/includes/navigator.php");
     </div>
         
     <!--Popin-->
-<!--     <div style='display:none'>
-        <div class="form-style-8" id="add">
+   <div style='display:none'>
+    saltu
+        <!-- <div class="form-style-8" id="add">
             <h2>Ajouter</h2>
             <form method="post" action="" id="addForm" class="formOverflow">
                 <label for="title">Titre : </label>   
@@ -148,7 +149,7 @@ include("php/includes/navigator.php");
                     $genresListAdd->closeCursor();
                     ?>
                 </select>
-                
+
                 <br/>
                 <label for="date">Date de sortie : </label>
                 <input type="date" name="releaseDate" class="date" placeholder="Ex : 1999">
@@ -217,7 +218,7 @@ include("php/includes/navigator.php");
                     $genresListModification->closeCursor();
                     ?>
                 </select>
-                
+
                 <br/>
                 <label for="date">Date de sortie : </label>
                 <input type="date" name="releaseDate" class="releaseDate" placeholder="Ex : 1999">
@@ -238,7 +239,7 @@ include("php/includes/navigator.php");
                 <input type="text" name="warning" class="warning"placeholder="Ex : -12">
                 <br/>
                 <input type="submit" name="updateMovie" id="modificationMovieSubmit" value="Enregistrer">
-                
+
             </form>
         </div>
         <div class="form-style-8" id="archive">
@@ -260,15 +261,15 @@ include("php/includes/navigator.php");
             </div>
             <span id="status" ></span>
         </div>
-        
+
         <div class="form-style-8" id="pictureCover">
             <h2>Image de couverture</h2>
             <div class="uploadCover" >
                 <span>Ajouter affiche</span>
             </div>
             <span id="status" ></span>
-        </div>
-    </div> -->
+        </div> -->
+    </div> 
         
     <!--Tableau-->
     <div id="table">
