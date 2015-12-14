@@ -38,12 +38,7 @@ echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br />
 <br />  		
 <form method="post" action="modification.php">
 <input type="submit" value="Modifier"/>
-</div>   
-<div class="attention">
-   <h2>Attention !!!</h2>
-   <br />
-   <p>Les modifications seront visibles lorsque de votre prochaine connexion</p> 
-</div>		
+</div>   	
 
 <br />
 <br />
