@@ -11,7 +11,7 @@ $moviesTitleList->closeCursor();
 $update = $dbh->prepare("UPDATE cw_medias_movies "
 	. "SET nb_entrees = :nb "
 	. "WHERE id = ".$_GET['ID']);
-$update->bindParam(":nb", $nb);
+$update->bindParam(":nb", $_POST['nb']);
 $update->execute();
 header("Location: untitled.php");
 ?>
