@@ -230,7 +230,8 @@ include("php/includes/navigator.php");
                 <tr>
                     <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" style="background-color:#232b2d">Nom</th>
                     <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col style="background-color:#232b2d" data-tablesaw-priority="1">Prénom</th>
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" style="background-color:#232b2d">job</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" style="background-color:#232b2d">Job</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3" style="background-color:#232b2d">Mail</th>
                     <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3" style="background-color:#232b2d">Statut</th>   
 
                 </tr>
@@ -254,6 +255,15 @@ include("php/includes/navigator.php");
                         $categorie2->closeCursor();
 
                         ?></td>
+                        <td><?php 
+                        if($_SESSION['auth']['job'] == 1 || $_SESSION['auth']['job'] == 2)
+                            echo $result->email;
+                        else if (($_SESSION['auth']['job'] >= 3 && $result->job >= 3) && ($_SESSION['auth']['job'] <= 6 && $result->job >= 3))
+                            echo $result->email;
+                        else
+                            echo "Vous n'avez pas les permissions pour voir les adresses mail.";
+
+                            ?></td>
                         <td><?php echo $result->status; ?></td>
                     </tr>
                     <?php
