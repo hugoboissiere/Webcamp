@@ -96,7 +96,6 @@ $().ready(function() {
             },
         rules: {
             lastname: "required",
-            firstname: "required",
             birthDate: {
                 required: true,
                 minlength: 8
@@ -129,7 +128,6 @@ $().ready(function() {
             lastname: {
                 required: "Veuillez specifier votre nom."
             },
-            firstname: "Veuillez spécifier votre prénom",
             birthDate: {
                 required: "Veuillez renseigner votre date de naissance",
                 minlength: "Au moins 8 chiffres"
