@@ -157,12 +157,13 @@ if($_SESSION['auth']['job'] == 1)
 	$employeesCompleteList = $dbh->query("SELECT * FROM cw_human_resources_employees  WHERE archive = 'false'");
 	$employeesCompleteList->setFetchMode(PDO::FETCH_OBJ);	
 }
-else
-{
-	$employeesCompleteList = $dbh->query("SELECT * FROM cw_human_resources_employees  WHERE archive = 'false' AND region= '" . $_SESSION['auth']['region'] . "'");
-	$employeesCompleteList->setFetchMode(PDO::FETCH_OBJ);
-}
 
+// else
+// {
+// 	$employeesCompleteList = $dbh->query("SELECT * FROM cw_human_resources_employees  WHERE archive = 'false' AND region= '" . $_SESSION['auth']['region'] . "'");
+// 	$employeesCompleteList->setFetchMode(PDO::FETCH_OBJ);
+// }
+// /*
 //  *  Liste complete des inscrits  
 //  */
 
