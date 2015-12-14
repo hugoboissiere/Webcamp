@@ -194,7 +194,7 @@ if (isset($_POST["insertEmployee"])) {
  *      1.  Sessions (movies' sessions)
  */
 
-$theaterCompleteList =  $dbh->query("SELECT * FROM cw_cinema_theaters WHERE archive = 'false'");
+$theaterCompleteList =  $dbh->query("SELECT * FROM cw_cinema_theaters WHERE archive = 'false' AND id = '" . $_POST['idTheater'] . "'");
 $theaterCompleteList -> setFetchMode(PDO::FETCH_OBJ);
 while ($result = $theaterCompleteList->fetch())
 {
