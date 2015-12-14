@@ -10,3 +10,10 @@ div
 	vertical-align: top;
 	border: black 1px solid;
 }
+
+#attention
+{
+	display: inline-block;
+	vertical-align: top;
+	border: black 1px solid;
+}
