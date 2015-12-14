@@ -87,7 +87,7 @@ if (isset($_POST["updateEmployee"])) {
 
 $memberCompleteList = $dbh->query("SELECT * FROM cw_human_resources_memberships WHERE username = '" . $_POST["username"] . "'");
 $memberCompleteList->setFetchMode(PDO::FETCH_OBJ);
-while ($result = $moviesCompleteList->fetch())
+while ($result = $memberCompleteList->fetch())
 {
  $id = $result->id;
 }
@@ -96,26 +96,27 @@ $memberCompleteList->closeCursor();
 if (isset($_POST["updateMembership"]))
 {
 
-   $update = $dbh->prepare("UPDATE cw_human_resources_memberships "
-    . "SET firstname = :firstname, lastname = :lastname, password = :password, cardNumber = :cardNumber, username = :username, sex = :sex, phoneHome = :phoneHome, phoneMobile = :phoneMobile, neighborhood = :neighborhood, city = :city, country = :country, email = :email, status = :status, activity = :activity, membership = :membership, newsletter = :newsletter "
-    . "WHERE id = " . $id);
-   $update->bindParam(":firstname", $_POST["firstname"]);
-   $update->bindParam(":lastname", $_POST["lastname"]);
-   $update->bindParam(":password", $_POST["password"]);
-   $update->bindParam(":cardNumber", $_POST["cardNumber"]);
-   $update->bindParam(":username", $_POST["username"]);
-   $update->bindParam(":sex", $_POST["sex"]);
-   $update->bindParam(":phoneHome", $_POST["phoneHome"]);
-   $update->bindParam(":phoneMobile", $_POST["phoneMobile"]);
-   $update->bindParam(":neighborhood", $_POST["neighborhood"]);
-   $update->bindParam(":city", $_POST["city"]);
-   $update->bindParam(":country", $_POST["country"]);
-   $update->bindParam(":email", $_POST["email"]);
-   $update->bindParam(":status", $_POST["status"]);
-   $update->bindParam(":activity", $_POST["activity"]);
-   $update->bindParam(":membership", $_POST["membership"]);
-   $update->bindParam(":newsletter", $_POST["newsletter"]);
-   $update->execute();
+ $update = $dbh->prepare("UPDATE cw_human_resources_memberships "
+  . "SET firstname = :firstname, lastname = :lastname, password = :password, cardNumber = :cardNumber, username = :username, sex = :sex, phoneHome = :phoneHome, phoneMobile = :phoneMobile,
+  neighborhood = :neighborhood, city = :city, country = :country, email = :email, status = :status, activity = :activity, membership = :membership, newsletter = :newsletter "
+  . "WHERE id = " . $id);
+ $update->bindParam(":firstname", $_POST["firstname"]);
+ $update->bindParam(":lastname", $_POST["lastname"]);
+ $update->bindParam(":password", $_POST["password"]);
+ $update->bindParam(":cardNumber", $_POST["cardNumber"]);
+ $update->bindParam(":username", $_POST["username"]);
+ $update->bindParam(":sex", $_POST["sex"]);
+ $update->bindParam(":phoneHome", $_POST["phoneHome"]);
+ $update->bindParam(":phoneMobile", $_POST["phoneMobile"]);
+ $update->bindParam(":neighborhood", $_POST["neighborhood"]);
+ $update->bindParam(":city", $_POST["city"]);
+ $update->bindParam(":country", $_POST["country"]);
+ $update->bindParam(":email", $_POST["email"]);
+ $update->bindParam(":status", $_POST["status"]);
+ $update->bindParam(":activity", $_POST["activity"]);
+ $update->bindParam(":membership", $_POST["membership"]);
+ $update->bindParam(":newsletter", $_POST["newsletter"]);
+ $update->execute();
 }
 
 if (isset($_POST["updateTheater"])) {
