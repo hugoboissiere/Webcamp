@@ -20,7 +20,7 @@ include("php/includes/navigator.php");
 ?>
 <main>
     <!--Titre-->
-    <?php
+<!--     <?php
     if ($_SESSION['auth']['job'] < 7)
     {
         
@@ -38,7 +38,7 @@ include("php/includes/navigator.php");
         </li>
         </ul>
         </div>";
-        ?>
+        ?> -->
 
         <div style='display:none'>
 
