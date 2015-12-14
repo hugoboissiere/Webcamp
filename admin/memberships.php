@@ -16,12 +16,9 @@ $addJS = array("js/form/memberships.js", "js/rowSelection/memberships.js");
 $addPHP = array("queries/select");
     
 include("php/includes/head.php");
-// include("php/includes/navigator.php");
+include("php/includes/navigator.php");
 ?>
 <?php echo "<main data-session =" . $_SESSION['auth']['job'] . ">" ?>
-  <?php
-  echo "yoyoyoyoyo";
-  ?>
 
     <!--Titre-->
     <div id="titleAndFilter">
