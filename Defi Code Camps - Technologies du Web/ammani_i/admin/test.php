@@ -25,8 +25,7 @@
     {
         $places = $result->numberOfPlace;
     }
-    echo "ddos";
-    $genresCompleteLists->closeCursor();
+    $theaterCompleteLists->closeCursor();
 
     echo "oui";
     try
