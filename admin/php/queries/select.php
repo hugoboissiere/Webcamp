@@ -179,7 +179,7 @@ if($_SESSION['auth']['job'] == 1)
 }
 else
 {
-	$employeeRegionListAdd = $dbh->query("SELECT * FROM region WHERE id_region = '" . $_SESSION['auth']['job'] . "'");
+	$employeeRegionListAdd = $dbh->query("SELECT * FROM region WHERE id_region = '" . $_SESSION['auth']['country'] . "'");
 	$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
 }
 
