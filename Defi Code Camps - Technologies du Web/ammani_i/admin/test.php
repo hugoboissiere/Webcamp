@@ -50,11 +50,11 @@
     $update->bindParam(":country", $_POST["country"]);
     echo "sauce";
     $update->execute();
-        echo 'logie';
+        echo "logie";
     }
     catch(PDOException $e)
     {
-        echo 'graphie';
+        echo "graphie";
         handle_sql_errors($selectQuery, $e->getMessage());
     }
 
