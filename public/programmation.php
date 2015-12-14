@@ -55,10 +55,10 @@ include("php/includes/head.php");
          </div>
 
     </li>
+<p>Reservarion</p>
 
 
 
-    
     <?php
 }
 $sessionsCompleteList->closeCursor();
