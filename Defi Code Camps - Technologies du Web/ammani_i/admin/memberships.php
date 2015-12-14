@@ -34,6 +34,36 @@ include("php/includes/navigator.php");
             </li>
         </ul>
     </div>
+   
+ <div id="table">
+        <table class="tablesaw" data-tablesaw-sortable data-tablesaw-mode="stack">
+            <thead>
+                <tr>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" style="background-color:#232b2d">Pseudonyme</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col style="background-color:#232b2d" data-tablesaw-priority="1">Email</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" style="background-color:#232b2d">Pays</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3" style="background-color:#232b2d">Newsletter<abbr title="Rotten Tomato Rating"></abbr></th>   
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                while ($result = $membershipsCompleteList->fetch()) {
+                              ?>
+                <tr data-id="<?php echo $result->id; ?>">
+                    <td class="title"><?php echo $result->username; ?></td>
+                    <td><?php echo $result->email; ?></td>
+                    <td><?php echo $result->country; ?></td>
+                    <td><?php  if($result->newsletter === "Yes"){echo "Inscrit";}else{echo "Non";}; ?></td>
+                </tr>
+                    <?php
+                }
+                $membershipsCompleteList->closeCursor();
+                ?>
+                
+            </tbody>
+        </table>
+    </div>
+
     <div style='display:none'>
         <div class="form-style-8" id="add">
             <h2>Ajouter</h2>
@@ -231,35 +261,7 @@ include("php/includes/navigator.php");
             </form>
         </div>
     </div>
-    <div id="table">
-        <table class="tablesaw" data-tablesaw-sortable data-tablesaw-mode="stack">
-            <thead>
-                <tr>
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" style="background-color:#232b2d">Pseudonyme</th>
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col style="background-color:#232b2d" data-tablesaw-priority="1">Email</th>
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" style="background-color:#232b2d">Pays</th>
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3" style="background-color:#232b2d">Newsletter<abbr title="Rotten Tomato Rating"></abbr></th>   
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                while ($result = $membershipsCompleteList->fetch()) {
-                              ?>
-                <tr data-id="<?php echo $result->id; ?>">
-                    <td class="title"><?php echo $result->username; ?></td>
-                    <td><?php echo $result->email; ?></td>
-                    <td><?php echo $result->country; ?></td>
-                    <td><?php  if($result->newsletter === "Yes"){echo "Inscrit";}else{echo "Non";}; ?></td>
-                </tr>
-                    <?php
-                }
-                $membershipsCompleteList->closeCursor();
-                ?>
-                
-            </tbody>
-        </table>
-    </div>
-    
+
 </main>
 
 
