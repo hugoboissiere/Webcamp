@@ -18,13 +18,14 @@
     $_POST["date"]= NOW;
     $_POST["language"]='Grec';
     $_POST["subtitles"]='no';
-    echo "ff";
+    echo "fffefefefef";
     $theaterCompleteList =  $dbh->query("SELECT * FROM cw_cinema_theaters WHERE archive = 'false'");
     $theaterCompleteList -> setFetchMode(PDO::FETCH_OBJ);
     while ($result = $theaterCompleteList->fetch())
     {
         $places = $result->numberOfPlace;
     }
+    echo "ddos";
     $genresCompleteLists->closeCursor();
 
     echo "oui";
