@@ -104,9 +104,6 @@ $(document).ready(function() {
             actors: {
                 minlength: 5
             },
-            country: {
-                minlength: 2
-            },
             type: {
                 minlength: 2
             },
@@ -137,9 +134,6 @@ $(document).ready(function() {
             },
             actors: {
                 minlength: "Au moins 5 caracteres"
-            },
-            country: {
-                minlength: "Au moins 2 caracteres"
             },
             type: {
                 minlength: "Au moins 2 caracteres"
