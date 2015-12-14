@@ -51,11 +51,7 @@ include("php/includes/head.php");
             <p style="font-size: 14px;color:rgb(51, 51, 51);"><?php echo $result->genre; ?></p>
             <p style="font-size: 14px;color:rgb(51, 51, 51);">De <?php echo $result->realisator; ?></p>
             <p style="font-size: 14px;color:rgb(51, 51, 51);"><?php echo $result->runningTime; ?> min (<?php echo $runningTimeHour; ?>)</p>
-            <p style="color:#68D2C3;"><?php echo strftime('%Y-%m-%d %H:%M:%S', date('Y-m-d H:i:s',strtotime($date)));?></p>
-            <br />
-            <br />
-            <br />
-            
+            <p style="color:#68D2C3;"><?php echo strftime('%Y-%m-%d %H:%M:%S', date('Y-m-d H:i:s',strtotime($date)));?></p>            
                 <a href='reservation.php'><p style="color:#68D2C3;">Reservation</p></a>            
          </div>
     </li>
