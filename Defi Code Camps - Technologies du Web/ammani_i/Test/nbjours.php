@@ -10,7 +10,7 @@ while ($result = $section->fetch())
 	$jour1->setFetchMode(PDO::FETCH_OBJ);
 	while ($result2 = $jour1->fetch())
 		{
-			print_r $result2['AVG(nb_entrees)'];
+			echo "test";
 			echo "<br>";
 		}
 	$jour1->closeCursor();
