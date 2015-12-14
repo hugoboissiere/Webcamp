@@ -44,8 +44,8 @@ $test->setFetchMode(PDO::FETCH_OBJ);
                   <td>' . $result->nb_entrees . '</td>
                   <td><form method="get" action="compteur.php">
                         <select type="hidden" name="ID" value="'.$result->id.'">
-                        <option>'1'</option>
-                        <option>'2'</option>
+                        <option>1'.$nb++.'</option>
+                        <option>2</option>
                         <option>3</option>
                         <option>4</option>
                         <option>5</option>
