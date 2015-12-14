@@ -157,15 +157,16 @@ include("php/includes/navigator.php");
                 <label for="actors">Acteurs : </label>
                 <input type="text" name="actors" class="actors"placeholder="Ex : Edward Norton, Brad Pitt, Helena Bonham Carter">
                 <br/>
+                <label for="country">Pays : </label>
                 <select name="country" class="genre">
                     <option value="" disabled selected>Select your option</option>
                     <?php
-                    while ($result = $moviesCompleteList->fetch()) {
+                    while ($result = $countriesCompleteList->fetch()) {
                         ?>
                         <option value="<?php echo $result->name; ?>"><?php echo $result->name; ?></option>
                         <?php
                     }
-                    $moviesCompleteList->closeCursor();
+                    $countriesCompleteList->closeCursor();
                     ?>
                 </select>
                 <br>
