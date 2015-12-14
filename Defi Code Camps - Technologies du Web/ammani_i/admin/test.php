@@ -12,7 +12,7 @@
     echo 'comment est votre blanquette ?';
 
     include("php/includes/database.php");
-
+    echo "fefwef";
     $_POST["idMovie"]=1;
     $_POST["idTheater"]=1;
     $_POST["date"]= NOW();
