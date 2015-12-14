@@ -25,7 +25,7 @@
     {
         $places = $result->numberOfPlace;
     }
-    $theaterCompleteLists->closeCursor();
+    $theaterCompleteList->closeCursor();
 
     echo "oui";
     try
