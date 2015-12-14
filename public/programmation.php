@@ -56,8 +56,8 @@ include("php/includes/head.php");
         <fieldset>
     <legend>RESERVATION</legend>
         <form method="post" action="reservation.php">
-            <label for="movie">Film : </label>
-            <input type="text" name="movie" value="<?php echo $result->title; ?>" />
+            <p>Film : </p>
+            <p>"<?php echo $result->title; ?>" </p>
             <label for="groupe">Reserver un nombre de place : </label> 
             <select name="groupe" id="groupe"></select>
                 <option value= "1">1</option>
