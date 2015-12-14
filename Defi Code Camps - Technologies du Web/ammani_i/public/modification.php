@@ -101,6 +101,6 @@ echo '                </select><br/>
 <div class="attention">
    <h2>Attention !!!</h2>
    <br />
-   <p>Les modifications seront visibles lorsque<br />
+   <p>Les modifications seront visibles lors<br />
     de votre prochaine connexion</p> 
 </div>	
