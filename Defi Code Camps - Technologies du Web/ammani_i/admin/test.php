@@ -13,43 +13,38 @@
 
     include("php/includes/database.php");
 
-    $_POST["firstname"]='graoui';
-    $_POST["lastname"]='CAPSLOCK';
-    $_POST["password"]='eeeee';
-    $_POST["birthDate"]='12-12-1912';
-    $_POST["sex"]='Female';
-    $_POST["address"]='Femalergegegergreger';
-    $_POST["phoneHome"]='546467984649';
-    $_POST["phoneMobile"]='484488448488';
-    $_POST["city"]='fes';
-    $_POST["country"]= "2";
-    $_POST["email"]='grgreg@er.fr';
-    $_POST["status"]='CDI';
-    $_POST["job"]='3';
+    $_POST["idMovie"]=1;
+    $_POST["idTheater"]=1;
+    $_POST["date"]= NOW();
+    $_POST["language"]='Grec';
+    $_POST["subtitles"]='no';
+
+    $theaterCompleteList =  $dbh->query("SELECT * FROM cw_cinema_theaters WHERE archive = 'false'");
+    $theaterCompleteList -> setFetchMode(PDO::FETCH_OBJ);
+    while ($result = $theaterCompleteList->fetch())
+    {
+        $places = $result->numberOfPlace;
+    }
+    $genresCompleteLists->closeCursor();
 
     echo "oui";
     try
     {
         echo "sse";
-    $update = $dbh->prepare("UPDATE cw_human_resources_employees "
-        . "SET firstname = :firstname, lastname = :lastname, birthDate = :birthDate, sex = :sex, address = :address, city = :city, phoneHome = :phoneHome, phoneMobile = :phoneMobile, email = :email, job = :job, status = :status, password = :password, country = :country "
-        . "WHERE lastname = 'test'");
-    $update->bindParam(":lastname", $_POST["lastname"]);
-    $update->bindParam(":firstname", $_POST["firstname"]);
-    $update->bindParam(":birthDate", $_POST["birthDate"]);
-    $update->bindParam(":sex", $_POST["sex"]);
-    $update->bindParam(":address", $_POST["address"]);
-    $update->bindParam(":city", $_POST["city"]);
-    $update->bindParam(":phoneHome", $_POST["phoneHome"]);
-    $update->bindParam(":phoneMobile", $_POST["phoneMobile"]);
-    $update->bindParam(":email", $_POST["email"]);
-    $update->bindParam(":job", $_POST["job"]);
-    $update->bindParam(":status", $_POST["status"]);
-    $update->bindParam(":password", $_POST["password"]);
-    $update->bindParam(":country", $_POST["country"]);
-    echo "sauce";
-    $update->execute();
-    echo "logie";
+
+        if (isset($_POST["insertSession"])) {
+
+            $insert = $dbh->prepare("INSERT INTO cw_cinema_sessions"
+                . "(idMovie, idTheater,date,language,subtitles, nb_place)"
+                . " VALUES(:idMovie, :idTheater, :date, :language, :subtitles, :nb_place)");
+            $insert->bindParam(":idMovie", $_POST["idMovie"]);
+            $insert->bindParam(":idTheater", $_POST["idTheater"]);
+            $insert->bindParam(":date", $_POST["date"]);
+            $insert->bindParam(":language", $_POST["language"]);
+            $insert->bindParam(":subtitles", $_POST["subtitles"]);
+            $insert->bindParam(":nb_place", $places);
+            $insert->execute();
+        }
     }
     catch (PDOException $e)
     {
