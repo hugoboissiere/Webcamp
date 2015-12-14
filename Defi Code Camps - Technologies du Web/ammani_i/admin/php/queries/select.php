@@ -34,10 +34,10 @@
 
 /*
  * II.  Medias
-//  *      1.  Movies 
-//  */
+ *      1.  Movies 
+ */
 
-// //  All movies and their infos  
+//  All movies and their infos  
 
 $moviesCompleteList = $dbh->query("SELECT * FROM cw_medias_movies WHERE archive = 'false'");
 $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
@@ -75,22 +75,22 @@ $genresListAdd->setFetchMode(PDO::FETCH_OBJ);
 $genresListModification = $dbh->query("SELECT name, id FROM cw_medias_genres WHERE archive = 'false'");
 $genresListModification->setFetchMode(PDO::FETCH_OBJ);
 
-// $genresCompleteLists = $dbh->query("SELECT count(m.title) as moviesCount, g.name as genre
-// FROM cw_medias_movies m, cw_medias_genres g
-// WHERE m.genre = g.name
-// GROUP BY g.name");
+$genresCompleteLists = $dbh->query("SELECT count(m.title) as moviesCount, g.name as genre
+FROM cw_medias_movies m, cw_medias_genres g
+WHERE m.genre = g.name
+GROUP BY g.name");
 $genresCompleteLists->setFetchMode(PDO::FETCH_OBJ);
 
 
-// /*
-//  *      4.  Countries
-//  */
+/*
+ *      4.  Countries
+ */
 
-// $countriesCompleteList = $dbh->query("SELECT * FROM cw_medias_countries  WHERE archive = 'false'");
-// $countriesCompleteList->setFetchMode(PDO::FETCH_OBJ);
+$countriesCompleteList = $dbh->query("SELECT * FROM cw_medias_countries  WHERE archive = 'false'");
+$countriesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 
-// $countriesListAdd = $dbh->query("SELECT name FROM cw_medias_countries  WHERE archive = 'false'");
-// $countriesListAdd->setFetchMode(PDO::FETCH_OBJ);
+$countriesListAdd = $dbh->query("SELECT name FROM cw_medias_countries  WHERE archive = 'false'");
+$countriesListAdd->setFetchMode(PDO::FETCH_OBJ);
 
 $countriesListModification = $dbh->query("SELECT name FROM cw_medias_countries  WHERE archive = 'false'");
 $countriesListModification->setFetchMode(PDO::FETCH_OBJ);
@@ -119,23 +119,24 @@ $activityListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_a
 $activityListAdd->setFetchMode(PDO::FETCH_OBJ);
 
 $activityListModification= $dbh->query("SELECT name FROM cw_human_resources_memberships_activity  WHERE archive = 'false'");
-// $activityListModification->setFetchMode(PDO::FETCH_OBJ);
+$activityListModification->setFetchMode(PDO::FETCH_OBJ);
 
 
-// // /*
-// //  *  Liste complete des inscrits  
-// //  */
+// /*
+//  *  Liste complete des inscrits  
+//  */
 
 if($_SESSION['auth']['job'] == 1)
 {
 	$membershipsCompleteList =  $dbh->query("SELECT * FROM cw_human_resources_memberships  WHERE archive = 'false'");
 	$membershipsCompleteList -> setFetchMode(PDO::FETCH_OBJ);
 }
-else
-{
-	$membershipsCompleteList =  $dbh->query("SELECT * FROM cw_human_resources_memberships  WHERE archive = 'false' AND country= '" . $_SESSION['auth']['country'] . "'");
-	$membershipsCompleteList -> setFetchMode(PDO::FETCH_OBJ);
-}
+
+// else
+// {
+// 	$membershipsCompleteList =  $dbh->query("SELECT * FROM cw_human_resources_memberships  WHERE archive = 'false' AND region= '" . $_SESSION['auth']['region'] . "'");
+// 	$membershipsCompleteList -> setFetchMode(PDO::FETCH_OBJ);
+// }
 
 // /*
 //  *          a.  Status
@@ -171,19 +172,20 @@ $employeeStatusListAdd->setFetchMode(PDO::FETCH_OBJ);
 $employeeStatusListModification = $dbh->query("SELECT * FROM cw_human_resources_employees_status  WHERE archive = 'false'");
 $employeeStatusListModification->setFetchMode(PDO::FETCH_OBJ);
 
+
 if($_SESSION['auth']['job'] == 1)
 {
-	$employeeRegionListAdd = $dbh->query("SELECT * FROM country");
+	$employeeRegionListAdd = $dbh->query("SELECT * FROM region");
 	$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
 }
 else
 {
-	$employeeRegionListAdd = $dbh->query("SELECT * FROM country WHERE id_country = '" . $_SESSION['auth']['job'] . "'");
+	$employeeRegionListAdd = $dbh->query("SELECT * FROM region WHERE id_region = '" . $_SESSION['auth']['job'] . "'");
 	$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
 }
 
-// $employeeRegionListModification = $dbh->query("SELECT * FROM country");
-// $employeeRegionListModification->setFetchMode(PDO::FETCH_OBJ);
+$employeeRegionListModification = $dbh->query("SELECT * FROM region");
+$employeeRegionListModification->setFetchMode(PDO::FETCH_OBJ);
 
 // /*
 //  *          a.  Status
@@ -222,11 +224,12 @@ if($_SESSION['auth']['job'] == 1)
 	$theaterCompleteList =  $dbh->query("SELECT * FROM cw_cinema_theaters WHERE archive = 'false'");
 	$theaterCompleteList -> setFetchMode(PDO::FETCH_OBJ);
 }
-else
-{
-	$theaterCompleteList =  $dbh->query("SELECT * FROM cw_cinema_theaters WHERE archive = 'false' AND country= '" . $_SESSION['auth']['country'] . "' ");
-	$theaterCompleteList -> setFetchMode(PDO::FETCH_OBJ);
-}
+
+// else
+// {
+// 	$theaterCompleteList =  $dbh->query("SELECT * FROM cw_cinema_theaters WHERE archive = 'false' AND region= '" . $_SESSION['auth']['region'] . "' ");
+// 	$theaterCompleteList -> setFetchMode(PDO::FETCH_OBJ);
+// }
 
 
 
