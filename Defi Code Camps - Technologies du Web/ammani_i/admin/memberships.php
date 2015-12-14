@@ -242,6 +242,7 @@ include("php/includes/navigator.php");
                 </tr>
             </thead>
             <tbody>
+                <tr><td>cc</td></tr>
                 <?php
                 while ($result = $membershipsCompleteList->fetch()) {
                               ?>
