@@ -263,7 +263,7 @@ include("php/includes/navigator.php");
                         else if($_SESSION['auth']['job'] == 7 && $result->job == 7)
                             echo $result->email;
                         else
-                            echo "Vous n'avez pas les permissions pour voir les adresses mail.";
+                            echo "Vous n'avez pas les permissions pour voir cette adresse mail.";
 
                             ?></td>
                         <td><?php echo $result->status; ?></td>
