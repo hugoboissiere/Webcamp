@@ -10,7 +10,7 @@ while ($result = $section->fetch())
 	$jour1->setFetchMode(PDO::FETCH_OBJ);
 	while ($result2 = $jour1->fetch())
 		{
-			echo "Test";
+			echo "Test" . "\n";
 		}
 	$jour1->closeCursor();
 }
