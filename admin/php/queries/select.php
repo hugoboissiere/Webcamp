@@ -159,7 +159,7 @@ if($_SESSION['auth']['job'] == 1)
 }
 else
 {
-	$employeesCompleteList = $dbh->query("SELECT * FROM cw_human_resources_employees  WHERE archive = 'false' AND contry= '" . $_SESSION['auth']['country'] . "'");
+	$employeesCompleteList = $dbh->query("SELECT * FROM cw_human_resources_employees  WHERE archive = 'false' AND country= '" . $_SESSION['auth']['country'] . "'");
 	$employeesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 }
 // /*
