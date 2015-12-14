@@ -131,12 +131,11 @@ if($_SESSION['auth']['job'] == 1)
 	$membershipsCompleteList =  $dbh->query("SELECT * FROM cw_human_resources_memberships  WHERE archive = 'false'");
 	$membershipsCompleteList -> setFetchMode(PDO::FETCH_OBJ);
 }
-
-// else
-// {
-// 	$membershipsCompleteList =  $dbh->query("SELECT * FROM cw_human_resources_memberships  WHERE archive = 'false' AND region= '" . $_SESSION['auth']['region'] . "'");
-// 	$membershipsCompleteList -> setFetchMode(PDO::FETCH_OBJ);
-// }
+else
+{
+	$membershipsCompleteList =  $dbh->query("SELECT * FROM cw_human_resources_memberships  WHERE archive = 'false' AND country= '" . $_SESSION['auth']['country'] . "'");
+	$membershipsCompleteList -> setFetchMode(PDO::FETCH_OBJ);
+}
 
 // /*
 //  *          a.  Status
