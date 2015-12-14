@@ -40,3 +40,8 @@ echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br />
 <input type="submit" value="Modifier"/>
 </div>   		
 
+<br />
+<br />
+
+<form action="programmation.php" />
+<input type="submit" value="Faire une reservation" />
