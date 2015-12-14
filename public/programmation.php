@@ -46,14 +46,13 @@ include("php/includes/head.php");
             <img src="<?php echo $img; ?>" alt="Poster de <?php echo $result->title; ?>"/>
         </a>
         <div id="text">
-            <?php echo $var?>
             <p style="color:#68D2C3;">Film</p>
             <p style="font-size: 18px;color:rgb(51, 51, 51);"><?php echo $result->title; ?></p>
             <p style="font-size: 14px;color:rgb(51, 51, 51);"><?php echo $result->genre; ?></p>
             <p style="font-size: 14px;color:rgb(51, 51, 51);">De <?php echo $result->realisator; ?></p>
             <p style="font-size: 14px;color:rgb(51, 51, 51);"><?php echo $result->runningTime; ?> min (<?php echo $runningTimeHour; ?>)</p>
             <p style="color:#68D2C3;"><?php echo strftime('%Y-%m-%d %H:%M:%S', date('Y-m-d H:i:s',strtotime($date)));?></p>            
-            <?php echo "<a href='reservation.php?id='" . $var . "'>"?><p style="color:#68D2C3;">Reservation</p></a>  
+            <?php echo '<a href="reservation.php?id=' . $var . '">' ?><p style="color:#68D2C3;">Reservation</p></a>  
          </div>
     </li>
 
