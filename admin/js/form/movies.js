@@ -42,9 +42,6 @@ $(document).ready(function() {
             },
             distribution: {
                 minlength: 2
-            },
-            language: {
-                minlength: 2
             }
         },
         messages: {
@@ -77,9 +74,6 @@ $(document).ready(function() {
             distribution: {
                 minlength: "Au moins 2 caracteres"
             },
-            language: {
-                minlength: "Au moins 2 caracteres"
-            }
         }
     });
     
