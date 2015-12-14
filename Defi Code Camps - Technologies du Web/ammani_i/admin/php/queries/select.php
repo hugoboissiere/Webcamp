@@ -199,8 +199,8 @@ $employeeRegionListModification->setFetchMode(PDO::FETCH_OBJ);
 //  *      1.  Sessions (movies' sessions)
 //  */
 
-if ($_SESSION['auth']['job'] == 1)
-{
+// if ($_SESSION['auth']['job'] == 1)
+// {
 	$sessionsCompleteList = $dbh->query("SELECT s.id, m.title, m.runningTime, s.date, t.name as theater
                                 FROM cw_medias_movies m, cw_cinema_sessions s, cw_cinema_theaters t
                                 WHERE t.id = s.idTheater AND s.idMovie = m.id AND s.archive = 'false'");        
@@ -212,7 +212,7 @@ if ($_SESSION['auth']['job'] == 1)
 
 	$languagesCompleteList = $dbh->query("SELECT name, id FROM cw_medias_languages WHERE archive = 'false'");      
 	$languagesCompleteList->setFetchMode(PDO::FETCH_OBJ);
-}
+// }
      
 
 // /*
