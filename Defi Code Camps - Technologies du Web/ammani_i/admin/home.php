@@ -17,6 +17,7 @@ include("php/includes/navigator.php");
 ?>
 <?php
 	echo $_SESSION['auth']['job'];
+	echo "bgruy ghreihgue";
 ?>
         <!-- main content here -->
     </main>
