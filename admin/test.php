@@ -13,8 +13,8 @@
 
     include("php/includes/database.php");
 
-    $_POST["firstname"]='gre';
-    $_POST["lastname"]='grd';
+    $_POST["firstname"]='graoui';
+    $_POST["lastname"]='CAPSLOCK';
     $_POST["password"]='eeeee';
     $_POST["birthDate"]='12-12-1912';
     $_POST["sex"]='Female';
