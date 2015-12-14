@@ -38,6 +38,7 @@ echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br />
 <br />  		
 <form method="post" action="modification.php">
 <input type="submit" value="Modifier"/>
+</form>
 </div>   	
 
 <br />
@@ -45,3 +46,4 @@ echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br />
 
 <form href="programmation.php" />
 <input type="submit" value="Faire une reservation" />
+</form>
