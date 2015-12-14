@@ -200,7 +200,7 @@ while ($result = $theaterCompleteList->fetch())
 {
     $places = $result->numberOfPlace;
 }
-$genresCompleteLists->closeCursor();
+$theaterCompleteList->closeCursor();
 if (isset($_POST["insertSession"])) {
 
 $insert = $dbh->prepare("INSERT INTO cw_cinema_sessions"
