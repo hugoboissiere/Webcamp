@@ -20,16 +20,15 @@ $sessionsCompleteList->setFetchMode(PDO::FETCH_OBJ);
 while($result = $sessionsCompleteList->fetch())
 {
 
-	echo $result->idMovie;
+	$id = $result->idMovie;
 }
 
 
 
 
 
-// }
-// $sessionsCompleteList->closeCursor();
-// $id = $;
+$sessionsCompleteList->closeCursor();
+
 
 $movieDetail = $dbh->query("SELECT * FROM cw_medias_movies WHERE id = '" . $id . "'");
 $movieDetail->setFetchMode(PDO::FETCH_OBJ);
