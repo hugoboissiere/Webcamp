@@ -52,30 +52,17 @@ include("php/includes/head.php");
             <p style="font-size: 14px;color:rgb(51, 51, 51);">De <?php echo $result->realisator; ?></p>
             <p style="font-size: 14px;color:rgb(51, 51, 51);"><?php echo $result->runningTime; ?> min (<?php echo $runningTimeHour; ?>)</p>
             <p style="color:#68D2C3;"><?php echo strftime('%Y-%m-%d %H:%M:%S', date('Y-m-d H:i:s',strtotime($date)));?></p>
-        </div>
-     <!--    <fieldset>
-    <legend>RESERVATION</legend>
-        <form method="post" action="reservation.php">
-            <p>Film : </p>
-            <p>"<?php //echo $result->title; ?>" </p>
-            <label for="groupe">Reserver un nombre de place : </label> 
-            <select name="groupe" id="groupe"></select>
-                <option value= "1">1</option>
-                <option value= "2">2</option>
-                <option value= "3">3</option>
-                <option value= "4">4</option>
-                <option value= "5">5</option>
-                <option value= "6">6</option>
-                <option value= "7">7</option>
-                <option value= "8">8</option>
-                <option value= "9">9</option>
-                <option value= "10">10</option>
-</fieldset> -->
+         </div>
+
     </li>
+
+
+
+    
     <?php
 }
 $sessionsCompleteList->closeCursor();
-?> 
+?>
 </ul>
 
 
