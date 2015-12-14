@@ -100,8 +100,8 @@ $countriesListModification->setFetchMode(PDO::FETCH_OBJ);
 //  */
 
 
-// $languageCompleteList =  $dbh->query("SELECT * FROM cw_medias_languages  WHERE archive = 'false'");
-// $languageCompleteList -> setFetchMode(PDO::FETCH_OBJ);
+$languageCompleteList =  $dbh->query("SELECT * FROM cw_medias_languages  WHERE archive = 'false'");
+$languageCompleteList -> setFetchMode(PDO::FETCH_OBJ);
 
 
 // /*
