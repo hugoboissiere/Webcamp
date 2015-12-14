@@ -69,8 +69,8 @@ $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 // $genresList = $dbh->query("SELECT name, id FROM cw_medias_genres WHERE archive = 'false'");
 // $genresList->setFetchMode(PDO::FETCH_OBJ);
 
-// $genresListAdd = $dbh->query("SELECT name, id FROM cw_medias_genres WHERE archive = 'false'");
-// $genresListAdd->setFetchMode(PDO::FETCH_OBJ);
+$genresListAdd = $dbh->query("SELECT name, id FROM cw_medias_genres WHERE archive = 'false'");
+$genresListAdd->setFetchMode(PDO::FETCH_OBJ);
 
 // $genresListModification = $dbh->query("SELECT name, id FROM cw_medias_genres WHERE archive = 'false'");
 // $genresListModification->setFetchMode(PDO::FETCH_OBJ);
