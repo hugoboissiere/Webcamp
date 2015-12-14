@@ -41,6 +41,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
                   <td>' . $result->genre . '</td>
                   <td>' . $result->runningTime . '</td>
                   <td>' . $result->country . '</td>
+                  <td>' . $result->publicationtime . '</td>
                   <td>' . $result->nb_entrees . '</td>
                   <td><form method="get" action="compteur.php">
                         <input type="hidden" name="ID" value="'.$result->id.'">
