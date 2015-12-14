@@ -31,10 +31,7 @@
     try
     {
         echo "sse";
-
-        if (isset($_POST["insertSession"])) {
-
-            $insert = $dbh->prepare("INSERT INTO cw_cinema_sessions"
+                    $insert = $dbh->prepare("INSERT INTO cw_cinema_sessions"
                 . "(idMovie, idTheater,date,language,subtitles, nb_place)"
                 . " VALUES(:idMovie, :idTheater, :date, :language, :subtitles, :nb_place)");
             $insert->bindParam(":idMovie", $_POST["idMovie"]);
@@ -44,7 +41,7 @@
             $insert->bindParam(":subtitles", $_POST["subtitles"]);
             $insert->bindParam(":nb_place", $places);
             $insert->execute();
-        }
+        
     }
     catch (PDOException $e)
     {
