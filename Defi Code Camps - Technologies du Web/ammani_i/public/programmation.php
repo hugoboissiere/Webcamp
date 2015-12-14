@@ -55,6 +55,7 @@ include("php/includes/head.php");
          </div>
 
     </li>
+    <p>Reservation</p>
 
 
 
@@ -62,7 +63,7 @@ include("php/includes/head.php");
     <?php
 }
 $sessionsCompleteList->closeCursor();
-echo "Reservation";
+
 ?>
 </ul>
 
