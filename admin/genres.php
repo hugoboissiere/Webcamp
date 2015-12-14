@@ -51,7 +51,7 @@ include("php/includes/navigator.php");
             </form>
         </div>
         <div class="form-style-8" id="modify">
-            <h2>Modifer</h2>
+            <h2>Modifier</h2>
             <form method="post" action="" id="modificationForm" class="formOverflow">
                 <input type="hidden" class="id" name="id">
                 <label for="name">Le genre : </label>
