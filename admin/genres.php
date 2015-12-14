@@ -13,7 +13,7 @@ $addJS = array("js/form/genres.js","js/rowSelection/genres.js");
     
     
 // PHP (queries) de cette page
-$addPHP = array("php/queries/select.php");
+$addPHP = array("queries/select");
     
 include("php/includes/head.php");
 include("php/includes/navigator.php");
@@ -83,7 +83,7 @@ include("php/includes/navigator.php");
                 </tr>
             </thead>
             <tbody>
-                <tr><td>Glace</td><td>vanille</td></tr>
+
                 <?php
                 while ($result = $genresCompleteLists->fetch()) {
                     ?>
