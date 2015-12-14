@@ -20,18 +20,18 @@ $sessionsCompleteList->setFetchMode(PDO::FETCH_OBJ);
 while($result = $sessionsCompleteList->fetch())
 {
 
-	echo $result->m.id;
+	
 
 
 
 
 
 
-}
-$sessionsCompleteList->closeCursor();
+// }
+// $sessionsCompleteList->closeCursor();
 // $id = $;
 
-$movieDetail = $dbh->query("SELECT * FROM cw_medias_movies WHERE id = '" . $id . "'");
+$movieDetail = $dbh->query("SELECT * FROM cw_medias_movies WHERE id = m.id");
 $movieDetail->setFetchMode(PDO::FETCH_OBJ);
 
 
@@ -140,3 +140,4 @@ while ($result = $movieDetail->fetch()) {
 
 	</body>
 	</html>
+}
