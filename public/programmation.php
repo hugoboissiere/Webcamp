@@ -36,6 +36,7 @@ include("php/includes/head.php");
        $img = 'resources/imgs/content/movies/defaultPoster'.$rand.'.jpg';
     }  
     $date = $result->date;
+    $var = $result->id;
 //    $date = date_format($date, 'Y-m-d H:i:s');
 //   $date = $date->format('%A %d %B %Y H:i');
     $runningTimeHour = convertToHoursMins($result->runningTime, '%02d h %02d minutes');
@@ -51,7 +52,7 @@ include("php/includes/head.php");
             <p style="font-size: 14px;color:rgb(51, 51, 51);">De <?php echo $result->realisator; ?></p>
             <p style="font-size: 14px;color:rgb(51, 51, 51);"><?php echo $result->runningTime; ?> min (<?php echo $runningTimeHour; ?>)</p>
             <p style="color:#68D2C3;"><?php echo strftime('%Y-%m-%d %H:%M:%S', date('Y-m-d H:i:s',strtotime($date)));?></p>            
-            <?php echo "<a href='reservation.php?id='" . $result->id . "'>"?><p style="color:#68D2C3;">Reservation</p></a>  
+            <?php echo "<a href='reservation.php?id='" . $var . "'>"?><p style="color:#68D2C3;">Reservation</p></a>  
          </div>
     </li>
 
