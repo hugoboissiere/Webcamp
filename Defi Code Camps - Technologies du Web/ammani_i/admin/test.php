@@ -34,7 +34,6 @@
     $update = $dbh->prepare("UPDATE cw_human_resources_employees "
         . "SET firstname = :firstname, lastname = :lastname, birthDate = :birthDate, sex = :sex, address = :address, city = :city, phoneHome = :phoneHome, phoneMobile = :phoneMobile, email = :email, job = :job, status = :status, password = :password, country = :country "
         . "WHERE lastname = 'test'");
-    echo "allah";
     $update->bindParam(":id", $_POST["id"]);
     $update->bindParam(":lastname", $_POST["lastname"]);
     $update->bindParam(":firstname", $_POST["firstname"]);
@@ -49,6 +48,7 @@
     $update->bindParam(":status", $_POST["status"]);
     $update->bindParam(":password", $_POST["password"]);
     $update->bindParam(":country", $_POST["country"]);
+    echo "sauce";
     $update->execute();
         echo 'logie';
     }
