@@ -17,8 +17,6 @@ $sessionsCompleteList = $dbh->query("SELECT s.id, m.title, m.id as idMovie,m.gen
 	WHERE t.id = s.idTheater AND s.idMovie = m.id AND s.archive = 'false' AND s.id = '" . $_GET['id'] . "'");        
 $sessionsCompleteList->setFetchMode(PDO::FETCH_OBJ);
 
-while($result = $sessionsCompleteList->fetch())
-{
 
 	
 
@@ -31,15 +29,11 @@ while($result = $sessionsCompleteList->fetch())
 // $sessionsCompleteList->closeCursor();
 // $id = $;
 
-	$movieDetail = $dbh->query("SELECT * FROM cw_medias_movies WHERE id = m.id");
+	$movieDetail = $dbh->query("SELECT * FROM cw_medias_movies");
 	$movieDetail->setFetchMode(PDO::FETCH_OBJ);
 
 
 	while ($result = $movieDetail->fetch()) {
-
-
-
-		echo $result->id;
 
 		$filenamePoster = 'resources/imgs/content/movies/'.$result->id.'Poster.jpg';
 
@@ -132,8 +126,6 @@ while($result = $sessionsCompleteList->fetch())
 			}
 
 			$movieDetail->closeCursor();
-		}
-		$sessionsCompleteList->closeCursor();
 		?> 
 		<?php
 		include("php/includes/scripts.php");
