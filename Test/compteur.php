@@ -9,7 +9,7 @@ while ($result = $moviesTitleList->fetch()) {
 $moviesTitleList->closeCursor();
 
 $update = $dbh->prepare("UPDATE cw_medias_movies "
-	. "SET nb_entrees = :nb "
+	. "SET nb_entrees = nb_entrees + :nb "
 	. "WHERE id = ".$_GET['ID']);
 $update->bindParam(":nb", $_POST['nb']);
 $update->execute();
