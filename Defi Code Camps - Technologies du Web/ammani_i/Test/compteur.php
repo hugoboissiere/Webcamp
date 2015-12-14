@@ -4,7 +4,7 @@ $moviesTitleList = $dbh->query("SELECT nb_entrees FROM cw_medias_movies WHERE id
 $moviesTitleList->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $moviesTitleList->fetch()) {
 	$nb = $result->nb_entrees;
-	$nb = $nb++;
+	$nb++;
 }
 $moviesTitleList->closeCursor();
 
