@@ -194,16 +194,22 @@ if (isset($_POST["insertEmployee"])) {
  *      1.  Sessions (movies' sessions)
  */
 
+while ($result = $theaterCompleteList->fetch())
+{
+    $places = $result->numberOfPlace;
+}
+$genresCompleteLists->closeCursor();
 if (isset($_POST["insertSession"])) {
 
 $insert = $dbh->prepare("INSERT INTO cw_cinema_sessions"
-        . "(idMovie, idTheater,date,language,subtitles)"
-        . " VALUES(:idMovie, :idTheater, :date, :language, :subtitles)");
+        . "(idMovie, idTheater,date,language,subtitles, nb_place)"
+        . " VALUES(:idMovie, :idTheater, :date, :language, :subtitles, :nb_place)");
 $insert->bindParam(":idMovie", $_POST["idMovie"]);
 $insert->bindParam(":idTheater", $_POST["idTheater"]);
 $insert->bindParam(":date", $_POST["date"]);
 $insert->bindParam(":language", $_POST["language"]);
 $insert->bindParam(":subtitles", $_POST["subtitles"]);
+$insert->bindParam(":nb_place", $places);
 $insert->execute();
 }
 
