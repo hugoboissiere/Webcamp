@@ -31,7 +31,8 @@ $test->setFetchMode(PDO::FETCH_OBJ);
          <th>Genre</th>
          <th>Duree (en min)</th>
          <th>Pays/Continent</th>
-         <th>Nombre d'entrees total</th>
+         <th>Date de publication</th>
+         <th>Nombre d'entrees totaux</th>
       </tr>
       <?php
       while ($result = $test->fetch())
