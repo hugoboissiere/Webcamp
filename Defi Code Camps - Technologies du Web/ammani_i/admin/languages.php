@@ -56,7 +56,7 @@ include("php/includes/navigator.php");
                 <label for="name">Langue : </label>
                 <input type="text" name="name" class="name" placeholder="Espagnol">
                 <br/>
-                <label for="abbreviation">Son abrÃ©viation : </label>
+                <label for="abbreviation">Son abréviation : </label>
                 <input type="text" name="abbreviation" class="abbreviation" placeholder="Ex: ES (norme ISO 639-1)">
                 <input type="submit" name="updateLanguage" value="Enregistrer">
             </form>
