@@ -2,7 +2,7 @@
 include("php/includes/database.php");
 include("php/includes/head.php");
 
-echo '<p>SE CONNECTER<br/><p/>
+echo '<p style="color:#68D2C3;">SE CONNECTER<br/><p/>
         <br>';
 
         echo '<form method="POST" action="identifiant.php">
