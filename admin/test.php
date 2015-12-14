@@ -18,7 +18,7 @@
     $_POST["date"]= NOW();
     $_POST["language"]='Grec';
     $_POST["subtitles"]='no';
-
+    echo "ff";
     $theaterCompleteList =  $dbh->query("SELECT * FROM cw_cinema_theaters WHERE archive = 'false'");
     $theaterCompleteList -> setFetchMode(PDO::FETCH_OBJ);
     while ($result = $theaterCompleteList->fetch())
