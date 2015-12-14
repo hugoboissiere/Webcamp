@@ -11,7 +11,7 @@ while ($result = $section->fetch())
 	while ($result2 = $jour1->fetch())
 		{
 			$nbjour = $result2->divjour;
-			echo $result2->nb_entrees;
+			echo $nbjour;
 		}
 	$jour1->closeCursor();
 }
