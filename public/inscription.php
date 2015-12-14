@@ -34,9 +34,11 @@ echo '<br />';
 
 echo '<form method="post" action="connect.php" id="addForm" autocomplete="off" class="formOverflow"> 
                 <label for="member">Adhérent</label>
-                <input type="radio" name="membership" value="Member" id="member" class="radio">
+                <input type="radio" name="membership" value="Member" id="member" class="radio"><br />
+                <br />
                 <label for="subscriber">Abonné</label>
-                <input type="radio" name="membership" value="Subscriber" id="subscriber" class="radio" checked>
+                <input type="radio" name="membership" value="Subscriber" id="subscriber" class="radio" checked><br />
+                <br />
                 <br/>
                 <label for="newsletterOn">Newsletter(ON)</label>
                 <input type="radio" name="newsletter" value="Yes" id="newsletterOn"class="radio">
@@ -44,37 +46,37 @@ echo '<form method="post" action="connect.php" id="addForm" autocomplete="off" c
                 <input type="radio" name="newsletter" value="No" id="newsletterOff"class="radio" checked>
                 <br/>
                 <label for="name">Nom : </label>
-                <input type="text" name="lastname" id="name" placeholder="Ex : Dupont">
+                <input type="text" name="lastname" id="name" placeholder="Ex : Dupont"><br />
                 <br/>
                 <label for="firstname">Prénom : </label>
-                <input type="text" name="firstname" id="firstname" placeholder="Ex : Laurent">
+                <input type="text" name="firstname" id="firstname" placeholder="Ex : Laurent"><br />
                 <br/>
                 <label for="password">Mot de passe : </label>
-                <input type="password" type="password" name="password" id="password" placeholder="Au moins 5 caractères" pattern=".{5,}">
+                <input type="password" type="password" name="password" id="password" placeholder="Au moins 5 caractères" pattern=".{5,}"><br />
                 <br/>
                 <label for="password2">Retaper le mdp : </label>
-                <input type="password" name="password2" id="password2" placeholder="Au moins 5 caractères" pattern=".{5,}">
+                <input type="password" name="password2" id="password2" placeholder="Au moins 5 caractères" pattern=".{5,}"><br />
                 <br/>
                 <label for="username">Pseudo : </label>
-                <input type="text" name="username" id="username" placeholder="Ex : laurent_dupont">
+                <input type="text" name="username" id="username" placeholder="Ex : laurent_dupont"><br />
                 <br/>
                 Sexe : 
                 <label for="man">Homme</label>
                 <input type="radio" name="sex" value="Male" id="man" class="radio">
                 <label for="woman">Femme</label>
-                <input type="radio" name="sex" value="Female" id="woman"  class="radio" checked>
+                <input type="radio" name="sex" value="Female" id="woman"  class="radio" checked><br />
                 <br/>
                 <label for="phoneHome">Téléphone Fixe : </label>
-                <input type="tel" name="phoneHome" id="phoneHome" placeholder="Ex : +221 01 023 45 87">
+                <input type="tel" name="phoneHome" id="phoneHome" placeholder="Ex : +221 01 023 45 87"><br />
                 <br/>
                 <label for="phoneMobile">Téléphone Mobile : </label>
-                <input type="tel" name="phoneMobile" id="phoneMobile" placeholder="Ex : +221 01 023 45 87">
+                <input type="tel" name="phoneMobile" id="phoneMobile" placeholder="Ex : +221 01 023 45 87"><br />
                 <br/>
                 <label for="neighborhood">Quartier : </label>
-                <input type="text" id="neighborhood" name="neighborhood" placeholder="">
+                <input type="text" id="neighborhood" name="neighborhood" placeholder=""><br />
                 <br/>
                 <label for="city">Ville : </label>
-                <input type="text" name="city" id="city" placeholder="Dakar">
+                <input type="text" name="city" id="city" placeholder="Dakar"><br />
                 <br/>
                 <label for="country">Pays : </label>
                 <select name="country" id="country">';
