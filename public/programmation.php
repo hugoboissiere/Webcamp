@@ -62,7 +62,6 @@ include("php/includes/head.php");
     <?php
 }
 $sessionsCompleteList->closeCursor();
-
 ?>
 </ul>
 
