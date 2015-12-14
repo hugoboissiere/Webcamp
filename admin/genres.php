@@ -39,7 +39,31 @@ include("php/includes/navigator.php");
             </li>
         </ul>
     </div>
-        
+    </table>
+
+
+
+    <table class="tablesaw" data-tablesaw-sortable data-tablesaw-mode="stack">
+        <thead>
+            <tr>
+                <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" style="background-color:#232b2d">Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            while ($result = $genresList->fetch()) {
+                ?>
+                <tr data-id="<?php echo $result->id; ?>">
+                    <td class="title"><?php echo $result->name; ?></td>
+                </tr>
+                <?php
+            }
+            $genresList->closeCursor();
+            ?>
+            
+        </tbody>
+    </table>
+
     <div style='display:none'>
         <div class="form-style-8" id="add">
             <h2>Ajouter</h2>
@@ -96,32 +120,8 @@ $genresCompleteLists->closeCursor();
 ?>
     
             </tbody>
-        </table>
-            
-            
-            
-        <table class="tablesaw" data-tablesaw-sortable data-tablesaw-mode="stack">
-            <thead>
-                <tr>
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" style="background-color:#232b2d">Genre</th>
-                </tr>
-            </thead>
-            <tbody>
-<?php
-while ($result = $genresList->fetch()) {
-    ?>
-                <tr data-id="<?php echo $result->id; ?>">
-                    <td class="title"><?php echo $result->name; ?></td>
-                </tr>
-                    <?php
-                }
-                $genresList->closeCursor();
-                ?>
-                    
-            </tbody>
-        </table>
     </div>
-        
+
 </main>
     
     
