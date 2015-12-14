@@ -8,12 +8,15 @@ while ($result = $section->fetch())
 {
 	$jour1 = $dbh->query("SELECT AVG(DATEDIFF(NOW(), publicationtime)) AS nb_entrees FROM cw_medias_movies WHERE id =" . $result->id);
 	$jour1->setFetchMode(PDO::FETCH_OBJ);
+	echo "<li>"
 	while ($result2 = $jour1->fetch())
 		{
 			var_dump($result2);
-			//var_dump($result2['nb_entrees']);
+			echo "<ul>" . $result2['nb_entrees'] . "</ul>";
 			echo "<br>";
 		}
+	echo "</li>"
+
 	$jour1->closeCursor();
 }
 
