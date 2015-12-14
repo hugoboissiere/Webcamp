@@ -179,12 +179,11 @@ if($_SESSION['auth']['job'] == 1)
 	$employeeRegionListAdd = $dbh->query("SELECT * FROM region");
 	$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
 }
-
-// else
-// {
-// 	$employeeRegionListAdd = $dbh->query("SELECT * FROM region WHERE id_region = '" . $_SESSION['auth']['job'] . "'");
-// 	$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
-// }
+else
+{
+	$employeeRegionListAdd = $dbh->query("SELECT * FROM region WHERE id_region = '" . $_SESSION['auth']['job'] . "'");
+	$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
+}
 
 $employeeRegionListModification = $dbh->query("SELECT * FROM region");
 $employeeRegionListModification->setFetchMode(PDO::FETCH_OBJ);
@@ -216,21 +215,7 @@ if ($_SESSION['auth']['job'] == 1)
 	$languagesCompleteList = $dbh->query("SELECT name, id FROM cw_medias_languages WHERE archive = 'false'");      
 	$languagesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 }
-
-// else if($_SESSION['auth']['job'] == 2)
-// {
-// 	$sessionsCompleteList = $dbh->query("SELECT s.id, m.title, m.runningTime, s.date, t.name as theater
-//                                 FROM cw_medias_movies m, cw_cinema_sessions s, cw_cinema_theaters t
-//                                 WHERE t.id = s.idTheater AND s.idMovie = m.id AND s.archive = 'false' AND t.region = '" . $_SESSION['auth']['country'] . "'");        
-// 	$sessionsCompleteList->setFetchMode(PDO::FETCH_OBJ);
-
-// 	$theatersCompleteList = $dbh->query("SELECT name, id FROM cw_cinema_theaters WHERE archive = 'false'");      
-// 	$theatersCompleteList->setFetchMode(PDO::FETCH_OBJ);
-
-
-// 	$languagesCompleteList = $dbh->query("SELECT name, id FROM cw_medias_languages WHERE archive = 'false'");      
-// 	$languagesCompleteList->setFetchMode(PDO::FETCH_OBJ);
-// }
+     
 
 // /*
 //  *      2.  Theaters (locations)
