@@ -39,7 +39,7 @@ while($result = $sessionsCompleteList->fetch())
 
 
 
-
+		echo $result->id;
 
 		$filenamePoster = 'resources/imgs/content/movies/'.$result->id.'Poster.jpg';
 
