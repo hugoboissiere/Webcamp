@@ -36,7 +36,6 @@ include("php/includes/head.php");
        $img = 'resources/imgs/content/movies/defaultPoster'.$rand.'.jpg';
     }  
     $date = $result->date;
-    $var = $result->id;
 //    $date = date_format($date, 'Y-m-d H:i:s');
 //   $date = $date->format('%A %d %B %Y H:i');
     $runningTimeHour = convertToHoursMins($result->runningTime, '%02d h %02d minutes');
