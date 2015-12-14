@@ -28,7 +28,8 @@ while($result = $sessionsCompleteList->fetch())
 
 
 }
-$id = $;
+$sessionsCompleteList->closeCursor();
+// $id = $;
 
 $movieDetail = $dbh->query("SELECT * FROM cw_medias_movies WHERE id = '" . $id . "'");
 $movieDetail->setFetchMode(PDO::FETCH_OBJ);
