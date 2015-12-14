@@ -107,6 +107,7 @@ $genresCompleteLists->closeCursor();
             </tr>
         </thead>
         <tbody>
+            <td>Glace</td>
             <?php
             while ($result = $genresList->fetch()) {
                 ?>
