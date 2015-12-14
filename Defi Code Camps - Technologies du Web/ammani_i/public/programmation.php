@@ -56,13 +56,7 @@ include("php/includes/head.php");
             <br />
             <br />
             
-                <p style="color:#68D2C3;">Reservation</p>
-                <label for="movie">Film :</label>
-                <input type="text" value="<?php echo $result->title; ?>"  />
-                <br />
-                <p>Selectionnez l'horaire : </p>
-                <input type="radio" name="horaires" id="horaires" value="10 h 45" /><label for="horaires">10 h 45</label>
-            
+                <a href='reservation.php'><p style="color:#68D2C3;">Reservation</p></a>            
          </div>
     </li>
 
