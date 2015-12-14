@@ -53,7 +53,7 @@ include("php/includes/head.php");
             <p style="font-size: 14px;color:rgb(51, 51, 51);"><?php echo $result->runningTime; ?> min (<?php echo $runningTimeHour; ?>)</p>
             <p style="color:#68D2C3;"><?php echo strftime('%Y-%m-%d %H:%M:%S', date('Y-m-d H:i:s',strtotime($date)));?></p>
         </div>
-        <fieldset>
+     <!--    <fieldset>
     <legend>RESERVATION</legend>
         <form method="post" action="reservation.php">
             <p>Film : </p>
@@ -70,7 +70,7 @@ include("php/includes/head.php");
                 <option value= "8">8</option>
                 <option value= "9">9</option>
                 <option value= "10">10</option>
-</fieldset>
+</fieldset> -->
     </li>
     <?php
 }
