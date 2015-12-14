@@ -121,9 +121,9 @@ include("php/includes/navigator.php");
                 // $countriesCompleteList->setFetchMode(PDO::FETCH_OBJ);
                 while ($result = $moviesCompleteList->fetch()) {
                     
-                   echo "<tr data-id='" . $result->title . "'>
+                   echo "<tr data-id='Tableau_films'>
                     <td class='title'>" . $result->title . "</td>
-                    <td>" . $result->abbreviation . "</td>
+                    <td>" . $result->genre . "</td>
                 </tr>";
                 }
                 // $countriesCompleteList->closeCursor();
