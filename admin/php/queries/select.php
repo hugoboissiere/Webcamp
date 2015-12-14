@@ -72,14 +72,14 @@ $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 $genresListAdd = $dbh->query("SELECT name, id FROM cw_medias_genres WHERE archive = 'false'");
 $genresListAdd->setFetchMode(PDO::FETCH_OBJ);
 
-// $genresListModification = $dbh->query("SELECT name, id FROM cw_medias_genres WHERE archive = 'false'");
-// $genresListModification->setFetchMode(PDO::FETCH_OBJ);
+$genresListModification = $dbh->query("SELECT name, id FROM cw_medias_genres WHERE archive = 'false'");
+$genresListModification->setFetchMode(PDO::FETCH_OBJ);
 
-// $genresCompleteLists = $dbh->query("SELECT count(m.title) as moviesCount, g.name as genre
-// FROM cw_medias_movies m, cw_medias_genres g
-// WHERE m.genre = g.name
-// GROUP BY g.name");
-// $genresCompleteLists->setFetchMode(PDO::FETCH_OBJ);
+$genresCompleteLists = $dbh->query("SELECT count(m.title) as moviesCount, g.name as genre
+FROM cw_medias_movies m, cw_medias_genres g
+WHERE m.genre = g.name
+GROUP BY g.name");
+$genresCompleteLists->setFetchMode(PDO::FETCH_OBJ);
 
 
 /*
@@ -89,11 +89,11 @@ $genresListAdd->setFetchMode(PDO::FETCH_OBJ);
 $countriesCompleteList = $dbh->query("SELECT * FROM cw_medias_countries  WHERE archive = 'false'");
 $countriesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 
-// $countriesListAdd = $dbh->query("SELECT name FROM cw_medias_countries  WHERE archive = 'false'");
-// $countriesListAdd->setFetchMode(PDO::FETCH_OBJ);
+$countriesListAdd = $dbh->query("SELECT name FROM cw_medias_countries  WHERE archive = 'false'");
+$countriesListAdd->setFetchMode(PDO::FETCH_OBJ);
 
-// $countriesListModification = $dbh->query("SELECT name FROM cw_medias_countries  WHERE archive = 'false'");
-// $countriesListModification->setFetchMode(PDO::FETCH_OBJ);
+$countriesListModification = $dbh->query("SELECT name FROM cw_medias_countries  WHERE archive = 'false'");
+$countriesListModification->setFetchMode(PDO::FETCH_OBJ);
 
 // /*
 //  *      5.  Langages
