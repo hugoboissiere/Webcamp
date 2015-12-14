@@ -4,8 +4,9 @@ $moviesTitleList = $dbh->query("SELECT nb_entrees FROM cw_medias_movies WHERE id
 $moviesTitleList->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $moviesTitleList->fetch()) {
 	$nb = $result->nb_entrees;
-	$nb++;
+	$nb = $nb + $_POST['list'];
 }
+echo $_POST['list'];
 $moviesTitleList->closeCursor();
 
 $update = $dbh->prepare("UPDATE cw_medias_movies "
