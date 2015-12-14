@@ -5,7 +5,7 @@ if (!isset($_SESSION['auth']) && count($_SESSION['auth']) != 11) {
     exit;
 }
 
-include("php/queries/count.php");
+// include("php/queries/count.php");
 
 // Fichiers CSS/JS/PHP ajoutés
 $css = $addCSS;
