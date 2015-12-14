@@ -13,8 +13,8 @@
 
     include("php/includes/database.php");
     echo "fefwef";
-    $_POST["idMovie"]=1;
-    $_POST["idTheater"]=1;
+    $_POST["idMovie"]= '1';
+    $_POST["idTheater"]='1';
     $_POST["date"]= NOW();
     $_POST["language"]='Grec';
     $_POST["subtitles"]='no';
