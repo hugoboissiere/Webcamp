@@ -12,8 +12,8 @@ while ($result = $section->fetch())
 		{
 			$nbjour = $result2->divjour;
 			$pull = $result2->nb_entrees;
-			$qui = $nbjour / $pull;
-			echo $qui . "<br>";
+			// $qui = $nbjour / $pull;
+			echo $pull . "<br>";
 		}
 	$jour1->closeCursor();
 }
