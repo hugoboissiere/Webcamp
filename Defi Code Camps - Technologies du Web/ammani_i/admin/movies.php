@@ -139,7 +139,7 @@ include("php/includes/navigator.php");
         
     <!--Popin-->
    <div style='display:none'>
-        <!-- <div class="form-style-8" id="add">
+        <div class="form-style-8" id="add">
             <h2>Ajouter</h2>
             <form method="post" action="" id="addForm" class="formOverflow">
                 <label for="title">Titre : </label>   
@@ -302,7 +302,7 @@ include("php/includes/navigator.php");
                 <span>Ajouter affiche</span>
             </div>
             <span id="status" ></span>
-        </div> -->
+        </div>
     </div> 
 
 </main>
