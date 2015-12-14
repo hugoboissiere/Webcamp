@@ -17,3 +17,10 @@ div
 	vertical-align: top;
 	border: black 1px solid;
 }
+
+#formOverflow
+{
+	display: inline-block;
+	vertical-align: top;
+	border: black 1px solid;
+}
