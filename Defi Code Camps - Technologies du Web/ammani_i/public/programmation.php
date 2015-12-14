@@ -35,7 +35,7 @@ include("php/includes/head.php");
        $rand =  rand(1,2);
        $img = 'resources/imgs/content/movies/defaultPoster'.$rand.'.jpg';
     }  
-    echo "l'id c'est " . $result->id;
+    echo "l'id c'est " . $result->s.id;
     $date = $result->date;
 //    $date = date_format($date, 'Y-m-d H:i:s');
 //   $date = $date->format('%A %d %B %Y H:i');
