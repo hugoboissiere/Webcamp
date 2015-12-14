@@ -83,6 +83,7 @@ include("php/includes/navigator.php");
                 </tr>
             </thead>
             <tbody>
+                <tr><td>Glace</td><td>vanille</td></tr>
                 <?php
                 while ($result = $genresCompleteLists->fetch()) {
                     ?>
@@ -107,7 +108,6 @@ $genresCompleteLists->closeCursor();
             </tr>
         </thead>
         <tbody>
-            <td>Glace</td>
             <?php
             while ($result = $genresList->fetch()) {
                 ?>
