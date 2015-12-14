@@ -12,12 +12,13 @@ $css = $addCSS;
 $js = $addJS;
 $php = $addPHP;
 
+var_dump($php); exit;
 
-// if (count($php) > 0 && $php[0] != "") {
-//     for ($i = 0; $i < count($php); $i++) {
-//         include("php/" . $php[$i] . ".php");
-//     }
-// }
+if (count($php) > 0 && $php[0] != "") {
+    for ($i = 0; $i < count($php); $i++) {
+        include("php/" . $php[$i] . ".php");
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
