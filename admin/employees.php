@@ -260,6 +260,8 @@ include("php/includes/navigator.php");
                             echo $result->email;
                         else if (($_SESSION['auth']['job'] >= 3 && $result->job >= 3) && ($_SESSION['auth']['job'] <= 6 && $result->job >= 3))
                             echo $result->email;
+                        else if($_SESSION['auth']['job'] == 7 && $result->job == 7)
+                            echo $result->email;
                         else
                             echo "Vous n'avez pas les permissions pour voir les adresses mail.";
 
