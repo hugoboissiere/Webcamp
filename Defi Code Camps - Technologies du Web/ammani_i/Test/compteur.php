@@ -7,10 +7,8 @@ while ($result = $moviesTitleList->fetch()) {
 	$nb++;
 }
 $moviesTitleList->closeCursor();
-
-$update = $dbh->prepare("UPDATE cw_medias_movies "
-	. "SET nb_entrees = nb_entrees + ".$_POST['nb']
-	. " WHERE id = ".$_GET['ID']);
+echo "UPDATE cw_medias_movies "."SET nb_entrees = nb_entrees + ".$_POST['nb']." WHERE id = ".$_GET['ID'];
+$update = $dbh->prepare("UPDATE cw_medias_movies "."SET nb_entrees = nb_entrees + ".$_POST['nb']." WHERE id = ".$_GET['ID']);
 $update->execute();
-header("Location: untitled.php");
+//header("Location: untitled.php");
 ?>
