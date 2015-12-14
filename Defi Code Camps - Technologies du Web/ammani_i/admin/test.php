@@ -15,7 +15,7 @@
     echo "fefwef";
     $_POST["idMovie"]= '1';
     $_POST["idTheater"]='1';
-    $_POST["date"]= NOW();
+    $_POST["date"]= NOW;
     $_POST["language"]='Grec';
     $_POST["subtitles"]='no';
     echo "ff";
