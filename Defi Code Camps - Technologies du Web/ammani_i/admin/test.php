@@ -41,7 +41,7 @@
             $insert->bindParam(":subtitles", $_POST["subtitles"]);
             $insert->bindParam(":nb_place", $places);
             $insert->execute();
-        
+        echo "ffewfefeew";
     }
     catch (PDOException $e)
     {
