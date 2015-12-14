@@ -217,7 +217,7 @@ if ($_SESSION['auth']['job'] == 1)
 	$languagesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 }
 
-else
+else if($_SESSION['auth']['job'] == 2)
 {
 	$sessionsCompleteList = $dbh->query("SELECT s.id, m.title, m.runningTime, s.date, t.name as theater
                                 FROM cw_medias_movies m, cw_cinema_sessions s, cw_cinema_theaters t
