@@ -55,7 +55,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
                         <option>9</option>
                         <option>10</option>
                         </select>
-                        <button type="submit">Entree</button>
+                        <button type="submit" value="submit">Entree</button>
                   </form></td>
                   <td><form method="get" action="compteur2.php">
                         <input type="hidden" name="ID" value="'.$result->id.'">
