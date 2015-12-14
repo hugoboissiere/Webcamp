@@ -1,5 +1,10 @@
-table { 
+body {
   background-color: #00ff00;
+}
+
+
+
+table { 
 	margin : 10px auto auto auto; 
 }
 
