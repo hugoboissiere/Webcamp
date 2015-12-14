@@ -12,7 +12,7 @@ while ($result = $section->fetch())
 	while ($result2 = $jour1->fetch())
 		{
 			var_dump($result2);
-			var_dump($result2->nb_entrees);
+			//var_dump($result2->nb_entrees);
 			/*echo "<ul>" . $result2->nb_entrees . "</ul>";
 			echo "<br>";*/
 		}
