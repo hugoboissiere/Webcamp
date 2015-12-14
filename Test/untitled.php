@@ -58,10 +58,6 @@ $test->setFetchMode(PDO::FETCH_OBJ);
                         </select>
                         <button type="submit">Entree</button>
                   </form></td>
-                  <td><form method="get" action="compteur2.php">
-                        <input type="hidden" name="ID" value="'.$result->id.'">
-                        <button type="submit">Entree en groupe</button>
-                  </form></td>
                </tr>';
       }
       $employeeStatusListAdd->closeCursor();
