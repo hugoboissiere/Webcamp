@@ -55,7 +55,6 @@ include("php/includes/head.php");
          </div>
 
     </li>
-    <p>Reservation</p>
 
 
 
