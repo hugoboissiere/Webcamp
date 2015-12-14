@@ -12,7 +12,7 @@ $addJS = array("js/form/languages.js", "js/rowSelection/languages.js");
     
     
 // PHP (queries) de cette page
-$addPHP = array("php/queries/select.php");
+$addPHP = array("queries/select");
     
 include("php/includes/head.php");
 include("php/includes/navigator.php");
