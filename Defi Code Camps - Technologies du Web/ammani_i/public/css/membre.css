@@ -1,4 +1,4 @@
-img 
+/*img 
 {
 	display: inline-block;
 	vertical-align: top;
@@ -6,13 +6,13 @@ img
 
 div
 {
-	display: inline-block;
+	/*display: inline-block;
 	vertical-align: top;
 	border: black 1px solid;
-	margin-left: 20%; 
+	margin-left: 20%; */
 }
 
-form
+/*form
 {
 	display: inline-block;
 	vertical-align: top;
@@ -24,4 +24,4 @@ form
 	display: inline-block;
 	vertical-align: top;
 	border: black 1px solid;
-}
+}*/
