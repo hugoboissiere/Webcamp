@@ -53,15 +53,16 @@ include("php/includes/head.php");
             <p style="font-size: 14px;color:rgb(51, 51, 51);"><?php echo $result->runningTime; ?> min (<?php echo $runningTimeHour; ?>)</p>
             <p style="color:#68D2C3;"><?php echo strftime('%Y-%m-%d %H:%M:%S', date('Y-m-d H:i:s',strtotime($date)));?></p>
             <br />
-            <!-- <p style="color:#68D2C3;">Reservation</p> -->
-            <fieldset>
-                <legend>Reservation</legend>
+            <br />
+            <br />
+            
+                <p style="color:#68D2C3;">Reservation</p>
                 <label for="movie">Film :</label>
                 <input type="text" value="<?php echo $result->title; ?>"  />
                 <br />
                 <p>Selectionnez l'horaire : </p>
-                <input type="radio" name="horaires" id="horaires" /><label for="horaires">10 h 45</label>
-            </fieldset>
+                <input type="radio" name="horaires" id="horaires" value="10 h 45" /><label for="horaires">10 h 45</label>
+            
          </div>
     </li>
 
