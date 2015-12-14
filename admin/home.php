@@ -16,7 +16,7 @@ include("php/includes/queries/count.php");
 include("php/includes/navigator.php");
 ?>
 <?php
-	echo $_SESSION['auth']['job'];
+	// echo $_SESSION['auth']['job'];
         <!-- main content here -->
     </main>
     <script src="js/layoutNavigator.js"></script> <!-- Resource jQuery -->
