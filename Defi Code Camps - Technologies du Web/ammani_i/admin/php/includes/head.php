@@ -5,7 +5,7 @@ if (!isset($_SESSION['auth']) && count($_SESSION['auth']) != 11) {
     exit;
 }
 
-// include("php/queries/count.php");
+include("php/queries/count.php");
 
 // Fichiers CSS/JS/PHP ajoutés
 $css = $addCSS;
@@ -13,11 +13,11 @@ $js = $addJS;
 $php = $addPHP;
 
 
-if (count($php) > 0 && $php[0] != "") {
-    for ($i = 0; $i < count($php); $i++) {
-        include("php/" . $php[$i] . ".php");
-    }
-}
+// if (count($php) > 0 && $php[0] != "") {
+//     for ($i = 0; $i < count($php); $i++) {
+//         include("php/" . $php[$i] . ".php");
+//     }
+// }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
