@@ -109,34 +109,34 @@ $languageCompleteList -> setFetchMode(PDO::FETCH_OBJ);
 //  *      1.  Members
 //  */
 
-// $statusListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_status  WHERE archive = 'false'");
-// $statusListAdd->setFetchMode(PDO::FETCH_OBJ);
+$statusListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_status  WHERE archive = 'false'");
+$statusListAdd->setFetchMode(PDO::FETCH_OBJ);
 
-// $statusListModification= $dbh->query("SELECT name FROM cw_human_resources_memberships_status  WHERE archive = 'false'");
-// $statusListModification->setFetchMode(PDO::FETCH_OBJ);
+$statusListModification= $dbh->query("SELECT name FROM cw_human_resources_memberships_status  WHERE archive = 'false'");
+$statusListModification->setFetchMode(PDO::FETCH_OBJ);
 
-// $activityListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_activity  WHERE archive = 'false'");
-// $activityListAdd->setFetchMode(PDO::FETCH_OBJ);
+$activityListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_activity  WHERE archive = 'false'");
+$activityListAdd->setFetchMode(PDO::FETCH_OBJ);
 
-// $activityListModification= $dbh->query("SELECT name FROM cw_human_resources_memberships_activity  WHERE archive = 'false'");
-// $activityListModification->setFetchMode(PDO::FETCH_OBJ);
+$activityListModification= $dbh->query("SELECT name FROM cw_human_resources_memberships_activity  WHERE archive = 'false'");
+$activityListModification->setFetchMode(PDO::FETCH_OBJ);
 
 
 // /*
 //  *  Liste complete des inscrits  
 //  */
 
-// if($_SESSION['auth']['job'] == 1)
-// {
-// 	$membershipsCompleteList =  $dbh->query("SELECT * FROM cw_human_resources_memberships  WHERE archive = 'false'");
-// 	$membershipsCompleteList -> setFetchMode(PDO::FETCH_OBJ);
-// }
+if($_SESSION['auth']['job'] == 1)
+{
+	$membershipsCompleteList =  $dbh->query("SELECT * FROM cw_human_resources_memberships  WHERE archive = 'false'");
+	$membershipsCompleteList -> setFetchMode(PDO::FETCH_OBJ);
+}
 
-// else
-// {
-// 	$membershipsCompleteList =  $dbh->query("SELECT * FROM cw_human_resources_memberships  WHERE archive = 'false' AND region= '" . $_SESSION['auth']['region'] . "'");
-// 	$membershipsCompleteList -> setFetchMode(PDO::FETCH_OBJ);
-// }
+else
+{
+	$membershipsCompleteList =  $dbh->query("SELECT * FROM cw_human_resources_memberships  WHERE archive = 'false' AND region= '" . $_SESSION['auth']['region'] . "'");
+	$membershipsCompleteList -> setFetchMode(PDO::FETCH_OBJ);
+}
 
 // /*
 //  *          a.  Status
