@@ -46,6 +46,7 @@ include("php/includes/head.php");
             <img src="<?php echo $img; ?>" alt="Poster de <?php echo $result->title; ?>"/>
         </a>
         <div id="text">
+            <?php echo $var?>
             <p style="color:#68D2C3;">Film</p>
             <p style="font-size: 18px;color:rgb(51, 51, 51);"><?php echo $result->title; ?></p>
             <p style="font-size: 14px;color:rgb(51, 51, 51);"><?php echo $result->genre; ?></p>
