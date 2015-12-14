@@ -136,9 +136,6 @@ $().ready(function() {
             city: {
                 minlength: 2
             },
-            country: {
-                minlength: 2
-            },
             email: {
                 required: true,
                 email: true
@@ -176,9 +173,6 @@ $().ready(function() {
                 minlength: "It must be at least 2 characters long"
             },
             city: {
-                minlength: "It must be at least 2 characters long"
-            },
-            country: {
                 minlength: "It must be at least 2 characters long"
             },
             email: "Please enter a valid email address"
