@@ -242,14 +242,13 @@ include("php/includes/navigator.php");
                 </tr>
             </thead>
             <tbody>
-                <tr><td>cc</td></tr>
                 <?php
                 while ($result = $membershipsCompleteList->fetch()) {
                               ?>
                 <tr data-id="<?php echo $result->id; ?>">
                     <td class="title"><?php echo $result->username; ?></td>
                     <td><?php echo $result->email; ?></td>
-                    <td><?php echo $result->region; ?></td>
+                    <td><?php echo $result->country; ?></td>
                     <td><?php  if($result->newsletter === "Yes"){echo "Inscrit";}else{echo "Non";}; ?></td>
                 </tr>
                     <?php
