@@ -14,7 +14,7 @@ include("php/includes/head.php");
 
 $sessionsCompleteList = $dbh->query("SELECT s.id, m.title, m.id as idMovie,m.genre, m.realisator, m.runningTime, s.date, t.name as theater
 	FROM cw_medias_movies m, cw_cinema_sessions s, cw_cinema_theaters t
-	WHERE t.id = s.idTheater AND s.idMovie = m.id AND s.archive = 'false'");        
+	WHERE t.id = s.idTheater AND s.idMovie = m.id AND s.archive = 'false' AND s.id = '" . $_GET['id'] . "'");        
 $sessionsCompleteList->setFetchMode(PDO::FETCH_OBJ);
 
 while($result = $sessionsCompleteList->fetch())
