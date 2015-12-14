@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['auth']) && count($_SESSION['auth']) != 11) {
-    header("location:index.php");
+    header("Location: index.php");
     exit;
 }
 
