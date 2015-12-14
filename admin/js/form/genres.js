@@ -12,18 +12,18 @@ $().ready(function() {
             });
             return false;
         },
-        rules: {
-            name: {
-                required: true,
-                minlength: 2
-            }
-        },
-        messages: {
-            name: {
-                required: "Veuillez renseigner le nom du genre",
-                minlength: "Au moins 2 caractères"
-            }
-        }
+        // rules: {
+        //     name: {
+        //         required: true,
+        //         minlength: 2
+        //     }
+        // },
+        // messages: {
+        //     name: {
+        //         required: "Veuillez renseigner le nom du genre",
+        //         minlength: "Au moins 2 caractères"
+        //     }
+        // }
     });
 
 $("#modificationForm").validate({

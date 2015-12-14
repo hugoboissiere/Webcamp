@@ -42,7 +42,6 @@ if (isset($_POST["updateGenre"])) {
     $update->bindParam(":id", $_POST["id"]);
     $update->bindParam(":name", $_POST["name"]);
     $update->execute();
-    header("Location : ../../genres.php");
 }
 
 if (isset($_POST["updateCountry"])) {
