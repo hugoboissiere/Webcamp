@@ -9,9 +9,8 @@ while ($result = $moviesTitleList->fetch()) {
 $moviesTitleList->closeCursor();
 
 $update = $dbh->prepare("UPDATE cw_medias_movies "
-	. "SET nb_entrees = nb_entrees + :nb "
-	. "WHERE id = ".$_GET['ID']);
-$update->bindParam(":nb", $_POST['nb']);
+	. "SET nb_entrees = nb_entrees + ".$_POST['nb']
+	. " WHERE id = ".$_GET['ID']);
 $update->execute();
 header("Location: untitled.php");
 ?>
