@@ -31,25 +31,24 @@
     try
     {
         echo "sse";
-        $update = $dbh->prepare("UPDATE cw_human_resources_employees "
-            . "SET firstname = :firstname, lastname = :lastname, birthDate = :birthDate, sex = :sex, address = :address, city = :city, phoneHome = :phoneHome, phoneMobile = :phoneMobile, email = :email, job = :job, status = :status, password = :password, country = :country "
-            . "WHERE id = 14");
-        echo "lera";
-        $update->bindParam(":lastname", $_POST["lastname"]);
-        echo "nnerie";
-        $update->bindParam(":firstname", $_POST["firstname"]);
-        $update->bindParam(":birthDate", $_POST["birthDate"]);
-        $update->bindParam(":sex", $_POST["sex"]);
-        $update->bindParam(":address", $_POST["address"]);
-        $update->bindParam(":city", $_POST["city"]);
-        $update->bindParam(":phoneHome", $_POST["phoneHome"]);
-        $update->bindParam(":phoneMobile", $_POST["phoneMobile"]);
-        $update->bindParam(":email", $_POST["email"]);
-        $update->bindParam(":job", $_POST["job"]);
-        $update->bindParam(":status", $_POST["status"]);
-        $update->bindParam(":password", $_POST["password"]);
-        $update->bindParam(":country", $_POST["country"]);
-        $update->execute();
+    $update = $dbh->prepare("UPDATE cw_human_resources_employees "
+        . "SET firstname = :firstname, lastname = :lastname, birthDate = :birthDate, sex = :sex, address = :address, city = :city, phoneHome = :phoneHome, phoneMobile = :phoneMobile, email = :email, job = :job, status = :status, password = :password, country = :country "
+        . "WHERE id = 7");
+    $update->bindParam(":id", $_POST["id"]);
+    $update->bindParam(":lastname", $_POST["lastname"]);
+    $update->bindParam(":firstname", $_POST["firstname"]);
+    $update->bindParam(":birthDate", $_POST["birthDate"]);
+    $update->bindParam(":sex", $_POST["sex"]);
+    $update->bindParam(":address", $_POST["address"]);
+    $update->bindParam(":city", $_POST["city"]);
+    $update->bindParam(":phoneHome", $_POST["phoneHome"]);
+    $update->bindParam(":phoneMobile", $_POST["phoneMobile"]);
+    $update->bindParam(":email", $_POST["email"]);
+    $update->bindParam(":job", $_POST["job"]);
+    $update->bindParam(":status", $_POST["status"]);
+    $update->bindParam(":password", $_POST["password"]);
+    $update->bindParam(":country", $_POST["country"]);
+    $update->execute();
         echo 'logie';
     }
     catch(PDOException $e)
