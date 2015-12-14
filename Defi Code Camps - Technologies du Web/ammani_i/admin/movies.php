@@ -160,12 +160,12 @@ include("php/includes/navigator.php");
                 <select name="country" class="genre">
                     <option value="" disabled selected>Select your option</option>
                     <?php
-                    while ($result = $countriesListAdd->fetch()) {
+                    while ($result = $moviesCompleteList->fetch()) {
                         ?>
                         <option value="<?php echo $result->name; ?>"><?php echo $result->name; ?></option>
                         <?php
                     }
-                    $countriesListAdd->closeCursor();
+                    $moviesCompleteList->closeCursor();
                     ?>
                 </select>
                 <br>
