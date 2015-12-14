@@ -29,6 +29,50 @@ include("php/includes/navigator.php");
             </li>
         </ul>
     </div>
+        <div id="table">
+        <table class="tablesaw" data-tablesaw-mode="stack">
+            <thead>
+                <tr>
+                    
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" style="background-color:#232b2d">Titre</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col style="background-color:#232b2d" data-tablesaw-priority="1">Salle</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" style="background-color:#232b2d">Date</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" style="background-color:#232b2d">Horaire</th>
+                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3" style="background-color:#232b2d"><abbr title="Rotten Tomato Rating">Durée</abbr></th>  
+                </tr>
+            </thead>
+            <tbody>
+                
+                <?php
+                while ($result = $sessionsCompleteList->fetch()) {
+                    $result->date;
+                    $dateAndHour = $result->date;
+                    $dateAndHour = explode(" ", $dateAndHour);
+                    $date = new DateTime($dateAndHour[0]);
+                    $dateDay = $date->format("w");
+                    $dateMonth = $date->format("n");
+                    $test = $date->format("d");
+                    $jour = array("Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi");
+                    $mois = array("", "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre");
+                    $date = $jour[$dateDay] . " " . $test . " " . $mois[$dateMonth];
+                    $hour = new DateTime($dateAndHour[1]);
+                    $hour = $hour->format("g:i");
+                    ?>
+                    <tr data-id="<?php echo $result->id; ?>">
+                        <td class="title"><?php echo $result->title; ?></td>
+                        <td><?php echo $result->theater; ?></td>
+                        <td><?php echo $date ?></td>
+                        <td><?php echo $hour ?></td>
+                        <td><?php echo $result->runningTime; ?> min</td> 
+                    </tr>
+                    <?php
+                }
+                $sessionsCompleteList->closeCursor();
+                ?>
+
+            </tbody>
+        </table>
+    </div>
     <div style='display:none'>
         <div class="form-style-8" id="add">
             <h2>Ajouter</h2>
@@ -94,50 +138,7 @@ include("php/includes/navigator.php");
             </form>
         </div>
     </div>
-    <div id="table">
-        <table class="tablesaw" data-tablesaw-mode="stack">
-            <thead>
-                <tr>
-                    
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="persist" style="background-color:#232b2d">Titre</th>
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-sortable-default-col style="background-color:#232b2d" data-tablesaw-priority="1">Salle</th>
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" style="background-color:#232b2d">Date</th>
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="2" style="background-color:#232b2d">Horaire</th>
-                    <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3" style="background-color:#232b2d"><abbr title="Rotten Tomato Rating">Durée</abbr></th>  
-                </tr>
-            </thead>
-            <tbody>
-                
-                <?php
-                while ($result = $sessionsCompleteList->fetch()) {
-                    $result->date;
-                    $dateAndHour = $result->date;
-                    $dateAndHour = explode(" ", $dateAndHour);
-                    $date = new DateTime($dateAndHour[0]);
-                    $dateDay = $date->format("w");
-                    $dateMonth = $date->format("n");
-                    $test = $date->format("d");
-                    $jour = array("Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi");
-                    $mois = array("", "Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre");
-                    $date = $jour[$dateDay] . " " . $test . " " . $mois[$dateMonth];
-                    $hour = new DateTime($dateAndHour[1]);
-                    $hour = $hour->format("g:i");
-                    ?>
-                    <tr data-id="<?php echo $result->id; ?>">
-                        <td class="title"><?php echo $result->title; ?></td>
-                        <td><?php echo $result->theater; ?></td>
-                        <td><?php echo $date ?></td>
-                        <td><?php echo $hour ?></td>
-                        <td><?php echo $result->runningTime; ?> min</td> 
-                    </tr>
-                    <?php
-                }
-                $sessionsCompleteList->closeCursor();
-                ?>
 
-            </tbody>
-        </table>
-    </div>
 </main>
 
 
