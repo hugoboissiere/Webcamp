@@ -55,7 +55,6 @@ if (file_exists($filenameCover)) {
 
       <h2>
         <?php echo $result->title; ?>
-        // <?php echo $result->id; ?>
         <span><?php echo $result->titleOriginal; ?></span>
 
       </h2>
