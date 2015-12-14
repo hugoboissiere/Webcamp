@@ -186,8 +186,8 @@ else
 	$employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
 }
 
-// $employeeRegionListModification = $dbh->query("SELECT * FROM region");
-// $employeeRegionListModification->setFetchMode(PDO::FETCH_OBJ);
+$employeeRegionListModification = $dbh->query("SELECT * FROM region");
+$employeeRegionListModification->setFetchMode(PDO::FETCH_OBJ);
 
 // /*
 //  *          a.  Status
