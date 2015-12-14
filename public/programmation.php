@@ -57,7 +57,7 @@ include("php/includes/head.php");
     <legend>RESERVATION</legend>
         <form method="post" action="reservation.php">
             <p>Film : </p>
-            <p>"<?php echo $result->title; ?>" </p>
+            <p>"<?php //echo $result->title; ?>" </p>
             <label for="groupe">Reserver un nombre de place : </label> 
             <select name="groupe" id="groupe"></select>
                 <option value= "1">1</option>
