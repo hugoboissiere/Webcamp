@@ -223,12 +223,11 @@ if($_SESSION['auth']['job'] == 1)
 	$theaterCompleteList =  $dbh->query("SELECT * FROM cw_cinema_theaters WHERE archive = 'false'");
 	$theaterCompleteList -> setFetchMode(PDO::FETCH_OBJ);
 }
-
-// else
-// {
-// 	$theaterCompleteList =  $dbh->query("SELECT * FROM cw_cinema_theaters WHERE archive = 'false' AND region= '" . $_SESSION['auth']['region'] . "' ");
-// 	$theaterCompleteList -> setFetchMode(PDO::FETCH_OBJ);
-// }
+else
+{
+	$theaterCompleteList =  $dbh->query("SELECT * FROM cw_cinema_theaters WHERE archive = 'false' AND country= '" . $_SESSION['auth']['country'] . "' ");
+	$theaterCompleteList -> setFetchMode(PDO::FETCH_OBJ);
+}
 
 
 
