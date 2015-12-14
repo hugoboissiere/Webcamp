@@ -241,8 +241,8 @@ include("php/includes/navigator.php");
                 while ($result = $employeesCompleteList->fetch()) {
                     ?>
                     <tr data-id="<?php echo $result->id; ?>">
-                        <td class="title"><?php echo $result->firstname; ?></td>
-                        <td><?php echo $result->lastname; ?></td>
+                        <td class="title"><?php echo $result->lastname; ?></td>
+                        <td><?php echo $result->firstname; ?></td>
                         <td><?php 
                         
                         $categorie2 = $dbh->query('SELECT * FROM job WHERE id_job = "' . $result->job . '"');
