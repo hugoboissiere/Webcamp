@@ -17,8 +17,6 @@ include("php/includes/head.php");
 
 <?php
 include("php/includes/scripts.php");
-
-print_r($_SESSION);
 ?>
 
 <!--scripts Js-->
