@@ -55,7 +55,7 @@ $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
                   </form></td>
                </tr>';
       }*/
-      $employeeStatusListAdd->closeCursor();
+      
       ?>
       </table>
    </head>
