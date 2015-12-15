@@ -167,11 +167,12 @@ and open the template in the editor.
         
         <aside>
 
-            <?php 
-            if ($_SESSION['id'])
-                echo 'Bonjour, ' . $_SESSION['firstname'] . ' '; ?>
             <nav id="staffPanel">
                 <ul>
+                    <?php 
+            if ($_SESSION['id'])
+                echo '<li>Bonjour, ' . $_SESSION['firstname'] . ' </li>'; ?>
+            <br />
                     <li>Programmation
                         <ul>
                             <li><a href="programmation.php">Séances
