@@ -11,12 +11,11 @@ while ($result = $section->fetch())
 	while ($result2 = $jour1->fetch())
 		{
 			$nbjour = $result2->divjour;
-			$pull = $result2->nb_entrees;
+			$pull = $result2->entrees;
 			// $qui = $nbjour / $pull;
 			echo $pull . "<br>";
 		}
 	$jour1->closeCursor();
 }
-
 $section->closeCursor();
 ?>
