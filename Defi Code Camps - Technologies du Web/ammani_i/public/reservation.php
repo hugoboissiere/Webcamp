@@ -202,6 +202,7 @@ while ($result = $movieDetail->fetch()) {
 							<option value="9">9</option>
 							<option value="10">10</option>
 						</select><br/>
+						<input type="hidden" name="movie" value=<?php echo ' "'.$id.'" '?> />
 							<br/>
 							<input type="submit" value="Valider" />
 				</fieldset>
