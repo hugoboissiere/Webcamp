@@ -92,7 +92,7 @@ echo '<div class="formu">
                     $employeeRegionListAdd->closeCursor();
                     ?>
                     <?php
-echo '                </select>
+echo '                </select><br/>
                 <br/>
                 <label for="mail">Email : </label>
                 <input type="email" name="email" id="mail" placeholder="Ex : laurent.dupont@gmail.com" required>
@@ -107,7 +107,7 @@ echo '                </select>
                     $statusListAdd->closeCursor();
                     ?>
                     <?php
-echo '                </select>
+echo '                </select><br/>
                 <br/>
                 <label for="activity">Activité : </label>
                 <select name="activity" id="activity">';
