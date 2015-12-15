@@ -1,6 +1,9 @@
 <?php
 include("../admin/php/includes/database.php");
 
+$test = $dbh->query("SELECT * from cw_medias_movies"); 
+$test->setFetchMode(PDO::FETCH_OBJ);
+
 $section = $dbh->query("SELECT `id` FROM cw_medias_movies");
 $section->setFetchMode(PDO::FETCH_OBJ);
 
