@@ -109,10 +109,6 @@ while ($result = $movieDetail->fetch()) {
 						<span class="dataContent"><?php echo $result->actors; ?></span>
 					</li>
 					<li>
-						<span class="dataTitle">Production</span>
-						<span class="dataContent"><?php echo $result->production; ?></span>
-					</li>
-					<li>
 						<span class="dataTitle">Pays</span>
 						<span class="dataContent"><?php echo $result->country ?></span>
 					</li>
