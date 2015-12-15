@@ -17,7 +17,6 @@ include("php/includes/head.php");
 
 <?php
 include("php/includes/scripts.php");
-var_dump($_SESSION);
 ?>
 
 <!--scripts Js-->
