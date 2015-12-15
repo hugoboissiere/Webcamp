@@ -200,7 +200,8 @@ while ($result = $movieDetail->fetch()) {
 				<option value="8">8</option>
 				<option value="9">9</option>
 				<option value="10">10</option>
-			</select>
+			</select><br/>
+			<br/>
 			<input type="submit" value="Valider" />
 		</fieldset>
 	</form>
