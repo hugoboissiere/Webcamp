@@ -1,18 +1,14 @@
 body {
-  text-align: center;
-  margin: auto;
+  margin: 100px;
   background-color: #1e262c;
-  display: block;
 }
 
 table { 
   text-align: center;
-	margin : 30px 100px auto auto;
   font-size: 14px;
 }
 
 table.tableau {
-	border-collapse: collapse; 
   text-align: center;
   height: 800px;
   width: 1200px;
@@ -26,7 +22,7 @@ table.tableau td {
 
 table.tableau th { 
   text-align: center;
-  color: white;
+  color: #ffffff;
 }
 
 .titre {
