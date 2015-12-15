@@ -15,8 +15,6 @@ $test->setFetchMode(PDO::FETCH_OBJ);
    <link rel="stylesheet" type="text/css" href="style.css"></link>
    <body>
 	   <p class="titre">Statistiques des films</p>
-      <form action="compteur.php">
-      </form>
 	   <table class="tableau">
       <tr>
          <th>Film</th>
