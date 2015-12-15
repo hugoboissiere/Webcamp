@@ -2,7 +2,7 @@
 
 include("php/includes/database.php");
 
-echo $_POST['sessions'];
+echo $_POST['session'];
 echo "1";
 
 // $i = 0;
