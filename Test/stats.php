@@ -32,10 +32,10 @@ while ($result = $section->fetch())
 			$entrees_jour = $entrees / $nbjour;
 			$entrees_semaine = $entrees_jour * 7;
 			$entrees_mois = $entrees_jour * 30;
-			echo "<td>". ROUND($nbjour) . "</td>";
-			echo "<td>" . ROUND($entrees_jour) . "</td>";
-			echo "<td>" . ROUND($entrees_semaine) . "</td>";
-			echo "<td>" . ROUND($entrees_mois) . "</td>";
+			echo "<td>". ROUND($nbjour, 1) . "</td>";
+			echo "<td>" . ROUND($entrees_jour, 1) . "</td>";
+			echo "<td>" . ROUND($entrees_semaine, 1) . "</td>";
+			echo "<td>" . ROUND($entrees_mois, 1) . "</td>";
 			echo '</tr>';
 			// echo $changeDeNom . "<br>";
 			// while ($result = $test->fetch())
