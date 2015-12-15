@@ -39,10 +39,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
                   <td>' . $result->country . '</td>
                   <td>' . $result->publicationtime . '</td>
                   <td>' . $result->nb_entrees . '</td>
-                  while ($result2 = $jour1->fetch())
-                  {
-                     <td>' . $result2->moy_entree_jour . '</td>
-                  }
+                  <td>' . $result->moy_entree_jour . '</td>
                   <td><form method="get" action="compteur.php">
                         <input type="hidden" name="ID" value="'.$result->id.'">
                         <select type="hidden" name="nb">
