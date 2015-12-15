@@ -1,8 +1,8 @@
 <?php
 
 include("php/includes/database.php");
-
-$moviesTitleList = $dbh->query("SELECT nb_entrees FROM cw_medias_movies WHERE id = ".$_POST["movie"]));
+echo "srete";
+$moviesTitleList = $dbh->query("SELECT nb_entrees FROM cw_medias_movies WHERE id = ".$_POST["movie"]);
 		$moviesTitleList->setFetchMode(PDO::FETCH_OBJ);
 		echo "-1";
 
