@@ -6,47 +6,47 @@ include("php/includes/database.php");
 
 echo '<form method="post" action="change.php" id="addForm" autocomplete="off" class="formOverflow"> 
                 <label for="member">Adhérent</label>
-                <input type="radio" name="membership" value="Member" id="member" class="radio">
+                <input type="radio" name="membership" value="Member" id="member" class="radio"><br/>
                 <label for="subscriber">Abonné</label>
-                <input type="radio" name="membership" value="Subscriber" id="subscriber" class="radio" checked>
+                <input type="radio" name="membership" value="Subscriber" id="subscriber" class="radio" checked><br/>
                 <br/>
                 <label for="newsletterOn">Newsletter(ON)</label>
-                <input type="radio" name="newsletter" value="Yes" id="newsletterOn"class="radio">
+                <input type="radio" name="newsletter" value="Yes" id="newsletterOn"class="radio"><br/>
                 <label for="newsletterOff">Newsletter(OFF)</label>
-                <input type="radio" name="newsletter" value="No" id="newsletterOff"class="radio" checked>
+                <input type="radio" name="newsletter" value="No" id="newsletterOff"class="radio" checked><br/>
                 <br/>
                 <label for="name">Nom : </label>
-                <input type="text" name="lastname" id="name" value="' . $_SESSION['lastname'] . '">
+                <input type="text" name="lastname" id="name" value="' . $_SESSION['lastname'] . '"><br/>
                 <br/>
                 <label for="firstname">Prénom : </label>
-                <input type="text" name="firstname" id="firstname" value="' . $_SESSION['firstname'] . '">
+                <input type="text" name="firstname" id="firstname" value="' . $_SESSION['firstname'] . '"><br/>
                 <br/>
                 <label for="password">Mot de passe : </label>
-                <input type="password" type="password" name="password" id="password" value="' . $_SESSION['password'] . '" pattern=".{5,}">
+                <input type="password" type="password" name="password" id="password" value="' . $_SESSION['password'] . '" pattern=".{5,}"><br/>
                 <br/>
                 <label for="password2">Retaper le mdp : </label>
-                <input type="password" name="password2" id="password2" value="' . $_SESSION['password2'] . '" pattern=".{5,}">
+                <input type="password" name="password2" id="password2" value="' . $_SESSION['password2'] . '" pattern=".{5,}"><br/>
                 <br/>
                 <label for="username">Pseudo : </label>
-                <input type="text" name="username" id="username" value="' . $_SESSION['username'] . '">
+                <input type="text" name="username" id="username" value="' . $_SESSION['username'] . '"><br/>
                 <br/>
                 Sexe : 
                 <label for="man">Homme</label>
                 <input type="radio" name="sex" value="Male" id="man" class="radio">
                 <label for="woman">Femme</label>
-                <input type="radio" name="sex" value="Female" id="woman"  class="radio" checked>
+                <input type="radio" name="sex" value="Female" id="woman"  class="radio" checked><br/>
                 <br/>
                 <label for="phoneHome">Téléphone Fixe : </label>
-                <input type="tel" name="phoneHome" id="phoneHome" value="' . $_SESSION['phoneHome'] . '">
+                <input type="tel" name="phoneHome" id="phoneHome" value="' . $_SESSION['phoneHome'] . '"><br/>
                 <br/>
                 <label for="phoneMobile">Téléphone Mobile : </label>
-                <input type="tel" name="phoneMobile" id="phoneMobile" value="' . $_SESSION['phoneMobile'] . '">
+                <input type="tel" name="phoneMobile" id="phoneMobile" value="' . $_SESSION['phoneMobile'] . '"><br/>
                 <br/>
                 <label for="neighborhood">Quartier : </label>
-                <input type="text" id="neighborhood" name="neighborhood" value="' . $_SESSION['neighborhood'] . '">
+                <input type="text" id="neighborhood" name="neighborhood" value="' . $_SESSION['neighborhood'] . '"><br/>
                 <br/>
                 <label for="city">Ville : </label>
-                <input type="text" name="city" id="city" value="' . $_SESSION['city'] . '">
+                <input type="text" name="city" id="city" value="' . $_SESSION['city'] . '"><br/>
                 <br/>
                 <label for="country">Pays : </label>
                 <select name="country" id="country">';
@@ -61,7 +61,7 @@ echo '<form method="post" action="change.php" id="addForm" autocomplete="off" cl
                     $employeeRegionListAdd->closeCursor();
                     ?>
                     <?php
-echo '                </select>
+echo '                </select><br/>
                 <br/>
                 <label for="mail">Email : </label>
                 <input type="email" name="email" id="mail" value="' . $_SESSION['email'] . '">
@@ -76,7 +76,7 @@ echo '                </select>
                     $statusListAdd->closeCursor();
                     ?>
                     <?php
-echo '                </select>
+echo '                </select><br/>
                 <br/>
                 <label for="activity">Activité : </label>
                 <select name="activity" id="activity">';
