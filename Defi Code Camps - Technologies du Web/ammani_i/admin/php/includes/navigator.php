@@ -112,6 +112,14 @@
                         <li><a href="" class="strip">Newsletter</a></li>
                         <li><a href="" class="strip">Historique</a></li>
                         <li><a href="" class="strip">Cloud</a></li>
+                        <li><a href=<?php 
+                        if ($_SESSION['auth']['job'] == 1){
+                            echo "'statistiques.php'"
+                        }
+                        else {
+                            echo '"" class="strip"'
+                        }
+                        ?>>Statistiques</a></li>
                     </ul>
                 </li>
             </ul>
