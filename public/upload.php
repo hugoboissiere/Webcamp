@@ -1,5 +1,7 @@
 <?php
 $maxsize = 1048576;
+$maxwidth = 500;
+$maxheight = 500;
 if ($_FILES['profilpic']['error'] > 0)
 	$erreur = "Erreur lors du transfert";
 if ($_FILES['icone']['size'] > $maxsize)
@@ -14,9 +16,12 @@ if (in_array($extension_upload,$img_extensions))
 {
 	echo "Extension correcte";
 }
+// $image_size = getimagesize($_FILES['icone']['tmp_name']);
+// if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
+// 	$erreur = "Image trop grande";
+print_r($_FILES);
 
 if($erreur)
 	echo $erreur;
-else
-	echo "reg";
+
 ?>
