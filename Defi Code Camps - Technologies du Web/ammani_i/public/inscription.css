@@ -1,10 +1,4 @@
-.addForm {
-	margin: auto;	
-   /*position:absolute;
-   top:50%;
-   left:50%;
-   width:300px; 
-   height:200px; 
-   margin-left:-150px; 
-   margin-top:-100px;*/ 
+.addForm {	
+   position:absolute;
+   margin: 0% 80%;
 }
