@@ -159,11 +159,11 @@ while ($result = $movieDetail->fetch()) {
 						<span>Date de la séance</span>
 						<span><?php echo $date ?></span>
 					</li>
+					<li>
 						<span>Sous-titres?</span>
 						<span><?php echo $subtitles ?></span>
 					</li>
 
-					</li>
 					</ul>
 				</div>
 			</div>
