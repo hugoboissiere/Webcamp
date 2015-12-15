@@ -66,7 +66,7 @@ echo '<form method="post" action="change.php" id="addForm" autocomplete="off" cl
 echo '                </select><br/>
                 <br/>
                 <label for="mail">Email : </label>
-                <input type="email" name="email" id="mail" value="' . $_SESSION['email'] . '">
+                <input type="email" name="email" id="mail" value="' . $_SESSION['email'] . '"><br/>
                 <br/>
                 <label for="status">Statut : </label>
                 <select name="status" id="status">';
