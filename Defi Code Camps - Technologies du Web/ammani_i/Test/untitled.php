@@ -2,9 +2,6 @@
 include("../admin/php/includes/database.php");
 $moviesCompleteList = $dbh->query("SELECT * FROM cw_medias_movies WHERE archive = 'false'");
 $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
-
-$test = $dbh->query("SELECT * from cw_medias_movies"); 
-$test->setFetchMode(PDO::FETCH_OBJ);
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +36,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
                   <td>' . $result->country . '</td>
                   <td>' . $result->publicationtime . '</td>
                   <td>' . $result->nb_entrees . '</td>
-                  <td>' . $result->moy_entree_jour . '</td>
+                  <td>' . $result2->moy_entree_jour . '</td>
                   <td><form method="get" action="compteur.php">
                         <input type="hidden" name="ID" value="'.$result->id.'">
                         <select type="hidden" name="nb">
