@@ -53,13 +53,13 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
             $_SESSION['newsletter'] = $result->newsletter;
             $_SESSION['archive'] = $result->archive;
             header('Location: index.php');
-
         }
-        else
-            header('Location: inscription.php');
-
     }
+    else
+        header('Location: inscription.php');
+
+}
 
 
-    ?>
+?>
 
