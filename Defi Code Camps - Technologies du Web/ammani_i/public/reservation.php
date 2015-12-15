@@ -86,7 +86,7 @@ while ($result = $movieDetail->fetch()) {
 			<img src="<?php echo $img; ?>" alt="">
 		</div>
 		<div id="text">
-			<div>
+			<div style="width:200px">
 				<ul>
 					<li>
 						<span class="dataTitle">Date de sortie</span>
