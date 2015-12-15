@@ -3,7 +3,7 @@ if ($_FILES['profilpic']['error'] > 0)
 	$erreur = "Erreur lors du transfert";
 if ($_FILES['profilpic']['size'] > $maxsize)
 	$erreur = "Le fichier est trop gros";
-echo $maxsize;
+echo "La taille max est de" . $maxsize . "<br>";
 // $img_extensions = array('jpg', 'jpeg', 'gif', 'png');
 // //1. strrchr renvoie l'extension avec le point (« . »).
 // //2. substr(chaine,1) ignore le premier caractère de chaine.
