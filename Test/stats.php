@@ -3,7 +3,8 @@ include("../admin/php/includes/database.php");
 
 $test = $dbh->query("SELECT * from cw_medias_movies"); 
 $test->setFetchMode(PDO::FETCH_OBJ);
-
+while ($result = $test->fetch())
+	print_r($result);
 
 
 $section = $dbh->query("SELECT `id` FROM cw_medias_movies");
