@@ -149,7 +149,7 @@ while ($result = $movieDetail->fetch()) {
 						<span class="dataTitle">Langue</span>
 						<span class="dataContent"><?php echo $result->language; ?></span>
 					</li>
-						<span><?php echo $date . $subtitles . $nb_places . $cinemaName . $adress . $countryName . $langue; ?></span>
+
 					<li>
 						<span class="dataPlot">Description</span>
 						<span class="dataContent"><?php echo $result->plot; ?></span>
