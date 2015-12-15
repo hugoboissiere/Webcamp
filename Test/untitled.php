@@ -27,7 +27,7 @@ $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
       </tr>
       <?php
       include("stats.php");
-      while (($result = $test->fetch()) || ($result = $jour1->fetch()))
+      while ($result = $test->fetch())
       {
          echo '<tr>
                   <td>' . $result->title . '</td>
@@ -36,7 +36,7 @@ $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
                   <td>' . $result->country . '</td>
                   <td>' . $result->publicationtime . '</td>
                   <td>' . $result->nb_entrees . '</td>
-                  <td>' . $result->moy_entree_jour . '</td>
+                  <td>' . $result2->moy_entree_jour . '</td>
                   <td><form method="get" action="compteur.php">
                         <input type="hidden" name="ID" value="'.$result->id.'">
                         <select type="hidden" name="nb">
