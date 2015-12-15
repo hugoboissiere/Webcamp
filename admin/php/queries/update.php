@@ -121,12 +121,13 @@ if (isset($_POST["updateMembership"]))
 
 if (isset($_POST["updateTheater"])) {
     $update = $dbh->prepare("UPDATE cw_cinema_theaters "
-        . "SET name = :name, numberOfPlace = :numberOfPlace, address = :address, phone = :phone "
+        . "SET name = :name, numberOfPlace = :numberOfPlace, address = :address, phone = :phone, country = :country "
         . "WHERE id = :id");
     $update->bindParam(":id", $_POST["id"]);
     $update->bindParam(":name", $_POST["name"]);
     $update->bindParam(":address", $_POST["address"]);
     $update->bindParam(":phone", $_POST["phone"]);
     $update->bindParam(":numberOfPlace", $_POST["numberOfPlace"]);
+    $update->bindParam(":country", $_POST["country"]);
     $update->execute();
 }
