@@ -12,7 +12,7 @@ $moviesCompleteList->closeCursor();
 	<title>Test</title>
    <link rel="stylesheet" type="text/css" href="style.css"></link>
    <body>
-	   <p class="titre">test de résistance rétinienne de vos employés</p>
+	   <p class="titre">Statistiques des films</p>
 	   <table class="tableau">
       <tr>
          <th>Film</th>
