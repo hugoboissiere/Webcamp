@@ -22,6 +22,4 @@ if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
 
 if($erreur)
 	echo $erreur;
-header("Location : test.php");
-echo "JE SUIS FURAX";
 ?>
