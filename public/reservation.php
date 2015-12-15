@@ -93,7 +93,7 @@ while ($result = $movieDetail->fetch()) {
 						<span class="dataContent"><?php echo $result->releaseDate; ?></span>
 					</li>
 					<li>
-						<span class="dataTitle">DurÃ©e</span>
+						<span class="dataTitle">Durée</span>
 						<span class="dataContent"><?php echo $result->runningTime; ?> Minutes</span>
 					</li>
 					<li>
@@ -101,7 +101,7 @@ while ($result = $movieDetail->fetch()) {
 						<span class="dataContent"><?php echo $result->genre;?></span>
 					</li>
 					<li>
-						<span class="dataTitle">RÃ©alisateur</span>
+						<span class="dataTitle">Réalisateur</span>
 						<span class="dataContent"><?php echo $result->realisator; ?></span>
 					</li>
 					<li>
