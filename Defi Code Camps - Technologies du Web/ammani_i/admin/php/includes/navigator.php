@@ -114,7 +114,7 @@
                         <li><a href="" class="strip">Cloud</a></li>
                         <li><a href=<?php 
                         if ($_SESSION['auth']['job'] == 1){
-                            echo "'statistiques.php'";
+                            echo "'stats.php'";
                         }
                         else {
                             echo '"" class="strip"';
