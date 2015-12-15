@@ -15,7 +15,7 @@ if (isset($_POST['envoie']))
 	echo "a";
 	$req->bindParam(":theater", $_POST["theater"]);
 	echo "b";
-	$req->bindParam(":date", NOW);
+	$req->bindParam(":date", $_POST["date"]);
 	echo "c";
 	$req->bindParam(":member", $_POST["member"]);
 	echo "d";
