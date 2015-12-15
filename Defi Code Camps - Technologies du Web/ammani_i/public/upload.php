@@ -1,9 +1,11 @@
 <?php
+$maxsize = 1048576;
 if ($_FILES['profilpic']['error'] > 0)
 	$erreur = "Erreur lors du transfert";
+if ($_FILES['icone']['size'] > $maxsize)
+	$erreur = "Le fichier est trop gros";
 
 $img_extensions = array('jpg', 'jpeg', 'gif', 'png');
-print_r($img_extensions);
 // //1. strrchr renvoie l'extension avec le point (« . »).
 // //2. substr(chaine,1) ignore le premier caractère de chaine.
 // //3. strtolower met l'extension en minuscules.
@@ -12,15 +14,9 @@ if (in_array($extension_upload,$img_extensions))
 {
 	echo "Extension correcte";
 }
-else
-{
-	echo "logie";
-}
-echo $extension_upload;
-echo "akakak";
+
 if($erreur)
 	echo $erreur;
 else
 	echo "reg";
-var_dump($_FILES);
 ?>
