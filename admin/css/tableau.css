@@ -10,6 +10,7 @@ table.tableau {
 	  border-collapse: collapse; 
     text-align: center;
     height: 800px;
+    width: 800px;
 }
 
 table.tableau td{
