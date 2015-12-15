@@ -21,8 +21,7 @@ include("php/includes/navigator.php");
 	<title>Test</title>
     <link rel="stylesheet" type="text/css" href="css/tableau.css"></link>
 	<p class="titre">Statistiques des films</p>
-	<br>
-	<br>
+	<div style="height:20%"></div>
 	<table class="tableau">
       <tr>
          <th>Film</th>
