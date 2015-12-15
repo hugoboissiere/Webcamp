@@ -30,7 +30,7 @@ form
 .reservation
 {
 	display: inline-block;
-	text-align: right;
+	vertical-align: top;
 }
 
 .text
