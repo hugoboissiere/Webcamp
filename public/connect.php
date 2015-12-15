@@ -29,7 +29,7 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
         $insert->bindParam(":membership", $_POST["membership"]);
         $insert->bindParam(":newsletter", $_POST["newsletter"]);
         $insert->execute();
-        header('Location: inscription.php');
+        header('Location: identification.php');
 
     }
     else
