@@ -46,11 +46,11 @@ while ($result = $movieDetail->fetch()) {
 		$subtitles = $result2->subtitles;
 		$nb_places = $result2->nb_place;
 		$idTheater = $result2->idTheater;
-		$theaterDetail = $dbh->query("SELECT * FROM cw_cinema_theaters WHERE id = '" . $idTheater . "'")
-		$theaterDetail->setFetchMode(PDO::FETCH_OBJ);
-		while($result3 = $theaterDetail->fetch())
-		{
-		// 	$cinemaName = $result3->name;
+		// $theaterDetail = $dbh->query("SELECT * FROM cw_cinema_theaters WHERE id = '" . $idTheater . "'")
+		// $theaterDetail->setFetchMode(PDO::FETCH_OBJ);
+		// while($result3 = $theaterDetail->fetch())
+		// {
+			// $cinemaName = $result3->name;
 		// 	$adress = $result3->address;
 		// 	$countryDetail = $dbh->query("SELECT * FROM region WHERE id_region = '" . $result3->country . "'");
 		// 	$countryDetail->setFetchMode(PDO::FETCH_OBJ);
@@ -58,9 +58,10 @@ while ($result = $movieDetail->fetch()) {
 		// 	{
 		// 		$countryName = $result35->nom_region;
 		// 	}
+		
 		// 	$countryDetail->closeCursor();
-		}
-		$theaterDetail->closeCursor();
+		// }
+		// $theaterDetail->closeCursor();
 		
 		// $languageDetail = $dbh->query("SELECT * FROM cw_medias_languages WHERE id = '" . $result2->language . "'")
 		// $languageDetail->setFetchMode(PDO::FETCH_OBJ);
