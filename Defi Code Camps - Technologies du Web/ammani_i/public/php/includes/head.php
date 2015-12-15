@@ -172,9 +172,9 @@ and open the template in the editor.
                 echo 'Bonjour, ' . $_SESSION['firstname'] . ' '; ?>
             <nav id="staffPanel">
                 <ul>
-                    <li>LE CINÉMA
+                    <li>Programmation
                         <ul>
-                            <li><a href="programmation.php">Programmation
+                            <li><a href="programmation.php">Séances
                                 <span>    <?php while ($result = $countCinemaSessions->fetch()) {
 
     echo $result->count;
@@ -183,7 +183,7 @@ and open the template in the editor.
                                </span>   </a>
                             </li>
                             
-                            <li><a href="movies.php">Films Disponibles
+                            <li><a href="movies.php">Général
                                     <span> 
                                         <?php while ($result = $countMediasMovies->fetch()) {
 
@@ -193,6 +193,7 @@ and open the template in the editor.
                                     </span>
                                 </a>
                             </li>
+                            <li><a href="activites.php">Activités</a></li>
                             
                         </ul>
                     </li>
