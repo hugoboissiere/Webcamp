@@ -12,7 +12,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
    <head>
    <meta charset="utf-8">
 	<title>Test</title>
-   <link rel="stylesheet" type="text/css" href="test.css"></link>
+   <link rel="stylesheet" type="text/css" href="style.css"></link>
    <body>
 	   <p class="titre">Statistiques des films</p>
       <form action="compteur.php">
