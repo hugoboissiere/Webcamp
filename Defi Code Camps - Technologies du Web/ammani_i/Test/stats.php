@@ -4,16 +4,7 @@ include("../admin/php/includes/database.php");
 $test = $dbh->query("SELECT * from cw_medias_movies"); 
 $test->setFetchMode(PDO::FETCH_OBJ);
 
-while($result = $test->fetch())
-{
-		echo '<tr>
-                  <td>' . $result->title . '</td>
-                  <td>' . $result->genre . '</td>
-                  <td>' . $result->runningTime . '</td>
-                  <td>' . $result->country . '</td>
-                  <td>' . $result->publicationtime . '</td>
-                  <td>' . $result->nb_entrees . '</td>';
-}
+
 $test->closeCursor();
 $section = $dbh->query("SELECT `id` FROM cw_medias_movies");
 $section->setFetchMode(PDO::FETCH_OBJ);
@@ -26,6 +17,16 @@ while ($result = $section->fetch())
 
 	while ($result2 = $jour1->fetch())
 		{
+			while($result = $test->fetch())
+{
+		echo '<tr>
+                  <td>' . $result->title . '</td>
+                  <td>' . $result->genre . '</td>
+                  <td>' . $result->runningTime . '</td>
+                  <td>' . $result->country . '</td>
+                  <td>' . $result->publicationtime . '</td>
+                  <td>' . $result->nb_entrees . '</td>';
+}
 			$nbjour = $result2->moy_entree_jour;
 			$entrees = $result2->nb_entrees;
 			$entrees_jour = $entrees / $nbjour;
