@@ -10,8 +10,8 @@ while ($result = $section->fetch())
 	$jour1->setFetchMode(PDO::FETCH_OBJ);
 	while ($result2 = $jour1->fetch())
 		{
-			$nbjour = $jour1->divjour;
-			echo $nbjour . "<br>";
+			echo $result2->divjour . "<br>";
+			
 		}
 	$jour1->closeCursor();
 }
