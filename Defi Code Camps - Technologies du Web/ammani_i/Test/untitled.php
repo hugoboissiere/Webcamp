@@ -27,7 +27,7 @@ $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
       </tr>
       <?php
       include("stats.php");
-      while ($result = $test->fetch())
+      /*while ($result = $test->fetch())
       {
          echo '<tr>
                   <td>' . $result->title . '</td>
@@ -54,7 +54,7 @@ $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
                         <button type="submit">Entrée</button>
                   </form></td>
                </tr>';
-      }
+      }*/
       $employeeStatusListAdd->closeCursor();
       ?>
       </table>
