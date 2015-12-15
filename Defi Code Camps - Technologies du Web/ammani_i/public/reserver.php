@@ -5,17 +5,16 @@ include("php/includes/database.php");
 		$moviesTitleList = $dbh->query("SELECT nb_entrees FROM cw_medias_movies WHERE id = ".$_POST["movie"]);
 		$moviesTitleList->setFetchMode(PDO::FETCH_OBJ);
 
-		$moviesPlace = $dbh->query('SELECT nb_place FROM cw_cinema_sessions WHERE id = "'.$_POST['session'].'" ');
-		$moviesPlace->setFetchMode(PDO::FETCH_OBJ);
-
-		while ($result2 = $moviesPlace->fetch()) {
-			$nbp = $result2->nb_place;
-		}
-		
-
 		while ($result = $moviesTitleList->fetch()) {
 			$nb = $result->nb_entrees;
 		}
+
+		// $moviesPlace = $dbh->query('SELECT nb_place FROM cw_cinema_sessions WHERE id = "'.$_POST['session'].'" ');
+		// $moviesPlace->setFetchMode(PDO::FETCH_OBJ);
+
+		// while ($result2 = $moviesPlace->fetch()) {
+		// 	$nbp = $result2->nb_place;
+		// }
 
 $session = $dbh->query('SELECT * FROM cw_cinema_sessions WHERE id = "'.$_POST['session'].'" ');
 $session->setFetchMode(PDO::FETCH_OBJ);
@@ -49,16 +48,16 @@ while ($i < $_POST['places'])
 	}
 		$nb++;
 		$i++;
-		$nbp--;
+		$nb_places--;
 	
  }
 
  $update2 = $dbh->prepare("UPDATE cw_cinema_sessions "
-		. "SET nb_entrees = :nbp "
+		. "SET nb_place = :nb_places "
 		. "WHERE id = ".$_POST["session"]);
-		$update2->bindParam(":nbp", $nbp);
+		$update2->bindParam(":nb_places", $nb_places);
 		$update2->execute();
-$moviesPlace->closeCursor();
+$session->closeCursor();
 
 $update = $dbh->prepare("UPDATE cw_medias_movies "
 		. "SET nb_entrees = :nb "
