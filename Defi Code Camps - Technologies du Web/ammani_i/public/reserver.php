@@ -14,3 +14,5 @@ if (isset($_POST['envoie']))
 
 	header('Location:programmation.php');
 }
+
+?>
