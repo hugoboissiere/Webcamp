@@ -12,10 +12,15 @@ while ($result = $section->fetch())
 		{
 			$nbjour = $result2->moy_entree_jour;
 			$entrees = $result2->nb_entrees;
-			$pull = $entrees / $nbjour;
+			$entrees_jour = $entrees / $nbjour;
+			$entrees_semaine = $entrees_jour * 7;
+			$entrees_mois = $entrees_jour * 30;
 			echo "Difference de jour : " . $nbjour . "<br>";
 			echo "Nombre d'entrees : " . $entrees . "<br>";
-			echo "Moyenne d'entrees par jour : " . $pull . "<br>";
+			echo "Moyenne d'entrees par jour : " . $entrees_jour . "<br>";
+			echo "Moyenne d'entrees par semaine : " . $entrees_semaine . "<br>";
+			echo "Moyenne d'entrees par mois : " . $entrees_mois . "<br>";
+			echo "<br>";
 		}
 	$jour1->closeCursor();
 }
