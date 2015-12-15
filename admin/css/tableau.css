@@ -2,6 +2,7 @@ body {
   text-align: center;
   margin: 100px;
   background-color: #1e262c;
+  display: block;
 }
 
 table { 
