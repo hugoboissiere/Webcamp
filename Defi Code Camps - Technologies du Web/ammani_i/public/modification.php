@@ -7,6 +7,7 @@ include("php/includes/database.php");
 echo '<form method="post" action="change.php" id="addForm" autocomplete="off" class="formOverflow"> 
                 <label for="member">Adhérent</label>
                 <input type="radio" name="membership" value="Member" id="member" class="radio"><br/>
+                <br/>
                 <label for="subscriber">Abonné</label>
                 <input type="radio" name="membership" value="Subscriber" id="subscriber" class="radio" checked><br/>
                 <br/>
