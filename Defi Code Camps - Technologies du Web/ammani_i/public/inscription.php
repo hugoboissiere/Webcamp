@@ -120,6 +120,7 @@ echo '                </select><br/>
                     ?>
                     <?php
 echo '                </select><br/>
+                <br/>
                 <input type="submit" class="clearForm" name="InsertMembersOrSubscribers" value="Enregistrer">';
                  echo '
                  <br/>
