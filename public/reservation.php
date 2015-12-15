@@ -63,7 +63,7 @@ while ($result = $movieDetail->fetch()) {
 		}
 		$theaterDetail->closeCursor();
 		
-		$languageDetail = $dbh->query("SELECT * FROM cw_medias_languages WHERE id = '" . $result2->language . "'")
+		$languageDetail = $dbh->query("SELECT * FROM cw_medias_languages WHERE id = '" . $result2->language . "'");
 		$languageDetail->setFetchMode(PDO::FETCH_OBJ);
 		while($result4 = $languageDetail->fetch())
 		{
