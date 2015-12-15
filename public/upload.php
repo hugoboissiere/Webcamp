@@ -17,5 +17,5 @@
 // 	echo "logie";
 // }
 echo "akakak";
-
+var_dump($_FILES);
 ?>
