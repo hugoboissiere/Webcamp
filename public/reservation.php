@@ -120,7 +120,7 @@ while ($result = $movieDetail->fetch()) {
 		<div id="picture">
 			<img src="<?php echo $img; ?>" alt="">
 		</div>
-		<div id="text">
+		<div class="text">
 			<div style="width:50%;">
 				<ul>
 					<li>
