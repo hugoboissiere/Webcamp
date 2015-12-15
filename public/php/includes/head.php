@@ -72,7 +72,14 @@ and open the template in the editor.
                     <!--        <script src="js/jquery-2.1.1.js"></script>-->
         <script src="js/layoutNavigator.js"></script>
         <script src="js/jquery.adaptive-backgrounds.js"></script>
-        
+        <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>   
   <?php
         if (count($js) > 0 && $js[0] != "") {
             for ($i = 0; $i < count($js); $i++) {
@@ -211,6 +218,7 @@ and open the template in the editor.
                         </ul>
                     </li>
                 </ul>
+                <div class="fb-page" data-href="https://www.facebook.com/Cinecinewax/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Cinecinewax/"><a href="https://www.facebook.com/Cinecinewax/">Cinewax</a></blockquote></div></div>
                 <?php
                 if(!isset($_SESSION['id']))
                     echo '<a href="inscription.php">Créer un compte</a>/<a href="identification.php">Se connecter</a>';
