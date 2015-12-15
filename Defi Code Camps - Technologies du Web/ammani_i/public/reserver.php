@@ -1,7 +1,7 @@
 <?php
 
 include("php/includes/database.php");
-
+echo "2";
 $moviesTitleList = $dbh->query("SELECT nb_entrees FROM cw_medias_movies WHERE id = ".$_GET['ID']);
 		$moviesTitleList->setFetchMode(PDO::FETCH_OBJ);
 
