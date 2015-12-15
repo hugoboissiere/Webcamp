@@ -2,6 +2,12 @@
 include("../admin/php/includes/database.php");
 $moviesCompleteList = $dbh->query("SELECT * FROM cw_medias_movies WHERE archive = 'false'");
 $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
+/*while ($result = $moviesCompleteList->fetch())
+{
+   echo $result->country . "\n";
+}
+$moviesCompleteList->closeCursor(); */
+
 $test = $dbh->query("SELECT * from cw_medias_movies"); 
 $test->setFetchMode(PDO::FETCH_OBJ);
 ?>
@@ -9,11 +15,12 @@ $test->setFetchMode(PDO::FETCH_OBJ);
 <!DOCTYPE html>
 <html>
    <head>
+   <meta charset="utf-8">
 	<title>Test</title>
 	<link rel="stylesheet" href="chartist.min.css">
    <link rel="stylesheet" type="text/css" href="test.css"></link>
    <body>
-	   <p id="test1" data-numberone="20, 60, 120" data-numbertwo="200, 180, 20" class="titre">Nombre d'entrees</p>
+	   <p id="test1" data-numberone="20, 60, 120" data-numbertwo="200, 180, 20" class="titre">Statistiques des films</p>
 	   <div class="ct-chart"></div>
 	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	   <script src="chartist.min.js"></script>
@@ -23,10 +30,12 @@ $test->setFetchMode(PDO::FETCH_OBJ);
       <tr>
          <th>Film</th>
          <th>Genre</th>
-         <th>Duree (en min)</th>
+         <th>Durée (en min)</th>
          <th>Pays/Continent</th>
          <th>Date de publication</th>
-         <th>Nombre d'entrees totaux</th>
+         <th>Nombre d'entrées totaux</th>
+         <th>Moyenne d'entrées par jour</th>
+         <th>Moyenne d'entrées par semaine</th>
       </tr>
       <?php
       while ($result = $test->fetch())
@@ -52,22 +61,12 @@ $test->setFetchMode(PDO::FETCH_OBJ);
                         <option>9</option>
                         <option>10</option>
                         </select>
-                        <button type="submit">Entree</button>
+                        <button type="submit">Entrée</button>
                   </form></td>
                </tr>';
       }
       $employeeStatusListAdd->closeCursor();
       ?>
-      </table>
-      <table>
-      <p>Par genre</p>
-      <tr>
-         <th>Film</th>
-         <th>Genre</th>
-         <th>Duree (en min)</th>
-         <th>Pays/Continent</th>
-         <th>Nombre d'entrees total</th>
-      </tr>
       </table>
    </head>
    </body>
