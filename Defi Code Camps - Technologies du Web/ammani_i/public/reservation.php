@@ -181,11 +181,11 @@ while ($result = $movieDetail->fetch()) {
 						<span><?php echo $nb_places; ?></span>
 					</li>
 				</ul>
-				<div class="reservation">
-					<input type="text" />
-			    </div>
 			</div>
 		</div>
+		<div class="reservation">
+					<input type="text" />
+			    </div>
 			<?php
 
 		}
