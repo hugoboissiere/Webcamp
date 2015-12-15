@@ -3,6 +3,7 @@
 include("php/includes/database.php");
 
 echo $_POST['id_sessions'];
+echo "1";
 
 // $i = 0;
 
