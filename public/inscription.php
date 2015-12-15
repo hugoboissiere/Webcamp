@@ -46,19 +46,19 @@ echo '<form method="post" action="connect.php" id="addForm" autocomplete="off" c
                 <input type="radio" name="newsletter" value="No" id="newsletterOff"class="radio" checked>
                 <br/>
                 <label for="name">Nom : </label>
-                <input type="text" name="lastname" id="name" placeholder="Ex : Dupont"><br />
+                <input type="text" name="lastname" id="name" placeholder="Ex : Dupont" required><br />
                 <br/>
                 <label for="firstname">Prénom : </label>
-                <input type="text" name="firstname" id="firstname" placeholder="Ex : Laurent"><br />
+                <input type="text" name="firstname" id="firstname" placeholder="Ex : Laurent" required><br />
                 <br/>
                 <label for="password">Mot de passe : </label>
-                <input type="password" name="password" id="password" placeholder="Au moins 5 caractères" pattern=".{5,}"><br />
+                <input type="password" name="password" id="password" placeholder="Au moins 5 caractères" pattern=".{5,}" required><br />
                 <br/>
                 <label for="password2">Retaper le mdp : </label>
-                <input type="password" name="password2" id="password2" placeholder="Au moins 5 caractères" pattern=".{5,}"><br />
+                <input type="password" name="password2" id="password2" placeholder="Au moins 5 caractères" pattern=".{5,} required"><br />
                 <br/>
                 <label for="username">Pseudo : </label>
-                <input type="text" name="username" id="username" placeholder="Ex : laurent_dupont"><br />
+                <input type="text" name="username" id="username" placeholder="Ex : laurent_dupont" required><br />
                 <br/>
                 Sexe : 
                 <label for="man">Homme</label>
@@ -79,7 +79,7 @@ echo '<form method="post" action="connect.php" id="addForm" autocomplete="off" c
                 <input type="text" name="city" id="city" placeholder="Dakar"><br />
                 <br/>
                 <label for="country">Pays : </label>
-                <select name="country" id="country">';
+                <select name="country" id="country" required>';
                 ?>
                 <?php
 
@@ -94,7 +94,7 @@ echo '<form method="post" action="connect.php" id="addForm" autocomplete="off" c
 echo '                </select>
                 <br/>
                 <label for="mail">Email : </label>
-                <input type="email" name="email" id="mail" placeholder="Ex : laurent.dupont@gmail.com">
+                <input type="email" name="email" id="mail" placeholder="Ex : laurent.dupont@gmail.com" required>
                 <br/>
                 <label for="status">Statut : </label>
                 <select name="status" id="status">';
