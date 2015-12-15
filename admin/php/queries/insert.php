@@ -225,12 +225,13 @@ if (isset($_POST["insertTheater"])) {
     $_POST["cardNumber"] = "0"; // Pas de numero de compte pour l'instant
 
     $insert = $dbh->prepare("INSERT INTO cw_cinema_theaters"
-            . "(name,numberOfPlace,address,phone)"
-            . " VALUES(:name,:numberOfPlace,:address,:phone)");
+            . "(name,numberOfPlace,address,phone,country)"
+            . " VALUES(:name,:numberOfPlace,:address,:phone,:country)");
     $insert->bindParam(":name", $_POST["name"]);
     $insert->bindParam(":numberOfPlace", $_POST["numberOfPlace"]);
     $insert->bindParam(":address", $_POST["address"]);
     $insert->bindParam(":phone", $_POST["phone"]);
+    $insert->bindParam(":country", $_POST["country"]);
     $insert->execute();
 }
 
