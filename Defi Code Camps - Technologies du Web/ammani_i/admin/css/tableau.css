@@ -1,6 +1,4 @@
 body {
-  border-collapse: collapse;
-  border-spacing: 0;
   text-align: center;
   margin: 100px;
   background-color: #1e262c;
@@ -9,7 +7,7 @@ body {
 
 table { 
   text-align: center;
-	margin : 10px auto auto auto;
+	margin : auto auto auto auto;
   font-size: 14px;
 }
 
