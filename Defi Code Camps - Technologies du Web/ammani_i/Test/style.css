@@ -11,7 +11,7 @@ table.tableau {
     text-align: center;
 }
 
-table.tableau td, th {
+table.tableau td{
     border: 1px solid black;
     background-color: #ffffff;
     border-radius: 1000px;
