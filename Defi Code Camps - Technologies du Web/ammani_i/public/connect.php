@@ -29,11 +29,27 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
         $insert->bindParam(":membership", $_POST["membership"]);
         $insert->bindParam(":newsletter", $_POST["newsletter"]);
         $insert->execute();
-        header('Location: identification.php');
+        $_SESSION['username'] = $_POST['username'];
+        $_SESSION['firstname'] = $_POST['firstname'];
+        $_SESSION['lastname'] = $_POST['lastname'];
+        $_SESSION['password'] = $_POST['password'];
+        $_SESSION['sex'] = $_POST['sex'];
+        $_SESSION['phoneHome'] = $_POST['phoneHome'];
+        $_SESSION['phoneMobile'] = $_POST['phoneMobile'];
+        $_SESSION['neighborhood'] = $_POST['neighborhood'];
+        $_SESSION['city'] = $_POST['city'];
+        $_SESSION['country'] = $_POST['country'];
+        $_SESSION['email'] = $_POST['email'];
+        $_SESSION['status'] = $_POST['status'];
+        $_SESSION['activity'] = $_POST['activity'];
+        $_SESSION['membership'] = $_POST['membership'];
+        $_SESSION['newsletter'] = $_POST['newsletter'];
+        $_SESSION['archive'] = $_POST['archive'];
+        header('Location: index.php');
 
     }
     else
-        header('Location: index.php');
+        header('Location: inscription.php');
 
 }
 
