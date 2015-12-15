@@ -19,6 +19,8 @@ if (in_array($extension_upload,$img_extensions))
 $image_size = getimagesize($_FILES['icone']['/tmp/phpq4S3PS']);
 if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
 	$erreur = "Image trop grande";
+else
+	print_r($image_size);
 print_r($_FILES);
 
 if($erreur)
