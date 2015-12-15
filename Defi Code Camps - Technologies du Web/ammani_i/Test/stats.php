@@ -15,9 +15,9 @@ while ($result = $section->fetch())
 	$jour1->setFetchMode(PDO::FETCH_OBJ);
 
 
-	while ($result2 = $jour1->fetch())
-		{
-			while($result = $test->fetch())
+	while (($result2 = $jour1->fetch()) && ($result = $test->fetch()))
+/*		{
+			while($result = $test->fetch())*/
 {
 		echo '<tr>
                   <td>' . $result->title . '</td>
@@ -26,7 +26,7 @@ while ($result = $section->fetch())
                   <td>' . $result->country . '</td>
                   <td>' . $result->publicationtime . '</td>
                   <td>' . $result->nb_entrees . '</td>';
-}
+//}
 			$nbjour = $result2->moy_entree_jour;
 			$entrees = $result2->nb_entrees;
 			$entrees_jour = $entrees / $nbjour;
