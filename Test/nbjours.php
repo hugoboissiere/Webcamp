@@ -12,8 +12,10 @@ while ($result = $section->fetch())
 		{
 			$nbjour = $result2->moy_entree_jour;
 			$entrees = $result2->nb_entrees;
+			$pull = $entrees / $nbjour;
 			echo "Difference de jour : " . $nbjour . "<br>";
 			echo "Nombre d'entrees : " . $entrees . "<br>";
+			echo "Moyenne d'entrees par jour : " . $pull . "<br>";
 		}
 	$jour1->closeCursor();
 }
