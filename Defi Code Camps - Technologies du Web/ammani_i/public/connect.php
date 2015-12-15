@@ -31,7 +31,7 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
         $insert->execute();
     }
     else
-        exit(0);
+        header('Location: index.php');
 }
 
 header('Location: inscription.php');
