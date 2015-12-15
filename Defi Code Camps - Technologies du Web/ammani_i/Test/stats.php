@@ -22,10 +22,10 @@ while ($result = $test->fetch())
 				$entrees_jour = $entrees / $nbjour;
 				$entrees_semaine = $entrees_jour * 7;
 				$entrees_mois = $entrees_jour * 30;
-				"<td>". ROUND($nbjour, 1) . "</td>";
-				"<td>" . ROUND($entrees_jour, 1) . "</td>";
-				"<td>" . ROUND($entrees_semaine, 1) . "</td>";
-				"<td>" . ROUND($entrees_mois, 1) . "</td>";
+				echo "<td>". ROUND($nbjour, 1) . "</td>";
+				echo "<td>" . ROUND($entrees_jour, 1) . "</td>";
+				echo "<td>" . ROUND($entrees_semaine, 1) . "</td>";
+				echo "<td>" . ROUND($entrees_mois, 1) . "</td>";
 				'</tr>';
 	}
 	$jour1->closeCursor();
