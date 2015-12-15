@@ -8,9 +8,11 @@ table {
 
 table.tableau {
 	border-collapse: collapse;
-  border-radius: 150px;
     border: 1px solid black;
     text-align: center;
+}
+tbody{
+  border-radius: 150px;
 }
 
 table.tableau td, th {
