@@ -4,7 +4,7 @@ $headTitle = "Cinewax - Accueil";
 
 // CSS de cette page
 $addCSS =  array("");
-<link rel="stylesheet" type="text/css" href="inscription.css"></link>
+
 // JS de cette page
 $addJS =  array("");
 
@@ -27,7 +27,6 @@ $statusListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_sta
 $statusListAdd->setFetchMode(PDO::FETCH_OBJ);
 $activityListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_activity  WHERE archive = 'false'");
 $activityListAdd->setFetchMode(PDO::FETCH_OBJ);
-
 echo '<p style="color:#68D2C3;">INSCRIPTION<br/><p/>';
 echo '<br />';
 
