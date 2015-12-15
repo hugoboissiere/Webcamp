@@ -47,6 +47,7 @@ form
 	display: inline-block;
 	vertical-align: top;
 	border: #68D2C3 1px solid;
+	padding: 15%;
 }
 
 .formOverflow
