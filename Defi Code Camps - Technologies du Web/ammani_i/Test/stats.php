@@ -63,6 +63,6 @@ while ($result = $section->fetch())
 		}
 	$test->closeCursor();
 	$jour1->closeCursor();
-	$section->closeCursor();
 }
+$section->closeCursor();
 ?>
