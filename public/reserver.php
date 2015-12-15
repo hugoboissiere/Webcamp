@@ -52,6 +52,6 @@ while ($i < $_POST['places'])
 // 		$update->execute();
 // $moviesTitleList->closeCursor();
 
-header('Location:programmation.php');
+//header('Location:programmation.php');
 
 ?>
