@@ -37,11 +37,10 @@ echo '<br/>';
 echo '<div class="formu">
             <form method="post" action="connect.php" id="addForm" autocomplete="off" class="formOverflow"> 
                 <label for="member">Adhérent</label>
-                <input type="radio" name="membership" value="Member" id="member" class="radio"><br />
-                <br />
+                <input type="radio" name="membership" value="Member" id="member" class="radio">
+                <br/>
                 <label for="subscriber">Abonné</label>
-                <input type="radio" name="membership" value="Subscriber" id="subscriber" class="radio" checked>
-                <br />
+                <input type="radio" name="membership" value="Subscriber" id="subscriber" class="radio" checked><br/>
                 <br/>
                 <label for="newsletterOn">Newsletter(ON)</label>
                 <input type="radio" name="newsletter" value="Yes" id="newsletterOn"class="radio">
