@@ -188,6 +188,7 @@ while ($result = $movieDetail->fetch()) {
 			<form method="post" action="reserver.php">
 				<fieldset>
 					<legend>Reservation</legend>
+						<br/>
 						<label for="places">Nombres de places :</label>
 						<select name="places">
 							<option value="1">1</option>
