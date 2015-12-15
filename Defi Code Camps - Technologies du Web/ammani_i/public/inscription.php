@@ -52,7 +52,7 @@ echo '<form method="post" action="connect.php" id="addForm" autocomplete="off" c
                 <input type="text" name="firstname" id="firstname" placeholder="Ex : Laurent"><br />
                 <br/>
                 <label for="password">Mot de passe : </label>
-                <input type="password" type="password" name="password" id="password" placeholder="Au moins 5 caractères" pattern=".{5,}"><br />
+                <input type="password" name="password" id="password" placeholder="Au moins 5 caractères" pattern=".{5,}"><br />
                 <br/>
                 <label for="password2">Retaper le mdp : </label>
                 <input type="password" name="password2" id="password2" placeholder="Au moins 5 caractères" pattern=".{5,}"><br />
