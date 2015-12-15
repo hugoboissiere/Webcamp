@@ -35,7 +35,7 @@ while ($result = $section->fetch())
                   <td>' . $result->country . '</td>
                   <td>' . $result->publicationtime . '</td>
                   <td>' . $result->nb_entrees . '</td>
-                  <td>' . $changeDeNom . '</td>
+                  <td>' . ROUND($nbjour) . '</td>
                   <td><form method="get" action="compteur.php">
                         <input type="hidden" name="ID" value="'.$result->id.'">
                         <select type="hidden" name="nb">
