@@ -12,6 +12,7 @@ echo '<form method="post" action="change.php" id="addForm" autocomplete="off" cl
                 <br/>
                 <label for="newsletterOn">Newsletter(ON)</label>
                 <input type="radio" name="newsletter" value="Yes" id="newsletterOn"class="radio"><br/>
+                <br/>
                 <label for="newsletterOff">Newsletter(OFF)</label>
                 <input type="radio" name="newsletter" value="No" id="newsletterOff"class="radio" checked><br/>
                 <br/>
@@ -89,6 +90,7 @@ echo '                </select><br/>
                     ?>
                     <?php
 echo '                </select><br/>
+				<br/>
                 <input type="submit" class="clearForm" value="Modification">';
                  echo '
                  <br/>
