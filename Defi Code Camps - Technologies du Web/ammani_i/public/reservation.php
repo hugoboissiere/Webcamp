@@ -169,7 +169,7 @@ while ($result = $movieDetail->fetch()) {
 						<span><?php echo $countryName; ?></span>
 					</li>
 					<li>
-						<span>Nombre de places restantes</span>
+						<span>Adresse</span>
 						<span><?php echo $adress; ?></span>
 					</li>
 					<li>
