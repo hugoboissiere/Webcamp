@@ -16,7 +16,7 @@ if (in_array($extension_upload,$img_extensions))
 {
 	echo "Extension correcte";
 }
-$image_size = getimagesize($_FILES['icone']['/tmp/phpq4S3PS']);
+$image_size = getimagesize($_FILES['profilpic']['tmp_name']);
 if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
 	$erreur = "Image trop grande";
 else
