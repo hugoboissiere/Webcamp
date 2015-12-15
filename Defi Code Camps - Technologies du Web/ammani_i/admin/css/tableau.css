@@ -1,7 +1,6 @@
 body {
   margin: 100px;
   background-color: #1e262c;
-  text-color: white;
 }
 
 table { 
@@ -24,6 +23,7 @@ table.tableau td{
 	text-align: center;
 	font-size: 20px;
 	font-family: Arial, sans-serif;
+  color: #ffffff;
 }
 
 .button {
