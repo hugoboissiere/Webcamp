@@ -184,7 +184,7 @@ while ($result = $movieDetail->fetch()) {
 			</div>
 		</div>
 	</div>
-		<div class="reservation">
+		<div id="reservation">
 					<input type="text" />
 			    </div>
 			<?php
