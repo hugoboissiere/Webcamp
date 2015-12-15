@@ -29,6 +29,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
          <th>Moyenne d'entrées par mois</th>
       </tr>
       <?php
+      include("stats.php");
       while ($result = $test->fetch())
       {
          echo '<tr>
@@ -38,7 +39,7 @@ $test->setFetchMode(PDO::FETCH_OBJ);
                   <td>' . $result->country . '</td>
                   <td>' . $result->publicationtime . '</td>
                   <td>' . $result->nb_entrees . '</td>
-                  <td>' <?php include("stats.php") ; ?> '</td>
+                  <td>' . $result2->moy_entree_jour . '</td>
                   <td><form method="get" action="compteur.php">
                         <input type="hidden" name="ID" value="'.$result->id.'">
                         <select type="hidden" name="nb">
