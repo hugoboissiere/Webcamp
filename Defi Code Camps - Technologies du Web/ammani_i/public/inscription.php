@@ -4,7 +4,7 @@ $headTitle = "Cinewax - Accueil";
 
 // CSS de cette page
 $addCSS =  array("");
-
+<link rel="stylesheet" type="text/css" href="inscription.css"></link>
 // JS de cette page
 $addJS =  array("");
 
