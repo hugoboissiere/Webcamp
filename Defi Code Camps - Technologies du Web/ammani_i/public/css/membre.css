@@ -32,7 +32,7 @@ form
 	/*display: inline-block;
 	text-align: right;*/
 	position: absolute;
-	margin: 10% 50%;
+	margin: 0% 80%;
 	background-color: #00FA9A;
 }
 
@@ -51,7 +51,7 @@ form
 	background-color: #68D2C3;
 	color : white;
 	position: absolute;
-	margin: 0% 80%;
+	margin: 10% 70%;
 }
 
 .formOverflow
