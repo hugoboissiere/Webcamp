@@ -14,9 +14,9 @@ while ($result1 = $section->fetch())
 	$jour1 = $dbh->query("SELECT AVG(DATEDIFF(NOW(), publicationtime)) AS moy_entree_jour, nb_entrees FROM cw_medias_movies WHERE id =" . $result1->id);
 	$jour1->setFetchMode(PDO::FETCH_OBJ);
 
-
-	$result2 = $jour1->fetch();
 	$result = $test->fetch();
+	$result2 = $jour1->fetch();
+
 /*		{
 			while($result = $test->fetch())*/
 {
