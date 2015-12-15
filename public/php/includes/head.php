@@ -103,7 +103,7 @@ and open the template in the editor.
                         if(!isset($_SESSION['id']))
                             echo '<a href="#0" class="cd-subnav-trigger"><span>Reseaux sociaux</span></a>';
                         else
-                            echo '<a href="espace_membre.php" class="cd-subnav-trigger"><span>Espace Membre</span></a>';
+                            echo '<a href="espace_membre.php"><span>Espace Membre</span></a>';
 
                         ?>
                         <ul>
