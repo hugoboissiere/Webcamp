@@ -3,21 +3,12 @@ include("../admin/php/includes/database.php");
 
 $test = $dbh->query("SELECT * from cw_medias_movies"); 
 $test->setFetchMode(PDO::FETCH_OBJ);
-while ($result = $test->fetch()){
-	echo "<pre>";
-	print_r($result);
-	echo "</pre>";
-}
 
-$section = $dbh->query("SELECT `id` FROM cw_medias_movies");
-$section->setFetchMode(PDO::FETCH_OBJ);
-
-while ($result = $section->fetch())
+while ($result = $test->fetch())
 {
 	$jour1 = $dbh->query("SELECT AVG(DATEDIFF(NOW(), publicationtime)) AS moy_entree_jour, nb_entrees FROM cw_medias_movies WHERE id =" . $result->id);
 	$jour1->setFetchMode(PDO::FETCH_OBJ);
 
-	$result = $test->fetch();
 	$result2 = $jour1->fetch();
 
 /*		{
