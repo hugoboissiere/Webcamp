@@ -1,5 +1,5 @@
 body {
-  background-color: #ff00ff;
+  background-color: #99ccff;
 }
 
 table { 
@@ -8,7 +8,7 @@ table {
 
 table.tableau {
 	border-collapse: collapse;
-    border-radius: 150px;
+    border-radius: 150px; 
     text-align: center;
 }
 tbody{
