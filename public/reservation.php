@@ -161,7 +161,12 @@ while ($result = $movieDetail->fetch()) {
 					</li>
 					<li>
 						<span>Sous-titres?</span>
-						<span><?php echo $subtitles ?></span>
+						<span><?php 
+						if($subtitles == 'yes')
+							echo "Oui";
+						else
+							echo "Non";
+						 ?></span>
 					</li>
 
 					</ul>
