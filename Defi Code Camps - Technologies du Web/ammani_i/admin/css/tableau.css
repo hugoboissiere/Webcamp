@@ -3,9 +3,8 @@ body {
 }
 
 table { 
+  text-align: center;
   font-size: 14px;
-  overflow-x: auto;
-  display: block;
 }
 
 table.tableau {
