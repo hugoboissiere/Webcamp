@@ -34,7 +34,8 @@ echo '<p style="color:#68D2C3;">INSCRIPTION<br/><p/>';
 echo '<br />';
 
 
-echo '<form method="post" action="connect.php" id="addForm" autocomplete="off" class="formOverflow"> 
+echo '<div class="formu">
+            <form method="post" action="connect.php" id="addForm" autocomplete="off" class="formOverflow"> 
                 <label for="member">Adhérent</label>
                 <input type="radio" name="membership" value="Member" id="member" class="radio"><br />
                 <br />
@@ -78,7 +79,8 @@ echo '<form method="post" action="connect.php" id="addForm" autocomplete="off" c
                 <input type="text" name="city" id="city" placeholder="Dakar"><br />
                 <br/>
                 <label for="country">Pays : </label>
-                <select name="country" id="country" required>';
+                <select name="country" id="country" required>
+            </div>';
                 ?>
                 <?php
 
