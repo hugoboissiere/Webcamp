@@ -35,8 +35,8 @@ $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
                   <td>' . $result->runningTime . '</td>
                   <td>' . $result->country . '</td>
                   <td>' . $result->publicationtime . '</td>
+                  <td>' .  . '</td>
                   <td>' . $result->nb_entrees . '</td>
-                  <td>' . ROUND($nbjour = $result->moy_entree_jour) . '</td>
                   <td><form method="get" action="compteur.php">
                         <input type="hidden" name="ID" value="'.$result->id.'">
                         <select type="hidden" name="nb">
