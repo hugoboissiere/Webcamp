@@ -24,7 +24,7 @@ while($result = $sessionsCompleteList->fetch())
 }
 
 
-
+$id_sessions = $_GET['id'];
 
 
 $sessionsCompleteList->closeCursor();
@@ -205,6 +205,7 @@ while ($result = $movieDetail->fetch()) {
 						<input type="hidden" name="movie" value=<?php echo ' "'.$id.'" '?> />
 						<input type="hidden" name="theater" value=<?php echo ' "'.$idTheater.'"  '?> />
 						<input type="hidden" name="member" value=<?php echo ' "'.$_SESSION['id'].'" ' ?> />
+						<input type="hidden" name="session" value=<?php echo ' "'.$id_sessions.'" ' ?> />
 							<br/>
 							<input type="submit" name="envoie" value="Valider" />
 				</fieldset>
