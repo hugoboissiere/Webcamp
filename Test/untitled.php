@@ -33,9 +33,11 @@ $test->setFetchMode(PDO::FETCH_OBJ);
          <th>Durée (en min)</th>
          <th>Pays/Continent</th>
          <th>Date de publication</th>
+         <th>Différence de jours</th>
          <th>Nombre d'entrées totaux</th>
          <th>Moyenne d'entrées par jour</th>
          <th>Moyenne d'entrées par semaine</th>
+         <th>Moyenne d'entrées par mois</th>
       </tr>
       <?php
       while ($result = $test->fetch())
