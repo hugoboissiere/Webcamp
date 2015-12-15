@@ -11,13 +11,10 @@ table.tableau {
     text-align: center;
 }
 
-tbody.tableau{
-  border-radius: 1000px;
-}
-
 table.tableau td, th {
     border: 1px solid black;
     background-color: #ffffff;
+    border-radius: 1000px;
 }
 
 .titre {
