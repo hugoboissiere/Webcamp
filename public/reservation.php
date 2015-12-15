@@ -156,7 +156,13 @@ while ($result = $movieDetail->fetch()) {
 						<span class="dataContent"><?php echo $result->plot; ?></span>
 					</li>
 					<li>
-						<span><?php echo "Date de la séance : <br>" . $date . "<br>" . $subtitles . "<br>" . $nb_places . "<br>" . $cinemaName . "<br>" . $adress . "<br>" . $countryName . "<br>" . $langue; ?></span>
+						<span>Date de la séance</span>
+						<span><?php echo $date ?></span>
+					</li>
+						<span>Sous-titres?</span>
+						<span><?php echo $subtitles ?></span>
+					</li>
+						// $nb_places . "<br>" . $cinemaName . "<br>" . $adress . "<br>" . $countryName . "<br>" . $langue; ?></span>
 					</li>
 					</ul>
 				</div>
