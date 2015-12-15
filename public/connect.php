@@ -31,8 +31,8 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
         $insert->execute();
     }
     else
-        //header('Location: index.php');
-        echo "pas les memes password !!!";
+        header('Location: index.php');
+
 }
 
 header('Location: inscription.php');
