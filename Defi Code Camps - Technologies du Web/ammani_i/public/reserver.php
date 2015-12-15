@@ -12,9 +12,13 @@ if (isset($_POST['envoie']))
 						. "VALUES(:theater, :movie, :date, :member)");
 	echo "3";
 	$req->bindParam(":movie", $_POST["movie"]);
+	echo "a";
 	$req->bindParam(":theater", $_POST["theater"]);
+	echo "b";
 	$req->bindParam(":date", NOW());
+	echo "c";
 	$req->bindParam(":member", $_POST["member"]);
+	echo "d";
 	$req->execute();
 	echo "4";
 
