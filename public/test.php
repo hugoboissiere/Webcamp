@@ -37,5 +37,6 @@ include("php/includes/scripts.php");
      <textarea name="description" id="description"></textarea><br />
      <input type="submit" name="submit" value="Envoyer" />
 </form>
+</main>
 </body>
 </html>
