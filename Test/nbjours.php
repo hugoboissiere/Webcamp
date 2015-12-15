@@ -11,7 +11,7 @@ while ($result = $section->fetch())
 	while ($result2 = $jour1->fetch())
 		{
 			$nbjour = $result2->divjour;
-			$pull = nb_entrees->$result2;
+			$pull = $nbjour->nb_entrees;
 			// $qui = $nbjour / $pull;
 			echo $pull . "<br>";
 		}
