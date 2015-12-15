@@ -13,18 +13,6 @@ $addPHP = array("");
 include("php/includes/head.php");
 ?>
 
-
-
-
-
-
-<?php
-include("php/includes/scripts.php");
-?>
-
-<!--scripts Js-->
-
-
 <form method="post" action="reception.php" enctype="multipart/form-data">
      <label for="icone">Icône du fichier (JPG, PNG ou GIF | max. 15 Ko) :</label><br />
      <input type="file" name="icone" id="icone" /><br />
@@ -36,7 +24,18 @@ include("php/includes/scripts.php");
      <label for="description">Description de votre fichier (max. 255 caractères) :</label><br />
      <textarea name="description" id="description"></textarea><br />
      <input type="submit" name="submit" value="Envoyer" />
-</form>
-</main>
+</form> 
+
+
+
+
+<?php
+include("php/includes/scripts.php");
+?>
+
+<!--scripts Js-->
+
+
+
 </body>
 </html>
