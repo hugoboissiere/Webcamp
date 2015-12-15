@@ -84,6 +84,18 @@ include("php/includes/navigator.php");
                 <label>Téléphone : </label>
                 <input type="text" name="phone" class="phone" placeholder="Ex : +221 01 023 45 87">
                 <br/>
+                <label for="country">Pays : </label>
+                    <select name="country" id="country">
+                    <?php
+
+                $employeeRegionListAdd = $dbh->query("SELECT * FROM region");
+                $employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
+                    while ($result = $employeeRegionListAdd->fetch()) {
+                        echo '<option value="' . $result->id_region . '">' . $result->nom_region . '</option>';                        
+                    }
+                    $employeeRegionListAdd->closeCursor();
+                    ?>
+                <br/>
                 <input type="submit" name="updateTheater" value="Enregistrer">
             </form>
         </div>
