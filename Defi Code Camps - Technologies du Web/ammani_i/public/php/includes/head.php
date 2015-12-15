@@ -215,16 +215,17 @@ and open the template in the editor.
 } $countCinemaTheaters->closeCursor(); ?></span></a></li>
                             <li><a href="access.php">Contact & Accès</a></li>
                             <li><a href="rate.php">Tarifs</a></li>
+                            <br />
+                            <?php
+                if(!isset($_SESSION['id']))
+                    echo '<li><a href="inscription.php">Créer un compte</a>/<a href="identification.php">Se connecter</a></li>';
+                else
+                    echo '<li><a href="deconnexion.php">Deconnexion</a></li>';
+                ?>
                         </ul>
                     </li>
                 </ul>
                 <div class="fb-page" data-href="https://www.facebook.com/Cinecinewax/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Cinecinewax/"><a href="https://www.facebook.com/Cinecinewax/">Cinewax</a></blockquote></div></div>
-                <?php
-                if(!isset($_SESSION['id']))
-                    echo '<a href="inscription.php">Créer un compte</a>/<a href="identification.php">Se connecter</a>';
-                else
-                    echo '<a href="deconnexion.php">Deconnexion</a>';
-                ?>
             </nav>
         </aside>
         
