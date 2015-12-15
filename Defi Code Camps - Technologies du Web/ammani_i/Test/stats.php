@@ -5,7 +5,7 @@ $test = $dbh->query("SELECT * from cw_medias_movies");
 $test->setFetchMode(PDO::FETCH_OBJ);
 
 
-$test->closeCursor();
+
 $section = $dbh->query("SELECT `id` FROM cw_medias_movies");
 $section->setFetchMode(PDO::FETCH_OBJ);
 
@@ -27,6 +27,7 @@ while ($result = $section->fetch())
                   <td>' . $result->publicationtime . '</td>
                   <td>' . $result->nb_entrees . '</td>';
 }
+$test->closeCursor();
 			$nbjour = $result2->moy_entree_jour;
 			$entrees = $result2->nb_entrees;
 			$entrees_jour = $entrees / $nbjour;
