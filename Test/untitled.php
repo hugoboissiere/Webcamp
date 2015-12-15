@@ -17,13 +17,9 @@ $test->setFetchMode(PDO::FETCH_OBJ);
    <head>
    <meta charset="utf-8">
 	<title>Test</title>
-	<link rel="stylesheet" href="chartist.min.css">
    <link rel="stylesheet" type="text/css" href="test.css"></link>
    <body>
-	   <p id="test1" data-numberone="20, 60, 120" data-numbertwo="200, 180, 20" class="titre">Statistiques des films</p>
-	   <div class="ct-chart"></div>
-	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	   <script src="chartist.min.js"></script>
+	   <p class="titre">Statistiques des films</p>
       <form action="compteur.php">
       </form>
 	   <table class="tableau">
