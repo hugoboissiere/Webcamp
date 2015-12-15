@@ -36,11 +36,44 @@ $movieDetail->setFetchMode(PDO::FETCH_OBJ);
 
 while ($result = $movieDetail->fetch()) {
 
+	$sessionDetail = $dbh->query("SELECT * FROM cw_cinema_sessions WHERE id = '" . $_GET['id'] . "'");
+	$sessionDetail->setFetchMode(PDO::FETCH_OBJ);
 
 
+	while ($result2 = $sessionDetail->fetch())
+	{
+		$date = $result2->date;
+		$subtitles = $result2->subtitles;
+		$nb_places = $result2->nb_place;
+		$theaterDetail = $dbh->query("SELECT * FROM cw_cinema_theaters WHERE id = '" . $result2->idTheater . "'")
+		$theaterDetail->setFetchMode(PDO::FETCH_OBJ);
+		while($result3 = $theaterDetail->fetch())
+		{
+			$cinemaName = $result3->name;
+			$adress = $result3->address;
+			$countryDetail = $dbh->query("SELECT * FROM region WHERE id_region = '" . $result3->country . "'");
+			$countryDetail->setFetchMode(PDO::FETCH_OBJ);
+			while($result35 = $countryDetail->fetch())
+			{
+				$countryName = $result35->nom_region;
+			}
+			$countryDetail->closeCursor();
+		}
+		$theaterDetail->closeCursor();
+		
+		$languageDetail = $dbh->query("SELECT * FROM cw_medias_languages WHERE id = '" . $result2->language . "'")
+		$languageDetail->setFetchMode(PDO::FETCH_OBJ);
+		while($result4 = $languageDetail->fetch())
+		{
+			$langue = $result4->name;
+		}
+		$languageDetail->closeCursor();
+	}
+
+	$sessionDetail->closeCursor();
 
 
-	$filenamePoster = 'resources/imgs/content/movies/'.$result->id.'Poster.jpg';
+		$filenamePoster = 'resources/imgs/content/movies/'.$result->id.'Poster.jpg';
 
 	if (file_exists($filenamePoster)) {
 		$img = $filenamePoster;
@@ -116,9 +149,13 @@ while ($result = $movieDetail->fetch()) {
 						<span class="dataTitle">Langue</span>
 						<span class="dataContent"><?php echo $result->language; ?></span>
 					</li>
+						<span><?php echo $date . $subtitles . $nb_places . $cinemaName . $adress . $countryName . $langue; ?></span>
 					<li>
 						<span class="dataPlot">Description</span>
 						<span class="dataContent"><?php echo $result->plot; ?></span>
+					</li>
+					<li>
+
 					</ul>
 				</div>
 			</div>
