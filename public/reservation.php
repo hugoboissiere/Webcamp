@@ -144,12 +144,12 @@ while ($result = $movieDetail->fetch()) {
 						<span class="dataContent"><?php echo $result->actors; ?></span>
 					</li>
 					<li>
-						<span class="dataTitle">Pays</span>
+						<span class="dataTitle">Pays de production</span>
 						<span class="dataContent"><?php echo $result->country; ?></span>
 					</li>
 					<li>
-						<span class="dataTitle">Langue</span>
-						<span class="dataContent"><?php echo $result->language; ?></span>
+						<span class="dataTitle">Langage de diffusion</span>
+						<span class="dataContent"><?php echo $langue; ?></span>
 					</li>
 					<li>
 						<span>Sous-titres?</span>
@@ -163,10 +163,6 @@ while ($result = $movieDetail->fetch()) {
 					<li>
 						<span class="dataPlot">Description</span>
 						<span class="dataContent"><?php echo $result->plot; ?></span>
-					</li>
-					<li>
-						<span>Date de la séance</span>
-						<span><?php echo $countryName; ?></span>
 					</li>
 					<li>
 						<span>Adresse</span>
