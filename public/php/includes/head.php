@@ -171,7 +171,7 @@ and open the template in the editor.
             <nav id="staffPanel">
                 <ul>
                     <?php 
-            if ($_SESSION['id'])
+            if ($_SESSION['email'])
                 echo '<li>Bonjour, ' . $_SESSION['firstname'] . ' </li>'; ?>
             <br />
                     <li>Programmation
