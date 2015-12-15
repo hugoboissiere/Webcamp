@@ -36,7 +36,7 @@ while ($result = $section->fetch())
 			echo "<td>" . ROUND($entrees_jour) . "</td>";
 			echo "<td>" . ROUND($entrees_semaine) . "</td>";
 			echo "<td>" . ROUND($entrees_mois) . "</td>";
-
+			echo '</tr>';
 			// echo $changeDeNom . "<br>";
 			// while ($result = $test->fetch())
    //    {
