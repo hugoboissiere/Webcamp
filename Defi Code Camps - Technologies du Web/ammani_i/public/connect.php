@@ -30,7 +30,7 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
         $insert->bindParam(":newsletter", $_POST["newsletter"]);
         $insert->execute();
 
-        $moviesCompleteList = $dbh->query('SELECT * FROM cw_human_resources_memberships WHERE email = "' . $_POST['email'] . '"  AND password = "' . $_POST["password"] .'" ');
+        $moviesCompleteList = $dbh->query('SELECT * FROM cw_human_resources_memberships WHERE email = "' . $_POST['email'] . '" ');
         $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
         while ($result = $moviesCompleteList->fetch())
         {
