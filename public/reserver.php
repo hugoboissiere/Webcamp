@@ -15,7 +15,7 @@ while ($result = $session->fetch())
 {
 	$nb_places = $result->nb_place;
 }
-
+echo "1";
 $session->closeCursor();
 
 $i = 0;
