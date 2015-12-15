@@ -2,6 +2,9 @@
 
 include("php/includes/database.php");
 
+$moviesTitleList = $dbh->query("SELECT nb_entrees FROM cw_medias_movies WHERE id = ".$_GET['ID']);
+		$moviesTitleList->setFetchMode(PDO::FETCH_OBJ);
+
 $session = $dbh->query('SELECT * FROM cw_cinema_sessions WHERE id = "'.$_POST['session'].'" ');
 $session->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $session->fetch())
@@ -32,21 +35,15 @@ while ($i < $_POST['places'])
 	
 		$req->execute();
 	}
-		$moviesTitleList = $dbh->query("SELECT nb_entrees FROM cw_medias_movies WHERE id = ".$_GET['ID']);
-		$moviesTitleList->setFetchMode(PDO::FETCH_OBJ);
-		while ($result = $moviesTitleList->fetch()) {
-			$nb = $result->nb_entrees;
-			$nb++;
-		}
-
-		$update = $dbh->prepare("UPDATE cw_medias_movies "
+		$nb++;
+		$i++;
+	
+}
+$update = $dbh->prepare("UPDATE cw_medias_movies "
 		. "SET nb_entrees = nb_entrees + :nb "
 		. "WHERE id = ".$_GET['ID']);
 		$update->bindParam(":nb", $_GET['nb']);
 		$update->execute();
-		$i++;
-	
-}
 $moviesTitleList->closeCursor();
 
 header('Location:programmation.php');
