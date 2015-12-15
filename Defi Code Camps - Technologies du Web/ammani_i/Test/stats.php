@@ -33,7 +33,6 @@ while ($result = $section->fetch())
 			$entrees_semaine = $entrees_jour * 7;
 			$entrees_mois = $entrees_jour * 30;
 			echo "<td>". ROUND($nbjour) . "</td>";
-			echo "<td>" . ROUND($entrees) . "</td>";
 			echo "<td>" . ROUND($entrees_jour) . "</td>";
 			echo "<td>" . ROUND($entrees_semaine) . "</td>";
 			echo "<td>" . ROUND($entrees_mois) . "</td>";
