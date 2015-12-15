@@ -11,6 +11,7 @@ $extension_upload = strtolower(substr(strrchr($_FILES['profilpic']['name'], '.')
 if (in_array($extension_upload,$img_extensions))
 {
 	echo "Extension correcte";
+}
 else
 {
 	echo "logie";
