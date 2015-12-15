@@ -29,8 +29,10 @@ form
 
 #reservation
 {
-	display: inline-block;
-	text-align: right;
+	/*display: inline-block;
+	text-align: right;*/
+	position: absolute;
+	margin: 350px 380px;
 }
 
 #text
