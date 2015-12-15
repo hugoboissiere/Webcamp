@@ -4,11 +4,13 @@ include("php/includes/database.php");
 
 $moviesTitleList = $dbh->query("SELECT nb_entrees FROM cw_medias_movies WHERE id = ".$_POST["movie"]));
 		$moviesTitleList->setFetchMode(PDO::FETCH_OBJ);
+		echo "-1";
 
 while ($result = $moviesTitleList->fetch()) {
 	$nb = $result->nb_entrees;
 	$nb++;
 }
+echo "0";
 $session = $dbh->query('SELECT * FROM cw_cinema_sessions WHERE id = "'.$_POST['session'].'" ');
 $session->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $session->fetch())
