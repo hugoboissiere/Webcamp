@@ -17,7 +17,7 @@ while ($result = $section->fetch())
 			$entrees_mois = $entrees_jour * 30;
 			echo "Difference de jour : " . ROUND($nbjour) . "<br>";
 			echo "Nombre d'entrees : " . ROUND($entrees) . "<br>";
-			echo "Moyenne d'entrees par jour : " . $entrees_jour . "<br>";
+			echo "Moyenne d'entrees par jour : " . ROUND($entrees_jour) . "<br>";
 			echo "Moyenne d'entrees par semaine : " . ROUND($entrees_semaine) . "<br>";
 			echo "Moyenne d'entrees par mois : " . ROUND($entrees_mois) . "<br>";
 			echo "<br>";
