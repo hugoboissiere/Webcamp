@@ -11,7 +11,7 @@ table.tableau {
     border-radius: 150px; 
     text-align: center;
 }
-tbody{
+tbody tr td{
   border-radius: 150px;
 }
 
