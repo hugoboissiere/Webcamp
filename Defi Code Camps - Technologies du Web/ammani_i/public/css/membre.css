@@ -48,6 +48,10 @@ form
 	vertical-align: top;
 	border: #68D2C3 1px solid;
 	padding: 1%;
+	background-color: #68D2C3;
+	color : white;
+	position: absolute;
+	margin: 0% 80%;
 }
 
 .formOverflow
