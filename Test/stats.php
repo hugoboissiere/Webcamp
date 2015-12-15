@@ -55,8 +55,9 @@ while ($result = $test->fetch())
    //             </tr>
    //    }
 		}
-	$test->closeCursor();
+
 	$jour1->closeCursor();
 }
+$test->closeCursor();
 $section->closeCursor();
 ?>
