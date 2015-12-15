@@ -31,7 +31,6 @@ form
 {
 	display: inline-block;
 	vertical-align: top;
-	margin-right: 0px;
 }
 
 #informations
@@ -40,8 +39,8 @@ form
 	vertical-align: top;
 }
 
-#picture
+/*#picture
 {
 	display: inline-block;
 	vertical-align: top;
-}
+}*/
