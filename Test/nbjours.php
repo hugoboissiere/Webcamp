@@ -18,8 +18,8 @@ while ($result = $section->fetch())
 			echo "Difference de jour : " . $nbjour . "<br>";
 			echo "Nombre d'entrees : " . $entrees . "<br>";
 			echo "Moyenne d'entrees par jour : " . ROUND($entrees_jour) . "<br>";
-			echo "Moyenne d'entrees par semaine : " . $entrees_semaine . "<br>";
-			echo "Moyenne d'entrees par mois : " . $entrees_mois . "<br>";
+			echo "Moyenne d'entrees par semaine : " . ROUND($entrees_semaine) . "<br>";
+			echo "Moyenne d'entrees par mois : " . ROUND($entrees_mois) . "<br>";
 			echo "<br>";
 		}
 	$jour1->closeCursor();
