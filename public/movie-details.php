@@ -18,9 +18,9 @@ $movieDetail->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $movieDetail->fetch()) {
 
 
- 
- 
- 
+
+
+
  $filenamePoster = 'resources/imgs/content/movies/'.$result->id.'Poster.jpg';
 
  if (file_exists($filenamePoster)) {
@@ -42,7 +42,7 @@ if (file_exists($filenameCover)) {
 
 
 ?>
-<meta charset="UTF-8">
+
 <script>
 $(document).ready(function(){
   $(".trailer").colorbox({iframe:true, innerWidth:500, innerHeight:409});
@@ -74,7 +74,7 @@ $(document).ready(function(){
           <span class="dataContent"><?php echo $result->releaseDate; ?></span>
         </li>
         <li>
-          <span class="dataTitle">Durée</span>
+          <span class="dataTitle">Duree</span>
           <span class="dataContent"><?php echo $result->runningTime; ?> Minutes</span>
         </li>
         <li>
@@ -82,7 +82,7 @@ $(document).ready(function(){
           <span class="dataContent"><?php echo $result->genre;?></span>
         </li>
         <li>
-          <span class="dataTitle">Réalisateur</span>
+          <span class="dataTitle">Realisateur</span>
           <span class="dataContent"><?php echo $result->realisator; ?></span>
         </li>
         <li>
