@@ -10,8 +10,8 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
     {
 
         $insert = $dbh->prepare("INSERT INTO cw_human_resources_memberships"
-                . "(firstname,lastname,password,cardNumber,username,sex,phoneHome,phoneMobile,neighborhood,city,country,email,status,activity,membership,newsletter)"
-                . " VALUES(:firstname,:lastname,:password,:cardNumber,:username,:sex,:phoneHome,:phoneMobile,:neighborhood,:city,:country,:email,:status,:activity,:membership,:newsletter)");
+            . "(firstname,lastname,password,cardNumber,username,sex,phoneHome,phoneMobile,neighborhood,city,country,email,status,activity,membership,newsletter)"
+            . " VALUES(:firstname,:lastname,:password,:cardNumber,:username,:sex,:phoneHome,:phoneMobile,:neighborhood,:city,:country,:email,:status,:activity,:membership,:newsletter)");
         $insert->bindParam(":firstname", $_POST["firstname"]);
         $insert->bindParam(":lastname", $_POST["lastname"]);
         $insert->bindParam(":password", $_POST["password"]);
@@ -29,30 +29,37 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
         $insert->bindParam(":membership", $_POST["membership"]);
         $insert->bindParam(":newsletter", $_POST["newsletter"]);
         $insert->execute();
-        $_SESSION['username'] = $_POST['username'];
-        $_SESSION['firstname'] = $_POST['firstname'];
-        $_SESSION['lastname'] = $_POST['lastname'];
-        $_SESSION['password'] = $_POST['password'];
-        $_SESSION['sex'] = $_POST['sex'];
-        $_SESSION['phoneHome'] = $_POST['phoneHome'];
-        $_SESSION['phoneMobile'] = $_POST['phoneMobile'];
-        $_SESSION['neighborhood'] = $_POST['neighborhood'];
-        $_SESSION['city'] = $_POST['city'];
-        $_SESSION['country'] = $_POST['country'];
-        $_SESSION['email'] = $_POST['email'];
-        $_SESSION['status'] = $_POST['status'];
-        $_SESSION['activity'] = $_POST['activity'];
-        $_SESSION['membership'] = $_POST['membership'];
-        $_SESSION['newsletter'] = $_POST['newsletter'];
-        $_SESSION['archive'] = $_POST['archive'];
-        header('Location: index.php');
+
+        $moviesCompleteList = $dbh->query('SELECT * FROM cw_human_resources_memberships WHERE email = "' . $_POST['email'] . '"  AND password = "' . $_POST["password"] .'" ');
+        $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
+        while ($result = $moviesCompleteList->fetch())
+        {
+            $_SESSION['username'] = $result->username;
+            $_SESSION['id'] = $result->id;
+            $_SESSION['firstname'] = $result->firstname;
+            $_SESSION['lastname'] = $result->lastname;
+            $_SESSION['password'] = $result->password;
+            $_SESSION['caddNumber'] = $result->cardNumber;
+            $_SESSION['sex'] = $result->sex;
+            $_SESSION['phoneHome'] = $result->phoneHome;
+            $_SESSION['phoneMobile'] = $result->phoneMobile;
+            $_SESSION['neighborhood'] = $result->neighborhood;
+            $_SESSION['city'] = $result->city;
+            $_SESSION['country'] = $result->country;
+            $_SESSION['email'] = $result->email;
+            $_SESSION['status'] = $result->status;
+            $_SESSION['activity'] = $result->activity;
+            $_SESSION['membership'] = $result->membership;
+            $_SESSION['newsletter'] = $result->newsletter;
+            $_SESSION['archive'] = $result->archive;
+            header('Location: index.php');
+
+        }
+        else
+            header('Location: inscription.php');
 
     }
-    else
-        header('Location: inscription.php');
-
-}
 
 
-?>
+    ?>
 
