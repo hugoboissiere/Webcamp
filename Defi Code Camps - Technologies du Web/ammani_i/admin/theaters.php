@@ -52,8 +52,6 @@ include("php/includes/navigator.php");
                 <label>Téléphone : </label>
                 <input type="text" name="phone" placeholder="Ex : +221 01 023 45 87">
                 <br/>
-                <input type="submit" name="insertTheater" value="Enregistrer">
-                <br/>
                 <label for="country">Pays : </label>
                     <select name="country" id="country">
                     <?php
@@ -66,6 +64,8 @@ include("php/includes/navigator.php");
                     $employeeRegionListAdd->closeCursor();
                     ?>
                 </select>
+                <br/>
+                <input type="submit" name="insertTheater" value="Enregistrer">                    
             </form>
         </div>
         <div class="form-style-8" id="modify">
