@@ -12,6 +12,7 @@ table.tableau {
     text-align: center;
     height: 800px;
     width: 800px;
+    color: #ffffff;
 }
 
 table.tableau td{
