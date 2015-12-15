@@ -1,8 +1,8 @@
 <?php
-// if ($_FILES['profilpic']['error'] > 0)
-// 	$erreur = "Erreur lors du transfert";
-// if ($_FILES['profilpic']['size'] > $maxsize)
-// 	$erreur = "Le fichier est trop gros";
+if ($_FILES['profilpic']['error'] > 0)
+	$erreur = "Erreur lors du transfert";
+if ($_FILES['profilpic']['size'] > $maxsize)
+	$erreur = "Le fichier est trop gros";
 
 // $img_extensions = array('jpg', 'jpeg', 'gif', 'png');
 // //1. strrchr renvoie l'extension avec le point (« . »).
