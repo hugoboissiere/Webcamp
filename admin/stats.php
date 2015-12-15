@@ -18,11 +18,9 @@ include("php/includes/navigator.php");
 ?>
 
         <!-- main content here -->
-        <head>
-   <meta charset="utf-8">
+    <meta charset="utf-8">
 	<title>Test</title>
-   <link rel="stylesheet" type="text/css" href="style.css"></link>
-   <body>
+    <link rel="stylesheet" type="text/css" href="style.css"></link>
 	   <p class="titre">Statistiques des films</p>
 	   <table class="tableau">
       <tr>
@@ -41,8 +39,6 @@ include("php/includes/navigator.php");
       include("stats.php");
       ?>
       </table>
-   </head>
-   </body>
 	</main>
     <script src="js/layoutNavigator.js"></script> <!-- Resource jQuery -->
 </body>
