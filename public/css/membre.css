@@ -31,9 +31,10 @@ form
 {
 	display: inline-block;
 	vertical-align: top;
+	margin-right: 0px;
 }
 
-.dataTitle
+#informations
 {
 	display: inline-block;
 	vertical-align: top;
