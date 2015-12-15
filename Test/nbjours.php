@@ -6,7 +6,7 @@ $section->setFetchMode(PDO::FETCH_OBJ);
 
 while ($result = $section->fetch())
 {
-	$jour1 = $dbh->query("SELECT AVG(DATEDIFF, ROUND(NOW(), publicationtime)) AS moy_entree_jour, nb_entrees FROM cw_medias_movies WHERE id =" . $result->id);
+	$jour1 = $dbh->query("SELECT AVG(DATEDIFF(NOW(), publicationtime)) AS moy_entree_jour, nb_entrees FROM cw_medias_movies WHERE id =" . $result->id);
 	$jour1->setFetchMode(PDO::FETCH_OBJ);
 	while ($result2 = $jour1->fetch())
 		{
@@ -15,7 +15,7 @@ while ($result = $section->fetch())
 			$entrees_jour = $entrees / $nbjour;
 			$entrees_semaine = $entrees_jour * 7;
 			$entrees_mois = $entrees_jour * 30;
-			echo "Difference de jour : " . $nbjour . "<br>";
+			echo "Difference de jour : " . ROUND($nbjour) . "<br>";
 			echo "Nombre d'entrees : " . $entrees . "<br>";
 			echo "Moyenne d'entrees par jour : " . ROUND($entrees_jour) . "<br>";
 			echo "Moyenne d'entrees par semaine : " . ROUND($entrees_semaine) . "<br>";
