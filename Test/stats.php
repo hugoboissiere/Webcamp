@@ -18,12 +18,14 @@ while ($result = $section->fetch())
 			$entrees_jour = $entrees / $nbjour;
 			$entrees_semaine = $entrees_jour * 7;
 			$entrees_mois = $entrees_jour * 30;
+			$changeDeNom = ROUND($nbjour);
 			echo "Difference de jour : " . ROUND($nbjour) . "<br>";
 			echo "Nombre d'entrees : " . ROUND($entrees) . "<br>";
 			echo "Moyenne d'entrees par jour : " . ROUND($entrees_jour) . "<br>";
 			echo "Moyenne d'entrees par semaine : " . ROUND($entrees_semaine) . "<br>";
 			echo "Moyenne d'entrees par mois : " . ROUND($entrees_mois) . "<br>";
 			echo "<br>";
+			echo $changeDeNom . "<br>";
 		}
 	$jour1->closeCursor();
 }
