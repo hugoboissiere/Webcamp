@@ -11,10 +11,10 @@ while ($result = $section->fetch())
 {
 	$jour1 = $dbh->query("SELECT AVG(DATEDIFF(NOW(), publicationtime)) AS moy_entree_jour, nb_entrees FROM cw_medias_movies WHERE id =" . $result->id);
 	$jour1->setFetchMode(PDO::FETCH_OBJ);
-	while ($result = $jour1->fetch())
+	while ($result2 = $jour1->fetch())
 		{
-			$nbjour = $result->moy_entree_jour;
-			$entrees = $result->nb_entrees;
+			$nbjour = $result2->moy_entree_jour;
+			$entrees = $result2->nb_entrees;
 			$entrees_jour = $entrees / $nbjour;
 			$entrees_semaine = $entrees_jour * 7;
 			$entrees_mois = $entrees_jour * 30;
