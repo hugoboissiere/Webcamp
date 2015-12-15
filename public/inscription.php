@@ -1,4 +1,5 @@
 <?php
+
 // Titre de la page
 $headTitle = "Cinewax - Accueil";
 
@@ -12,7 +13,9 @@ $addJS =  array("");
 $addPHP = array("");
 include("php/includes/database.php");
 include("php/includes/head.php");
-
+?>
+<link rel="stylesheet" type="text/css" href="inscription.css"></link>
+<?php
 // $employeeRegionListAdd = $dbh->query("SELECT * FROM region");
 // $employeeRegionListAdd->setFetchMode(PDO::FETCH_OBJ);
 // while ($result = $employeeRegionListAdd->fetch()) 
