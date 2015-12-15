@@ -220,7 +220,7 @@ and open the template in the editor.
                             <li><a href="rate.php">Tarifs</a></li>
                             <br />
                             <?php
-                if(!isset($_SESSION['id']))
+                if(!isset($_SESSION['email']))
                     echo '<li><a href="inscription.php">Créer un compte</a><br />
                 <p>ou</p><br />
                 <a href="identification.php">Se connecter</a></li>';
