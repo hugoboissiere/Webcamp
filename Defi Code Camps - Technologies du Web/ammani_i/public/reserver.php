@@ -23,7 +23,7 @@ while ($i <= $_POST['places'])
 	
 		$req->execute();
 	}
-	i++;
+	$i++;
 	
 }
 
