@@ -162,7 +162,7 @@ while ($result = $movieDetail->fetch()) {
 						<span>Sous-titres?</span>
 						<span><?php echo $subtitles ?></span>
 					</li>
-						// $nb_places . "<br>" . $cinemaName . "<br>" . $adress . "<br>" . $countryName . "<br>" . $langue; ?></span>
+
 					</li>
 					</ul>
 				</div>
