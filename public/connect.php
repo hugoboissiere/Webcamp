@@ -5,9 +5,8 @@ session_start();
 include("php/includes/database.php");
 if (isset($_POST["InsertMembersOrSubscribers"])) {
     $_POST["cardNumber"] = "0"; // Pas de numero de compte pour l'instant
-
-    if ($_POST['password'] == $_POST['password2'])
-    {
+  
+    
 
         $insert = $dbh->prepare("INSERT INTO cw_human_resources_memberships"
             . "(firstname,lastname,password,cardNumber,username,sex,phoneHome,phoneMobile,neighborhood,city,country,email,status,activity,membership,newsletter)"
@@ -54,9 +53,7 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
             $_SESSION['archive'] = $result->archive;
             header('Location: index.php');
         }
-    }
-    else
-        header('Location: inscription.php');
+    
 
 }
 
