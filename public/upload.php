@@ -17,5 +17,9 @@ if ($_FILES['profilpic']['size'] > $maxsize)
 // 	echo "logie";
 // }
 echo "akakak";
+if($erreur)
+	echo $erreur;
+else
+	echo "reg";
 var_dump($_FILES);
 ?>
