@@ -27,7 +27,7 @@ $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
       </tr>
       <?php
       include("stats.php");
-      while ($result = $test->fetch())
+      while (($result = $test->fetch()) || ($result = $section->fetch()))
       {
          echo '<tr>
                   <td>' . $result->title . '</td>
