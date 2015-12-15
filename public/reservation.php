@@ -203,8 +203,10 @@ while ($result = $movieDetail->fetch()) {
 							<option value="10">10</option>
 						</select><br/>
 						<input type="hidden" name="movie" value=<?php echo ' "'.$id.'" '?> />
+						<input type="hidden" name="theater" value=<?php echo ' "'.$idTheater.'"  '?> />
+						<input type="hidden" name="member" value=<?php echo ' "'.$_SESSION['id'].'" ' ?> />
 							<br/>
-							<input type="submit" value="Valider" />
+							<input type="submit" name="envoie" value="Valider" />
 				</fieldset>
 			</form>
 		</div>
