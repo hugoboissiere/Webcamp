@@ -46,7 +46,7 @@ echo '<div class="formu">
                 <label for="newsletterOn">Newsletter(ON)</label>
                 <input type="radio" name="newsletter" value="Yes" id="newsletterOn"class="radio">
                 <label for="newsletterOff">Newsletter(OFF)</label>
-                <input type="radio" name="newsletter" value="No" id="newsletterOff"class="radio" checked>
+                <input type="radio" name="newsletter" value="No" id="newsletterOff"class="radio" checked><br/>
                 <br/>
                 <label for="name">Nom : </label>
                 <input type="text" name="lastname" id="name" placeholder="Ex : Dupont" required><br />
