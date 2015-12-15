@@ -15,7 +15,6 @@ include("php/includes/head.php");
 
 <form method="post" action="upload.php" enctype="multipart/form-data">
      <label for="profilpic">Fichier (tous formats | max. 1 Mo) :</label><br />
-     <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
      <input type="file" name="profilpic" id="profilpic" /><br />
      <input type="submit" name="submit" value="Envoyer" />
 </form> 
