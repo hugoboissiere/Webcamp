@@ -12,6 +12,7 @@ echo '<p style="color:#68D2C3;">SE CONNECTER<br/><p/>
                 <label for="password">Mot de passe : </label>
                 <input type="password" type="password" name="password" id="password" placeholder="Au moins 5 caractères">
                 <br/>
-                <input type="submit" class="clearForm" name="coco" value="Se connecter">';
+                <input type="submit" class="clearForm" name="coco" value="Se connecter">
+                </form>';
 
 ?>
