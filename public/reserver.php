@@ -1,8 +1,8 @@
 <?php
 
 include("php/includes/database.php");
-echo "2";
-$moviesTitleList = $dbh->query("SELECT nb_entrees FROM cw_medias_movies WHERE id = ".$_GET['ID']);
+
+$moviesTitleList = $dbh->query("SELECT nb_entrees FROM cw_medias_movies WHERE id = ".$_POST["movie"]));
 		$moviesTitleList->setFetchMode(PDO::FETCH_OBJ);
 
 while ($result = $moviesTitleList->fetch()) {
@@ -16,7 +16,6 @@ while ($result = $session->fetch())
 	$nb_places = $result->nb_place;
 }
 
-echo "1";
 $session->closeCursor();
 
 $i = 0;
