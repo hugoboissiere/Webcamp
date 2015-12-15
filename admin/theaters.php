@@ -65,6 +65,7 @@ include("php/includes/navigator.php");
                     }
                     $employeeRegionListAdd->closeCursor();
                     ?>
+                </select>
             </form>
         </div>
         <div class="form-style-8" id="modify">
