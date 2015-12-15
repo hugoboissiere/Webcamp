@@ -38,7 +38,6 @@ while ($i < $_POST['places'])
 			$nb = $result->nb_entrees;
 			$nb++;
 		}
-		$moviesTitleList->closeCursor();
 
 		$update = $dbh->prepare("UPDATE cw_medias_movies "
 		. "SET nb_entrees = nb_entrees + :nb "
@@ -48,6 +47,7 @@ while ($i < $_POST['places'])
 		$i++;
 	
 }
+$moviesTitleList->closeCursor();
 
 header('Location:programmation.php');
 
