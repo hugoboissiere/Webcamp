@@ -55,9 +55,9 @@ while ($i < $_POST['places'])
 
  $update2 = $dbh->prepare("UPDATE cw_cinema_sessions "
 		. "SET nb_entrees = :nbp "
-		. "WHERE id = ".$_POST["movie"]);
-		$update->bindParam(":nbp", $nbp);
-		$update->execute();
+		. "WHERE id = ".$_POST["session"]);
+		$update2->bindParam(":nbp", $nbp);
+		$update2->execute();
 $moviesPlace->closeCursor();
 
 $update = $dbh->prepare("UPDATE cw_medias_movies "
