@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  margin: 100px;
+  margin: auto;
   background-color: #1e262c;
   display: block;
 }
@@ -34,9 +34,4 @@ table.tableau th {
 	font-size: 20px;
 	font-family: Arial, sans-serif;
   color: #ffffff;
-}
-
-.button {
-  display: block;
-  margin : auto;
 }
