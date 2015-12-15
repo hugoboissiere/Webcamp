@@ -181,7 +181,9 @@ while ($result = $movieDetail->fetch()) {
 						<span><?php echo $nb_places; ?></span>
 					</li>
 				</ul>
-				<input type="text" />
+				<div>
+					<input type="text" />
+			    </div>
 			</div>
 		</div>
 			<?php
