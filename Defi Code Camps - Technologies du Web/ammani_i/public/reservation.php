@@ -61,13 +61,13 @@ while ($result = $movieDetail->fetch()) {
 		}
 		$theaterDetail->closeCursor();
 		
-		$languageDetail = $dbh->query("SELECT * FROM cw_medias_languages WHERE id = '" . $result2->language . "'")
-		$languageDetail->setFetchMode(PDO::FETCH_OBJ);
-		while($result4 = $languageDetail->fetch())
-		{
-			$langue = $result4->name;
-		}
-		$languageDetail->closeCursor();
+		// $languageDetail = $dbh->query("SELECT * FROM cw_medias_languages WHERE id = '" . $result2->language . "'")
+		// $languageDetail->setFetchMode(PDO::FETCH_OBJ);
+		// while($result4 = $languageDetail->fetch())
+		// {
+		// 	$langue = $result4->name;
+		// }
+		// $languageDetail->closeCursor();
 	}
 
 	$sessionDetail->closeCursor();
@@ -149,7 +149,7 @@ while ($result = $movieDetail->fetch()) {
 						<span class="dataTitle">Langue</span>
 						<span class="dataContent"><?php echo $result->language; ?></span>
 					</li>
-
+						<span><?php echo $date . $subtitles . $nb_places . $cinemaName . $adress . $countryName . $langue; ?></span>
 					<li>
 						<span class="dataPlot">Description</span>
 						<span class="dataContent"><?php echo $result->plot; ?></span>
