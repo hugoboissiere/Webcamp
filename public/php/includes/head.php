@@ -218,7 +218,7 @@ and open the template in the editor.
                             <br />
                             <?php
                 if(!isset($_SESSION['id']))
-                    echo '<li><a href="inscription.php">Créer un compte</a>/<a href="identification.php">Se connecter</a></li>';
+                    echo '<li><a href="inscription.php">Créer un compte</a><a href="identification.php">Se connecter</a></li>';
                 else
                     echo '<li><a href="deconnexion.php">Deconnexion</a></li>';
                 ?>
