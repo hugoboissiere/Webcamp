@@ -30,7 +30,9 @@ $statusListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_sta
 $statusListAdd->setFetchMode(PDO::FETCH_OBJ);
 $activityListAdd= $dbh->query("SELECT name FROM cw_human_resources_memberships_activity  WHERE archive = 'false'");
 $activityListAdd->setFetchMode(PDO::FETCH_OBJ);
-echo '<p style="color:#68D2C3;">INSCRIPTION<br/><p/>';
+echo '<div class="titre">
+        <p style="color:#68D2C3;">INSCRIPTION<br/><p/>;
+      </div>'
 echo '<br />';
 
 
@@ -80,7 +82,7 @@ echo '<div class="formu">
                 <br/>
                 <label for="country">Pays : </label>
                 <select name="country" id="country" required>
-            </div>';
+        </div>';
                 ?>
                 <?php
 
