@@ -16,42 +16,42 @@ while ($result = $session->fetch())
 {
 	$nb_places = $result->nb_place;
 }
-echo $nb."<br>";
+
 $session->closeCursor();
 
 $i = 0;
 
 while ($i < $_POST['places'])
  {
-// 	if (isset($_POST['envoie']))
-// 	{
+	if (isset($_POST['envoie']))
+	{
 	
-// 		$req = $dbh->prepare("INSERT INTO places_vendues"
-// 						. "(id_film, id_cinema, date_vente, id_utilisateur)"
-// 						. "VALUES(:theater, :movie, :date, :member)");
+		$req = $dbh->prepare("INSERT INTO places_vendues"
+						. "(id_film, id_cinema, date_vente, id_utilisateur)"
+						. "VALUES(:theater, :movie, :date, :member)");
 	
-// 		$req->bindParam(":movie", $_POST["movie"]);
+		$req->bindParam(":movie", $_POST["movie"]);
 	
-// 		$req->bindParam(":theater", $_POST["theater"]);
+		$req->bindParam(":theater", $_POST["theater"]);
 	
-// 		$req->bindParam(":date", date('Y-m-d H:i:s'));
+		$req->bindParam(":date", date('Y-m-d H:i:s'));
 	
-// 		$req->bindParam(":member", $_POST["member"]);
+		$req->bindParam(":member", $_POST["member"]);
 	
-// 		$req->execute();
-// 	}
+		$req->execute();
+	}
 		$nb++;
 		$i++;
 	
  }
- echo $nb;
-// $update = $dbh->prepare("UPDATE cw_medias_movies "
-// 		. "SET nb_entrees = nb_entrees + :nb "
-// 		. "WHERE id = ".$_POST["movie"]);
-// 		$update->bindParam(":nb", $nb);
-// 		$update->execute();
-// $moviesTitleList->closeCursor();
 
-//header('Location:programmation.php');
+$update = $dbh->prepare("UPDATE cw_medias_movies "
+		. "SET nb_entrees = nb_entrees + :nb "
+		. "WHERE id = ".$_POST["movie"]);
+		$update->bindParam(":nb", $nb);
+		$update->execute();
+$moviesTitleList->closeCursor();
+
+header('Location:programmation.php');
 
 ?>
