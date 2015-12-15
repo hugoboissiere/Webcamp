@@ -165,12 +165,12 @@ while ($result = $movieDetail->fetch()) {
 						<span class="dataContent"><?php echo $result->plot; ?></span>
 					</li>
 					<li>
-						<span>Adresse</span>
-						<span><?php echo $adress; ?></span>
-					</li>
-					<li>
 						<span>Cinéma</span>
 						<span><?php echo $cinemaName; ?></span>
+					</li>
+					<li>
+						<span>Adresse</span>
+						<span><?php echo $adress; ?></span>
 					</li>
 					<li>
 						<span>Horaire</span>
