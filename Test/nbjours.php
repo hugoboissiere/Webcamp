@@ -6,12 +6,12 @@ $section->setFetchMode(PDO::FETCH_OBJ);
 
 while ($result = $section->fetch())
 {
-	$jour1 = $dbh->query("SELECT AVG(DATEDIFF(NOW(), publicationtime)), divjour AS entrees FROM cw_medias_movies WHERE id =" . $result->id);
+	$jour1 = $dbh->query("SELECT AVG(DATEDIFF(NOW(), publicationtime)) AS moy_entree_jour FROM cw_medias_movies WHERE id =" . $result->id);
 	$jour1->setFetchMode(PDO::FETCH_OBJ);
 	while ($result2 = $jour1->fetch())
 		{
-			echo $result2->divjour . "<br>";
-			
+			$nbjour = $result2->moy_entree_jour;
+			echo $nbjour . "<br>";
 		}
 	$jour1->closeCursor();
 }
