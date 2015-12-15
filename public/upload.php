@@ -2,7 +2,8 @@
 if ($_FILES['profilpic']['error'] > 0)
 	$erreur = "Erreur lors du transfert";
 
-// $img_extensions = array('jpg', 'jpeg', 'gif', 'png');
+$img_extensions = array('jpg', 'jpeg', 'gif', 'png');
+print_r($img_extensions);
 // //1. strrchr renvoie l'extension avec le point (« . »).
 // //2. substr(chaine,1) ignore le premier caractère de chaine.
 // //3. strtolower met l'extension en minuscules.
