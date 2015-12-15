@@ -7,9 +7,12 @@ table {
 }
 
 table.tableau {
-	border-collapse: collapse;
-    border-radius: 1000px; 
+	border-collapse: collapse; 
     text-align: center;
+}
+
+tbody.tableau{
+  border-radius: 1000px;
 }
 
 table.tableau td, th {
