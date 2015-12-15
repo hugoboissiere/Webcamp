@@ -20,7 +20,7 @@ $image_size = getimagesize($_FILES['profilpic']['tmp_name']);
 if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
 	$erreur = "Image trop grande";
 else
-	print_r($image_size);
+	echo "CAGIBI";
 print_r($_FILES);
 
 if($erreur)
