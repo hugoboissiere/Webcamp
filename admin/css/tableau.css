@@ -9,6 +9,7 @@ table {
 table.tableau {
 	  border-collapse: collapse; 
     text-align: center;
+    height: 800px;
 }
 
 table.tableau td{
