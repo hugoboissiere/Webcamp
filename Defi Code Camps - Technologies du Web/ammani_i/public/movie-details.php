@@ -74,7 +74,7 @@ $(document).ready(function(){
           <span class="dataContent"><?php echo $result->releaseDate; ?></span>
         </li>
         <li>
-          <span class="dataTitle">Durée</span>
+          <span class="dataTitle">Duree</span>
           <span class="dataContent"><?php echo $result->runningTime; ?> Minutes</span>
         </li>
         <li>
@@ -82,7 +82,7 @@ $(document).ready(function(){
           <span class="dataContent"><?php echo $result->genre;?></span>
         </li>
         <li>
-          <span class="dataTitle">Réalisateur</span>
+          <span class="dataTitle">Realisateur</span>
           <span class="dataContent"><?php echo $result->realisator; ?></span>
         </li>
         <li>
