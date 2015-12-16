@@ -22,6 +22,7 @@ table.tableau td{
 table.tableau th{
     color: #ffffff;
     font-size: 10px;
+    width: 200px;
 }
 
 .titre {
