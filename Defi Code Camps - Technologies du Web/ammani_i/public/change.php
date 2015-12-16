@@ -26,7 +26,7 @@ $newsletter = $_POST['newsletter'];
 
 // print_r($_FILES);
 print_r($_FILES);
-if(isset($_FILES['profilpic']['name']))
+if($_FILES['profilpic']['name'] != "")
 	echo "yaourt";
 else
 	echo "eee";
