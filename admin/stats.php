@@ -10,6 +10,7 @@ include("php/includes/navigator.php");
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/tableau.css"></link>
 	<p class="titre">Statistiques des films</p>
+	<div style="height:50px;display:block;"></div>
 	<table class="tableau">
       	<tr>
          	<th>Film</th>
