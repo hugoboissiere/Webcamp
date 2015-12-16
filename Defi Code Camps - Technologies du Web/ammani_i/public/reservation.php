@@ -184,7 +184,9 @@ while ($result = $movieDetail->fetch()) {
 			</div>
 		</div>
 	</div>
-		<div id="reservation">
+	<?php if ($_SESSION['email'])
+	{
+		echo '	<div id="reservation">
 			<form method="post" action="reserver.php">
 				<fieldset>
 					<legend>Reservation</legend>
@@ -202,15 +204,17 @@ while ($result = $movieDetail->fetch()) {
 							<option value="9">9</option>
 							<option value="10">10</option>
 						</select><br/>
-						<input type="hidden" name="movie" value=<?php echo ' "'.$id.'" '?> />
-						<input type="hidden" name="theater" value=<?php echo ' "'.$idTheater.'"  '?> />
-						<input type="hidden" name="member" value=<?php echo ' "'.$_SESSION['id'].'" ' ?> />
-						<input type="hidden" name="session" value=<?php echo ' "'.$id_sessions.'" ' ?> />
+						<input type="hidden" name="movie" value= "'.$id.'" />
+						<input type="hidden" name="theater" value="'.$idTheater.'" />
+						<input type="hidden" name="member" value="'.$_SESSION['id'].'" />
+						<input type="hidden" name="session" value="'.$id_sessions.'" />
 							<br/>
 							<input type="submit" name="envoie" value="Valider" />
 				</fieldset>
 			</form>
-		</div>
+		</div>';
+	}
+		?>
 	</div>
 			<?php
 
