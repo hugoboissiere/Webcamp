@@ -96,7 +96,7 @@ echo '<div class="formu">
 echo '                </select><br/>
                 <br/>
                 <label for="mail">Email : </label>
-                <input type="email" name="email" id="mail"class"champ" placeholder="Ex : laurent.dupont@gmail.com" required><br/>
+                <input type="email" name="email" id="mail"class="champ" placeholder="Ex : laurent.dupont@gmail.com" required><br/>
                 <br/>
                 <label for="status">Statut : </label>
                 <select name="status" id="status">';
