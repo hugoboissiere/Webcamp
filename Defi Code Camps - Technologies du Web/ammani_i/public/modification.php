@@ -26,9 +26,6 @@ echo '<form method="post" action="change.php" id="addForm" enctype="multipart/fo
 <label for="password">Mot de passe : </label>
 <input type="password" type="password" name="password" id="password" value="' . $_SESSION['password'] . '" pattern=".{5,}"><br/>
 <br/>
-<label for="password2">Retaper le mdp : </label>
-<input type="password" name="password2" id="password2" value="' . $_SESSION['password2'] . '" pattern=".{5,}"><br/>
-<br/>
 <label for="username">Pseudo : </label>
 <input type="text" name="username" id="username" value="' . $_SESSION['username'] . '"><br/>
 <br/>
