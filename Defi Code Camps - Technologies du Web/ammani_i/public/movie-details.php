@@ -104,6 +104,7 @@ $(document).ready(function(){
         <li>
           <span class="dataPlot">Description</span>
           <span class="dataContent"><?php echo $result->plot; ?></span><br/>
+          <br/>
         </ul>
       </div>
     </div>
