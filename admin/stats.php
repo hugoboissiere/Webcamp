@@ -76,6 +76,7 @@ include("php/includes/navigator.php");
 	while ($i < $result3)
 	{
 		$classe1 = $dbh->query("SELECT COUNT(id_film) from places_vendues WHERE id_cinema=" . $i);
+		$i++;
 		$classe1->setFetchMode(PDO::FETCH_OBJ);
 		$result4 = $classe1->fetch();
 		print_r($result4);
@@ -83,7 +84,7 @@ include("php/includes/navigator.php");
 		echo '<tr>
 				<td>' . $result4->id_film . '<td>
 			 </tr>';
-		$i++;
+		
 		}
 		$classe1->closeCursor();
 	}
