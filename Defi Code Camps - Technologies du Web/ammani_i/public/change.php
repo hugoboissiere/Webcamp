@@ -60,7 +60,7 @@ if(!$_SESSION['erreur'])
 		$_SESSION['erreur'] = "Le serveur a rencontré un problème lors du transfert de l'image.";
 }
 if($_SESSION['erreur'])
-	header('Location:modification.php');
+	// header('Location:modification.php');
 // echo "dddd";
 if($img == "" && ($_SESSION['image'] == 'malepic.jpg' || $_SESSION['image'] == 'femalepic.jpg'))
 {
