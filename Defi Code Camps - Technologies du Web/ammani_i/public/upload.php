@@ -22,4 +22,13 @@ if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
 
 if($erreur)
 	echo $erreur;
+//Créer un dossier 'fichiers/1/'
+if(!file_exists('resources/profilpic') && !is_dir('resources/profpic'))
+{
+  mkdir('resources/profilpic', 0755, true);
+} 
+else
+	echo "ala";
+//Créer un identifiant difficile à deviner
+  // $nom = md5(uniqid(rand(), true));
 ?>
