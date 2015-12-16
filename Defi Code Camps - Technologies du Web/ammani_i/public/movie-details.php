@@ -103,7 +103,7 @@ $(document).ready(function(){
         </li>
         <li>
           <span class="dataPlot">Description</span>
-          <span class="dataContent"><?php echo $result->plot; ?></span>
+          <span class="dataContent"><?php echo $result->plot; ?></span><br/>
         </ul>
       </div>
     </div>
