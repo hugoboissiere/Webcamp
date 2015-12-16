@@ -31,6 +31,8 @@ if($erreur)
 
   $nom = "photo_" . $_SESSION['id'];
 echo $nom;
+echo $extension_upload;
+
 
 
 
