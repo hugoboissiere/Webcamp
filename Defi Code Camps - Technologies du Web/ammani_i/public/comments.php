@@ -9,7 +9,7 @@ if (isset($_POST['coco']))
 	
 		$req = $dbh->prepare("INSERT INTO Commentaires"
 						. "(username, commentaire, date, region)"
-						. "VALUES(:username, :commentaire, :date, :region)");
+						. "VALUES(:username, :commentaire, :date, :country)");
 	
 		$req->bindParam(":username", $_POST["username"]);
 	
@@ -17,10 +17,11 @@ if (isset($_POST['coco']))
 	
 		$req->bindParam(":date", date('Y-m-d H:i:s'));
 	
-		$req->bindParam(":region", $_POST["region"]);
+		$req->bindParam(":country", $_POST["country"]);
 	
 		$req->execute();
 	}	
+
 
 
 header('Location:programmation.php');
