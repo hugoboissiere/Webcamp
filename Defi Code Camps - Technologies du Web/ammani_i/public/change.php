@@ -55,7 +55,7 @@ if(!$_SESSION['erreur'])
 
 	$resultat = move_uploaded_file($_FILES['profilpic']['tmp_name'],$truepath);
 	if ($resultat)
-		$img = $nom . "." $extension_upload;
+		$img = $nom . "." . $extension_upload;
 	else
 		$_SESSION['erreur'] = "Le serveur a rencontré un problème lors du transfert de l'image.";
 }
