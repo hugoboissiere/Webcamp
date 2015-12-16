@@ -22,17 +22,14 @@ if (!in_array($extension_upload,$img_extensions))
 $image_size = getimagesize($_FILES['profilpic']['tmp_name']);
 if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
 	$erreur = "Image trop grande";
-echo "dddd";
 if($erreur)
 	echo $erreur;
 else
 {
-	echo "aa";
 	$nom = "photo_" . $_SESSION['id'];
 
 	$dir = "resources/profilpic/";
 	$truepath = $dir . $nom . "." . $extension_upload;
-	// echo $truepath;
 
 	$resultat = move_uploaded_file($_FILES['profilpic']['tmp_name'],$truepath);
 	if ($resultat)
