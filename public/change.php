@@ -70,7 +70,7 @@ if(!$img)
 		$img = 'femalepic.jpg';
 	}
 }
-
+echo "trump";
 $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $firstname . "' , password = '". $password ."', archive = '". $archive . "', lastname = '" . $lastname ."' , username = '" . $username . "', sex = '" . $sex . "' , phoneHome = '" . $phoneHome ."' , phoneMobile = '" . $phoneMobile ."' , neighborhood = '" . $neighborhood ."' , city = '" . $city . "' , country = '" . $country . "' , email = '" . $email . "' , membership = '" . $membership . "' , newsletter = '" . $newsletter . "', status = '". $status . "' , activity = '" . $activity ."', profile_pic = '" . $img . "' WHERE id =  '".$_SESSION['id']."' ");
 
 echo "yes";
