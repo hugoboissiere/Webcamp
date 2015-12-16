@@ -54,7 +54,7 @@ include("php/includes/navigator.php");
 		$jour1->closeCursor();
 	}
 	$test->closeCursor();
-	$section->closeCursor();
+	// $section->closeCursor();
     ?>
     </table>
     <?php echo "test2" ?>
