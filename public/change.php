@@ -24,6 +24,7 @@ $membership = $_POST['membership'];
 $newsletter = $_POST['newsletter'];
 $archive = $_POST['archive'];
 
+print_r($_FILES);
 // $maxsize = 1048576;
 // $maxwidth = 500;
 // $maxheight = 500;
