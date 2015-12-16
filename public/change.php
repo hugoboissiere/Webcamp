@@ -5,7 +5,7 @@
 session_start();
 
 include("php/includes/database.php");
-
+$_SESSION['erreur'] = "";
 // echo "lera";
 $firstname = $_POST['firstname'];
 $password = $_POST['password'];
