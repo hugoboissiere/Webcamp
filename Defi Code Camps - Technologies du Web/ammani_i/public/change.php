@@ -100,6 +100,6 @@ echo "yes";
             $_SESSION['image'] = $result->profile_pic;
 
  echo "beaccor";
-// header('Location:index.php');
+header('Location:index.php');
 
 ?>
