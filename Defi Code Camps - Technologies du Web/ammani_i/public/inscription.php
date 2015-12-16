@@ -50,16 +50,16 @@ echo '<div class="formu">
                 <input type="radio" name="newsletter" value="No" id="newsletterOff"class="radio" checked><br/>
                 <br/>
                 <label for="name">Nom : </label>
-                <input type="text" name="lastname" id="name"class="brak" placeholder="Ex : Dupont" required><br />
+                <input type="text" name="lastname" id="name"class="champ" placeholder="Ex : Dupont" required><br />
                 <br/>
                 <label for="firstname">Prénom : </label>
-                <input type="text" name="firstname" id="firstname"class="brak" placeholder="Ex : Laurent" required><br />
+                <input type="text" name="firstname" id="firstname"class="champ" placeholder="Ex : Laurent" required><br />
                 <br/>
                 <label for="password">Mot de passe : </label>
-                <input type="password" name="password" id="password"class="brak" placeholder="Au moins 5 caractères" pattern=".{5,}" required><br />
+                <input type="password" name="password" id="password"class="champ" placeholder="Au moins 5 caractères" pattern=".{5,}" required><br />
                 <br/>
                 <label for="username">Pseudo : </label>
-                <input type="text" name="username" id="username"class="brak" placeholder="Ex : laurent_dupont" required><br />
+                <input type="text" name="username" id="username"class="champ" placeholder="Ex : laurent_dupont" required><br />
                 <br/>
                 Sexe : 
                 <label for="man">Homme</label>
