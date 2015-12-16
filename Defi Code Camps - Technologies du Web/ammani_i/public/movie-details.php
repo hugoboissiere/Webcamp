@@ -137,7 +137,7 @@ $(document).ready(function(){
 
 <?php
 
-$rep = $dbh->query('SELECT * FROM Commentaires WHERE idmovie = '.$id.' AND region = "'.$_SESSION['country'].'" ');
+$rep = $dbh->query('SELECT * FROM Commentaires WHERE id_film = '.$id.' AND region = "'.$_SESSION['country'].'" ');
 $rep->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $rep->fetch())
 {
