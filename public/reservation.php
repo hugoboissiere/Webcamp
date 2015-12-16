@@ -237,11 +237,13 @@ while ($result = $movieDetail->fetch()) {
 	<br/>
 	<div class="commentaires">
 		<h2>Zone de commentaire</h2>
-		<form method="POST" action="">
+		<form method="POST" action="comments.php">
 			<br/>
 			<label for="commentaire">Poster un commentaire :</label><br/>
 			<br/>
-			<textarea name="commentaire" cols="50" rows="10"></textarea>
+			<textarea name="commentaire" cols="50" rows="10"></textarea><br/>
+			<br/>
+			<input type="submit" name="envoie" value="Envoyer" />
 
 			<?php
 
