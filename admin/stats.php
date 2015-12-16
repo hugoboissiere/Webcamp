@@ -63,9 +63,6 @@ include("php/includes/navigator.php");
 		<tr>
 			<th>Nom du cinéma</th>
 			<th>Nombre total d'entrées</th>
-			<th>Moyenne d'entree par jour</th>
-			<th>Moyenne d'entree par semaine</th>
-			<th>Moyenne d'entree par mois</th>
 		</tr>
 	<?php
 	$classe = $dbh->query("SELECT COUNT(id) as total from cw_cinema_theaters");
