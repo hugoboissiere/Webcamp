@@ -27,6 +27,7 @@ if($erreur)
 	echo $erreur;
 else
 {
+	echo "aa";
 	$nom = "photo_" . $_SESSION['id'];
 
 	$dir = "resources/profilpic/";
