@@ -23,6 +23,7 @@ if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
 if($erreur)
 	echo $erreur;
 //Créer un dossier 'fichiers/1/'
+echo "test :";
 if(!file_exists('resources/profilpic') && !is_dir('resources/profpic'))
 {
   mkdir('resources/profilpic', 0755, true);
