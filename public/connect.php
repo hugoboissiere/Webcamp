@@ -6,11 +6,14 @@ include("php/includes/database.php");
 if (isset($_POST["InsertMembersOrSubscribers"])) {
     $_POST["cardNumber"] = "0"; // Pas de numero de compte pour l'instant
   
-    
+        if($_POST['sex'] == 'Male')
+            $defaultpic = 'malepic.jpg';
+        else
+            $defaultpic = 'femalepic.jpg';
 
         $insert = $dbh->prepare("INSERT INTO cw_human_resources_memberships"
-            . "(firstname,lastname,password,cardNumber,username,sex,phoneHome,phoneMobile,neighborhood,city,country,email,status,activity,membership,newsletter)"
-            . " VALUES(:firstname,:lastname,:password,:cardNumber,:username,:sex,:phoneHome,:phoneMobile,:neighborhood,:city,:country,:email,:status,:activity,:membership,:newsletter)");
+            . "(firstname,lastname,password,cardNumber,username,sex,phoneHome,phoneMobile,neighborhood,city,country,email,status,activity,membership,newsletter, profile_pic)"
+            . " VALUES(:firstname,:lastname,:password,:cardNumber,:username,:sex,:phoneHome,:phoneMobile,:neighborhood,:city,:country,:email,:status,:activity,:membership,:newsletter, :pic)");
         $insert->bindParam(":firstname", $_POST["firstname"]);
         $insert->bindParam(":lastname", $_POST["lastname"]);
         $insert->bindParam(":password", $_POST["password"]);
@@ -27,6 +30,7 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
         $insert->bindParam(":activity", $_POST["activity"]);
         $insert->bindParam(":membership", $_POST["membership"]);
         $insert->bindParam(":newsletter", $_POST["newsletter"]);
+        $insert->bindParam(":pic", $defaultpic);
         $insert->execute();
 
         $moviesCompleteList = $dbh->query('SELECT * FROM cw_human_resources_memberships WHERE email = "' . $_POST['email'] . '" ');
@@ -51,6 +55,7 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
             $_SESSION['membership'] = $result->membership;
             $_SESSION['newsletter'] = $result->newsletter;
             $_SESSION['archive'] = $result->archive;
+            $_SESSION['image'] = $result->profile_pic;
             header('Location: index.php');
         }
     
