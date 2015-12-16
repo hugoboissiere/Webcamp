@@ -71,10 +71,10 @@ include("php/includes/navigator.php");
 	$classe = $dbh->query("SELECT COUNT(id) as total from cw_cinema_theaters");
 	$classe->setFetchMode(PDO::FETCH_OBJ);
 	$result3 = $classe->fetch();
-	print_r($result3);
 	$i = 0;
-	print_r($result3->total);
-	while ($i < $result3)
+	$nb = $result3->total;
+	print_r($nb);
+	while ($i < $nb)
 	{
 		$classe1 = $dbh->query("SELECT COUNT(id_film) from places_vendues WHERE id_cinema=" . $i);
 		$classe1->setFetchMode(PDO::FETCH_OBJ);
