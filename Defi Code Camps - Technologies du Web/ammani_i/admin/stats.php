@@ -66,6 +66,6 @@ include("php/includes/navigator.php");
 		</tr>
 	</table>
 	</main>
-    <script src="js/layoutNavigator.js"></scrip
+    <script src="js/layoutNavigator.js"></script>
 </body>
 </html>
