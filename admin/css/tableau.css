@@ -35,3 +35,7 @@ table.tableau th{
   display: block;
   margin : auto;
 }
+
+.titrefilm {
+  font-family: "Arial Black";
+}
