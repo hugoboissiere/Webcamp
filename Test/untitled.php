@@ -15,21 +15,13 @@ $moviesCompleteList->closeCursor();
 	   <p class="titre">Statistiques des films</p>
 	   <table class="tableau">
       <tr>
-         <th>Film</th>
-         <th>Genre</th>
-         <th>Durée (en min)</th>
-         <th>Pays/Continent</th>
-         <th>Date de publication</th>
-         <th>Nombre d'entrées totaux</th>
-         <th>Différence de jours</th>
-         <th>Moyenne d'entrées par jour</th>
-         <th>Moyenne d'entrées par semaine</th>
-         <th>Moyenne d'entrées par mois</th>
+         <th>Nom du cinéma</th>
+         <th>Nombre total d'entrées</th>
+         <th>Moyenne d'entree par jour</th>
+         <th>Moyenne d'entree par semaine</th>
+         <th>Moyenne d'entree par mois</th>
       </tr>
-      <?php
-      include("stats.php");
-      ?>
-      </table>
+   </table>
    </head>
    </body>
 </html>
