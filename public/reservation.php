@@ -225,7 +225,7 @@ while ($result = $movieDetail->fetch()) {
 		}
 		else
 		{
-			echo '	<div cols="50" rows="10" id="reservation">
+			echo '	<div id="reservation">
 				<p>Nous sommes complets !!!<br/>
 				<p>Desolé</p>
 			</div>';
