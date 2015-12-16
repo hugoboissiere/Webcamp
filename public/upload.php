@@ -41,7 +41,7 @@ if ($resultat)
 else
 	echo "lol nn";
 
-
+echo $truepath;
 
 
 
