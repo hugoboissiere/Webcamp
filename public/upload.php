@@ -15,9 +15,9 @@ $img_extensions = array('jpg', 'jpeg', 'gif', 'png');
 // //2. substr(chaine,1) ignore le premier caractère de chaine.
 // //3. strtolower met l'extension en minuscules.
 $extension_upload = strtolower(substr(strrchr($_FILES['profilpic']['name'], '.'), 1));
-if (in_array($extension_upload,$img_extensions))
+if (!in_array($extension_upload,$img_extensions))
 {
-	echo "Extension correcte";
+	$erreur = "Extension correcte";
 }
 $image_size = getimagesize($_FILES['profilpic']['tmp_name']);
 if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
@@ -26,24 +26,18 @@ if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
 if($erreur)
 	echo $erreur;
 
-// Créer un identifiant difficile à deviner
-  
-
-  $nom = "photo_" . $_SESSION['id'];
-
-$dir = "resources/profilpic/";
-$truepath = $dir . $nom . "." . $extension_upload;
-// echo $truepath;
-
-$resultat = move_uploaded_file($_FILES['profilpic']['tmp_name'],$truepath);
-if ($resultat)
-	echo "Transfert réussi";
 else
-	echo "Fail <br>";
+{
+	$nom = "photo_" . $_SESSION['id'];
 
-echo $truepath . "<br>";
-print_r($_FILES);
+	$dir = "resources/profilpic/";
+	$truepath = $dir . $nom . "." . $extension_upload;
+	// echo $truepath;
 
-
-
+	$resultat = move_uploaded_file($_FILES['profilpic']['tmp_name'],$truepath);
+	if ($resultat)
+		header("Location : espace_membre.php");
+	else
+		echo "Fail <br>";
+}
 ?>
