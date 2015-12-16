@@ -68,18 +68,17 @@ include("php/includes/navigator.php");
 			<th>Moyenne d'entree par mois</th>
 		</tr>
 	<?php
-	$classe = $dbh->query("SELECT COUNT(id) from cw_cinema_theaters");
+	$classe = $dbh->query("SELECT COUNT(id) as total from cw_cinema_theaters");
 	$classe->setFetchMode(PDO::FETCH_OBJ);
 	$result3 = $classe->fetch();
 	print_r($result3);
 	$i = 0;
-	print_r($result3->COUNT(id));
+	print_r($result3->total);
 	while ($i < $result3)
 	{
 		$classe1 = $dbh->query("SELECT COUNT(id_film) from places_vendues WHERE id_cinema=" . $i);
 		$classe1->setFetchMode(PDO::FETCH_OBJ);
 		$result4 = $classe1->fetch();
-		print_r($result4);
 		{
 		echo '<tr>
 				<td>' . $result4->id_film . '<td>
