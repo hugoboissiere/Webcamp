@@ -64,7 +64,6 @@ if($_SESSION['erreur'])
 // echo "dddd";
 if($img == "" && ($_SESSION['image'] == 'malepic.jpg' || $_SESSION['image'] == 'femalepic.jpg'))
 {
-	echo "few";
 	if($_POST['sex'] == 'Male')
 	{
 		$img = 'malepic.jpg';
@@ -74,6 +73,8 @@ if($img == "" && ($_SESSION['image'] == 'malepic.jpg' || $_SESSION['image'] == '
 		$img = 'femalepic.jpg';
 	}
 }
+if ($img == "")
+	$img = $_SESSION['image'];
 // echo "trui";
 $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $firstname . "' , password = '". $password . "', lastname = '" . $lastname ."' , username = '" . $username . "', sex = '" . $sex . "' , phoneHome = '" . $phoneHome ."' , phoneMobile = '" . $phoneMobile ."' , neighborhood = '" . $neighborhood ."' , city = '" . $city . "' , country = '" . $country . "' , email = '" . $email . "' , membership = '" . $membership . "' , newsletter = '" . $newsletter . "', status = '". $status . "' , activity = '" . $activity ."', profile_pic = '" . $img . "' WHERE id =  '".$_SESSION['id']."' ");
 
