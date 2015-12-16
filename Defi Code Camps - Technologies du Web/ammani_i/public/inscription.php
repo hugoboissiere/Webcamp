@@ -50,16 +50,16 @@ echo '<div class="formu">
                 <input type="radio" name="newsletter" value="No" id="newsletterOff"class="radio" checked><br/>
                 <br/>
                 <label for="name">Nom : </label>
-                <input type="text" name="lastname" id="name" placeholder="Ex : Dupont" required><br />
+                <input type="text" name="lastname" id="name"class="brak" placeholder="Ex : Dupont" required><br />
                 <br/>
                 <label for="firstname">Prénom : </label>
-                <input type="text" name="firstname" id="firstname" placeholder="Ex : Laurent" required><br />
+                <input type="text" name="firstname" id="firstname"class="brak" placeholder="Ex : Laurent" required><br />
                 <br/>
                 <label for="password">Mot de passe : </label>
-                <input type="password" name="password" id="password" placeholder="Au moins 5 caractères" pattern=".{5,}" required><br />
+                <input type="password" name="password" id="password"class="brak" placeholder="Au moins 5 caractères" pattern=".{5,}" required><br />
                 <br/>
                 <label for="username">Pseudo : </label>
-                <input type="text" name="username" id="username" placeholder="Ex : laurent_dupont" required><br />
+                <input type="text" name="username" id="username"class="brak" placeholder="Ex : laurent_dupont" required><br />
                 <br/>
                 Sexe : 
                 <label for="man">Homme</label>
@@ -68,16 +68,16 @@ echo '<div class="formu">
                 <input type="radio" name="sex" value="Female" id="woman"  class="radio" checked><br />
                 <br/>
                 <label for="phoneHome">Téléphone Fixe : </label>
-                <input type="tel" name="phoneHome" id="phoneHome" placeholder="Ex : +221 01 023 45 87"><br />
+                <input type="tel" name="phoneHome" id="phoneHome"class="brak" placeholder="Ex : +221 01 023 45 87"><br />
                 <br/>
                 <label for="phoneMobile">Téléphone Mobile : </label>
-                <input type="tel" name="phoneMobile" id="phoneMobile" placeholder="Ex : +221 01 023 45 87"><br />
+                <input type="tel" name="phoneMobile" id="phoneMobile"class="brak" placeholder="Ex : +221 01 023 45 87"><br />
                 <br/>
                 <label for="neighborhood">Quartier : </label>
-                <input type="text" id="neighborhood" name="neighborhood" placeholder=""><br />
+                <input type="text" id="neighborhood" name="neighborhood"class="brak" placeholder=""><br />
                 <br/>
                 <label for="city">Ville : </label>
-                <input type="text" name="city" id="city" placeholder="Dakar"><br />
+                <input type="text" name="city" id="city"class="brak" placeholder="Dakar"><br />
                 <br/>
                 <label for="country">Pays : </label>
                 <select name="country" id="country" required>
