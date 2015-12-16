@@ -193,33 +193,43 @@ while ($result = $movieDetail->fetch()) {
 	</div>
 	<?php if ($_SESSION['email'])
 	{
-		echo '	<div id="reservation">
-			<form method="post" action="reserver.php">
-				<fieldset>
-					<legend>Reservation</legend>
-						<br/>
-						<label for="places">Nombres de places :</label>
-						<select name="places">
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
-							<option value="7">7</option>
-							<option value="8">8</option>
-							<option value="9">9</option>
-							<option value="10">10</option>
-						</select><br/>
-						<input type="hidden" name="movie" value="'.$id.'" />
-						<input type="hidden" name="theater" value="'.$idTheater.'" />
-						<input type="hidden" name="member" value="'.$_SESSION['id'].'" />
-						<input type="hidden" name="session" value="'.$id_sessions.'" />
+		if ($nb_places > 0)
+		{
+			echo '	<div id="reservation">
+				<form method="post" action="reserver.php">
+					<fieldset>
+						<legend>Reservation</legend>
 							<br/>
-							<input type="submit" name="envoie" value="Valider" />
-				</fieldset>
-			</form>
-		</div>';
+							<label for="places">Nombres de places :</label>
+							<select name="places">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+							</select><br/>
+							<input type="hidden" name="movie" value="'.$id.'" />
+							<input type="hidden" name="theater" value="'.$idTheater.'" />
+							<input type="hidden" name="member" value="'.$_SESSION['id'].'" />
+							<input type="hidden" name="session" value="'.$id_sessions.'" />
+								<br/>
+								<input type="submit" name="envoie" value="Valider" />
+					</fieldset>
+				</form>
+			</div>';
+		}
+		else
+		{
+			echo '	<div id="reservation">
+				<p>Nous sommes complets !!!<br/>
+				<p>Desolé</p>
+			</div>';
+		}
 	}
 		?>
 	</div>
