@@ -24,7 +24,6 @@ while($result = $sessionsCompleteList->fetch())
 	$id = $result->idMovie;
 }
 
-
 $id_sessions = $_GET['id'];
 
 

@@ -21,4 +21,5 @@ if (isset($_POST['coco']))
 	
 		$req->execute();
 
+header('Location:programmation.php');
 ?>
