@@ -100,6 +100,6 @@ $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $f
  // echo "beaccor";
 if($_SESSION['erreur'] == "")
 	header('Location:espace_membre.php');
-else
-	header('Location:modification.php');
+// else
+// 	header('Location:modification.php');
 ?>
