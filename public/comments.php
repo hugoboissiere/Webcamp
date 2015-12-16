@@ -26,5 +26,5 @@ if (isset($_POST['coco']))
 
 
 
-header('Location:movie-details.php');
+header('Location:movie-details.php?id=' .$_POST["idmovie"]. ' ');
 ?>
