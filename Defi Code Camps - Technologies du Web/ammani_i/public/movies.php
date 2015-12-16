@@ -11,6 +11,7 @@ $addJS =  array("");
 // Queries de cette page
 $addPHP = array("");
 include("php/includes/head.php");
+$_SESSION['erreur'] = "";
 ?>
 <ul id="og-grid" class="og-grid">
     

@@ -11,6 +11,7 @@ $addJS =  array("");
 // Queries de cette page
 $addPHP = array("");
 include("php/includes/head.php");
+$_SESSION['erreur'] = "";
 ?>
 
 <h2 class="clip-text clip-text_one">L'équipe</h2>
