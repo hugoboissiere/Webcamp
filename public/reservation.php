@@ -204,7 +204,7 @@ while ($result = $movieDetail->fetch()) {
 							<option value="9">9</option>
 							<option value="10">10</option>
 						</select><br/>
-						<input type="hidden" name="movie" value= "'.$id.'" />
+						<input type="hidden" name="movie" value="'.$id.'" />
 						<input type="hidden" name="theater" value="'.$idTheater.'" />
 						<input type="hidden" name="member" value="'.$_SESSION['id'].'" />
 						<input type="hidden" name="session" value="'.$id_sessions.'" />
@@ -216,6 +216,9 @@ while ($result = $movieDetail->fetch()) {
 	}
 		?>
 	</div>
+	<br/>
+	<br/>
+	<h2>Zone de commentaire</h2>
 			<?php
 
 		}
