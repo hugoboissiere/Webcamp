@@ -20,6 +20,8 @@ if (isset($_POST['coco']))
 		$req->bindParam(":region", $_POST["region"]);
 	
 		$req->execute();
+	}	
+
 
 header('Location:programmation.php');
 ?>
