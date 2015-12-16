@@ -79,11 +79,11 @@ include("php/includes/navigator.php");
 		$result4 = $classe1->fetch();
 		{
 		echo '<tr>
-				<td>' . $result3->id_cinema . '<td>
+				<td>' . $i->id_cinema . '<td>
 			 </tr>';
 		$i++;
 		}
-		$result3->closeCursor();
+		$classe1->closeCursor();
 	}
 	?>
 	</table>
