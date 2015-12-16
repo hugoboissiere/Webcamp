@@ -71,6 +71,7 @@ include("php/includes/navigator.php");
 	$classe = $dbh->query("SELECT COUNT(id) from cw_cinema_theaters");
 	$classe->setFetchMode(PDO::FETCH_OBJ);
 	$result3 = $classe->fetch();
+	print_r($result3);
 	$i = 0;
 	while ($i < $result3)
 	{
