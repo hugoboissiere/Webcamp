@@ -63,5 +63,6 @@ form
 
 .comzone
 {
-	background-color: #68D2C3;
+	/*background-color: ;*/
+	border: black 1px solid;
 }
