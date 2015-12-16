@@ -17,7 +17,7 @@ if (isset($_POST['coco']))
 	
 		$req->bindParam(":date", date('Y-m-d H:i:s'));
 	
-		$req->bindParam(":country", $_POST["country"]);
+		$req->bindParam(":country", $_POST["region"]);
 	
 		$req->execute();
 	}	
