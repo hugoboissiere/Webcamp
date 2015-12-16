@@ -10,6 +10,7 @@ include("php/includes/navigator.php");
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/tableau.css"></link>
 	<p class="titre">Statistiques des films</p>
+	<?php echo "test" ?>
 	<table class="tableau">
       	<tr>
          	<th>Film</th>
@@ -56,6 +57,7 @@ include("php/includes/navigator.php");
 	$section->closeCursor();
     ?>
     </table>
+    <?php echo "test2" ?>
     <p class="titre">Statistiques des films par cinéma</p>
     <table class="tableau">
 		<tr>
