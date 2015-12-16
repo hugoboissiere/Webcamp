@@ -246,7 +246,7 @@ while ($result = $movieDetail->fetch()) {
 			<br/>
 			<input type="hidden" name="username" value="'.$_SESSION['username'].'" />
 			<br/>
-			<input type="hidden" name="region" value="'.$_SESSION['region'].'" />
+			<input type="hidden" name="region" value="'.$_SESSION['country'].'" />
 			<br/>
 			<input type="submit" name="coco" value="Envoyer" />';
 			?>
