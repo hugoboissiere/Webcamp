@@ -195,7 +195,6 @@ and open the template in the editor.
                                     </span>
                                 </a>
                             </li>
-                            <li><a href="activites.php">Activités</a></li>
                             
                         </ul>
                     </li>
