@@ -109,11 +109,13 @@ $(document).ready(function(){
       </div>
     </div>
     <?php
-  echo '
-  <div class="commentaires"><br/>
-  <br/>
-    <h2>Zone de commentaire</h2>
-    <form method="POST" action="comments.php">
+    if($_SESSION['id'])
+    {
+      echo '
+      <div class="commentaires"><br/>
+      <br/>
+      <h2>Zone de commentaire</h2>
+      <form method="POST" action="comments.php">
       <br/>
       <label for="commentaire">Poster un commentaire :</label><br/>
       <br/>
@@ -125,7 +127,8 @@ $(document).ready(function(){
       <br/>
       <input type="submit" name="coco" value="Envoyer" />
       </div>';
-      ?>
+    }
+    ?>
 
     <?php
     
@@ -135,22 +138,22 @@ $(document).ready(function(){
 
   ?> 
 
-<?php
+  <?php
 
-$rep = $dbh->query('SELECT * FROM Commentaires WHERE id_film = '.$id.' AND region = "'.$_SESSION['country'].'" ');
-$rep->setFetchMode(PDO::FETCH_OBJ);
-while ($result = $rep->fetch())
-{
-?>
-<div class="comzone">
-  <p><?php  echo $result->username; ?>, le <?php echo $result->date; ?> : </p><br/>
-  <p><?php echo $result->commentaire; ?></p>
-</div>
+  $rep = $dbh->query('SELECT * FROM Commentaires WHERE id_film = '.$id.' AND region = "'.$_SESSION['country'].'" ');
+  $rep->setFetchMode(PDO::FETCH_OBJ);
+  while ($result = $rep->fetch())
+  {
+    ?>
+    <div class="comzone">
+      <p><?php  echo $result->username; ?>, le <?php echo $result->date; ?> : </p><br/>
+      <p><?php echo $result->commentaire; ?></p>
+    </div>
 
-<?php  
-}
+    <?php  
+  }
 
-?>
+  ?>
 
   <?php
   include("php/includes/scripts.php");
