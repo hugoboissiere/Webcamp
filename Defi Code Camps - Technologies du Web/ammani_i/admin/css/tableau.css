@@ -14,8 +14,7 @@ table.tableau {
 }
 
 table.tableau td{
-    margin: auto;
-    border-radius : 120px;
+    border-radius : 110px;
     background-color: #b3ffff;
     font-size: 14px;
 }
