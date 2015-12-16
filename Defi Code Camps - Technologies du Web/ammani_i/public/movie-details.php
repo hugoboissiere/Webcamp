@@ -115,7 +115,7 @@ $(document).ready(function(){
       echo '
       <div class="commentaires"><br/>
       <br/>
-      <h2>Zone de commentaire</h2>
+      <h2 style="text-align:center">Zone de commentaire</h2>
       <form method="POST" action="comments.php">
       <br/>
       <label for="commentaire">Poster un commentaire :</label><br/>
