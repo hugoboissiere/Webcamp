@@ -30,15 +30,15 @@ while ($result = $moviesCompleteList->fetch())
    $_SESSION['membership'] = $result->membership;
    $_SESSION['newsletter'] = $result->newsletter;
    $_SESSION['archive'] = $result->archive;
-   header('Location:index.php');
+   //header('Location:index.php');
 
 }
 
 $moviesCompleteList->closeCursor(); 
 
 	
-header('Location:identification.php');
-
+//header('Location:identification.php');
+print_r($_SESSION);
 }
 
 ?>
