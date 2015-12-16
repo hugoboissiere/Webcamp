@@ -105,7 +105,6 @@ $(document).ready(function(){
           <span class="dataPlot">Description</span>
           <span class="dataContent"><?php echo $result->plot; ?></span><br/>
           <div style="height:200px; display:block;"></div>
-          <br/>
         </ul>
       </div>
     </div>
@@ -121,8 +120,8 @@ $(document).ready(function(){
       <textarea name="commentaire" cols="50" rows="10"></textarea><br/>
       <br/>
       <input type="hidden" name="username" value="'.$_SESSION['username'].'" />
-      <br/>
       <input type="hidden" name="region" value="'.$_SESSION['country'].'" />
+      <input type="hidden" name="idmovie" value="'.$id.'" />
       <br/>
       <input type="submit" name="coco" value="Envoyer" />';
       ?>
