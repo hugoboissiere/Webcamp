@@ -44,7 +44,7 @@ while ($i < $_POST['places'])
 	
 		$req->bindParam(":member", $_POST["member"]);
 
-		$req->bindParam(":session", $_POST["id"]);
+		$req->bindParam(":id", $_GET["id"]);
 	
 		$req->execute();
 	}
