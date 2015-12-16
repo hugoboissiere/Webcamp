@@ -18,7 +18,7 @@ include("php/includes/head.php");
      <input type="file" name="profilpic" id="profilpic" /><br />
      <input type="submit" name="submit" value="Envoyer" />
 </form> 
-
+<?php echo $_SESSION['erreur']; ?>
 
 
 

@@ -6,9 +6,9 @@ $maxsize = 1048576;
 $maxwidth = 500;
 $maxheight = 500;
 if ($_FILES['profilpic']['error'] > 0)
-	$erreur = "Erreur lors du transfert";
+	$_SESSION['erreur'] = "Erreur lors du transfert";
 if ($_FILES['icone']['size'] > $maxsize)
-	$erreur = "Le fichier est trop gros";
+	$_SESSION['erreur'] = "Le fichier est trop gros";
 
 $img_extensions = array('jpg', 'jpeg', 'gif', 'png');
 // //1. strrchr renvoie l'extension avec le point (« . »).
@@ -17,14 +17,12 @@ $img_extensions = array('jpg', 'jpeg', 'gif', 'png');
 $extension_upload = strtolower(substr(strrchr($_FILES['profilpic']['name'], '.'), 1));
 if (!in_array($extension_upload,$img_extensions))
 {
-	$erreur = "Extension incorrecte";
+	$_SESSION['erreur'] = "Extension incorrecte";
 }
 $image_size = getimagesize($_FILES['profilpic']['tmp_name']);
 if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
-	$erreur = "Image trop grande";
-if($erreur)
-	echo $erreur;
-else
+	$_SESSION['erreur'] = "Image trop grande";
+if(!$_SESSION['erreur'])
 {
 	$nom = "photo_" . $_SESSION['id'];
 
@@ -35,6 +33,8 @@ else
 	if ($resultat)
 		header('Location:espace_membre.php');
 	else
-		echo "Fail <br>";
+		$_SESSION['erreur'] = "Le serveur a rencontré un problème lors du transfert de l'image.";
 }
+if($_SESSION['erreur'])
+	header('Location:test.php');
 ?>
