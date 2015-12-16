@@ -11,18 +11,18 @@ include("php/includes/navigator.php");
     <link rel="stylesheet" type="text/css" href="css/tableau.css"></link>
 	<p class="titre">Statistiques des films</p>
 	<table class="tableau">
-      <tr>
-         <th>Film</th>
-         <th>Genre</th>
-         <th>Durée (en min)</th>
-         <th>Pays/Continent</th>
-         <th>Date de publication</th>
-         <th>Nombre d'entrées totaux</th>
-         <th>Différence de jours</th>
-         <th>Moyenne d'entrées par jour</th>
-         <th>Moyenne d'entrées par semaine</th>
-         <th>Moyenne d'entrées par mois</th>
-      </tr>
+      	<tr>
+         	<th>Film</th>
+         	<th>Genre</th>
+         	<th>Durée (en min)</th>
+         	<th>Pays/Continent</th>
+         	<th>Date de publication</th>
+         	<th>Nombre d'entrées totaux</th>
+         	<th>Différence de jours</th>
+         	<th>Moyenne d'entrées par jour</th>
+         	<th>Moyenne d'entrées par semaine</th>
+         	<th>Moyenne d'entrées par mois</th>
+     	</tr>
     <?php
     $test = $dbh->query("SELECT * from cw_medias_movies"); 
 	$test->setFetchMode(PDO::FETCH_OBJ);
