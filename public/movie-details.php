@@ -123,7 +123,8 @@ $(document).ready(function(){
       <input type="hidden" name="region" value="'.$_SESSION['country'].'" />
       <input type="hidden" name="idmovie" value="'.$id.'" />
       <br/>
-      <input type="submit" name="coco" value="Envoyer" />';
+      <input type="submit" name="coco" value="Envoyer" />
+      </div>';
       ?>
 
     <?php
