@@ -58,6 +58,7 @@ include("php/includes/navigator.php");
     </table>
     <div style="height:100px;display:block;"></div>
     <p class="titre" >Statistiques des films par cinéma</p>
+    <div style="height:50px;display:block;"></div>
     <table class="tableau">
 		<tr>
 			<th>Nom du cinéma</th>
