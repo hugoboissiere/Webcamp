@@ -27,7 +27,13 @@ echo "test :";
 if(!file_exists('resources/profilpic') && !is_dir('resources/profpic'))
 {
   if(mkdir('resources/profilpic', 0755, true));
-  	echo "cçce";
+  {
+	echo "cçce";
+  }
+  else
+  {
+  	echo "ffff";
+  }
 } 
 else
 {
