@@ -6,6 +6,7 @@ session_start();
 
 include("php/includes/database.php");
 
+echo "lera";
 $firstname = $_POST['firstname'];
 $password = $_POST['password'];
 $lastname = $_POST['lastname'];
