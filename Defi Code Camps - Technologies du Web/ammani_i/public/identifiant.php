@@ -30,7 +30,7 @@ if (isset($_POST["email"]) AND isset($_POST["password"]))
          $_SESSION['membership'] = $result->membership;
          $_SESSION['newsletter'] = $result->newsletter;
          $_SESSION['archive'] = $result->archive;
-
+         $_SESSION['image'] = $result->profile_pic;
       }
 
    $moviesCompleteList->closeCursor(); 
