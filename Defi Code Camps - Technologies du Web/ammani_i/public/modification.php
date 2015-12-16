@@ -29,13 +29,21 @@ echo '<form method="post" action="change.php" id="addForm" enctype="multipart/fo
 <label for="username">Pseudo : </label>
 <input type="text" name="username" id="username" value="' . $_SESSION['username'] . '"><br/>
 <br/>
-Sexe : 
+Sexe : ';
+?>
 <label for="man">Homme</label>
-<input type="radio" name="sex" value="Male" id="man" class="radio">
+<input type="radio" name="sex" value="Male" id="man" class="radio" <?php 
+if($_SESSION['sex'] == 'Male')
+    echo 'checked';
+?>>
 <label for="woman">Femme</label>
-<input type="radio" name="sex" value="Female" id="woman"  class="radio" checked><br/>
+<input type="radio" name="sex" value="Female" id="woman"  class="radio" <?php 
+if($_SESSION['sex'] == 'Female')
+    echo 'checked';
+?>><br/>
 <br/>
-<label for="phoneHome">Téléphone Fixe : </label>
+<?php
+echo '<label for="phoneHome">Téléphone Fixe : </label>
 <input type="tel" name="phoneHome" id="phoneHome" value="' . $_SESSION['phoneHome'] . '"><br/>
 <br/>
 <label for="phoneMobile">Téléphone Mobile : </label>
