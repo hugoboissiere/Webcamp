@@ -32,6 +32,7 @@ echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br />
    		Statut : ' . $_SESSION['status'] . '<br />
          <br />
    		Activité : ' . $_SESSION['activity'] . ' ';
+         $_SERVER['DOCUMENT_ROOT'];
 
 ?>
 <br /> 
