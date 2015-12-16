@@ -76,12 +76,14 @@ include("php/includes/navigator.php");
 	print_r($nb);
 	while ($i < $nb)
 	{
-		$classe1 = $dbh->query("SELECT COUNT(id_film) from places_vendues WHERE id_cinema=" . $i);
+		$classe1 = $dbh->query("SELECT COUNT(id_film) as total1 from places_vendues WHERE id_cinema=" . $i);
 		$classe1->setFetchMode(PDO::FETCH_OBJ);
 		$result4 = $classe1->fetch();
+		$nb1 = $result4->total1;
+		print_r($nb1);
 		{
 		echo '<tr>
-				<td>' . $result4->id_film . '<td>
+				<td>' . $nb1->id_film . '<td>
 			 </tr>';
 		$i++;
 		}
