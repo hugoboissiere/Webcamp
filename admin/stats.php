@@ -80,7 +80,7 @@ include("php/includes/navigator.php");
 		$result4 = $classe1->fetch();
 		{
 		echo '<tr>
-				<td>' . $i->id_cinema . '<td>
+				<td>' . $result4->id_film . '<td>
 			 </tr>';
 		$i++;
 		}
