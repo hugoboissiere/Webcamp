@@ -73,7 +73,7 @@ include("php/includes/navigator.php");
 	$result3 = $classe->fetch();
 	print_r($result3);
 	$i = 0;
-	print_r($result3[0]);
+	print_r($result3->COUNT(id));
 	while ($i < $result3)
 	{
 		$classe1 = $dbh->query("SELECT COUNT(id_film) from places_vendues WHERE id_cinema=" . $i);
