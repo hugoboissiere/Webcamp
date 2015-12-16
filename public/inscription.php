@@ -68,16 +68,16 @@ echo '<div class="formu">
                 <input type="radio" name="sex" value="Female" id="woman"  class="radio" checked><br />
                 <br/>
                 <label for="phoneHome">Téléphone Fixe : </label>
-                <input type="tel" name="phoneHome" id="phoneHome"class="brak" placeholder="Ex : +221 01 023 45 87"><br />
+                <input type="tel" name="phoneHome" id="phoneHome"class="champ" placeholder="Ex : +221 01 023 45 87"><br />
                 <br/>
                 <label for="phoneMobile">Téléphone Mobile : </label>
-                <input type="tel" name="phoneMobile" id="phoneMobile"class="brak" placeholder="Ex : +221 01 023 45 87"><br />
+                <input type="tel" name="phoneMobile" id="phoneMobile"class="champ" placeholder="Ex : +221 01 023 45 87"><br />
                 <br/>
                 <label for="neighborhood">Quartier : </label>
-                <input type="text" id="neighborhood" name="neighborhood"class="brak" placeholder=""><br />
+                <input type="text" id="neighborhood" name="neighborhood"class="champ" placeholder=""><br />
                 <br/>
                 <label for="city">Ville : </label>
-                <input type="text" name="city" id="city"class="brak" placeholder="Dakar"><br />
+                <input type="text" name="city" id="city"class="champ" placeholder="Dakar"><br />
                 <br/>
                 <label for="country">Pays : </label>
                 <select name="country" id="country" required>

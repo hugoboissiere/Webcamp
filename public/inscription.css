@@ -5,4 +5,7 @@
 .titre {
 	text-decoration: underline;
 	margin-left: 25%;
+
+#champ {
+	border-radius: 120px;
 }
