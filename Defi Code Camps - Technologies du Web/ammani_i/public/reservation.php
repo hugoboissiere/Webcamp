@@ -243,7 +243,11 @@ while ($result = $movieDetail->fetch()) {
 			<br/>
 			<textarea name="commentaire" cols="50" rows="10"></textarea><br/>
 			<br/>
-			<input type="submit" name="envoie" value="Envoyer" />
+			<input type="hidden" name="username" value="'.$_SESSION['username'].'" />
+			<br/>
+			<input type="hidden" name="region" value="'.$_SESSION['region'].'" />
+			<br/>
+			<input type="submit" name="coco" value="Envoyer" />
 
 			<?php
 
