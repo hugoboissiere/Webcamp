@@ -1,6 +1,6 @@
 <?php
 
-echo $_POST['id'];
+print_r($_GET['id']);
 
 include("php/includes/database.php");
 
