@@ -34,7 +34,7 @@ while ($i < $_POST['places'])
 	
 		$req = $dbh->prepare("INSERT INTO places_vendues"
 						. "(id_film, id_cinema, date_vente, id_utilisateur)"
-						. "VALUES(:theater, :movie, :date, :member)");
+						. "VALUES(:movie, :theater, :date, :member)");
 	
 		$req->bindParam(":movie", $_POST["movie"]);
 	
