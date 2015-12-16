@@ -39,9 +39,9 @@ $resultat = move_uploaded_file($_FILES['profilpic']['tmp_name'],$truepath);
 if ($resultat)
 	echo "Transfert réussi";
 else
-	echo "Fail";
+	echo "Fail <br>";
 
-echo $truepath;
+echo $truepath . "<br>";
 print_r($_FILES);
 
 
