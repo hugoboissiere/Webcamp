@@ -6,7 +6,7 @@ session_start();
 
 include("php/includes/database.php");
 
-echo "lera";
+// echo "lera";
 $firstname = $_POST['firstname'];
 $password = $_POST['password'];
 $lastname = $_POST['lastname'];
@@ -24,7 +24,7 @@ $membership = $_POST['membership'];
 $newsletter = $_POST['newsletter'];
 $archive = $_POST['archive'];
 
-print_r($_FILES);
+// print_r($_FILES);
 
 $maxsize = 1048576;
 $maxwidth = 500;
@@ -61,7 +61,7 @@ if(!$_SESSION['erreur'])
 }
 if($_SESSION['erreur'])
 	header('Location:modification.php');
-echo "dddd";
+// echo "dddd";
 if($img == "" && ($_SESSION['image'] == 'malepic.jpg' || $_SESSION['image'] == 'femalepic.jpg'))
 {
 	if($_POST['sex'] == 'Male')
@@ -73,10 +73,10 @@ if($img == "" && ($_SESSION['image'] == 'malepic.jpg' || $_SESSION['image'] == '
 		$img = 'femalepic.jpg';
 	}
 }
-echo "trui";
+// echo "trui";
 $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $firstname . "' , password = '". $password ."', archive = '". $archive . "', lastname = '" . $lastname ."' , username = '" . $username . "', sex = '" . $sex . "' , phoneHome = '" . $phoneHome ."' , phoneMobile = '" . $phoneMobile ."' , neighborhood = '" . $neighborhood ."' , city = '" . $city . "' , country = '" . $country . "' , email = '" . $email . "' , membership = '" . $membership . "' , newsletter = '" . $newsletter . "', status = '". $status . "' , activity = '" . $activity ."', profile_pic = '" . $img . "' WHERE id =  '".$_SESSION['id']."' ");
 
-echo "yes";
+// echo "yes";
 
 
             $_SESSION['username'] = $result->username;
@@ -99,7 +99,7 @@ echo "yes";
             $_SESSION['archive'] = $result->archive;
             $_SESSION['image'] = $result->profile_pic;
 
- echo "beaccor";
-header('Location:index.php');
+ // echo "beaccor";
+header('Location:programmation.php');
 
 ?>
