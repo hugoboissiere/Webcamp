@@ -221,7 +221,6 @@ while ($result = $movieDetail->fetch()) {
 	<div class="commentaires">
 		<h2>Zone de commentaire</h2>
 		<form method="POST" action="commentaires.php">
-			<label for="pseudo">Username :</label><input type="text" value=" '.$_SESSION['username'] .' "/><br/>
 			<br/>
 			<label for="commentaire">Poster un commentaire</label><br/>
 			<textarea name="commentaire" cols="50" rows="10"></textarea>
