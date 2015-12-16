@@ -224,8 +224,8 @@ while ($result = $movieDetail->fetch()) {
 			<label for="pseudo">Username :</label><input type="text" value=" '.$_SESSION['username'] .' "/><br/>
 			<br/>
 			<label for="commentaire">Poster un commentaire</label><br/>
-			<textarea name="commentaire"></textarea>
-			
+			<textarea name="commentaire" name="zone"></textarea>
+
 			<?php
 
 		}

@@ -60,3 +60,8 @@ form
 	display: inline-block;
 	vertical-align: top;
 }
+
+.zone
+{
+	width: 50%;
+}
