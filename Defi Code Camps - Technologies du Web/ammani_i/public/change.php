@@ -78,6 +78,6 @@ $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $f
 
 echo "yes";
 
-// header('Location:index.php');
+header('Location:index.php');
 
 ?>
