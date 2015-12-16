@@ -49,7 +49,7 @@ include("php/includes/navigator.php");
 					echo "<td>" . ROUND($entrees_jour) . "</td>";
 					echo "<td>" . ROUND($entrees_semaine) . "</td>";
 					echo "<td>" . ROUND($entrees_mois) . "</td>";
-				'</tr>';
+				echo '</tr>';
 		}
 		$jour1->closeCursor();
 	}
