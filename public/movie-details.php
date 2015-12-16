@@ -146,11 +146,11 @@ $(document).ready(function(){
   while ($result = $rep->fetch())
   {
     ?>
+    <br/>
     <div class="comzone">
       <p><?php  echo $result->username; ?>, le <?php echo $result->date; ?> : </p><br/>
       <p><?php echo $result->commentaire; ?></p>
     </div>
-    <br/>
 
     <?php  
   }
