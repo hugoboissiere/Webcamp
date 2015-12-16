@@ -61,7 +61,7 @@ if(!$_SESSION['erreur'])
 }
 if($_SESSION['erreur'])
 	// header('Location:modification.php');
-echo $_SESSION;
+echo $_SESSION['erreur'];
 echo $extension_upload;
 if($img == "" && ($_SESSION['image'] == 'malepic.jpg' || $_SESSION['image'] == 'femalepic.jpg'))
 {
@@ -97,7 +97,7 @@ $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $f
             $_SESSION['membership'] = $_POST['membership'];
             $_SESSION['newsletter'] = $_POST['newsletter'];
             $_SESSION['image'] = $img;
-
+echo $_SESSION['erreur'];
  // echo "beaccor";
 // if($_SESSION['erreur'] == "")
 	// header('Location:espace_membre.php');
