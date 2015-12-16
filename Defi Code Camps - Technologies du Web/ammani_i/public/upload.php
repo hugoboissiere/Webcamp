@@ -42,6 +42,7 @@ else
 	echo "lol nn";
 
 echo $truepath;
+print_r($_FILES);
 
 
 
