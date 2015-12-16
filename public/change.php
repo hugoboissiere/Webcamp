@@ -60,8 +60,9 @@ if(!$_SESSION['erreur'])
 		$_SESSION['erreur'] = "Le serveur a rencontré un problème lors du transfert de l'image.";
 }
 if($_SESSION['erreur'])
-	header('Location:modification.php');
-
+	// header('Location:modification.php');
+echo $_SESSION;
+echo $extension_upload;
 if($img == "" && ($_SESSION['image'] == 'malepic.jpg' || $_SESSION['image'] == 'femalepic.jpg'))
 {
 	if($_POST['sex'] == 'Male')
@@ -98,8 +99,8 @@ $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $f
             $_SESSION['image'] = $img;
 
  // echo "beaccor";
-if($_SESSION['erreur'] == "")
-	header('Location:espace_membre.php');
+// if($_SESSION['erreur'] == "")
+	// header('Location:espace_membre.php');
 // else
 // 	header('Location:modification.php');
 ?>
