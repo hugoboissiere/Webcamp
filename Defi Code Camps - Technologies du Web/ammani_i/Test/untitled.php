@@ -21,6 +21,14 @@ $moviesCompleteList->closeCursor();
          <th>Moyenne d'entree par semaine</th>
          <th>Moyenne d'entree par mois</th>
       </tr>
+      <tr>
+         <td>Test</td>
+         <td>Test1</td>
+         <td>Test2</td>
+         <td>Test3</td>
+         <td>Test4</td>
+      </tr>
+   </table>
    </table>
    </head>
    </body>
