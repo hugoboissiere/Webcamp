@@ -27,6 +27,7 @@ echo "test :";
 if(!file_exists('resources/profilpic') && !is_dir('resources/profpic'))
 {
   mkdir('resources/profilpic', 0755, true);
+  echo "cçce";
 } 
 else
 {
