@@ -62,6 +62,7 @@ if(!$_SESSION['erreur'])
 if($_SESSION['erreur'])
 	// header('Location:modification.php');
 // echo "dddd";
+echo $_SESSION['erreur'];
 if($img == "" && ($_SESSION['image'] == 'malepic.jpg' || $_SESSION['image'] == 'femalepic.jpg'))
 {
 	if($_POST['sex'] == 'Male')
