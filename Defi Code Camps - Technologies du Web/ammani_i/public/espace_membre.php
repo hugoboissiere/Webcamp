@@ -4,7 +4,7 @@ include("php/includes/head.php");
 
 ?>
 
-<img src=<?php echo '"resources/profilpic/' . $_SESSION['image'] . '" ' alt="titi" />
+<img src=<?php echo '"resources/profilpic/' . $_SESSION['image'] . '"'; ?> alt="titi" />
 
 <div class="infos">
 <?php
