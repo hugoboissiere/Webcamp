@@ -1,4 +1,7 @@
 <?php
+session_start();
+
+
 $maxsize = 1048576;
 $maxwidth = 500;
 $maxheight = 500;
@@ -22,24 +25,12 @@ if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
 
 if($erreur)
 	echo $erreur;
-//Créer un dossier 'fichiers/1/'
-echo "test :";
-if(!file_exists('resources/profilpic') && !is_dir('resources/profpic'))
-{
-  if(mkdir('resources/profilpic', 0755, true))
-  {
-	echo "cçce";
-  }
-  else
-  {
-  	echo "ffff";
-  }
-} 
-else
-{
-	echo "ala";
-}
-echo "libri";
+
+// Créer un identifiant difficile à deviner
+  
+
+  $nom = "photo_" . $_SESSION['id'];
+echo $nom;
 
 
 
@@ -48,6 +39,8 @@ echo "libri";
 
 
 
-//Créer un identifiant difficile à deviner
-  // $nom = md5(uniqid(rand(), true));
+
+
+
+
 ?>
