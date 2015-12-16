@@ -96,6 +96,6 @@ $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $f
             $_SESSION['image'] = $img;
 
  // echo "beaccor";
-header('Location:programmation.php');
+header('Location:espace_membre.php');
 
 ?>
