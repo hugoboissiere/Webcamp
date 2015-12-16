@@ -58,7 +58,7 @@ if(!$_SESSION['erreur'])
 }
 if($_SESSION['erreur'])
 	header('Location:modification.php');
-
+echo "dddd";
 if(!$img)
 {
 	if($_SESSION['sex'] == 'Male')
