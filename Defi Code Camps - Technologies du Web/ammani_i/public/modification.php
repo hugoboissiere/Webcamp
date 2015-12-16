@@ -47,7 +47,7 @@ Sexe :
 <label for="city">Ville : </label>
 <input type="text" name="city" id="city" value="' . $_SESSION['city'] . '"><br/>
 <br/>
-<label for="profilpic">Fichier (JPG, JPEG, GIF ou PNG | max. 1 Mo) :</label><br />
+<label for="profilpic">Fichier (JPG, JPEG, GIF ou PNG | max. 1 Mo |max 500x500px) :</label><br />
 <input type="file" name="profilpic" id="profilpic" /><br />
 ' . $_SESSION['erreur'] . '
 <br>
