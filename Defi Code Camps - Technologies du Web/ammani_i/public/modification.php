@@ -4,7 +4,7 @@ include("php/includes/head.php");
 include("php/includes/database.php");
 
 
-echo '<form method="post" action="change.php" id="addForm" autocomplete="off" class="formOverflow"> 
+echo '<form method="post" action="change.php" id="addForm" enctype="multipart/form-data" autocomplete="off" class="formOverflow"> 
                 <label for="member">Adhérent</label>
                 <input type="radio" name="membership" value="Member" id="member" class="radio"><br/>
                 <br/>
@@ -51,7 +51,9 @@ echo '<form method="post" action="change.php" id="addForm" autocomplete="off" cl
                 <input type="text" name="city" id="city" value="' . $_SESSION['city'] . '"><br/>
                 <br/>
                 <label for="country">Pays : </label>
-                <select name="country" id="country">';
+                <select name="country" id="country">
+                <label for="profilpic">Fichier (JPG, JPEG, GIF ou PNG | max. 1 Mo) :</label><br />
+                <input type="file" name="profilpic" id="profilpic" /><br />';
                 ?>
                 <?php
 
