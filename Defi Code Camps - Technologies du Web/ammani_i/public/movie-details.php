@@ -108,6 +108,22 @@ $(document).ready(function(){
       </div>
     </div>
     <?php
+  echo '
+  <div class="commentaires">
+    <h2>Zone de commentaire</h2>
+    <form method="POST" action="comments.php">
+      <br/>
+      <label for="commentaire">Poster un commentaire :</label><br/>
+      <br/>
+      <textarea name="commentaire" cols="50" rows="10"></textarea><br/>
+      <br/>
+      <input type="hidden" name="username" value="'.$_SESSION['username'].'" />
+      <br/>
+      <input type="hidden" name="region" value="'.$_SESSION['country'].'" />
+      <br/>
+      <input type="submit" name="coco" value="Envoyer" />';
+      ?>
+    <?php
     
   }
 
