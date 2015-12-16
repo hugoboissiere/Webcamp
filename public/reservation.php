@@ -234,6 +234,8 @@ while ($result = $movieDetail->fetch()) {
 	</div>
 	<br/>
 	<br/>
+	<?php
+	echo '
 	<div class="commentaires">
 		<h2>Zone de commentaire</h2>
 		<form method="POST" action="comments.php">
@@ -246,7 +248,8 @@ while ($result = $movieDetail->fetch()) {
 			<br/>
 			<input type="hidden" name="region" value="'.$_SESSION['region'].'" />
 			<br/>
-			<input type="submit" name="coco" value="Envoyer" />
+			<input type="submit" name="coco" value="Envoyer" />';
+			?>
 
 			<?php
 
