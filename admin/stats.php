@@ -55,7 +55,7 @@ include("php/includes/navigator.php");
 	$test->closeCursor();
     ?>
     </table>
-    <p class="titre">Statistiques des films par cinéma</p>
+    <p class="titre" height="100px">Statistiques des films par cinéma</p>
     <table class="tableau">
 		<tr>
 			<th>Nom du cinéma</th>
@@ -65,9 +65,13 @@ include("php/includes/navigator.php");
 			<th>Moyenne d'entree par mois</th>
 		</tr>
 	<?php
-	$classe = $dbh->query("SELECT COUNT(id) from cw_cinema_theaters");
-	$classe->setFetchMode(PDO::FETCH_OBJ);
-	$nb_cinema = $classe;
+	$test1 = $dbh->query("SELECT * from cw_cinema_theaters"); 
+	$test1->setFetchMode(PDO::FETCH_OBJ);
+	while ($result1 = $test1->fetch())
+	{
+		$classe = $dbh->query("SELECT COUNT(id) from cw_cinema_theaters");
+		$classe->setFetchMode(PDO::FETCH_OBJ);
+		$result3 = $result1->;
 	echo $nb_cinema;
 	?>
 	</table>
