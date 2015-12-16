@@ -74,6 +74,7 @@ include("php/includes/navigator.php");
 	$i = 0;
 	$nb = $result3->total;
 	print_r($nb);
+	echo "<br>";
 	while ($i < $nb)
 	{
 		$classe1 = $dbh->query("SELECT COUNT(id_film) as total1 from places_vendues WHERE id_cinema=" . $i);
@@ -82,6 +83,7 @@ include("php/includes/navigator.php");
 		$nb1 = $result4->total1;
 		$i++;
 		print_r($nb1);
+		echo "<br>";
 	}
 	?>
 	</table>
