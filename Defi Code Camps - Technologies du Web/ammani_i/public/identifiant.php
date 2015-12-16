@@ -8,7 +8,7 @@ if (isset($_POST["email"]) AND isset($_POST["password"]))
 
 {
 
-	$moviesCompleteList = $dbh->query('SELECT * FROM cw_human_resources_memberships WHERE email = "' . $_POST['email'] . '"  AND password = "' . $_POST["password"] .'"  ');
+	$moviesCompleteList = $dbh->query('SELECT * FROM cw_human_resources_memberships WHERE email = "' . $_POST['email'] . '"  AND password = "' . $_POST["password"] .'" ');
 $moviesCompleteList->setFetchMode(PDO::FETCH_OBJ);
 while ($result = $moviesCompleteList->fetch())
 {
@@ -30,14 +30,14 @@ while ($result = $moviesCompleteList->fetch())
    $_SESSION['membership'] = $result->membership;
    $_SESSION['newsletter'] = $result->newsletter;
    $_SESSION['archive'] = $result->archive;
-
+   header('Location:index.php');
 
 }
 
 $moviesCompleteList->closeCursor(); 
 
 	
-header('Location:index.php');
+header('Location:identification.php');
 
 }
 
