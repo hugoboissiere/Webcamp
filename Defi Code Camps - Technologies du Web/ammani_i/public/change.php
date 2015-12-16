@@ -27,9 +27,7 @@ $newsletter = $_POST['newsletter'];
 // print_r($_FILES);
 print_r($_FILES);
 if($_FILES['profilpic']['name'] != "")
-	echo "yaourt";
-else
-	echo "eee";
+{
 
 $maxsize = 1048576;
 $maxwidth = 500;
@@ -64,7 +62,8 @@ if(!$_SESSION['erreur'])
 	else
 		$_SESSION['erreur'] = "Le serveur a rencontré un problème lors du transfert de l'image.";
 }
-if($_SESSION['erreur'])
+}
+// if($_SESSION['erreur'])
 	// header('Location:modification.php');
 echo $_SESSION['erreur'];
 echo $extension_upload;
