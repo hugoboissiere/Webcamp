@@ -64,6 +64,7 @@ if($_SESSION['erreur'])
 // echo "dddd";
 if($img == "" && ($_SESSION['image'] == 'malepic.jpg' || $_SESSION['image'] == 'femalepic.jpg'))
 {
+	echo "few";
 	if($_POST['sex'] == 'Male')
 	{
 		$img = 'malepic.jpg';
@@ -96,6 +97,6 @@ $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $f
             $_SESSION['image'] = $img;
 
  // echo "beaccor";
-header('Location:espace_membre.php');
+// header('Location:espace_membre.php');
 
 ?>
