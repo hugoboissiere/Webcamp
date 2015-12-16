@@ -56,6 +56,7 @@ include("php/includes/navigator.php");
 	$section->closeCursor();
     ?>
     </table>
+    <p class="titre">Statistiques des films par cinéma</p>
     <table class="tableau">
 		<tr>
 			<th>Nom du cinéma</th>
