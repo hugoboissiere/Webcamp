@@ -80,6 +80,7 @@ include("php/includes/navigator.php");
 		$classe1->setFetchMode(PDO::FETCH_OBJ);
 		$result4 = $classe1->fetch();
 		$nb1 = $result4->total1;
+		$i++;
 		// print_r($nb1);
 	}
 	?>
