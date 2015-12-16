@@ -17,7 +17,7 @@ $img_extensions = array('jpg', 'jpeg', 'gif', 'png');
 $extension_upload = strtolower(substr(strrchr($_FILES['profilpic']['name'], '.'), 1));
 if (!in_array($extension_upload,$img_extensions))
 {
-	$erreur = "Extension correcte";
+	$erreur = "Extension incorrecte";
 }
 $image_size = getimagesize($_FILES['profilpic']['tmp_name']);
 if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
