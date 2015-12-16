@@ -40,7 +40,7 @@ if (file_exists($filenameCover)) {
  $cover = 'resources/imgs/content/movies/defaultCover'.$rand.'.jpg';
 }  
 
-
+$_SESSION['erreur'] = "";
 ?>
 
 <script>

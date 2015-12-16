@@ -20,7 +20,7 @@ include("php/includes/head.php");
     $minutes = ($time % 60);
     return sprintf($format, $hours, $minutes);
 }
-
+$_SESSION['erreur'] = "";
 ?>
 <ul id="og-grid" class="og-grid">
     
