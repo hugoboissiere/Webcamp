@@ -22,10 +22,9 @@ if (!in_array($extension_upload,$img_extensions))
 $image_size = getimagesize($_FILES['profilpic']['tmp_name']);
 if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
 	$erreur = "Image trop grande";
-
+echo "dddd";
 if($erreur)
 	echo $erreur;
-
 else
 {
 	$nom = "photo_" . $_SESSION['id'];
