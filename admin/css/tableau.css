@@ -15,12 +15,12 @@ table.tableau {
 
 table.tableau td{
     border: 1px solid black;
-    background-color: #68D2C3;
+    background-color: #e5ffff;
     font-size: 14px;
 }
 
 table.tableau th{
-    color: #ff33cc;
+    color: #ffffff;
 }
 
 .titre {
