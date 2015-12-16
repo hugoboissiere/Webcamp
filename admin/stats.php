@@ -81,7 +81,7 @@ include("php/includes/navigator.php");
 		$result4 = $classe1->fetch();
 		$nb1 = $result4->total1;
 		$i++;
-		// print_r($nb1);
+		print_r($nb1);
 	}
 	?>
 	</table>
