@@ -225,7 +225,7 @@ and open the template in the editor.
                 <p>ou</p><br />
                 <a href="identification.php">Se connecter</a></li>';
                 else
-                    echo '<li><a href="deconnexion.php">Deconnexion</a></li>';
+                    echo '<li><a href="deconnexion.php">Déconnexion</a></li>';
                 ?>
                         </ul>
                     </li>
