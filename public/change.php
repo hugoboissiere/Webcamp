@@ -22,7 +22,7 @@ $status = $_POST['status'];
 $activity = $_POST['activity'];
 $membership = $_POST['membership'];
 $newsletter = $_POST['newsletter'];
-$archive = $_POST['archive'];
+
 
 // print_r($_FILES);
 
@@ -74,30 +74,26 @@ if($img == "" && ($_SESSION['image'] == 'malepic.jpg' || $_SESSION['image'] == '
 	}
 }
 // echo "trui";
-$rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $firstname . "' , password = '". $password ."', archive = '". $archive . "', lastname = '" . $lastname ."' , username = '" . $username . "', sex = '" . $sex . "' , phoneHome = '" . $phoneHome ."' , phoneMobile = '" . $phoneMobile ."' , neighborhood = '" . $neighborhood ."' , city = '" . $city . "' , country = '" . $country . "' , email = '" . $email . "' , membership = '" . $membership . "' , newsletter = '" . $newsletter . "', status = '". $status . "' , activity = '" . $activity ."', profile_pic = '" . $img . "' WHERE id =  '".$_SESSION['id']."' ");
+$rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $firstname . "' , password = '". $password . "', lastname = '" . $lastname ."' , username = '" . $username . "', sex = '" . $sex . "' , phoneHome = '" . $phoneHome ."' , phoneMobile = '" . $phoneMobile ."' , neighborhood = '" . $neighborhood ."' , city = '" . $city . "' , country = '" . $country . "' , email = '" . $email . "' , membership = '" . $membership . "' , newsletter = '" . $newsletter . "', status = '". $status . "' , activity = '" . $activity ."', profile_pic = '" . $img . "' WHERE id =  '".$_SESSION['id']."' ");
 
 // echo "yes";
 
-
-            $_SESSION['username'] = $result->username;
-            $_SESSION['id'] = $result->id;
-            $_SESSION['firstname'] = $result->firstname;
-            $_SESSION['lastname'] = $result->lastname;
-            $_SESSION['password'] = $result->password;
-            $_SESSION['caddNumber'] = $result->cardNumber;
-            $_SESSION['sex'] = $result->sex;
-            $_SESSION['phoneHome'] = $result->phoneHome;
-            $_SESSION['phoneMobile'] = $result->phoneMobile;
-            $_SESSION['neighborhood'] = $result->neighborhood;
-            $_SESSION['city'] = $result->city;
-            $_SESSION['country'] = $result->country;
-            $_SESSION['email'] = $result->email;
-            $_SESSION['status'] = $result->status;
-            $_SESSION['activity'] = $result->activity;
-            $_SESSION['membership'] = $result->membership;
-            $_SESSION['newsletter'] = $result->newsletter;
-            $_SESSION['archive'] = $result->archive;
-            $_SESSION['image'] = $result->profile_pic;
+            $_SESSION['username'] = $_POST['username'];
+            $_SESSION['firstname'] = $_POST['firstname'];
+            $_SESSION['lastname'] = $_POST['lastname'];
+            $_SESSION['password'] = $_POST['password'];
+            $_SESSION['sex'] = $_POST['sex'];
+            $_SESSION['phoneHome'] = $_POST['phoneHome'];
+            $_SESSION['phoneMobile'] = $_POST['phoneMobile'];
+            $_SESSION['neighborhood'] = $_POST['neighborhood'];
+            $_SESSION['city'] = $_POST['city'];
+            $_SESSION['country'] = $_POST['country'];
+            $_SESSION['email'] = $_POST['email'];
+            $_SESSION['status'] = $_POST['status'];
+            $_SESSION['activity'] = $_POST['activity'];
+            $_SESSION['membership'] = $_POST['membership'];
+            $_SESSION['newsletter'] = $_POST['newsletter'];
+            $_SESSION['image'] = $img;
 
  // echo "beaccor";
 header('Location:programmation.php');
