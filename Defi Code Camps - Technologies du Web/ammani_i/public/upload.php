@@ -32,8 +32,8 @@ if($erreur)
   $nom = "photo_" . $_SESSION['id'];
 
 $dir = "resources/profilpic/";
-echo $dir . $nom . "." . $extension_upload;
-
+$truepath = $dir . $nom . "." . $extension_upload;
+echo $truepath;
 
 
 
