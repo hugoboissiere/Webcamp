@@ -26,6 +26,11 @@ $newsletter = $_POST['newsletter'];
 
 // print_r($_FILES);
 print_r($_FILES);
+if(isset($_FILES['profilpic']))
+	echo "yaourt";
+else
+	echo "eee";
+
 $maxsize = 1048576;
 $maxwidth = 500;
 $maxheight = 500;
