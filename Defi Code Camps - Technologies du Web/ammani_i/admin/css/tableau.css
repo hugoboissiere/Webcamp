@@ -27,7 +27,7 @@ table.tableau th{
 .titre {
 	text-align: center;
 	font-size: 20px;
-	font-family: Arial, sans-serif;
+	font-family: "Comic Sans MS", sans-serif;
   color: #ffffff;
 }
 
@@ -37,5 +37,5 @@ table.tableau th{
 }
 
 .titrefilm {
-  font-family: "Arial Black";
+  font-family: "Comic Sans MS";
 }
