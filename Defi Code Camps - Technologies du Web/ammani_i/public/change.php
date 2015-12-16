@@ -62,7 +62,8 @@ if(!$_SESSION['erreur'])
 if($_SESSION['erreur'])
 	// header('Location:modification.php');
 // echo "dddd";
-echo $extension_upload;
+echo "l'extension de l'image est " . $extension_upload "<br>";
+print_r($img_extensions);
 echo $_SESSION['erreur'];
 if($img == "" && ($_SESSION['image'] == 'malepic.jpg' || $_SESSION['image'] == 'femalepic.jpg'))
 {
