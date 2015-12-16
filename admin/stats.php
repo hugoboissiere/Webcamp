@@ -55,7 +55,8 @@ include("php/includes/navigator.php");
 	$test->closeCursor();
     ?>
     </table>
-    <p class="titre" height="100px">Statistiques des films par cinéma</p>
+    <div style="height:50px;display:block;"></div>
+    <p class="titre" >Statistiques des films par cinéma</p>
     <table class="tableau">
 		<tr>
 			<th>Nom du cinéma</th>
