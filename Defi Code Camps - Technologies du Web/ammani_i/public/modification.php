@@ -49,6 +49,7 @@ Sexe :
 <br/>
 <label for="profilpic">Fichier (JPG, JPEG, GIF ou PNG | max. 1 Mo) :</label><br />
 <input type="file" name="profilpic" id="profilpic" /><br />
+' . $_SESSION['erreur']; . '
 <br>
 <label for="country">Pays : </label>
 <select name="country" id="country">';
