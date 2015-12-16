@@ -36,7 +36,8 @@ else
 
 	$resultat = move_uploaded_file($_FILES['profilpic']['tmp_name'],$truepath);
 	if ($resultat)
-		header("Location : espace_membre.php");
+		echo "jui";
+		// header("Location : espace_membre.php");
 	else
 		echo "Fail <br>";
 }
