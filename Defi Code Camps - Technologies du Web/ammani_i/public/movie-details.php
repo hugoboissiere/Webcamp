@@ -109,7 +109,8 @@ $(document).ready(function(){
     </div>
     <?php
   echo '
-  <div class="commentaires">
+  <div class="commentaires"><br/>
+  <br/>
     <h2>Zone de commentaire</h2>
     <form method="POST" action="comments.php">
       <br/>
