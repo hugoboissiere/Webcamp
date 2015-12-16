@@ -60,8 +60,7 @@ if(!$_SESSION['erreur'])
 		$_SESSION['erreur'] = "Le serveur a rencontré un problème lors du transfert de l'image.";
 }
 if($_SESSION['erreur'])
-	// header('Location:modification.php');
-// echo "dddd";
+	header('Location:modification.php');
 echo "l'extension de l'image est " . $extension_upload . "<br>";
 print_r($img_extensions);
 echo $_SESSION['erreur'];
@@ -101,6 +100,6 @@ $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $f
             $_SESSION['image'] = $img;
 
  // echo "beaccor";
-// header('Location:espace_membre.php');
+header('Location:espace_membre.php');
 
 ?>
