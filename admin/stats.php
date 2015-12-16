@@ -81,12 +81,7 @@ include("php/includes/navigator.php");
 		$result4 = $classe1->fetch();
 		$nb1 = $result4->total1;
 		print_r($nb1);
-		{
-		echo '<tr>
-				<td>' . $nb1->id_film . '<td>
-			 </tr>';
 		$i++;
-		}
 	}
 	?>
 	</table>
