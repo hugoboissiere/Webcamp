@@ -180,11 +180,7 @@ while ($result = $movieDetail->fetch()) {
 					</li>
 					<li>
 						<span>Nombre de places restantes</span>
-						<span><?php
-						if ($nb_places > 0)
-						 	echo $nb_places;
-						else
-							echo "Complet"; ?></span>
+						<span><?php echo $nb_places; ?></span>
 					</li>
 				</ul>
 			</div>
