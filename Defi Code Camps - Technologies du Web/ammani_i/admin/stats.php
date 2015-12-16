@@ -10,7 +10,6 @@ include("php/includes/navigator.php");
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/tableau.css"></link>
 	<p class="titre">Statistiques des films</p>
-	<?php echo "test" ?>
 	<table class="tableau">
       	<tr>
          	<th>Film</th>
@@ -54,10 +53,8 @@ include("php/includes/navigator.php");
 		$jour1->closeCursor();
 	}
 	$test->closeCursor();
-	// $section->closeCursor();
     ?>
     </table>
-    <?php echo "test2" ?>
     <p class="titre">Statistiques des films par cinéma</p>
     <table class="tableau">
 		<tr>
@@ -67,6 +64,12 @@ include("php/includes/navigator.php");
 			<th>Moyenne d'entree par semaine</th>
 			<th>Moyenne d'entree par mois</th>
 		</tr>
+	<?php
+	$classe = $dbh->query("SELECT COUNT(id) from cw_cinema_theaters");
+	$classe->setFetchMode(PDO::FETCH_OBJ);
+	$nb_cinema = $classe;
+	echo $nb_cinema;
+	?>
 	</table>
 	</main>
     <script src="js/layoutNavigator.js"></script>
