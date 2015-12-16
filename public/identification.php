@@ -1,7 +1,9 @@
 <?php
 include("php/includes/database.php");
 include("php/includes/head.php");
-
+?>
+<link rel="stylesheet" type="text/css" href="inscription.php"></link>
+<?php
 echo '<div class="connecter">
         <p style="color:#68D2C3;">SE CONNECTER<br/><p/>
         <br>
