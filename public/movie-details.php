@@ -125,6 +125,7 @@ $(document).ready(function(){
       <br/>
       <input type="submit" name="coco" value="Envoyer" />';
       ?>
+
     <?php
     
   }
@@ -132,6 +133,24 @@ $(document).ready(function(){
   $movieDetail->closeCursor();
 
   ?> 
+
+<?php
+
+$rep = $dbh->query('SELECT * FROM Commentaires WHERE idmovie = '.$id.' AND region = "'.$_SESSION['country'].'" ');
+$rep->setFetchMode(PDO::FETCH_OBJ);
+while ($result = $rep->fetch())
+{
+?>
+<div class="comzone">
+  <p><?php  echo $result->username; ?>, le <?php echo $result->date; ?> : </p><br/>
+  <p><?php echo $result->commentaire; ?></p>
+</div>
+
+<?php  
+}
+
+?>
+
   <?php
   include("php/includes/scripts.php");
   ?>
