@@ -71,7 +71,7 @@ include("php/includes/navigator.php");
 	$classe = $dbh->query("SELECT COUNT(id) as total from cw_cinema_theaters");
 	$classe->setFetchMode(PDO::FETCH_OBJ);
 	$result3 = $classe->fetch();
-	$i = 0;
+	$i = 1;
 	$nb = $result3->total;
 	print_r($nb);
 	echo "<br>";
@@ -81,9 +81,15 @@ include("php/includes/navigator.php");
 		$classe1->setFetchMode(PDO::FETCH_OBJ);
 		$result4 = $classe1->fetch();
 		$nb1 = $result4->total1;
+		$classe2 = $dbh->query("SELECT name as total2 from cw_cinema_theaters WHERE id=" . $i);
+		$classe2->setFetchMode(PDO::FETCH_OBJ);
+		$result5 = $classe2->fetch();
+		$nb2 = $result5->total2;
 		$i++;
-		print_r($nb1);
-		echo "<br>";
+		echo '<tr>
+				<td>' . $nb2 . '</td>
+				<td>' . $nb1 . '</td>
+			 </tr>';
 	}
 	?>
 	</table>
