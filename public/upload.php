@@ -33,14 +33,13 @@ if($erreur)
 
 $dir = "resources/profilpic/";
 $truepath = $dir . $nom . "." . $extension_upload;
-echo $truepath;
+// echo $truepath;
 
-
-
-
-
-
-
+$resultat = move_uploaded_file($_FILES['profilpic']['tmp_name'],$truepath);
+if ($resultat)
+	echo "Transfert réussi";
+else
+	echo "lol nn";
 
 
 
