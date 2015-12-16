@@ -3,7 +3,7 @@
 include("php/includes/head.php");
 include("php/includes/database.php");
 
-$_SESSION['erreur'] = "";
+
 echo '<form method="post" action="change.php" id="addForm" enctype="multipart/form-data" autocomplete="off" class="formOverflow"> 
 <label for="member">Adhérent</label>
 <input type="radio" name="membership" value="Member" id="member" class="radio"><br/>
