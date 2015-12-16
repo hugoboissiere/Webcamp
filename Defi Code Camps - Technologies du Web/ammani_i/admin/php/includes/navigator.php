@@ -108,7 +108,6 @@
                 <li>OUTILS
                     <ul>
                         <li><a href="" class="strip">Caisse</a></li>
-                        <li><a href="" class="strip">Statistiques</a></li>
                         <li><a href="" class="strip">Newsletter</a></li>
                         <li><a href="" class="strip">Historique</a></li>
                         <li><a href="" class="strip">Cloud</a></li>
