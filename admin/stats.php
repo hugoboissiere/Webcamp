@@ -67,12 +67,12 @@ include("php/includes/navigator.php");
 	<?php
 	$test1 = $dbh->query("SELECT * from cw_cinema_theaters"); 
 	$test1->setFetchMode(PDO::FETCH_OBJ);
-	while ($result1 = $test1->fetch())
+	/* while ($result1 = $test1->fetch())
 	{
 		$classe = $dbh->query("SELECT COUNT(id) from cw_cinema_theaters");
 		$classe->setFetchMode(PDO::FETCH_OBJ);
 		$result3 = $result1->;
-	echo $nb_cinema;
+	echo $nb_cinema; */
 	?>
 	</table>
 	</main>
