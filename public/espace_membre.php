@@ -4,7 +4,7 @@ include("php/includes/head.php");
 
 ?>
 
-<img src="http://img.tvmag.lefigaro.fr/ImCon/Arti/72959/Motus-350.jpg" alt="titi" />
+<img src=<?php echo '"resources/profilpic/' . $_SESSION['image'] . '" ' alt="titi" />
 
 <div class="infos">
 <?php
@@ -32,7 +32,6 @@ echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br />
    		Statut : ' . $_SESSION['status'] . '<br />
          <br />
    		Activité : ' . $_SESSION['activity'] . ' ';
-         $_SERVER['DOCUMENT_ROOT'];
 
 ?>
 <br /> 
