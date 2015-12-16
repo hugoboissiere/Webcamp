@@ -34,7 +34,7 @@ include("php/includes/navigator.php");
 		$result2 = $jour1->fetch();
 		{
 			echo '<tr>
-                	<td>' . $result->title . '</td>
+                	<td class="titrefilm">' . $result->title . '</td>
                 	<td>' . $result->genre . '</td>
                 	<td>' . $result->runningTime . '</td>
                 	<td>' . $result->country . '</td>
