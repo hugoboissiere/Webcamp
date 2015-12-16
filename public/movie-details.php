@@ -104,12 +104,7 @@ $(document).ready(function(){
         <li>
           <span class="dataPlot">Description</span>
           <span class="dataContent"><?php echo $result->plot; ?></span><br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
+          <div style="height=200px; display:block;"></div>
           <br/>
         </ul>
       </div>
