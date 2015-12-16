@@ -149,6 +149,7 @@ $(document).ready(function(){
       <p><?php  echo $result->username; ?>, le <?php echo $result->date; ?> : </p><br/>
       <p><?php echo $result->commentaire; ?></p>
     </div>
+    <br/>
 
     <?php  
   }
