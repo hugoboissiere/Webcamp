@@ -29,7 +29,18 @@ if(!file_exists('resources/profilpic') && !is_dir('resources/profpic'))
   mkdir('resources/profilpic', 0755, true);
 } 
 else
+{
 	echo "ala";
+}
+echo "libri";
+
+
+
+
+
+
+
+
 //Créer un identifiant difficile à deviner
   // $nom = md5(uniqid(rand(), true));
 ?>
