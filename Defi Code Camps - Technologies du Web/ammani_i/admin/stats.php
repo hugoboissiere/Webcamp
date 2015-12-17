@@ -105,13 +105,12 @@ include("php/includes/navigator.php");
     {
       $nbv = $result->nb_vote;
       $voter = $result->vote;
+		$moyenne = $voter / $nbv;    
+		echo '<tr>
+				<td>' . $moyenne . '</td>
+				<td>' . $nbv . '</td>
+		 	 </tr>';
     }
-
-	$moyenne = $voter / $nbv;    
-	echo '<tr>
-			<td>' . $moyenne . '</td>
-			<td>' . $nbv . '</td>
-		 </tr>';
 	?>
 	</main>
     <script src="js/layoutNavigator.js"></script>
