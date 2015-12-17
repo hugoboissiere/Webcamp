@@ -1,6 +1,6 @@
 <?php
 include("php/includes/database.php");
-include("php/includes/head.php");
+// include("php/includes/head.php");
 
 ?>
 
