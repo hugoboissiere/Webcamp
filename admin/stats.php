@@ -101,8 +101,8 @@ include("php/includes/navigator.php");
 	$j = 1;
 	$session1 = $dbh->query("SELECT * FROM cw_medias_movies as requete WHERE id = " . $j);
 	$session1->setFetchMode(PDO::FETCH_OBJ);
-	$session1-> $result6->fetch();
-	$test1 = $session1->requete;
+	$result6-> $session1->fetch();
+	$test1 = $result6->requete;
 	echo $test1;
   	while ($j <= $test1)
     {
