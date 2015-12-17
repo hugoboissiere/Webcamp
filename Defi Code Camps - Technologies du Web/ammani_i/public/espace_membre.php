@@ -12,8 +12,8 @@ require_once("php/includes/head.php");
    <?php
    if(!isset($_SESSION['id']))
    {
-      echo "<b>Vous n'avez pas les droits d'afficher cette page.<br>
-      Veuillez cliquer ici pour retourner sur l'accueil.</b>
+      echo "<p style='font-size: 300%'>Vous n'avez pas les droits d'afficher cette page.<br>
+      Veuillez cliquer sur l'image pour retourner sur l'accueil.</p>
       <br><br>
       <a href='index.php'><img src='https://knightslol.org/images/403_Error.png' style='width:100%'></img></a>";
    }
