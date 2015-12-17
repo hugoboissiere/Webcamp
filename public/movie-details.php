@@ -7,6 +7,9 @@ $addCSS =  array("css/colorbox.css");
 
 // JS de cette page
 $addJS =  array("js/jquery.scrollNav.js","js/jquery.colorbox.js");
+?>
+<link rel="stylesheet" href="css/comms.css">
+<?php
 
 include("php/includes/head.php");
 
