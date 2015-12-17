@@ -109,7 +109,7 @@ $(document).ready(function(){
         <li>
           <link rel="stylesheet" type="text/css" href="css/vote.css"></link>
           <fieldset class="rating">
-          <legend>Qu'avez-vous pense du film ?</legend>
+          <span>Qu'avez-vous pense du film ?</span>
           <!-- <form method="post" action="action_page.php"> -->
           <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Excellent !"> Excellent !</label>
           <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Bien !"> Bien !</label>
