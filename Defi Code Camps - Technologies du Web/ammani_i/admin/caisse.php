@@ -13,8 +13,8 @@ include("php/includes/head.php");
 
 // Queries de cette page
 $addPHP = array("");
-include("php/includes/head.php");
-include("php/includes/navigator.php");
+// include("php/includes/head.php");
+// include("php/includes/navigator.php");
 ?>
 
             <div id="table">
