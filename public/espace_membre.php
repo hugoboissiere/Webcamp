@@ -10,45 +10,49 @@ require_once("php/includes/head.php");
    if(!isset($_SESSION['id']))
    {
       echo "Vous n'avez pas les droits d'afficher cette page.<br>
-            <a href='index.php'><span>Veuillez cliquer ici pour retourner sur l'accueil.</span></a>
-            <br><br>
-            <img src='https://knightslol.org/images/403_Error.png'></img>"
+      <a href='index.php'><span>Veuillez cliquer ici pour retourner sur l'accueil.</span></a>
+      <br><br>
+      <img src='https://knightslol.org/images/403_Error.png'></img>"
    }
-   echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br /> 
-   <br />
-   Nom : ' . $_SESSION['lastname'] . '<br /> 
-   <br />
-   Login : ' . $_SESSION['username'] . '<br /> 
-   <br />
-   Sexe : ' . $_SESSION['sex'] . '<br /> 
-   <br />
-   Numéro de domicile : ' .$_SESSION['phoneHome'] . '<br />
-   <br />
-   Numéro de portable : ' .$_SESSION['phoneMobile'] . '<br />
-   <br />
-   Quartier : ' . $_SESSION['neighborhood'] .'<br /> 
-   <br />
-   Ville : ' . $_SESSION['city'] . '<br /> 
-   <br />
-   Pays : ' . $_SESSION['country'] . '<br /> 
-   <br />
-   Email : ' . $_SESSION['email'] . '<br />
-   <br />
-   Statut : ' . $_SESSION['status'] . '<br />
-   <br />
-   Activité : ' . $_SESSION['activity'] . ' ';
+   else
+   {
+      echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br /> 
+      <br />
+      Nom : ' . $_SESSION['lastname'] . '<br /> 
+      <br />
+      Login : ' . $_SESSION['username'] . '<br /> 
+      <br />
+      Sexe : ' . $_SESSION['sex'] . '<br /> 
+      <br />
+      Numéro de domicile : ' .$_SESSION['phoneHome'] . '<br />
+      <br />
+      Numéro de portable : ' .$_SESSION['phoneMobile'] . '<br />
+      <br />
+      Quartier : ' . $_SESSION['neighborhood'] .'<br /> 
+      <br />
+      Ville : ' . $_SESSION['city'] . '<br /> 
+      <br />
+      Pays : ' . $_SESSION['country'] . '<br /> 
+      <br />
+      Email : ' . $_SESSION['email'] . '<br />
+      <br />
+      Statut : ' . $_SESSION['status'] . '<br />
+      <br />
+      Activité : ' . $_SESSION['activity'] . ' 
 
-   ?>
-   <br /> 
-   <br />  		
-   <form method="post" action="modification.php">
+      
+      <br /> 
+      <br />  		
+      <form method="post" action="modification.php">
       <input type="submit" value="Modifier"/>
-   </form>
-</div>   	
+      </form>
+      </div>   	
 
-<br />
-<br />
+      <br />
+      <br />
 
-<form action="programmation.php" />
-<input type="submit" value="Faire une reservation" />
-</form>
+      <form action="programmation.php" />
+      <input type="submit" value="Faire une reservation" />
+      </form>';
+   }
+   ?>
