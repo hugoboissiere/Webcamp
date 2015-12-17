@@ -109,13 +109,13 @@ $(document).ready(function(){
         <li>
           <fieldset class="rating">
           <legend>Qu'avez-vous pense du film ?</legend>
-          <form method="post" action="action_page.php">
+          <!-- <form method="post" action="action_page.php"> -->
           <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Excellent !"> Excellent !</label>
           <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Bien !"> Bien !</label>
           <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Moyen !"> Moyen !</label>
           <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Mauvais !"> Mauvais !</label>
           <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Très mauvais !"> Tres mauvais !</label>
-      </form>
+      <!-- </form> -->
       </fieldset>
         </li>
           <div style="height:200px; display:block;"></div>
