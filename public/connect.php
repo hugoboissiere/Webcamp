@@ -10,13 +10,13 @@ if (isset($_POST["InsertMembersOrSubscribers"])) {
             $defaultpic = 'malepic.jpg';
         else
             $defaultpic = 'femalepic.jpg';
-
+        $mdp = md5($_POST['password']);
         $insert = $dbh->prepare("INSERT INTO cw_human_resources_memberships"
             . "(firstname,lastname,password,cardNumber,username,sex,phoneHome,phoneMobile,neighborhood,city,country,email,status,activity,membership,newsletter, profile_pic)"
             . " VALUES(:firstname,:lastname,:password,:cardNumber,:username,:sex,:phoneHome,:phoneMobile,:neighborhood,:city,:country,:email,:status,:activity,:membership,:newsletter, :pic)");
         $insert->bindParam(":firstname", $_POST["firstname"]);
         $insert->bindParam(":lastname", $_POST["lastname"]);
-        $insert->bindParam(":password", $_POST["password"]);
+        $insert->bindParam(":password", $mdp);
         $insert->bindParam(":cardNumber", $_POST["cardNumber"]);
         $insert->bindParam(":username", $_POST["username"]);
         $insert->bindParam(":sex", $_POST["sex"]);
