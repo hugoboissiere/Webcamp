@@ -12,10 +12,10 @@ require_once("php/includes/head.php");
    <?php
    if(!isset($_SESSION['id']))
    {
-      echo "Vous n'avez pas les droits d'afficher cette page.<br>
-      <a href='index.php'><span>Veuillez cliquer ici pour retourner sur l'accueil.</span></a>
+      echo "<b>Vous n'avez pas les droits d'afficher cette page.<br>
+      Veuillez cliquer ici pour retourner sur l'accueil.</b>
       <br><br>
-      <img src='https://knightslol.org/images/403_Error.png' style='width:100%'></img>";
+      <a href='index.php'><img src='https://knightslol.org/images/403_Error.png' style='width:100%'></img></a>";
    }
    else
    {
