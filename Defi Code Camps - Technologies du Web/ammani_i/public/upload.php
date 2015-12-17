@@ -33,5 +33,5 @@ if(!$_SESSION['erreur'])
 		$_SESSION['erreur'] = "Le serveur a rencontré un problème lors du transfert de l'image.";
 }
 if($_SESSION['erreur'])
-	echo "Fail";
+	echo $_SESSION['erreur'];
 ?>
