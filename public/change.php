@@ -113,8 +113,8 @@ $_SESSION['membership'] = $_POST['membership'];
 $_SESSION['newsletter'] = $_POST['newsletter'];
 $_SESSION['image'] = $img;
 echo "<br>session = " .$_SESSION['password'];
-echo "rien = " . md5("");
-echo "kappa = " . md5("kappa");
+echo "<br>rien = " . md5("");
+echo "<br>kappa = " . md5("kappa");
  // echo "beaccor";
 if($_SESSION['erreur'] == "")
 	// header('Location:espace_membre.php');
