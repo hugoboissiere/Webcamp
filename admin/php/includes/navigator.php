@@ -107,7 +107,13 @@
                 </li>
                 <li>OUTILS
                     <ul>
-                        <li><a href="" class="strip">Caisse</a></li>
+                        <li><a href=<?php
+                        if ($_SESSION['auth']['job'] == 1 || $_SESSION['auth']['job'] == 6){
+                            echo "'caisse.php'";
+                        }
+                        else {
+                            echo '"" class="strip"';
+                        }?>>Caisse</a></li>
                         <li><a href="" class="strip">Newsletter</a></li>
                         <li><a href="" class="strip">Historique</a></li>
                         <li><a href="" class="strip">Cloud</a></li>
