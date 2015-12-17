@@ -39,6 +39,8 @@ echo "4";
 	// $req->execute();
 }
 
+echo $id;
+
 $nbv++;
 
 $update2 = $dbh->prepare("UPDATE cw_medias_movies "
