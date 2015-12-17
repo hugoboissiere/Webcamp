@@ -4,7 +4,7 @@ session_start();
 
 include("php/includes/database.php");
 
-console.log("1");
+
 
 if (isset($_POST['votant']))
 {
