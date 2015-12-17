@@ -98,22 +98,22 @@ include("php/includes/navigator.php");
 			<th>Moyenne des votes</th>
 		</tr>
 	<?php
-	$j = 1;
-	$session1 = $dbh->query("SELECT * FROM cw_medias_movies as requete WHERE id = " . $j);
+	// $j = 1;
+	$session1 = $dbh->query("SELECT * FROM cw_medias_movies");
 	$session1->setFetchMode(PDO::FETCH_OBJ);
-	$result6 = $session1->fetch();
-	$test1 = $result6->requete;
-	echo "$result6";
-  	while ($j <= $test1)
+	// $result6 = $session1->fetch();
+	// $test1 = $result6->requete;
+	//echo "$result6";
+  	while ($result6 = $session1->fetch())
     {
       	$nbv = $result6->nb_vote;
       	$voter = $result6->vote;
 		$moyenne1 = $voter / $nbv;    
 		echo '<tr>
 				<td>' . $nbv . '</td>
-				<td>' . $voter . '</td>
+				<td>' . $moyenne1 . '</td>
 		 	 </tr>';
-		$j++;
+		// $j++;
     }
 	?>
 	</main>
