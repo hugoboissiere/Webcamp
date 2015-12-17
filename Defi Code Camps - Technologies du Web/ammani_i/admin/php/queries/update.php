@@ -100,7 +100,7 @@ if (isset($_POST["updateMembership"]))
   . "SET firstname = :firstname, lastname = :lastname, password = :password, cardNumber = :cardNumber, username = :username, sex = :sex, phoneHome = :phoneHome, phoneMobile = :phoneMobile,
   neighborhood = :neighborhood, city = :city, country = :country, email = :email, status = :status, activity = :activity, membership = :membership, newsletter = :newsletter "
   . "WHERE id = " . $id);
- if($_POST['password'] !== $update->password))
+ if($_POST['password'] !== $update->password)
  {
     $update->bindParam(":password", md5($_POST["password"]));
  }
