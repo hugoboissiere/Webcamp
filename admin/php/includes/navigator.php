@@ -108,7 +108,7 @@
                 <li>OUTILS
                     <ul>
                         <li><a href=<?php
-                        if ($_SESSION['auth']['job'] == 1 || $_SESSION['auth']['job'] == 6){
+                        if ($_SESSION['auth']['job'] == 1 || $_SESSION['auth']['job'] == 6 || $_SESSION['auth']['job'] == 2){
                             echo "'caisse.php'";
                         }
                         else {
