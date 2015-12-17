@@ -105,6 +105,8 @@ $(document).ready(function(){
         <li>
           <span class="dataPlot">Description</span>
           <span class="dataContent"><?php echo $result->plot; ?></span><br/>
+        </li>
+        <li>
           <fieldset class="rating">
           <legend>Qu'avez-vous pensé du film ?</legend>
           <form method="post" action="action_page.php">
