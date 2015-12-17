@@ -58,7 +58,7 @@ while ($result = $movieDetail->fetch()) {
 			{
 				$countryName = $result35->nom_region;
 			}
-		
+
 			$countryDetail->closeCursor();
 		}
 		$theaterDetail->closeCursor();
@@ -75,7 +75,7 @@ while ($result = $movieDetail->fetch()) {
 	$sessionDetail->closeCursor();
 
 
-		$filenamePoster = 'resources/imgs/content/movies/'.$result->id.'Poster.jpg';
+	$filenamePoster = 'resources/imgs/content/movies/'.$result->id.'Poster.jpg';
 
 	if (file_exists($filenamePoster)) {
 		$img = $filenamePoster;
@@ -185,63 +185,90 @@ while ($result = $movieDetail->fetch()) {
 							echo "Complet";
 						?>
 					</span>
-					</li>
-				</ul>
-			</div>
+				</li>
+			</ul>
 		</div>
 	</div>
-	<?php if ($_SESSION['email'])
+</div>
+<?php if ($_SESSION['email'])
+{
+	if ($nb_places > 0)
 	{
-		if ($nb_places > 0)
+		echo '	<div id="reservation">
+		<form method="post" action="reserver.php">
+		<fieldset>
+		<legend>Reservation</legend>
+		<br/>
+		<label for="places">Nombres de places :</label>
+		<select name="places">
+		<option value="1">1</option>';
+		if($nb_places > 1)
 		{
-			echo '	<div id="reservation">
-				<form method="post" action="reserver.php">
-					<fieldset>
-						<legend>Reservation</legend>
-							<br/>
-							<label for="places">Nombres de places :</label>
-							<select name="places">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-								<option value="7">7</option>
-								<option value="8">8</option>
-								<option value="9">9</option>
-								<option value="10">10</option>
-							</select><br/>
-							<input type="hidden" name="movie" value="'.$id.'" />
-							<input type="hidden" name="theater" value="'.$idTheater.'" />
-							<input type="hidden" name="member" value="'.$_SESSION['id'].'" />
-							<input type="hidden" name="session" value="'.$id_sessions.'" />
-								<br/>
-								<input type="submit" name="envoie" value="Valider" />
-					</fieldset>
-				</form>
-			</div>';
+			echo '<option value="2">2</option>';
+			if($nb_places > 2)
+			{
+				echo '<option value="3">3</option>';
+				if($nb_places > 3)
+				{
+					echo '<option value="4">4</option>';
+					if($nb_places > 4)
+					{
+						echo '<option value="5">5</option>';
+						if($nb_places > 5)
+						{
+							echo '<option value="6">6</option>';
+							if($nb_places > 6)
+							{
+								echo '<option value="7">7</option>';
+								if($nb_places > 7)
+								{
+									echo '<option value="8">8</option>';
+									if($nb_places > 8)
+									{
+										echo '<option value="9">9</option>';
+										if($nb_places > 9)
+										{
+											echo '<option value="10">10</option>';
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
-		else
-		{
-			echo '	<div id="reservation">
-				<p>Nous sommes complets !!!<br/>
-				<p>Desolé</p>
-			</div>';
-		}
-	}
-		?>
+											</select><br/>
+											<input type="hidden" name="movie" value="'.$id.'" />
+											<input type="hidden" name="theater" value="'.$idTheater.'" />
+											<input type="hidden" name="member" value="'.$_SESSION['id'].'" />
+											<input type="hidden" name="session" value="'.$id_sessions.'" />
+											<br/>
+											<input type="submit" name="envoie" value="Valider" />
+											</fieldset>
+											</form>
+											</div>';
+										}
+										else
+										{
+											echo '	<div id="reservation">
+											<p>Nous sommes complets !!!<br/>
+											<p>Desolé</p>
+											</div>';
+										}
+									}
+									?>
 
-			<?php
+									<?php
 
-		}
+								}
 
-		$movieDetail->closeCursor();
+								$movieDetail->closeCursor();
 
-		?> 
-		<?php
-		include("php/includes/scripts.php");
-		?>
+								?> 
+								<?php
+								include("php/includes/scripts.php");
+								?>
 
-	</body>
-	</html>
+								</body>
+								</html>
