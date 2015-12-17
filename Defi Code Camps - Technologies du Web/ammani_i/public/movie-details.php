@@ -140,9 +140,9 @@ $(document).ready(function(){
           <span>'; ?>
           <?php 
           if ($nbv <= 1)
-            echo ' '. ROUND($moyenne, 3).' ('.$nbv.' votant)';
+            echo ' '. ROUND($moyenne, 2).' ('.$nbv.' votant)';
           else
-            echo ' '. ROUND($moyenne, 3).' ('.$nbv.' votants)';  
+            echo ' '. ROUND($moyenne, 2).' ('.$nbv.' votants)';  
           echo '</span>
         </li>';
         }
