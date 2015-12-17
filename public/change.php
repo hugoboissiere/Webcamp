@@ -40,8 +40,8 @@ if($_FILES['profilpic']['name'] != "")
 {
 
 	$maxsize = 1048576;
-	$maxwidth = 500;
-	$maxheight = 500;
+	$maxwidth = 1000;
+	$maxheight = 1000;
 	if ($_FILES['profilpic']['error'] > 0)
 		$_SESSION['erreur'] = "Erreur lors du transfert";
 	if ($_FILES['icone']['size'] > $maxsize)

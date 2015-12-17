@@ -224,7 +224,7 @@ while ($result = $movieDetail->fetch()) {
 							{
 								echo '<option value="7">7</option>';
 								if($nb_places > 7)
-								{
+								{		
 									echo '<option value="8">8</option>';
 									if($nb_places > 8)
 									{
