@@ -33,7 +33,7 @@ $newsletter = $_POST['newsletter'];
 echo $_SESSION['password'] . "<br>";
 echo $password;
 // print_r($_FILES);
-print_r($_FILES);
+// print_r($_FILES);
 if($_FILES['profilpic']['name'] != "")
 {
 
