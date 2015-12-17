@@ -15,7 +15,7 @@ require_once("php/includes/head.php");
       echo "Vous n'avez pas les droits d'afficher cette page.<br>
       <a href='index.php'><span>Veuillez cliquer ici pour retourner sur l'accueil.</span></a>
       <br><br>
-      <img src='https://knightslol.org/images/403_Error.png'></img>";
+      <img src='https://knightslol.org/images/403_Error.png' style='width:100%'></img>";
    }
    else
    {
