@@ -10,7 +10,7 @@ $addJS =  array("js/jquery.scrollNav.js","js/jquery.colorbox.js");
 
 include("php/includes/head.php");
 
-$session = $dbh->query('SELECT * FROM cw_medias_movies WHERE id = "'.$_POST['idmovie'].'" ');
+$session = $dbh->query('SELECT * FROM cw_medias_movies WHERE id = "'.$_GET['id'].'" ');
   $session->setFetchMode(PDO::FETCH_OBJ);
   while ($result = $session->fetch())
     {
