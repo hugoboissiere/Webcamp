@@ -49,6 +49,7 @@ $update2 = $dbh->prepare("UPDATE cw_medias_movies "
 $update2->bindParam(":nbv", $nbv);
 		$update2->execute();
 $update2->closeCursor();
+echo "4";
 $session->closeCursor();
 echo "4";
 header('Location:movie-details.php?id='.$_POST['idmovie']);
