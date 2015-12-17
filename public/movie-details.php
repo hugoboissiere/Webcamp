@@ -107,14 +107,14 @@ $(document).ready(function(){
           <span class="dataContent"><?php echo $result->plot; ?></span><br/>
         </li>
         <li>
-          <fieldset class="rating fieldset">
+          <fieldset>
           <span>Qu'avez-vous pense du film ?</span>
           <form method="post" action="vote.php">
-            <input type="radio" value="5" /><label for="star5" title="Excellent !"> 5</label>&nbsp;&nbsp;&nbsp;
-            <input type="radio" value="4" /><label for="star4" title="Bien !"> 4</label>&nbsp;&nbsp;&nbsp;
-            <input type="radio" value="3" /><label for="star3" title="Moyen !"> 3</label>&nbsp;&nbsp;&nbsp;
-            <input type="radio" value="2" /><label for="star2" title="Mauvais !"> 2</label>&nbsp;&nbsp;&nbsp;
-            <input type="radio" value="1" /><label for="star1" title="Très mauvais !"> 1</label>
+            <input type="radio" value="5" /><label title="Excellent !"> 5</label>&nbsp;&nbsp;&nbsp;
+            <input type="radio" value="4" /><label title="Bien !"> 4</label>&nbsp;&nbsp;&nbsp;
+            <input type="radio" value="3" /><label title="Moyen !"> 3</label>&nbsp;&nbsp;&nbsp;
+            <input type="radio" value="2" /><label title="Mauvais !"> 2</label>&nbsp;&nbsp;&nbsp;
+            <input type="radio" value="1" /><label title="Très mauvais !"> 1</label>
           </form>
       </fieldset>
         </li>
