@@ -10,10 +10,12 @@ $_SESSION['erreur'] = "";
 $firstname = $_POST['firstname'];
 if (isset($_POST['password']))
 {
+	echo "frgr";
 	$password = md5($_POST['password']);
 }
 else
 {
+	echo "rrre";
 	$password = $_SESSION['password'];
 }
 $lastname = $_POST['lastname'];
@@ -113,6 +115,6 @@ $_SESSION['image'] = $img;
 echo $_SESSION['image'];
  // echo "beaccor";
 if($_SESSION['erreur'] == "")
-	header('Location:espace_membre.php');
+	// header('Location:espace_membre.php');
 
 ?>
