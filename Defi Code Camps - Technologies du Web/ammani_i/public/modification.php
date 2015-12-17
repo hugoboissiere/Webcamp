@@ -23,7 +23,7 @@ echo '<form method="post" action="change.php" id="addForm" enctype="multipart/fo
 <label for="firstname">Prénom : </label>
 <input type="text" name="firstname" id="firstname" value="' . $_SESSION['firstname'] . '"><br/>
 <br/>
-<label for="password">Mot de passe : </label>
+<label for="password">Mot de passe (laissez vide si vous ne voulez pas en changer) : </label>
 <input type="password" type="password" name="password" id="password"><br/>
 <br/>
 <label for="username">Pseudo : </label>
