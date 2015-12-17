@@ -1,8 +1,8 @@
 <?php
-include("php/includes/a_database.php");
+include("php/includes/database.php");
 
 // Titre de la page
-$headTitle = "Admin - ???";
+$headTitle = "Admin - Caisse";
 
 // CSS de cette page
 $addCSS =  array("");
