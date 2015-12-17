@@ -10,6 +10,9 @@ $addJS =  array("");
 
 // Queries de cette page
 $addPHP = array("");
+?>
+<link rel="stylesheet" href="css/reserve.css">
+<?php
 include("php/includes/head.php");
 
 $_SESSION['erreur'] = "";
