@@ -136,7 +136,7 @@ $(document).ready(function(){
           <span>Moyenne : </span>
           <span>'; ?>
           <?php echo $moyenne;
-          echo ' "("'.$nbv.'")"' '</span>
+          echo "(".$nbv." votants)"'</span>
         </li>';
         }
         ?>
