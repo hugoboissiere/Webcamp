@@ -10,8 +10,8 @@ include("php/includes/head.php");
    <?php
    if(!isset($_SESSION['id']))
    {
-      echo "cacacacacacacacacacascascaca";
       header('Location:index.php');
+      exit;
    }
    echo $_SESSION['id'] . "vuserguiyrsh guyewf ueihfgyewgfuegfbyei gyefg uewjfh ygeifg uyejfheruyivgrivh reuyif hreu vhreuv rouyheruog hvoreu ";
    echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br /> 
