@@ -37,6 +37,12 @@ form
 	padding: 1%;
 }
 
+.infos, label
+{
+	color: #68D2C3;
+	font-weight: bold;
+}
+
 #reservation
 {
 	/*display: inline-block;
