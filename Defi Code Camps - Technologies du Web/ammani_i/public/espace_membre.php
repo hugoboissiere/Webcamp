@@ -8,7 +8,11 @@ include("php/includes/head.php");
 
 <div class="infos">
    <?php
-
+   if(!isset($_SESSION['id']))
+   {
+      echo "cacacacacacacacacacascascaca";
+      header('Location:index.php');
+   }
    echo $_SESSION['id'] . "vuserguiyrsh guyewf ueihfgyewgfuegfbyei gyefg uewjfh ygeifg uyejfheruyivgrivh reuyif hreu vhreuv rouyheruog hvoreu ";
    echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br /> 
    <br />
@@ -48,10 +52,3 @@ include("php/includes/head.php");
 <form action="programmation.php" />
 <input type="submit" value="Faire une reservation" />
 </form>
-<?php
-   if(!isset($_SESSION['id']))
-   {
-      echo "cacacacacacacacacacascascaca";
-      header('Location:index.php');
-   }
-?>
