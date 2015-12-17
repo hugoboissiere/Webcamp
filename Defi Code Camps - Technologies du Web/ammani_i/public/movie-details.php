@@ -52,7 +52,7 @@ $(document).ready(function(){
 <div id="cover">
   <span></span>
   <img src="<?php echo $cover; ?>" alt="">
-  <link rel="stylesheet" type="text/css" href="css/vote.css"></link>
+  <link rel="stylesheet" type="text/css" href="css/vote.css" />
 
   <h2>
     <?php echo $result->title; ?>
