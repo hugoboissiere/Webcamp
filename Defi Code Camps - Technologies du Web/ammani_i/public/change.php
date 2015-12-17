@@ -112,9 +112,9 @@ $_SESSION['activity'] = $_POST['activity'];
 $_SESSION['membership'] = $_POST['membership'];
 $_SESSION['newsletter'] = $_POST['newsletter'];
 $_SESSION['image'] = $img;
-echo $_SESSION['image'];
+echo "<br>" .$_SESSION['password'];
  // echo "beaccor";
 if($_SESSION['erreur'] == "")
-	header('Location:espace_membre.php');
+	// header('Location:espace_membre.php');
 
 ?>
