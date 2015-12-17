@@ -8,12 +8,10 @@ require_once("php/includes/head.php");
 
 <div class="infos">
    <?php
-   var_dump($_SESSION);
    if(!isset($_SESSION['id']))
    {
       header('Location: http://192.168.114.4/public/index.php');
    }
-   echo $_SESSION['id'] . "vuserguiyrsh guyewf ueihfgyewgfuegfbyei gyefg uewjfh ygeifg uyejfheruyivgrivh reuyif hreu vhreuv rouyheruog hvoreu ";
    echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br /> 
    <br />
    Nom : ' . $_SESSION['lastname'] . '<br /> 
