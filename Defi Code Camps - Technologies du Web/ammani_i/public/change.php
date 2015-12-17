@@ -14,7 +14,7 @@ if (isset($_POST['password']))
 }
 else
 {
-	$password =$_SESSION['password'];
+	$password = $_SESSION['password'];
 }
 $lastname = $_POST['lastname'];
 $username = $_POST['username'];
@@ -30,7 +30,8 @@ $activity = $_POST['activity'];
 $membership = $_POST['membership'];
 $newsletter = $_POST['newsletter'];
 
-
+echo $_SESSION['password'] . "<br>";
+echo $password;
 // print_r($_FILES);
 print_r($_FILES);
 if($_FILES['profilpic']['name'] != "")
@@ -72,8 +73,8 @@ if($_FILES['profilpic']['name'] != "")
 }
 if($_SESSION['erreur'])
 	header('Location:modification.php');
-echo $_SESSION['erreur'];
-echo $extension_upload;
+// echo $_SESSION['erreur'];
+// echo $extension_upload;
 if($img == "" && ($_SESSION['image'] == 'malepic.jpg' || $_SESSION['image'] == 'femalepic.jpg'))
 {
 	if($_POST['sex'] == 'Male')
@@ -88,8 +89,8 @@ if($img == "" && ($_SESSION['image'] == 'malepic.jpg' || $_SESSION['image'] == '
 if ($img == "")
 	$img = $_SESSION['image'];
 // echo "trui";
-echo $img;
-$rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $firstname . "' , password = '". $password . "', lastname = '" . $lastname ."' , username = '" . $username . "', sex = '" . $sex . "' , phoneHome = '" . $phoneHome ."' , phoneMobile = '" . $phoneMobile ."' , neighborhood = '" . $neighborhood ."' , city = '" . $city . "' , country = '" . $country . "' , email = '" . $email . "' , membership = '" . $membership . "' , newsletter = '" . $newsletter . "', status = '". $status . "' , activity = '" . $activity ."', profile_pic = '" . $img . "' WHERE id =  '".$_SESSION['id']."' ");
+// echo $img;
+// $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $firstname . "' , password = '". $password . "', lastname = '" . $lastname ."' , username = '" . $username . "', sex = '" . $sex . "' , phoneHome = '" . $phoneHome ."' , phoneMobile = '" . $phoneMobile ."' , neighborhood = '" . $neighborhood ."' , city = '" . $city . "' , country = '" . $country . "' , email = '" . $email . "' , membership = '" . $membership . "' , newsletter = '" . $newsletter . "', status = '". $status . "' , activity = '" . $activity ."', profile_pic = '" . $img . "' WHERE id =  '".$_SESSION['id']."' ");
 
 // echo "yes";
 
