@@ -99,16 +99,18 @@ include("php/includes/navigator.php");
 		</tr>
 	<?php
 	$j = 1;
-	$session1 = $dbh->query("SELECT * FROM cw_medias_movies WHERE id = " . $j);
+	$session1 = $dbh->query("SELECT * FROM cw_medias_movies as requete WHERE id = " . $j);
 	$session1->setFetchMode(PDO::FETCH_OBJ);
-  	while ($result6 = $session1->fetch())
+	$session1-> $result6->fetch();
+	$test1 = $session1->requete;
+  	while ($j <= $test)
     {
       	$nbv = $result6->nb_vote;
       	$voter = $result6->vote;
-		$moyenne = $voter / $nbv;    
+		$moyenne1 = $voter / $nbv;    
 		echo '<tr>
-				<td>' . $result6->nb_vote . '</td>
-				<td>' . $result6->vote . '</td>
+				<td>' . $nbv . '</td>
+				<td>' . $moyenne1 . '</td>
 		 	 </tr>';
 		$j++;
     }
