@@ -10,6 +10,16 @@ $addJS =  array("js/jquery.scrollNav.js","js/jquery.colorbox.js");
 
 include("php/includes/head.php");
 
+$session = $dbh->query('SELECT * FROM cw_medias_movies WHERE id = "'.$_POST['idmovie'].'" ');
+  $session->setFetchMode(PDO::FETCH_OBJ);
+  while ($result = $session->fetch())
+    {
+      $nbv = $result->nb_vote;
+      $voter = $result->vote;
+    }
+
+$moyenne = $voter / $nbv;    
+
 $id = $_GET['id'];
 
 $movieDetail = $dbh->query("SELECT * FROM cw_medias_movies WHERE id = '" . $id . "'");
@@ -124,6 +134,9 @@ $(document).ready(function(){
         <br>
         <li>
           <span>Moyenne : </span>
+          <span>'; ?>
+          <?php echo $moyenne;
+          echo '</span>
         </li>';
         }
         ?>
