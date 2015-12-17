@@ -114,7 +114,7 @@ include("php/includes/navigator.php");
 	$movieDetail->setFetchMode(PDO::FETCH_OBJ);
 	echo '<tr>
 			<td>' . $moyenne . '</td>
-			<td>' . $nbr . '</td>
+			<td>' . $nbv . '</td>
 		 </tr>';
 	?>
 	</main>
