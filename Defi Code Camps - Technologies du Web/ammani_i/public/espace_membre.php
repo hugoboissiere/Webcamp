@@ -8,10 +8,10 @@ include("php/includes/head.php");
 
 <div class="infos">
    <?php
+   var_dump($_SESSION);
    if(!isset($_SESSION['id']))
    {
       header('Location:index.php');
-      exit;
    }
    echo $_SESSION['id'] . "vuserguiyrsh guyewf ueihfgyewgfuegfbyei gyefg uewjfh ygeifg uyejfheruyivgrivh reuyif hreu vhreuv rouyheruog hvoreu ";
    echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br /> 
