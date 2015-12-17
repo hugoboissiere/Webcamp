@@ -118,7 +118,7 @@ $(document).ready(function(){
             <input type="radio" name="vote" value="2" /><label title="Mauvais !"> 2</label>&nbsp;&nbsp;&nbsp;
             <input type="radio" name="vote" value="3" /><label title="Moyen !"> 3</label>&nbsp;&nbsp;&nbsp;
             <input type="radio" name="vote" value="4" /><label title="Bien !"> 4</label>&nbsp;&nbsp;&nbsp;
-            <input type="radio" name="vote" value="5" /><label title="Excellent !"> 5</label>
+            <input type="radio" name="vote" value="5" /><label title="Excellent !"> 5</label>&nbsp;&nbsp;&nbsp;
             <input type="submit" name="votant" value="Voter" /> 
           </form>
           </fieldset>
