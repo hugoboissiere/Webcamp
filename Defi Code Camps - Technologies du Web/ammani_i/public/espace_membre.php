@@ -51,6 +51,7 @@ include("php/includes/head.php");
 <?php
    if(!isset($_SESSION['id']))
    {
+      echo "cacacacacacacacacacascascaca";
       header('Location:index.php');
    }
-   ?>
+?>
