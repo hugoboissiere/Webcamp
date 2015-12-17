@@ -47,9 +47,21 @@ include("php/includes/navigator.php");
 					$test->setFetchMode(PDO::FETCH_OBJ);
 						while($r = $test->fetch())
 						{
-							echo '<td class="title">' . $r->username . '</td>';
+							echo '<td>' . $r->username . '</td>';
 						}
-						'<td></td>
+					$oui = $dbh->query("SELECT * FROM cw_human_media_movies WHERE id = '" . $result->id_film . "'");
+					$oui->setFetchMode(PDO::FETCH_OBJ);
+					while($a = $oui->fetch())
+					{
+						echo '<td>' . $a->title . '</td>';
+					}
+					$non = $dbh->query("SELECT * FROM cw_cinema_theaters WHERE id = '" . $result->id_cinema . "'");
+					$non->setFetchMode(PDO::FETCH_OBJ);
+					while($b = $non->fetch())
+					{
+						echo '<td>' . $b->name . '</td>';
+					}
+					echo '<td>' . $result->date_vente . '<td>
 					</tr>';
 					
 				}
