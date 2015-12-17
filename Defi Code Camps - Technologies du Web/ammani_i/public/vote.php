@@ -39,7 +39,7 @@ if (isset($_POST['votant']))
 	// $req->bindParam(":vote", $_POST["vote"]);
 	// $req->execute();
 }
-
+echo "4";
 $nbv++;
 $totalvote = $_POST['vote'] + $voter;
 
@@ -50,7 +50,7 @@ $update2->bindParam(":nbv", $nbv);
 		$update2->execute();
 $update2->closeCursor();
 $session->closeCursor();
-
+echo "4";
 header('Location:movie-details.php?id='.$_POST['idmovie']);
 
 ?>
