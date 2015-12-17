@@ -110,7 +110,7 @@ include("php/includes/navigator.php");
 		$moyenne1 = $voter / $nbv;    
 		echo '<tr>
 				<td>' . $nbv . '</td>
-				<td>' . $moyenne1 . '</td>
+				<td>' . $voter . '</td>
 		 	 </tr>';
 		$j++;
     }
