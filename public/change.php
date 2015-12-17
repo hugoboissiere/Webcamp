@@ -8,7 +8,7 @@ include("php/includes/database.php");
 $_SESSION['erreur'] = "";
 // echo "lera";
 $firstname = $_POST['firstname'];
-if (isset($_POST['password'])
+if (isset($_POST['password']))
 {
 	$password = md5($_POST['password']);
 }
