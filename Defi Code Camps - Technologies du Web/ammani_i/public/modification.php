@@ -55,7 +55,7 @@ echo '<label for="phoneHome">Téléphone Fixe : </label>
 <label for="city">Ville : </label>
 <input type="text" name="city" id="city" value="' . $_SESSION['city'] . '"><br/>
 <br/>
-<label for="profilpic">Fichier (JPG, JPEG, GIF ou PNG | max. 1 Mo | max 500x500px) :</label><br />
+<label for="profilpic">Fichier (JPG, JPEG, GIF ou PNG | max. 1 Mo | max 1000x1000px) :</label><br />
 <input type="file" name="profilpic" id="profilpic" /><br />
 ' . $_SESSION['erreur'] . '
 <br>
