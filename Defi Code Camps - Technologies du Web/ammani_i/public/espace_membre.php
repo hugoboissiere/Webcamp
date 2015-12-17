@@ -10,7 +10,8 @@ include("php/includes/head.php");
 <?php
 if($_SESSION['id'] == "")
 {
-   header("Location:index.php");
+         header('Location:index.php');
+
 }
 echo $_SESSION['id'] . "vuserguiyrsh guyewf ueihfgyewgfuegfbyei gyefg uewjfh ygeifg uyejfheruyivgrivh reuyif hreu vhreuv rouyheruog hvoreu ";
 echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br /> 
