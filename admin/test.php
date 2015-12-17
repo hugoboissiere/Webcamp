@@ -45,7 +45,11 @@ $update = $dbh->prepare("UPDATE cw_human_resources_memberships "
   . "WHERE id = 28");
 $mdp = $dbh->query("SELECT * FROM cw_human_resources_memberships  WHERE id = 28");
 $mdp->setFetchMode(PDO::FETCH_OBJ);
-if($_POST['password'] !== $mdp->password)
+while ($result = $mdp->fetch()) {
+    $password = $mdp->password;
+}
+
+if($_POST['password'] !== $password)
 {
     $update->bindParam(":password", md5($_POST["password"]));
 }
