@@ -113,6 +113,6 @@ $_SESSION['image'] = $img;
 echo $_SESSION['image'];
  // echo "beaccor";
 if($_SESSION['erreur'] == "")
-	// header('Location:espace_membre.php');
+	header('Location:espace_membre.php');
 
 ?>
