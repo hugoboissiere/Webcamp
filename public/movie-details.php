@@ -52,6 +52,7 @@ $(document).ready(function(){
 <div id="cover">
   <span></span>
   <img src="<?php echo $cover; ?>" alt="">
+  <link rel="stylesheet" type="text/css" href="test.css"></link>
 
   <h2>
     <?php echo $result->title; ?>
@@ -104,6 +105,16 @@ $(document).ready(function(){
         <li>
           <span class="dataPlot">Description</span>
           <span class="dataContent"><?php echo $result->plot; ?></span><br/>
+          <fieldset class="rating">
+          <legend>Qu'avez-vous pensé du film ?</legend>
+          <form method="post" action="action_page.php">
+          <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Excellent !">Excellent !</label>
+          <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Bien !">Bien !</label>
+          <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Moyen !">Moyen !</label>
+          <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Mauvais !">Mauvais !</label>
+          <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Très mauvais">Très mauvais !</label>
+      </form>
+      </fieldset>
         </li>
           <div style="height:200px; display:block;"></div>
         </ul>
