@@ -8,7 +8,7 @@ include("php/includes/database.php");
 $_SESSION['erreur'] = "";
 // echo "lera";
 $firstname = $_POST['firstname'];
-$password = $_POST['password'];
+$password = md5($_POST['password']);
 $lastname = $_POST['lastname'];
 $username = $_POST['username'];
 $sex = $_POST['sex'];
@@ -89,7 +89,6 @@ $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $f
             $_SESSION['username'] = $_POST['username'];
             $_SESSION['firstname'] = $_POST['firstname'];
             $_SESSION['lastname'] = $_POST['lastname'];
-            $_SESSION['password'] = $_POST['password'];
             $_SESSION['sex'] = $_POST['sex'];
             $_SESSION['phoneHome'] = $_POST['phoneHome'];
             $_SESSION['phoneMobile'] = $_POST['phoneMobile'];
