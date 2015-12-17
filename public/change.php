@@ -81,6 +81,7 @@ if($img == "" && ($_SESSION['image'] == 'malepic.jpg' || $_SESSION['image'] == '
 if ($img == "")
 	$img = $_SESSION['image'];
 // echo "trui";
+echo $img;
 $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $firstname . "' , password = '". $password . "', lastname = '" . $lastname ."' , username = '" . $username . "', sex = '" . $sex . "' , phoneHome = '" . $phoneHome ."' , phoneMobile = '" . $phoneMobile ."' , neighborhood = '" . $neighborhood ."' , city = '" . $city . "' , country = '" . $country . "' , email = '" . $email . "' , membership = '" . $membership . "' , newsletter = '" . $newsletter . "', status = '". $status . "' , activity = '" . $activity ."', profile_pic = '" . $img . "' WHERE id =  '".$_SESSION['id']."' ");
 
 // echo "yes";
@@ -101,9 +102,9 @@ $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $f
             $_SESSION['membership'] = $_POST['membership'];
             $_SESSION['newsletter'] = $_POST['newsletter'];
             $_SESSION['image'] = $img;
-echo $_SESSION['erreur'];
+echo $_SESSION['image'];
  // echo "beaccor";
-if($_SESSION['erreur'] == "")
-	header('Location:espace_membre.php');
+// if($_SESSION['erreur'] == "")
+	// header('Location:espace_membre.php');
 
 ?>
