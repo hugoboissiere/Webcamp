@@ -43,18 +43,18 @@ include("php/includes/navigator.php");
 				$caisse->setFetchMode(PDO::FETCH_OBJ);
 				while ($result = $caisse->fetch()) {
 					echo '<tr>';
-					$test = $dbh->query("SELECT * FROM cw_human_resources_memberships WHERE id = '" . $result->id_utilisateur . "'");
-					$test->setFetchMode(PDO::FETCH_OBJ);
-						while($r = $test->fetch())
-						{
-							echo '<td>' . $r->username . '</td>';
-						}
-					// $oui = $dbh->query("SELECT * FROM cw_human_media_movies WHERE id = '" . $result->id_film . "'");
-					// $oui->setFetchMode(PDO::FETCH_OBJ);
-					// while($a = $oui->fetch())
-					// {
-					// 	echo '<td>' . $a->title . '</td>';
-					// }
+					// $test = $dbh->query("SELECT * FROM cw_human_resources_memberships WHERE id = '" . $result->id_utilisateur . "'");
+					// $test->setFetchMode(PDO::FETCH_OBJ);
+					// 	while($r = $test->fetch())
+					// 	{
+					// 		echo '<td>' . $r->username . '</td>';
+					// 	}
+					$oui = $dbh->query("SELECT * FROM cw_human_media_movies WHERE id = '" . $result->id_film . "'");
+					$oui->setFetchMode(PDO::FETCH_OBJ);
+					while($a = $oui->fetch())
+					{
+						echo '<td>' . $a->title . '</td>';
+					}
 					// $non = $dbh->query("SELECT * FROM cw_cinema_theaters WHERE id = '" . $result->id_cinema . "'");
 					// $non->setFetchMode(PDO::FETCH_OBJ);
 					// while($b = $non->fetch())
