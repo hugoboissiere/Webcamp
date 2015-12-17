@@ -21,7 +21,7 @@ $countHREmployees ->setFetchMode(PDO::FETCH_OBJ);
 $countCinemaTheaters = $dbh->query("SELECT count(id) as count FROM cw_cinema_theaters");
 $countCinemaTheaters ->setFetchMode(PDO::FETCH_OBJ);
     
-$countCinemaSessions = $dbh->query("SELECT count(id) as count FROM cw_cinema_sessions");
+$countCinemaSessions = $dbh->query("SELECT count(id) as count FROM cw_cinema_sessions WHERE archive='false'");
 $countCinemaSessions ->setFetchMode(PDO::FETCH_OBJ);
         
 ?> 
