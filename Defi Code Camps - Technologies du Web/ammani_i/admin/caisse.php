@@ -49,7 +49,7 @@ include("php/includes/navigator.php");
 						{
 							echo '<td>' . $r->username . '</td>';
 						}
-					$oui = $dbh->query("SELECT * FROM cw_media_movies WHERE id = '" . $result->id_film . "'");
+					$oui = $dbh->query("SELECT * FROM cw_medias_movies WHERE id = '" . $result->id_film . "'");
 					$oui->setFetchMode(PDO::FETCH_OBJ);
 					while($a = $oui->fetch())
 					{
