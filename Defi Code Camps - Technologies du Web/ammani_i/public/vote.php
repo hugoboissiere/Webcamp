@@ -39,8 +39,6 @@ echo "4";
 	// $req->execute();
 }
 
-echo $id;
-
 $nbv++;
 
 $update2 = $dbh->prepare("UPDATE cw_medias_movies "
@@ -50,7 +48,7 @@ $update2->bindParam(":nbv", $nbv);
 		$update2->execute();
 $update2->closeCursor();
 
-header('Location:movie-details.php?id='.$id);
+header('Location:movie-details.php?id='.$_POST['idmovie']);
 
 ?>
 
