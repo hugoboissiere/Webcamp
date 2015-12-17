@@ -1,7 +1,6 @@
 <?php
 include("php/includes/database.php");
-if(isset($_SESSION['id']))
-   require_once("php/includes/head.php");
+require_once("php/includes/head.php");
 
 ?>
 
