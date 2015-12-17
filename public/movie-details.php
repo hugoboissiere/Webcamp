@@ -107,7 +107,6 @@ $(document).ready(function(){
           <span class="dataContent"><?php echo $result->plot; ?></span><br/>
         </li>
         <li>
-          <link rel="stylesheet" type="text/css" href="css/vote.css"></link>
           <fieldset class="rating fieldset">
           <span>Qu'avez-vous pense du film ?</span>
           <form method="post" action="vote.php">
