@@ -1,5 +1,5 @@
 <?php
-include("php/includes/database.php");
+// include("php/includes/database.php");
 require_once("php/includes/head.php");
 
 ?>
