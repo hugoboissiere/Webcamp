@@ -7,14 +7,11 @@ $addCSS =  array("css/colorbox.css");
 
 // JS de cette page
 $addJS =  array("js/jquery.scrollNav.js","js/jquery.colorbox.js");
-?>
-<link rel="stylesheet" href="css/comms.css">
-<?php
 
 include("php/includes/head.php");
 
 $session = $dbh->query('SELECT * FROM cw_medias_movies WHERE id = "'.$_GET['id'].'" ');
-  $session->setFetchMode(PDO::FETCH_OBJ);
+$session->setFetchMode(PDO::FETCH_OBJ);
   while ($result = $session->fetch())
     {
       $nbv = $result->nb_vote;
@@ -122,7 +119,7 @@ $(document).ready(function(){
         echo '<br>
         <li>
           <fieldset>
-          <span>Notez le film :</span>
+          <span>Notez le film !</span>
           <form method="post" action="vote.php">
             <input type="radio" name="vote" value="1" /><label title="Très mauvais !"> 1</label>&nbsp;&nbsp;&nbsp;
             <input type="radio" name="vote" value="2" /><label title="Mauvais !"> 2</label>&nbsp;&nbsp;&nbsp;
@@ -140,9 +137,9 @@ $(document).ready(function(){
           <span>'; ?>
           <?php 
           if ($nbv <= 1)
-            echo ' '. ROUND($moyenne, 2).' ('.$nbv.' votant)';
+            echo ' '.$moyenne.' ('.$nbv.' votant)';
           else
-            echo ' '. ROUND($moyenne, 2).' ('.$nbv.' votants)';  
+            echo ' '.$moyenne.' ('.$nbv.' votants)';  
           echo '</span>
         </li>';
         }
