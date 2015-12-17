@@ -89,6 +89,34 @@ include("php/includes/navigator.php");
 	}
 	?>
 	</table>
+	<div style="height:100px;display:block;"></div>
+	<p class="titre" >Moyenne des votes</p>
+	<div style="height:50px;display:block;"></div>
+    <table class="tableau">
+		<tr>
+			<th>Nombre de votants</th>
+			<th>Moyenne des votes</th>
+		</tr>
+	<?php
+	$session = $dbh->query('SELECT * FROM cw_medias_movies WHERE id = "'.$_GET['id'].'" ');
+	$session->setFetchMode(PDO::FETCH_OBJ);
+  	while ($result = $session->fetch())
+    {
+      $nbv = $result->nb_vote;
+      $voter = $result->vote;
+    }
+
+	$moyenne = $voter / $nbv;    
+
+	$id = $_GET['id'];
+
+	$movieDetail = $dbh->query("SELECT * FROM cw_medias_movies WHERE id = '" . $id . "'");
+	$movieDetail->setFetchMode(PDO::FETCH_OBJ);
+	echo '<tr>
+			<td>' . $moyenne . '</td>
+			<td>' . $nbr . '</td>
+		 </tr>';
+	?>
 	</main>
     <script src="js/layoutNavigator.js"></script>
 </body>
