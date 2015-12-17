@@ -7,4 +7,6 @@
      // 'X-Mailer: PHP/' . phpversion();
 
      mail($to, $subject, $message);
+
+     header('Location:test.php');
  ?>
