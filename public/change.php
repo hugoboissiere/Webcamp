@@ -10,12 +10,12 @@ $_SESSION['erreur'] = "";
 $firstname = $_POST['firstname'];
 if ($_POST['password'] !== "")
 {
-	echo "frgr <br>";
+	// echo "frgr <br>";
 	$password = md5($_POST['password']);
 }
 else
 {
-	echo "rrre <br>";
+	// echo "rrre <br>";
 	$password = $_SESSION['password'];
 }
 $lastname = $_POST['lastname'];
@@ -32,8 +32,8 @@ $activity = $_POST['activity'];
 $membership = $_POST['membership'];
 $newsletter = $_POST['newsletter'];
 
-echo "ancien session : " .$_SESSION['password'] . "<br>";
-echo "nouveau mdp : " . $password;
+// echo "ancien session : " .$_SESSION['password'] . "<br>";
+// echo "nouveau mdp : " . $password;
 // print_r($_FILES);
 // print_r($_FILES);
 if($_FILES['profilpic']['name'] != "")
@@ -112,11 +112,11 @@ $_SESSION['activity'] = $_POST['activity'];
 $_SESSION['membership'] = $_POST['membership'];
 $_SESSION['newsletter'] = $_POST['newsletter'];
 $_SESSION['image'] = $img;
-echo "<br>session = " .$_SESSION['password'];
-echo "<br>rien = " . md5("");
-echo "<br>kappa = " . md5("kappa");
+// echo "<br>session = " .$_SESSION['password'];
+// echo "<br>rien = " . md5("");
+// echo "<br>kappa = " . md5("kappa");
  // echo "beaccor";
 if($_SESSION['erreur'] == "")
-	// header('Location:espace_membre.php');
+	header('Location:espace_membre.php');
 
 ?>
