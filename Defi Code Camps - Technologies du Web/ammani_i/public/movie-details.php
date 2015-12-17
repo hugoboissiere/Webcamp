@@ -106,7 +106,10 @@ $(document).ready(function(){
           <span class="dataPlot">Description</span>
           <span class="dataContent"><?php echo $result->plot; ?></span><br/>
         </li>
-        <br>
+        <?php
+        if($_SESSION['id'])
+        {
+        echo '<br>
         <li>
           <fieldset>
           <span>Notez le film !</span>
@@ -117,8 +120,10 @@ $(document).ready(function(){
             <input type="radio" name="vote" value="4" /><label title="Bien !"> 4</label>&nbsp;&nbsp;&nbsp;
             <input type="radio" name="vote" value="5" /><label title="Excellent !"> 5</label>
           </form>
-      </fieldset>
-        </li>
+          </fieldset>
+        </li>';
+        }
+        ?>
           <div style="height:200px; display:block;"></div>
         </ul>
       </div>
