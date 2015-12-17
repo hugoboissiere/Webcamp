@@ -75,9 +75,10 @@ include("php/includes/navigator.php");
                     //Add uploaded file to list
                     if(response==="success"){
                         alert("Success ! :)");
-                    } else{
-                        alert("Failure ! :(");
-                    }
+                    } 
+                    // else{
+                    //     alert("Failure ! :(");
+                    // }
                 }
             });
             

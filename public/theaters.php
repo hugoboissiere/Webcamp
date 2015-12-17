@@ -1,3 +1,4 @@
+
 <?php
 // Titre de la page
 $headTitle = "Cinewax - Nos salles";
