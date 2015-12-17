@@ -44,7 +44,7 @@ $nbv++;
 $totalvote = $_POST['vote'] + $voter;
 
 $update2 = $dbh->prepare("UPDATE cw_medias_movies "
-		. "SET nb_vote = :nbv, vote= :totalvote "
+		. "SET nb_vote = :nbv, vote = :totalvote "
 		. "WHERE id = ".$_POST["idmovie"]);
 $update2->bindParam(":nbv", $nbv);
 		$update2->execute();
