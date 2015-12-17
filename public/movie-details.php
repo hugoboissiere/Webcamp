@@ -49,6 +49,7 @@ $(document).ready(function(){
 
 });
 </script>
+<meta charset="UTF-8">
 <div id="cover">
   <span></span>
   <img src="<?php echo $cover; ?>" alt="">
@@ -109,7 +110,7 @@ $(document).ready(function(){
         <li>
           <link rel="stylesheet" type="text/css" href="css/vote.css"></link>
           <fieldset class="rating">
-          <span>Qu'avez-vous pense du film ?</span>
+          <span>Qu'avez-vous pensé du film ?</span>
           <!-- <form method="post" action="action_page.php"> -->
           <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Excellent !"> Excellent !</label>
           <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Bien !"> Bien !</label>
