@@ -28,10 +28,10 @@ if(!$_SESSION['erreur'])
 
 	$resultat = move_uploaded_file($_FILES['profilpic']['tmp_name'],$truepath);
 	if ($resultat)
-		header('Location:espace_membre.php');
+		echo "Done";
 	else
 		$_SESSION['erreur'] = "Le serveur a rencontré un problème lors du transfert de l'image.";
 }
 if($_SESSION['erreur'])
-	header('Location:test.php');
+	echo "Fail";
 ?>
