@@ -27,7 +27,7 @@ echo "3";
 echo "4";
 	$session2->closeCursor();
 
-	$totalvote = $_POST['vote'] + $voter
+	$totalvote = $_POST['vote'] + $voter;
 
 
 
