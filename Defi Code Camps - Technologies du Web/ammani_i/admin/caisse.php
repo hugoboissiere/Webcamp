@@ -43,7 +43,7 @@ include("php/includes/navigator.php");
 				$caisse->setFetchMode(PDO::FETCH_OBJ);
 				while ($result = $caisse->fetch()) {
 					echo '<tr>';
-					$test = $dbh->query("SELECT * FROM cw_human_resources_memberships");
+					$test = $dbh->query("SELECT * FROM cw_human_resources_memberships WHERE id = '" . $result->id_utilisateur . "'");
 					$test->setFetchMode(PDO::FETCH_OBJ);
 						while($r = $test->fetch())
 						{
