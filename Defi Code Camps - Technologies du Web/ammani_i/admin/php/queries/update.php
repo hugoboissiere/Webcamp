@@ -102,7 +102,11 @@ if (isset($_POST["updateMembership"]))
   . "WHERE id = " . $id);
  if($_POST['password'] !== md5($update->password))
  {
-    $update->bindParam(":password", ($_POST["password"]);
+    $update->bindParam(":password", md5($_POST["password"]));
+ }
+ else
+ {
+    $update->bindParam(":password", $_POST["password"]);
  }
  $update->bindParam(":firstname", $_POST["firstname"]);
  $update->bindParam(":lastname", $_POST["lastname"]);
