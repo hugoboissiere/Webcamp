@@ -90,6 +90,7 @@ $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $f
             $_SESSION['firstname'] = $_POST['firstname'];
             $_SESSION['lastname'] = $_POST['lastname'];
             $_SESSION['sex'] = $_POST['sex'];
+            $_SESSION['password'] =$password;
             $_SESSION['phoneHome'] = $_POST['phoneHome'];
             $_SESSION['phoneMobile'] = $_POST['phoneMobile'];
             $_SESSION['neighborhood'] = $_POST['neighborhood'];
