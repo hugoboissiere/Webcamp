@@ -1,4 +1,6 @@
 .comzone
 {
 	border: black 1px solid;
+	padding:1%;
+	border-radius: 120px;
 }
