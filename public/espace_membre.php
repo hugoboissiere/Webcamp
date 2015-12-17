@@ -8,7 +8,7 @@ include("php/includes/head.php");
 
 <div class="infos">
 <?php
-if($_SESSION['id'] == "")
+if(!isset($_SESSION['id']))
 {
          header('Location:index.php');
 
