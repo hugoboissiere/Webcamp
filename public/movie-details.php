@@ -106,6 +106,7 @@ $(document).ready(function(){
           <span class="dataPlot">Description</span>
           <span class="dataContent"><?php echo $result->plot; ?></span><br/>
         </li>
+        <br>
         <li>
           <fieldset>
           <span>Notez le film !</span>
