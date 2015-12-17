@@ -2,6 +2,9 @@
 
 include("php/includes/head.php");
 include("php/includes/database.php");
+?>
+<link rel="stylesheet" href="css/modification.css">
+<?php
 
 
 echo '<form method="post" action="change.php" id="addForm" enctype="multipart/form-data" autocomplete="off" class="formOverflow"> 
@@ -18,16 +21,16 @@ echo '<form method="post" action="change.php" id="addForm" enctype="multipart/fo
 <input type="radio" name="newsletter" value="No" id="newsletterOff"class="radio" checked><br/>
 <br/>
 <label for="name">Nom : </label>
-<input type="text" name="lastname" id="name" value="' . $_SESSION['lastname'] . '"><br/>
+<input type="text" name="lastname" id="name"class"champignon" value="' . $_SESSION['lastname'] . '"><br/>
 <br/>
 <label for="firstname">Prénom : </label>
-<input type="text" name="firstname" id="firstname" value="' . $_SESSION['firstname'] . '"><br/>
+<input type="text" name="firstname" id="firstname"class"champignon" value="' . $_SESSION['firstname'] . '"><br/>
 <br/>
 <label for="password">Mot de passe (laissez vide si vous ne voulez pas en changer) : </label>
-<input type="password" type="password" name="password" id="password"><br/>
+<input type="password" type="password" name="password" id="password"class"champignon"><br/>
 <br/>
 <label for="username">Pseudo : </label>
-<input type="text" name="username" id="username" value="' . $_SESSION['username'] . '"><br/>
+<input type="text" name="username" id="username"class"champignon" value="' . $_SESSION['username'] . '"><br/>
 <br/>
 Sexe : ';
 ?>
@@ -44,23 +47,23 @@ if($_SESSION['sex'] == 'Female')
 <br/>
 <?php
 echo '<label for="phoneHome">Téléphone Fixe : </label>
-<input type="tel" name="phoneHome" id="phoneHome" value="' . $_SESSION['phoneHome'] . '"><br/>
+<input type="tel" name="phoneHome" id="phoneHome"class"champignon" value="' . $_SESSION['phoneHome'] . '"><br/>
 <br/>
 <label for="phoneMobile">Téléphone Mobile : </label>
-<input type="tel" name="phoneMobile" id="phoneMobile" value="' . $_SESSION['phoneMobile'] . '"><br/>
+<input type="tel" name="phoneMobile" id="phoneMobile"class"champignon" value="' . $_SESSION['phoneMobile'] . '"><br/>
 <br/>
 <label for="neighborhood">Quartier : </label>
-<input type="text" id="neighborhood" name="neighborhood" value="' . $_SESSION['neighborhood'] . '"><br/>
+<input type="text" id="neighborhood"class"champignon" name="neighborhood" value="' . $_SESSION['neighborhood'] . '"><br/>
 <br/>
 <label for="city">Ville : </label>
-<input type="text" name="city" id="city" value="' . $_SESSION['city'] . '"><br/>
+<input type="text" name="city" id="city"class"champignon" value="' . $_SESSION['city'] . '"><br/>
 <br/>
 <label for="profilpic">Fichier (JPG, JPEG, GIF ou PNG | max. 1 Mo | max 1000x1000px) :</label><br />
 <input type="file" name="profilpic" id="profilpic" /><br />
 ' . $_SESSION['erreur'] . '
 <br>
 <label for="country">Pays : </label>
-<select name="country" id="country">';
+<select name="country" id="country"class"champignon">';
 ?>
 <?php
 
@@ -75,7 +78,7 @@ $employeeRegionListAdd->closeCursor();
 echo '                </select><br/>
 <br/>
 <label for="mail">Email : </label>
-<input type="email" name="email" id="mail" value="' . $_SESSION['email'] . '"><br/>
+<input type="email" name="email" id="mail"class"champignon" value="' . $_SESSION['email'] . '"><br/>
 <br/>
 <label for="status">Statut : </label>
 <select name="status" id="status">';
