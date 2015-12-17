@@ -9,6 +9,7 @@ $addCSS =  array("css/colorbox.css");
 $addJS =  array("js/jquery.scrollNav.js","js/jquery.colorbox.js");
 
 include("php/includes/head.php");
+
 $id = $_GET['id'];
 
 $movieDetail = $dbh->query("SELECT * FROM cw_medias_movies WHERE id = '" . $id . "'");
