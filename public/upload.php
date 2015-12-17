@@ -5,6 +5,7 @@ session_start();
 $maxsize = 1048576;
 $maxwidth = 500;
 $maxheight = 500;
+var_dump($_FILES);
 if ($_FILES['profilpic']['error'] > 0)
 	$_SESSION['erreur'] = "Erreur lors du transfert";
 if ($_FILES['icone']['size'] > $maxsize)
