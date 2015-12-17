@@ -45,7 +45,7 @@ require_once("php/includes/head.php");
       <br /> 
       <br />  		
       <form method="post" action="modification.php">
-      <input type="submit" value="Modifier"/>
+      <input type="submit" value="Modifier" class="marre" />
       </form>
       </div>   	
 
@@ -53,7 +53,7 @@ require_once("php/includes/head.php");
       <br />
 
       <form action="programmation.php" />
-      <input type="submit" value="Faire une reservation" />
+      <input type="submit" value="Faire une reservation" class="marre2" />
       </form>';
    }
    ?>
