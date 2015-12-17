@@ -110,11 +110,11 @@ $(document).ready(function(){
           <fieldset class="rating fieldset">
           <span>Qu'avez-vous pense du film ?</span>
           <form method="post" action="vote.php">
-            <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Excellent !">5</label>&nbsp;&nbsp;&nbsp;
-            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Bien !">4</label>&nbsp;&nbsp;&nbsp;
-            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Moyen !">3</label>&nbsp;&nbsp;&nbsp;
-            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Mauvais !">2</label>&nbsp;&nbsp;&nbsp;
-            <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Très mauvais !">1</label>
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Excellent !"> 5</label>&nbsp;&nbsp;&nbsp;
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Bien !"> 4</label>&nbsp;&nbsp;&nbsp;
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Moyen !"> 3</label>&nbsp;&nbsp;&nbsp;
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Mauvais !"> 2</label>&nbsp;&nbsp;&nbsp;
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Très mauvais !"> 1</label>
           </form>
       </fieldset>
         </li>
