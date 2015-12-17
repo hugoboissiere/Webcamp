@@ -1,6 +1,6 @@
 body {
   margin: 100px;
-  background-color: #1e262c;
+  background-color: #ffffff;
 }
 
 table { 
@@ -20,7 +20,7 @@ table.tableau td{
 }
 
 table.tableau th{
-    color: #ffffff;
+    color: #69D2C3;
     font-size: 15px;
 }
 
@@ -28,7 +28,7 @@ table.tableau th{
 	text-align: center;
 	font-size: 20px;
 	font-family: "Comic Sans MS", sans-serif;
-  color: #ffffff;
+  color: #69D2C3;
 }
 
 .button {
