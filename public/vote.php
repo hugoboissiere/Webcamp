@@ -8,7 +8,6 @@ include("php/includes/database.php");
 
 if (isset($_POST['votant']))
 {
-	//echo "2";
 	$session = $dbh->query('SELECT * FROM cw_medias_movies WHERE id = "'.$_POST['idmovie'].'" ');
 	$session->setFetchMode(PDO::FETCH_OBJ);
 	while ($result = $session->fetch())
