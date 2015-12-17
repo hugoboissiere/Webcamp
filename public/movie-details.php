@@ -135,7 +135,11 @@ $(document).ready(function(){
         <li>
           <span>Moyenne : </span>
           <span>'; ?>
-          <?php echo ' '.$moyenne.' ('.$nbv.' votants)';
+          <?php 
+          if ($nbv > 1)
+            echo ' '.$moyenne.' ('.$nbv.' votants)';
+          else
+            echo ' '.$moyenne.' ('.$nbv.' votants)';  
           echo '</span>
         </li>';
         }
