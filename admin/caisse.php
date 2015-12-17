@@ -8,7 +8,7 @@ $pageTitle = "Caisse";
 $addCSS = array("");
 
 // JS de cette page
-$addJS = array("js/form/languages.js", "js/rowSelection/languages.js");
+$addJS = array("js/form/languages.js");
 
 
 // PHP (queries) de cette page
