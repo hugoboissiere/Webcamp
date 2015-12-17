@@ -253,13 +253,6 @@ while ($result = $movieDetail->fetch()) {
 		</form>
 		</div>';
 	}
-	else
-	{
-		echo '	<div id="reservation">
-		<p>Nous sommes complets !!!<br/>
-		<p>Desolé</p>
-		</div>';
-	}
 }
 ?>
 
