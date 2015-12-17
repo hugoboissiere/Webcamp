@@ -4,7 +4,9 @@ require_once("php/includes/head.php");
 
 ?>
 
-<img src=<?php echo '"resources/profilpic/' . $_SESSION['image'] . '"'; ?> alt="titi" />
+<?php if (isset($_SESSION['id'])) {
+   echo '<img src="resources/profilpic/' . $_SESSION['image'] . '" alt="titi" />';}
+   ?>
 
 <div class="infos">
    <?php
