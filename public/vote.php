@@ -48,7 +48,7 @@ $update2->bindParam(":nbv", $nbv);
 		$update2->execute();
 $update2->closeCursor();
 
-header('Location:movie-details.php');
+header('Location:movie-details.php?id="'.$id.'"');
 
 ?>
 
