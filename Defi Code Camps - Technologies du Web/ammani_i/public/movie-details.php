@@ -17,10 +17,6 @@ $movieDetail->setFetchMode(PDO::FETCH_OBJ);
 
 while ($result = $movieDetail->fetch()) {
 
-
-
-
-
  $filenamePoster = 'resources/imgs/content/movies/'.$result->id.'Poster.jpg';
 
  if (file_exists($filenamePoster)) {
@@ -119,6 +115,7 @@ $(document).ready(function(){
             <input type="radio" name="vote" value="3" /><label title="Moyen !"> 3</label>&nbsp;&nbsp;&nbsp;
             <input type="radio" name="vote" value="4" /><label title="Bien !"> 4</label>&nbsp;&nbsp;&nbsp;
             <input type="radio" name="vote" value="5" /><label title="Excellent !"> 5</label>&nbsp;&nbsp;&nbsp;
+            <input type="hidden" name="idmovie" value="'.$id.'" />
             <input type="submit" name="votant" value="Voter" /> 
           </form>
           </fieldset>
