@@ -114,7 +114,7 @@ $(document).ready(function(){
           <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Bien !">Bien !</label>
           <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Moyen !">Moyen !</label>
           <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Mauvais !">Mauvais !</label>
-          <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Très mauvais">Très mauvais !</label>
+          <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Très mauvais !">Très mauvais !</label>
       </form>
       </fieldset>
         </li>
