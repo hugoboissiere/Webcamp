@@ -17,7 +17,7 @@ if (isset($_POST['votant']))
 			$voter = $result->vote;
 		}
 
-	$session->closeCursor();
+	// $session->closeCursor();
 
 	// $session2 = $dbh->query('SELECT * FROM cw_medias_movies WHERE id = "'.$_POST['idmovie'].'" ');
 	// $session2->setFetchMode(PDO::FETCH_OBJ);
@@ -49,6 +49,7 @@ $update2 = $dbh->prepare("UPDATE cw_medias_movies "
 $update2->bindParam(":nbv", $nbv);
 		$update2->execute();
 $update2->closeCursor();
+$session->closeCursor();
 
 header('Location:movie-details.php?id='.$_POST['idmovie']);
 
