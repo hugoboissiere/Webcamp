@@ -101,10 +101,10 @@ include("php/includes/navigator.php");
 	$j = 1;
 	$session1 = $dbh->query("SELECT * FROM cw_medias_movies WHERE id = " . $j);
 	$session1->setFetchMode(PDO::FETCH_OBJ);
-  	while ($result = $session1->fetch())
+  	while ($result6 = $session1->fetch())
     {
-      	$nbv = $result->nb_vote;
-      	$voter = $result->vote;
+      	$nbv = $result6->nb_vote;
+      	$voter = $result6->vote;
 		$moyenne = $voter / $nbv;    
 		echo '<tr>
 				<td>' . $moyenne . '</td>
