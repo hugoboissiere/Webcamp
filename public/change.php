@@ -8,7 +8,14 @@ include("php/includes/database.php");
 $_SESSION['erreur'] = "";
 // echo "lera";
 $firstname = $_POST['firstname'];
-$password = md5($_POST['password']);
+if (isset($_POST['password'])
+{
+	$password = md5($_POST['password']);
+}
+else
+{
+	$password =$_SESSION['password'];
+}
 $lastname = $_POST['lastname'];
 $username = $_POST['username'];
 $sex = $_POST['sex'];
@@ -29,39 +36,39 @@ print_r($_FILES);
 if($_FILES['profilpic']['name'] != "")
 {
 
-$maxsize = 1048576;
-$maxwidth = 500;
-$maxheight = 500;
-if ($_FILES['profilpic']['error'] > 0)
-	$_SESSION['erreur'] = "Erreur lors du transfert";
-if ($_FILES['icone']['size'] > $maxsize)
-	$_SESSION['erreur'] = "Le fichier est trop gros";
+	$maxsize = 1048576;
+	$maxwidth = 500;
+	$maxheight = 500;
+	if ($_FILES['profilpic']['error'] > 0)
+		$_SESSION['erreur'] = "Erreur lors du transfert";
+	if ($_FILES['icone']['size'] > $maxsize)
+		$_SESSION['erreur'] = "Le fichier est trop gros";
 
-$img_extensions = array('jpg', 'jpeg', 'gif', 'png');
+	$img_extensions = array('jpg', 'jpeg', 'gif', 'png');
 // //1. strrchr renvoie l'extension avec le point (« . »).
 // //2. substr(chaine,1) ignore le premier caractère de chaine.
 // //3. strtolower met l'extension en minuscules.
-$extension_upload = strtolower(substr(strrchr($_FILES['profilpic']['name'], '.'), 1));
-if (!in_array($extension_upload,$img_extensions))
-{
-	$_SESSION['erreur'] = "Extension incorrecte";
-}
-$image_size = getimagesize($_FILES['profilpic']['tmp_name']);
-if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
-	$_SESSION['erreur'] = "Image trop grande";
-if(!$_SESSION['erreur'])
-{
-	$nom = "photo_" . $_SESSION['id'];
+	$extension_upload = strtolower(substr(strrchr($_FILES['profilpic']['name'], '.'), 1));
+	if (!in_array($extension_upload,$img_extensions))
+	{
+		$_SESSION['erreur'] = "Extension incorrecte";
+	}
+	$image_size = getimagesize($_FILES['profilpic']['tmp_name']);
+	if ($image_size[0] > $maxwidth OR $image_size[1] > $maxheight)
+		$_SESSION['erreur'] = "Image trop grande";
+	if(!$_SESSION['erreur'])
+	{
+		$nom = "photo_" . $_SESSION['id'];
 
-	$dir = "resources/profilpic/";
-	$truepath = $dir . $nom . "." . $extension_upload;
+		$dir = "resources/profilpic/";
+		$truepath = $dir . $nom . "." . $extension_upload;
 
-	$resultat = move_uploaded_file($_FILES['profilpic']['tmp_name'],$truepath);
-	if ($resultat)
-		$img = $nom . "." . $extension_upload;
-	else
-		$_SESSION['erreur'] = "Le serveur a rencontré un problème lors du transfert de l'image.";
-}
+		$resultat = move_uploaded_file($_FILES['profilpic']['tmp_name'],$truepath);
+		if ($resultat)
+			$img = $nom . "." . $extension_upload;
+		else
+			$_SESSION['erreur'] = "Le serveur a rencontré un problème lors du transfert de l'image.";
+	}
 }
 if($_SESSION['erreur'])
 	header('Location:modification.php');
@@ -86,22 +93,22 @@ $rep = $dbh->exec("UPDATE cw_human_resources_memberships SET firstname = '" . $f
 
 // echo "yes";
 
-            $_SESSION['username'] = $_POST['username'];
-            $_SESSION['firstname'] = $_POST['firstname'];
-            $_SESSION['lastname'] = $_POST['lastname'];
-            $_SESSION['sex'] = $_POST['sex'];
-            $_SESSION['password'] =$password;
-            $_SESSION['phoneHome'] = $_POST['phoneHome'];
-            $_SESSION['phoneMobile'] = $_POST['phoneMobile'];
-            $_SESSION['neighborhood'] = $_POST['neighborhood'];
-            $_SESSION['city'] = $_POST['city'];
-            $_SESSION['country'] = $_POST['country'];
-            $_SESSION['email'] = $_POST['email'];
-            $_SESSION['status'] = $_POST['status'];
-            $_SESSION['activity'] = $_POST['activity'];
-            $_SESSION['membership'] = $_POST['membership'];
-            $_SESSION['newsletter'] = $_POST['newsletter'];
-            $_SESSION['image'] = $img;
+$_SESSION['username'] = $_POST['username'];
+$_SESSION['firstname'] = $_POST['firstname'];
+$_SESSION['lastname'] = $_POST['lastname'];
+$_SESSION['sex'] = $_POST['sex'];
+$_SESSION['password'] = $password;
+$_SESSION['phoneHome'] = $_POST['phoneHome'];
+$_SESSION['phoneMobile'] = $_POST['phoneMobile'];
+$_SESSION['neighborhood'] = $_POST['neighborhood'];
+$_SESSION['city'] = $_POST['city'];
+$_SESSION['country'] = $_POST['country'];
+$_SESSION['email'] = $_POST['email'];
+$_SESSION['status'] = $_POST['status'];
+$_SESSION['activity'] = $_POST['activity'];
+$_SESSION['membership'] = $_POST['membership'];
+$_SESSION['newsletter'] = $_POST['newsletter'];
+$_SESSION['image'] = $img;
 echo $_SESSION['image'];
  // echo "beaccor";
 if($_SESSION['erreur'] == "")
