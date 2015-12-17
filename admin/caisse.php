@@ -61,8 +61,7 @@ include("php/includes/navigator.php");
 					{
 						echo '<td>' . $b->name . '</td>';
 					}
-					echo '<td>' . $result->date_vente . '<td>
-					</tr>';
+					echo '<td>' . $result->date_vente . '<td>';
 					
 				}
 
