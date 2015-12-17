@@ -108,7 +108,7 @@ $(document).ready(function(){
         </li>
         <li>
           <fieldset>
-          <span>Qu'avez-vous pense du film ?</span>
+          <span>Notez le film !</span>
           <form method="post" action="vote.php">
             <input type="radio" name="vote" value="1" /><label title="Très mauvais !"> 1</label>&nbsp;&nbsp;&nbsp;
             <input type="radio" name="vote" value="2" /><label title="Mauvais !"> 2</label>&nbsp;&nbsp;&nbsp;
