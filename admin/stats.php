@@ -90,7 +90,7 @@ include("php/includes/navigator.php");
 	?>
 	</table>
 	<div style="height:100px;display:block;"></div>
-	<p class="titre" >Moyenne des votes</p>
+	<p class="titre" >Moyenne des votes par film</p>
 	<div style="height:50px;display:block;"></div>
     <table class="tableau">
 		<tr>
