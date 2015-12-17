@@ -24,7 +24,7 @@ echo '<form method="post" action="change.php" id="addForm" enctype="multipart/fo
 <input type="text" name="firstname" id="firstname" value="' . $_SESSION['firstname'] . '"><br/>
 <br/>
 <label for="password">Mot de passe : </label>
-<input type="password" type="password" name="password" id="password" value="' . $_SESSION['password'] . '" pattern=".{5,}"><br/>
+<input type="password" type="password" name="password" id="password"><br/>
 <br/>
 <label for="username">Pseudo : </label>
 <input type="text" name="username" id="username" value="' . $_SESSION['username'] . '"><br/>
