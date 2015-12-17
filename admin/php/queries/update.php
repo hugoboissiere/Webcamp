@@ -110,7 +110,6 @@ if($_POST['password'] !== $password)
 {
     $update->bindParam(":password", md5($_POST["password"]));
 }
-else
  else
  {
     $update->bindParam(":password", $_POST["password"]);
