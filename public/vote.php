@@ -28,7 +28,7 @@ if (isset($_POST['votant']))
 //echo "4";
 	// $session2->closeCursor();
 
-	$totalvote = $_POST['vote'] + $voter;
+	
 
 
 
@@ -41,6 +41,7 @@ if (isset($_POST['votant']))
 }
 
 $nbv++;
+$totalvote = $_POST['vote'] + $voter;
 
 $update2 = $dbh->prepare("UPDATE cw_medias_movies "
 		. "SET nb_vote = :nbv, vote= :totalvote "
