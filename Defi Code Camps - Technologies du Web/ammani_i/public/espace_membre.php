@@ -1,6 +1,6 @@
 <?php
 include("php/includes/database.php");
-// include("php/includes/head.php");
+require_once("php/includes/head.php");
 
 ?>
 
