@@ -238,37 +238,38 @@ while ($result = $movieDetail->fetch()) {
 				}
 			}
 		}
-											</select><br/>
-											<input type="hidden" name="movie" value="'.$id.'" />
-											<input type="hidden" name="theater" value="'.$idTheater.'" />
-											<input type="hidden" name="member" value="'.$_SESSION['id'].'" />
-											<input type="hidden" name="session" value="'.$id_sessions.'" />
-											<br/>
-											<input type="submit" name="envoie" value="Valider" />
-											</fieldset>
-											</form>
-											</div>';
-										}
-										else
-										{
-											echo '	<div id="reservation">
-											<p>Nous sommes complets !!!<br/>
-											<p>Desolé</p>
-											</div>';
-										}
-									}
-									?>
 
-									<?php
+		echo '</select><br/>
+		<input type="hidden" name="movie" value="'.$id.'" />
+		<input type="hidden" name="theater" value="'.$idTheater.'" />
+		<input type="hidden" name="member" value="'.$_SESSION['id'].'" />
+		<input type="hidden" name="session" value="'.$id_sessions.'" />
+		<br/>
+		<input type="submit" name="envoie" value="Valider" />
+		</fieldset>
+		</form>
+		</div>';
+	}
+	else
+	{
+		echo '	<div id="reservation">
+		<p>Nous sommes complets !!!<br/>
+		<p>Desolé</p>
+		</div>';
+	}
+}
+?>
 
-								}
+<?php
 
-								$movieDetail->closeCursor();
+}
 
-								?> 
-								<?php
-								include("php/includes/scripts.php");
-								?>
+$movieDetail->closeCursor();
 
-								</body>
-								</html>
+?> 
+<?php
+include("php/includes/scripts.php");
+?>
+
+</body>
+</html>
