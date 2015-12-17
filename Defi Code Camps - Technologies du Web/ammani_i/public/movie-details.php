@@ -52,7 +52,7 @@ $(document).ready(function(){
 <div id="cover">
   <span></span>
   <img src="<?php echo $cover; ?>" alt="">
-  <link rel="stylesheet" type="text/css" href="css/vote.css" />
+  
 
   <h2>
     <?php echo $result->title; ?>
@@ -107,6 +107,7 @@ $(document).ready(function(){
           <span class="dataContent"><?php echo $result->plot; ?></span><br/>
         </li>
         <li>
+          <link rel="stylesheet" type="text/css" href="css/vote.css"></link>
           <fieldset class="rating">
           <legend>Qu'avez-vous pense du film ?</legend>
           <!-- <form method="post" action="action_page.php"> -->
