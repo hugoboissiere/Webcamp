@@ -94,26 +94,23 @@ include("php/includes/navigator.php");
 	<div style="height:50px;display:block;"></div>
     <table class="tableau">
 		<tr>
+			<th>Nom du film</th>
 			<th>Nombre de votants</th>
 			<th>Moyenne des votes</th>
 		</tr>
 	<?php
-	// $j = 1;
 	$session1 = $dbh->query("SELECT * FROM cw_medias_movies");
 	$session1->setFetchMode(PDO::FETCH_OBJ);
-	// $result6 = $session1->fetch();
-	// $test1 = $result6->requete;
-	//echo "$result6";
   	while ($result6 = $session1->fetch())
     {
       	$nbv = $result6->nb_vote;
       	$voter = $result6->vote;
 		$moyenne1 = $voter / $nbv;    
 		echo '<tr>
+				<td>' . $result6->title . '</td>
 				<td>' . $nbv . '</td>
 				<td>' . $moyenne1 . '</td>
 		 	 </tr>';
-		// $j++;
     }
 	?>
 	</main>
