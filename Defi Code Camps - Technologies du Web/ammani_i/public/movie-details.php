@@ -121,6 +121,10 @@ $(document).ready(function(){
             <input type="radio" name="vote" value="5" /><label title="Excellent !"> 5</label>
           </form>
           </fieldset>
+        </li>
+        <br>
+        <li>
+          <span>Moyenne : </span>
         </li>';
         }
         ?>
