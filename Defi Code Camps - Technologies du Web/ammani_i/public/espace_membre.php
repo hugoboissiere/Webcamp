@@ -12,6 +12,7 @@ if($_SESSION['id'] == "")
 {
    header("Location:index.php");
 }
+echo $_SESSION['id'];
 echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br /> 
          <br />
    		Nom : ' . $_SESSION['lastname'] . '<br /> 
