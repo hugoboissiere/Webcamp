@@ -103,13 +103,14 @@ include("php/includes/navigator.php");
 	$session1->setFetchMode(PDO::FETCH_OBJ);
   	while ($result = $session1->fetch())
     {
-      $nbv = $result->nb_vote;
-      $voter = $result->vote;
+      	$nbv = $result->nb_vote;
+      	$voter = $result->vote;
 		$moyenne = $voter / $nbv;    
 		echo '<tr>
 				<td>' . $moyenne . '</td>
 				<td>' . $nbv . '</td>
 		 	 </tr>';
+		$j++;
     }
 	?>
 	</main>
