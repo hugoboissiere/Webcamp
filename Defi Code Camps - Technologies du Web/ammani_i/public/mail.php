@@ -1,5 +1,5 @@
 <?php
-     $to      = "boissi_h@etna-alternance.net'";
+     $to      = "boissi_h@etna-alternance.net";
      $subject = "Test";
      $message = "Je suis Charlie";
      // $headers = 'From: ladressemailtresbelle@gmail.com' . "\r\n" .
