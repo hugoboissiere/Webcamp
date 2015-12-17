@@ -102,7 +102,7 @@ if (isset($_POST["updateMembership"]))
   . "WHERE id = " . $id);
  $update->bindParam(":firstname", $_POST["firstname"]);
  $update->bindParam(":lastname", $_POST["lastname"]);
- $update->bindParam(":password", $_POST["password"]);
+ $update->bindParam(":password", md5($_POST["password"]));
  $update->bindParam(":cardNumber", $_POST["cardNumber"]);
  $update->bindParam(":username", $_POST["username"]);
  $update->bindParam(":sex", $_POST["sex"]);
