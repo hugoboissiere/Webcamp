@@ -4,29 +4,6 @@
 	vertical-align: top;
 }
 
-/*
-div
-{
-	
-	display: inline-block;
-	vertical-align: top;
-	border: black 1px solid;
-	margin-left: 20%; 
-
-
-form
-{
-	display: inline-block;
-	vertical-align: top;
-	border: black 1px solid;
-}
-
-#formOverflow
-{
-	display: inline-block;
-	vertical-align: top;
-	border: black 1px solid;
-}*/
 
 .infos
 {
@@ -58,18 +35,6 @@ form
 	vertical-align: top;
 }
 
-.attention
-{
-	display: inline-block;
-	vertical-align: top;
-	border: #68D2C3 1px solid;
-	/*padding: 1%;*/
-	background-color: #68D2C3;
-	color : white;
-	position: absolute;
-	margin: 0% 50%;
-	width: 35%;
-}
 
 .formOverflow
 {
@@ -77,13 +42,17 @@ form
 	vertical-align: top;
 }
 
-.comzone
-{
-	/*background-color: ;*/
-	border-bottom: black 1px solid;
-}
 
 .marre
+{
+	width:100px;
+	margin-left:5px;
+	box-shadow:1px 1px 1px #68D2C3;
+	cursor:pointer;
+	width: 100px;
+}
+
+.marre2
 {
 	width:100px;
 	margin-left:5px;
