@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
- 
+
 $dataBaseHost = 'localhost';
 $dataBaseName = 'cinewax; charset=utf8';
 $dataBaseUser = 'root';
@@ -43,7 +43,7 @@ $update = $dbh->prepare("UPDATE cw_human_resources_memberships "
   . "SET firstname = :firstname, lastname = :lastname, password = :password, cardNumber = :cardNumber, username = :username, sex = :sex, phoneHome = :phoneHome, phoneMobile = :phoneMobile,
   neighborhood = :neighborhood, city = :city, country = :country, email = :email, status = :status, activity = :activity, membership = :membership, newsletter = :newsletter "
   . "WHERE id = 28");
-$mdp = $dbh->query("SELECT * FROM cw_human_resources_memberships  WHERE id = " . $id);
+$mdp = $dbh->query("SELECT * FROM cw_human_resources_memberships  WHERE id = 28");
 $mdp->setFetchMode(PDO::FETCH_OBJ);
 if($_POST['password'] !== $mdp->password)
 {
