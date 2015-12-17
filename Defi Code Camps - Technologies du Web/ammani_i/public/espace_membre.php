@@ -9,7 +9,10 @@ require_once("php/includes/head.php");
    <?php
    if(!isset($_SESSION['id']))
    {
-      header('Location: http://192.168.114.4/public/index.php');
+      echo "Vous n'avez pas les droits d'afficher cette page.<br>
+            <a href='index.php'><span>Veuillez cliquer ici pour retourner sur l'accueil.</span></a>
+            <br><br>
+            <img src='https://knightslol.org/images/403_Error.png'></img>"
    }
    echo 	  'Prenom : ' . $_SESSION['firstname'] . '<br /> 
    <br />
