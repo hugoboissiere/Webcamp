@@ -107,11 +107,6 @@ include("php/includes/navigator.php");
     }
 
 	$moyenne = $voter / $nbv;    
-
-	$id = $_GET['id'];
-
-	$movieDetail = $dbh->query("SELECT * FROM cw_medias_movies WHERE id = '" . $id . "'");
-	$movieDetail->setFetchMode(PDO::FETCH_OBJ);
 	echo '<tr>
 			<td>' . $moyenne . '</td>
 			<td>' . $nbv . '</td>
