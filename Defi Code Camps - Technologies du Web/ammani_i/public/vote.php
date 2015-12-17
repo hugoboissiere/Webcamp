@@ -42,7 +42,7 @@ if (isset($_POST['votant']))
 echo "4";
 $nbv++;
 $totalvote = $_POST['vote'] + $voter;
-
+echo "4";
 $update2 = $dbh->prepare("UPDATE cw_medias_movies "
 		. "SET nb_vote = :nbv, vote = :totalvote "
 		. "WHERE id = ".$_POST["idmovie"]);
