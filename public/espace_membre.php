@@ -35,8 +35,6 @@ require_once("php/includes/head.php");
       <br />
       Ville : ' . $_SESSION['city'] . '<br /> 
       <br />
-      Pays : ' . $_SESSION['country'] . '<br /> 
-      <br />
       Email : ' . $_SESSION['email'] . '<br />
       <br />
       Statut : ' . $_SESSION['status'] . '<br />
