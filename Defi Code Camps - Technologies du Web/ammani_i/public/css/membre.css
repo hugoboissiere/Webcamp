@@ -1,9 +1,10 @@
-/*img 
+.imgprofil
 {
 	display: inline-block;
 	vertical-align: top;
 }
 
+/*
 div
 {
 	
@@ -26,6 +27,12 @@ form
 	vertical-align: top;
 	border: black 1px solid;
 }*/
+
+.infos
+{
+	display: inline-block;
+	vertical-align: top;
+}
 
 #reservation
 {
