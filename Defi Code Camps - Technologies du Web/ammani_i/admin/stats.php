@@ -103,7 +103,7 @@ include("php/includes/navigator.php");
 	$session1->setFetchMode(PDO::FETCH_OBJ);
 	$result6 = $session1->fetch();
 	$test1 = $result6->requete;
-	echo $test1;
+	echo "2" ;
   	while ($j <= $test1)
     {
       	$nbv = $result6->nb_vote;
