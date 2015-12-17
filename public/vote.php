@@ -16,28 +16,6 @@ if (isset($_POST['votant']))
 			$nbv = $result->nb_vote;
 			$voter = $result->vote;
 		}
-
-	// $session->closeCursor();
-
-	// $session2 = $dbh->query('SELECT * FROM cw_medias_movies WHERE id = "'.$_POST['idmovie'].'" ');
-	// $session2->setFetchMode(PDO::FETCH_OBJ);
-	// while ($result2 = $session2->fetch())
-	// 	{
-	// 		$voter = $result->vote;
-	// 	}
-//echo "4";
-	// $session2->closeCursor();
-
-	
-
-
-
-	// $req = $dbh->prepare("INSERT INTO cw_medias_movies"
-	// 		  . "('vote')"
-	// 		  . "(:vote)");
-
-	// $req->bindParam(":vote", $_POST["vote"]);
-	// $req->execute();
 }
 
 $nbv++;
