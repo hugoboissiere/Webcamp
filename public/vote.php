@@ -39,19 +39,19 @@ if (isset($_POST['votant']))
 	// $req->bindParam(":vote", $_POST["vote"]);
 	// $req->execute();
 }
-echo "4";
+
 $nbv++;
 $totalvote = $_POST['vote'] + $voter;
-echo "4";
+
 $update2 = $dbh->prepare("UPDATE cw_medias_movies "
 		. "SET nb_vote = :nbv, vote = :totalvote "
 		. "WHERE id = ".$_POST["idmovie"]);
 $update2->bindParam(":nbv", $nbv);
+$update2->bindParam(":totalvote", $totalvote);
 		$update2->execute();
 $update2->closeCursor();
-echo "4";
 $session->closeCursor();
-echo "4";
+
 header('Location:movie-details.php?id='.$_POST['idmovie']);
 
 ?>
